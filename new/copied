@@ -1,0 +1,111 @@
+
+    <!--navigationbar-->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" class="bible">Bible</a>
+        <a href="#">Contact</a>
+    </div>
+    <hr>
+
+<main> <section class="cta">
+    <h4>"It is the Spirit who gives life;the flesh profits nothing.<br>The words that I speak to you are <br>spirit,and they are life"</h4>
+    <p><i>John 6:63 [NKJV]</i></p>
+
+
+</section>
+
+<!------TOPIC AND VERSE READING SECTION-->
+
+<section class="topic">
+    <h1>Topic:Establish Your Priorities</h1>
+    <h4 class="mon">Date:7th July</h4>
+</section>
+<section class="Main-text">
+    <p><i>"I chose you and appointed you that you should go and bear fruit, and<br>
+    that your fruit should remain,"</i></p>
+    <p class="mon"><i>John 15:16 NKJV</i></p>
+</section>
+
+<!-----CONTENT SECTION-->
+<section class="content">
+    <p class="p">
+        In order to fulfil God’s plan for your life,
+         you must establish clear priorities and live by them each day
+         . Author Edward de Bono quipped, ‘A conclusion is the place where
+          you get tired of thinking.’ Sadly, many people arrive at priorities based
+           on where they ran out of steam. You definitely don’t want to do that.
+            Nor do you want to allow others to decide your agenda or your priorities.
+            </p>
+            <p class="p">
+             Many ways exist for determining priorities. First, and foremost, your 
+             plan must always line up with God’s will for you (see Hebrews 13;20-21).
+              Jesus said, ‘I chose you and appointed you that you should go and bear 
+              fruit, and   your frit should ramin.’Observe:1)You must know that God
+               has chosen you and appointed you  to a particular area of service.2) 
+               Your goal in life should be fruit that remains after you .If you them 
+               properly,  things like money and influence can aid you , but they must 
+               never be your goal or your heart’s desire.</p>
+               <p class="p"> So, how can you establish 
+               the right priorities? As you get to know yourself better, begin focusing
+                on your strengths and the things that make best use of your God-given 
+                skills. Consider what brings you the highest return and reward. Think
+                 about what you enjoy most and do best. Those are your core gifts. 
+                   Utilize the 80/20 rule. Give 80 per cent of your effort to the 20 
+                   per cent of your activities. Bottom line: Jesus said you are to give
+                    your attention to  the areas that bear the most-fruit.
+    </p>
+</section>
+<hr>
+</main>
+   
+    <!------footer section-->
+    <section class="Every-day-reading">
+
+        <h4>"...I have come that they may have life,<br>and 
+            <br>that they may have it more abundantly."</h4>
+
+
+        <p><i>John 10:10 [NKJV]</i></p>
+
+        
+    </section>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Contact Us</h4>
+                <p>Email: info@Toradentalclinic.com</p>
+                <p>Phone: 0769 236112</p>
+            </div>
+            <div class="col">
+                <h4>Address</h4>
+                <p>128 Sultan Hamud</p>
+                <p>Makueni</p>
+            </div>
+            <div class="col">
+                <h4>Follow Us</h4>
+                <p>Connect with us on social media for updates</p>
+                <ul class="social-icons">
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="period">&copy; 2023 Agape Ministry. All Rights Reserved.</p>
+    </div>
+</footer>
+<!---Footer End-->
+
+
+
+    
+</body>
+</html>
