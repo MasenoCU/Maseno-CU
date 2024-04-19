@@ -73,8 +73,9 @@
   <div class="container">
     <h1 class="heading">MINISTRIES</h1>
     <div class="card-container">
+      //fetching code.
     <?php
-        include 'db_connect.php';  // Ensure you have your database connection file
+        include 'db_connect.php';
 
         $sql = "SELECT MinistryName, Description FROM Ministries";
         $result = $conn->query($sql);
@@ -83,7 +84,7 @@
           // Output data of each row
           while($row = $result->fetch_assoc()) {
             echo '<div class="card">';
-            echo '<img src="assets/image.jpg">'; // Update or customize the image path as needed
+            echo '<img src="assets/image.jpg">';
             echo '<div class="card-content">';
             echo '<h3>' . $row["MinistryName"] . '</h3>';
             echo '<p>' . $row["Description"] . '</p>';

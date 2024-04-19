@@ -77,85 +77,29 @@
   <div class="container">
     <h1 class="heading">MINISTRIES</h1>
     <div class="card-container">
-       
+      //code to fetch the ministries dynamically.
+      <?php
+      include 'db_connect.php';
 
-        <div class="card">
-         <img src="assets/image.jpg">
-         <div class="card-content">
-             <h3>DISCIPLESHIP MINISTRY</h3>
-             <p>Tuesday-6:00pm-8:00pm</p>
-             
-         </div>
-         </div>
+      $sql = "SELECT MinistryName, Description FROM Ministries";
+      $result = $conn->query($sql);
 
-         <div class="card">
-            <img src="assets/image.jpg">
-            <div class="card-content">
-                <h3>CHOIR MINISTRY</h3>
-                <p>Tuesday-6:00pm-8:00pm</p>
-                
-            </div>
-            </div>
-
-            <div class="card">
-                <img src="assets/image.jpg">
-                <div class="card-content">
-                    <h3>PRAISE AND WORSHIP MINISTRY</h3>
-                    <p>Tuesday-6:00pm-8:00pm</p>
-                    
-                </div>
-                </div>
-                <div class="card">
-                    <img src="assets/image.jpg">
-                    <div class="card-content">
-                        <h3>INSTRUMENTALISTS MINISTRY</h3>
-                        <p>Tuesday-6:00pm-8:00pm</p>
-                        
-                    </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/image.jpg">
-                        <div class="card-content">
-                            <h3>MEDIA AND IT MINISTRY</h3>
-                            <p>Tuesday-6:00pm-8:00pm</p>
-                            
-                        </div>
-                        </div>
-                        <div class="card">
-                            <img src="assets/image.jpg">
-                            <div class="card-content">
-                                <h3>CREATIVE MINISTRY</h3>
-                                <p>Tuesday-6:00pm-8:00pm</p>
-                                
-                            </div>
-                            </div>
-                
-                            <div class="card">
-                                <img src="assets/image.jpg">
-                                <div class="card-content">
-                                    <h3>INTERCESSORY MINISTRY</h3>
-                                    <p>Tuesday-6:00pm-8:00pm</p>
-                                    
-                                </div>
-                                </div>
-
-
-                                <div class="card">
-                                    <img src="assets/image.jpg">
-                                    <div class="card-content">
-                                        <h3>HOSPITALITY MINISTRY</h3>
-                                        <p>Tuesday-6:00pm-8:00pm</p>
-                                        
-                                    </div>
-                                    </div>
-                                    <div class="card">
-                                        <img src="assets/image.jpg">
-                                        <div class="card-content">
-                                            <h3>HIGH SCHOOL MINISTRY</h3>
-                                            <p>Tuesday-6:00pm-8:00pm</p>
-                                            
-                                        </div>
-                                        </div>     
+      if ($result->num_rows > 0) {
+        // Output data of each row
+        while($row = $result->fetch_assoc()) {
+          echo '<div class="card">';
+          echo '<img src="assets/image.jpg">'; // Update or customize the image path as needed
+          echo '<div class="card-content">';
+          echo '<h3>' . $row["MinistryName"] . '</h3>';
+          echo '<p>' . $row["Description"] . '</p>';
+          echo '</div>';
+          echo '</div>';
+        }
+      } else {
+        echo "<p>No ministries to display.</p>";
+      }
+      $conn->close();
+      ?>
      </div>
 </div>
     
