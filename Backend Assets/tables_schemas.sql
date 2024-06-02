@@ -1,5 +1,8 @@
 -- These are the tables that are being used by the application.
 -- You can run this file to create them then add dummy data to the database, to test.
+-- To acces the online documentation use this link  below
+-- https://docs.google.com/document/d/1C_uhUj0v70pqsNkRC7OxsMOxVkkM5TDKx_8DN_VhIck/edit?usp=sharing
+
 CREATE TABLE Roles (
     RoleID INT AUTO_INCREMENT PRIMARY KEY,
     RoleName VARCHAR(100) NOT NULL,
@@ -97,3 +100,4 @@ CREATE TABLE ActivityAttendances (
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
+#kflmvfml

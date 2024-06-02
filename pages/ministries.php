@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MUCU WEB</title>
 
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/mediaquaries.css">
-  <link rel="stylesheet" href="styles/general.css">
-  <link rel="stylesheet" href="new/all.min.css">
-  <link rel="stylesheet" href="new/fontawesome.min.css">
-  <link rel="stylesheet" href="styles/ministries.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/mediaquaries.css">
+  <link rel="stylesheet" href="../styles/general.css">
+  <link rel="stylesheet" href="../new/all.min.css">
+  <link rel="stylesheet" href="../new/fontawesome.min.css">
+  <link rel="stylesheet" href="../styles/ministries.css">
 
 
 </head>
@@ -28,12 +28,12 @@
     </div>
    <div class="right-section">
     <ul class="nav-links">
-      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.php">HOME</a></li>
       <li><a href="#">ABOUT US</a></li>
       <li><a href="#">BLOGS</a></li>
       <li><a href="#" onclick="toggleMenu()">LEADERSHIP & COMMITTEES</a></li>
       <li><a href="#">EV.TEAMS</a></li>
-      <li><a href="ministries.html">MINISTRIES</a></li>
+      <li><a href="ministries.php">MINISTRIES</a></li>
       <li><a href="#">CONTACT US</a></li>
     </ul>
     
@@ -77,28 +77,33 @@
   <div class="container">
     <h1 class="heading">MINISTRIES</h1>
     <div class="card-container">
-      //code to fetch the ministries dynamically.
       <?php
-      include 'db_connect.php';
+            #code to fetch the ministries dynamically.
 
-      $sql = "SELECT MinistryName, Description FROM Ministries";
-      $result = $conn->query($sql);
+      require '../includes/db_connection.php';
+      try{
+        $ministriesCollection =$database->selectCollection('Ministries');
+        $ministries=$ministriesCollection->find();
 
-      if ($result->num_rows > 0) {
-        // Output data of each row
-        while($row = $result->fetch_assoc()) {
-          echo '<div class="card">';
-          echo '<img src="assets/image.jpg">'; // Update or customize the image path as needed
-          echo '<div class="card-content">';
-          echo '<h3>' . $row["MinistryName"] . '</h3>';
-          echo '<p>' . $row["Description"] . '</p>';
-          echo '</div>';
-          echo '</div>';
+        $hasMinistries = false;
+        foreach ($ministries as $ministry) {
+            $hasMinistries = true;
+            echo '<div class="card">';
+            echo '<img src="../assets/image.jpg">';
+            echo '<div class="card-content">';
+            echo '<h3>' . $ministry["ministryName"] . '</h3>';
+            echo '<p>' . $ministry["description"] . '</p>';
+            echo '</div>';
+            echo '</div>';
         }
-      } else {
-        echo "<p>No ministries to display.</p>";
+    
+        if (!$hasMinistries) {
+            echo "<p>No ministries to display.</p>";
+        }
+      } catch (MongoDB\Exception\Exception $e){
+        /** @var \Throwable $e */
+        echo "MongoDB Error: " . $e->getMessage(). "\n";
       }
-      $conn->close();
       ?>
      </div>
 </div>

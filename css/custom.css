@@ -249,3 +249,30 @@ p {
   padding: 8px 8px;
 }
 /* meadia queries */
+
+section {
+  padding: 16px 0;
+}
+/* theme button styles */
+.btn-bd-primary {
+--bd-beige-bg: #f9b160;
+--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+--bs-btn-font-weight: 600;
+--bs-btn-color: var(--bs-white);
+--bs-btn-bg: var(--bd-beige-bg);
+--bs-btn-border-color: var(--bd-beige-bg);
+--bs-btn-hover-color: var(--bs-white);
+--bs-btn-hover-bg: #fbaf40;
+--bs-btn-hover-border-color: #fbaf40;
+--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+--bs-btn-active-color: var(--bs-btn-hover-color);
+--bs-btn-active-bg: #f89e36;
+--bs-btn-active-border-color: #f89e36;
+}
+.bd-mode-toggle {
+z-index: 1500;
+}
+.bd-mode-toggle .dropdown-menu .active .bi {
+display: block !important;
+}
