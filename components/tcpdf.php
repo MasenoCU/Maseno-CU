@@ -1,4 +1,4 @@
-// Hy, this file is a php library that helps with generating the certificate. Please try not to delete or tamper. Thanks.
+// Hy, this file is a php library that helps with generating the certificates. Please try not to delete or tamper. Thanks.
 
 <?php
 //============================================================+
