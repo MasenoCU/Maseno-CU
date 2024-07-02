@@ -1,3 +1,5 @@
+// Hy, this file is a php library that helps with generating the certificates. Please try not to delete or tamper. Thanks.
+
 <?php
 //============================================================+
 // File name   : tcpdf.php
