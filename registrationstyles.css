@@ -403,8 +403,8 @@ form.sign-in-form {
 }
 
 .cuthemeformat span{
-    border-bottom: 2px solid #f5a133; /* Yellow underline for the span */
-    padding-bottom: 2px; /* Adjust padding as needed */
+    border-bottom: 2px solid #f5a133; 
+    padding-bottom: 2px; 
 
 }
 
@@ -413,7 +413,7 @@ form.sign-in-form {
     position: relative;
   }
   .step-1 {
-    display: block; /* Show first step initially */
+    display: block; 
   }
 
   .ministry-btn {
