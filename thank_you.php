@@ -9,6 +9,6 @@
     <h1>Thanks for your submission</h1>
     <br>
     <br>
-    <h3>Your details are with us now, thanks for being a member </h3>
+    <h3>Your details are with us now, thanks and have a good day</h3>
 </body>
 </html>

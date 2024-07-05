@@ -1,31 +1,42 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    // Receive form data
+    $firstName = $_POST["firstName"];
+    $otherName = $_POST["otherName"];
+    $admissionNumber = $_POST["admissionNumber"];
+    $yearOfStudy = $_POST["yearOfStudy"];
+    $ministries = isset($_POST['ministry']) ? (is_array($_POST['ministry']) ? $_POST['ministry'] : [$_POST['ministry']]) : [];
+    $evTeam = $_POST["evTeam"];
+    $gender = $_POST["gender"];
+    $course = $_POST["course"];
+    $phoneNumber = $_POST["phoneNumber"];
+    $email = $_POST["email"];
 
+    // Database connection and insertion
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "your_database_name";
 
-// Retrieve form data
-$firstName = $_POST["firstName"];
-$otherName = $_POST["otherName"];
-$admissionNumber = $_POST["admissionNumber"];
-$yearOfStudy = $_POST["yearOfStudy"];
-$ministries = isset($_POST['ministry']) ? (is_array($_POST['ministry']) ? $_POST['ministry'] : [$_POST['ministry']]) : [];
-$evTeam = $_POST["evTeam"];
-$gender = $_POST["gender"];
-$course = $_POST["course"];
-$phoneNumber = $_POST["phoneNumber"];
-$email = $_POST["email"];
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-echo $firstName . ", your details have been received successfully. Thanks for being a member";
+    // SQL to insert data into table
+    $sql = "INSERT INTO registration (firstName, otherName, admissionNumber, yearOfStudy, ministries, evTeam, gender, course, phoneNumber, email)
+    VALUES ('$firstName', '$otherName', '$admissionNumber', '$yearOfStudy', '" . implode(",", $ministries) . "', '$evTeam', '$gender', '$course', '$phoneNumber', '$email')";
 
-echo "First Name: " . $firstName . "<br>";
-echo "Other Name: " . $otherName . "<br>";
-echo "Admission Number: " . $admissionNumber . "<br>";
-echo "Year of Study: " . $yearOfStudy . "<br>";
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-echo "EV Team: " . $evTeam . "<br>";
-echo "Gender: " . $gender . "<br>";
-echo "Course: " . $course . "<br>";
-echo "Phone Number: " . $phoneNumber . "<br>";
-echo "Email: " . $email . "<br>";
-
+    $conn->close();
+}
 ?>
