@@ -2,32 +2,36 @@
 require 'components/db_connection.php';
 require 'components/authenticate.php';
 
+use MongoDB\Exception\Exception as MongoDBException;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT password FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->bind_result($hashed_password);
-    $stmt->fetch();
-
-    if (password_verify($password, $hashed_password)) {
-        // Set session variables
-        $_SESSION['username'] = $username;
-        // Redirect to home page
-        header("Location: homepage.php");
-        exit;
-    } else {
-        echo "<p>Invalid username or password. <a href='login.php'>Try again</a></p>";
+    try {
+        if ($database) {
+            //database is taken  as an argument, to check if conection established from db_connection
+            $collection = $database->selectCollection('Users');
+            $user = $collection->findOne(['username' => $username]);
+            // Verify the password
+            if (password_verify($password, $user['password'])) {
+                // Set session variables
+                $_SESSION['username'] = $username;
+                // Redirect to home page
+                header("Location: homepage.php");
+                exit;
+            } else {
+                echo "<p>Invalid username or password. <a href='login.php'>Try again</a></p>";
+            }
+        } else {
+            echo "<p>Invalid username or password. <a href='login.php'>Try again</a></p>";
+        }
+    } catch (MongoDBException $e) {
+        /** @var \Throwable $e */
+        echo "<p>Error: " . $e->getMessage() . "</p>";
     }
-
-    $stmt->close();
-    $conn->close();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -46,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" id="password" name="password" required><br>
         <input type="submit" value="Login">
     </form>
-    <p>Don't have an account? <a href="signup.php">Sign up here</a></p>
+    <p>Don't have an account? <a href="../signup.php">Sign up here</a></p>
 </body>
 
 </html>
