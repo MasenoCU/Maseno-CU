@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// Check if the user is logged in, if not redirect to login page
+// Check if the user is logged in, if not redirect to first page registartion page
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: registarationpage.php");
     exit;
 }
 ?>
@@ -20,7 +20,7 @@ if (!isset($_SESSION['username'])) {
     <div class="container">
         <h2>Welcome to the Home Page</h2>
         <p>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! This is the home page.</p>
-        <p><a href="logout.php" class="logout-btn">Logout</a></p>
+        <p><a href="index.php" class="logout-btn">Logout</a></p>
     </div>
 </body>
 
