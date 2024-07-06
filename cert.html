@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="cert.css">
+</head>
+<body>
+    <div class="certificate-container" id="certificate">
+        <div class="certificate">
+            <img src="assets\images\MUCU logo.png" alt="Logo" class="logo">
+            <img class="seal">
+            <h1 class="highlight">Maseno University Christian Union</h1>
+            <h2 class="ahighlight">Associates</h2>
+            <p>This certificate is presented to</p>
+            <p class="name" id="userName">[User Name]</p>
+            <p class="paragraph"><i>for being a faithful member of the Christian Union upto Associates Level.</i></p>
+            <p>Date: <span id="completionDate">[Date]</span></p>
+            <div class="signature">
+                <p class="sig-name">Paul Mwika</p>
+                <p>Chairperson MUCU</p>
+            </div>
+            <div class="signature">
+                <p class="sig-name">Steve Omondi</p>
+                <p>Director Creative Ministry</p>
+            </div>
+        </div>
+    </div>
+    <button onclick="generatePDF()">Download Certificate</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const userName = 'John Doe';
+            const completionDate = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            document.getElementById('userName').innerText = userName;
+            document.getElementById('completionDate').innerText = completionDate;
+        });
+
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+
+            html2canvas(document.querySelector('#certificate')).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF('landscape', 'mm', 'a4');
+
+                const width = pdf.internal.pageSize.getWidth();
+                const height = pdf.internal.pageSize.getHeight();
+
+                pdf.addImage(imgData, 'PNG', 0, 0, width, height);
+                pdf.save('certificate.pdf');
+            }).catch(error => {
+                console.error('Error generating PDF: ', error);
+            });
+        }
+    </script>
+</body>
+</html>

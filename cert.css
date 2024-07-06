@@ -1,0 +1,151 @@
+/* certificate.css */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.certificate-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 297mm;
+    height: auto;
+    position: relative;
+    margin: 50px auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow: hidden;
+}
+.certificate {
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+.certificate h1 {
+    font-size: 35px;
+    margin: 10px 0;
+    color: #000000;
+}
+.certificate p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #000000;
+}
+
+.certificate .name {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+    background: linear-gradient(to right, #25aae1, #f5a133);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.certificate .name::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #f5a133, #25aae1);
+}
+
+.certificate .logo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+}
+.certificate .seal {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    background: linear-gradient(to bottom right, #25aae1, #f5a133);
+    border-radius: 50%;
+}
+.certificate .signature {
+    display: inline-block;
+    margin: 20px 50px;
+}
+.certificate .signature .sig-name {
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+.certificate .highlight {
+    font-weight: bold;
+    background: linear-gradient(to right, #25aae1, #f5a133);
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.certificate .ahighlight {
+    font-weight: bold;
+    color: #25aae1;
+    position: relative;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .certificate-container {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        margin: 20px auto;
+    }
+    .certificate {
+        border: none;
+        padding: 10px;
+    }
+    .certificate h1 {
+        font-size: 25px;
+    }
+    .certificate p {
+        font-size: 15px;
+    }
+    .certificate .name {
+        font-size: 20px;
+    }
+    .certificate .logo, .certificate .seal {
+        width: 60px;
+        height: 60px;
+    }
+    .certificate .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+    .certificate .seal {
+        top: 200px;
+        right: 10px;
+        margin: 0 auto;
+    }
+    .certificate .signature {
+        margin: 10px 20px;
+    }
+}
+
+/* Zigzag pattern on the left side */
+.certificate-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to bottom right, #25aae1, #f5a133);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+    z-index: 0;
+}
