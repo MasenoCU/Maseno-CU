@@ -1,8 +1,17 @@
 <?php
 session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_name'])) {
+    // Redirect to the login page
+    header("Location: login.php");
+    exit();
+}
+
+
 require_once('tcpdf/tcpdf.php');
 
-$userName = $_SESSION['user_name'] ?? 'Simon Doe';
+$userName = $_SESSION['user_name'];
 $completionDate = date("F j, Y");
 
 // Create new PDF document
