@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../backend/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use MongoDB\Client;
 use MongoDB\Exception\Exception as MongoDBException;
