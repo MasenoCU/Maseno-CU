@@ -1,4 +1,22 @@
 <?php include("db_connection.php"); ?>
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <script src="../scripts/color-modes.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title -->
+    <title>Events</title>
+    <!-- custon css -->
+    <link rel="stylesheet" href="../styles/custom.css">
+    <link rel="stylesheet" href="../styles/blog.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <!-- unicons iconscout -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+
     <!-- This is the leadership section -->
     <section id="leadership">
         <div class="container-xl">
@@ -32,3 +50,5 @@
             </div>
         </div>
     </section>
+</body>
+</html>
