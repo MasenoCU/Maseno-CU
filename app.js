@@ -2,6 +2,10 @@ const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.signin-signup').scrollTop = 0;
+});
+
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
@@ -47,21 +51,31 @@ $(document).ready(function() {
             prevStep.removeClass('slide-in-left');
         }, 500); 
     });
-});
 
-
-  
-$(document).ready(function() {
     $('.ministry-btn').on('click', function() {
-    $(this).toggleClass('active'); // Toggle active class on button click
+        // Remove 'active' class from all ministry buttons and add to the clicked button
+        $('.ministry-btn').removeClass('active');
+        $(this).addClass('active');
+
+        // Set the hidden input field for ministry
+        $('#ministry').val($(this).data('value'));
     });
-});
 
-$(document).ready(function() {
     $('.eve-team-btn').on('click', function() {
+        // Remove 'active' class from all eve team buttons and add to the clicked button
+        $('.eve-team-btn').removeClass('active');
+        $(this).addClass('active');
 
-    $('.eve-team-btn').not(this).removeClass('active');
+        // Set the hidden input field for eve team
+        $('#eve_team').val($(this).data('value'));
+    });
 
-    $(this).toggleClass('active'); // Toggle active class on button click
+    $('.yos .eve-team-btn').on('click', function() {
+        // Remove 'active' class from all year of study buttons and add to the clicked button
+        $('.yos .eve-team-btn').removeClass('active');
+        $(this).addClass('active');
+
+        // Set the hidden input field for year of study
+        $('#year_of_study').val($(this).data('value'));
     });
 });

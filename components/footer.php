@@ -9,7 +9,7 @@
                     <li class="nav-item mb-2"><a href="index.php" class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
                     <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-body-secondary">About</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Services` Activities</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ministries</a></li>
+                    <li class="nav-item mb-2"><a href="ministries.php" class="nav-link p-0 text-body-secondary">Ministries</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Evangelistic Teams</a></li>
                     <li class="nav-item mb-2"><a href="leadership.php" class="nav-link p-0 text-body-secondary">Leadership</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Noticeboard</a></li>
