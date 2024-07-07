@@ -70,25 +70,22 @@
 
             </div>
         </div>
-
     </nav>
-
     <section class="main-section">
 
         <div class="container">
             <h1 class="heading">MINISTRIES</h1>
             <div class="card-container">
                 <?php
-
       require 'components/db_connection.php';
       try{
         $error="Cannot connect to the database";
         if ($database){
             $collection =$database->selectCollection('Ministries');
-            $ministries=$ministriesCollection->find();
+            $ministries=$collection->find();
 
             $hasMinistries =false;
-            foreach($minisries as $ministry){
+            foreach($ministries as $ministry){
                 $hasMinistries =true;
                 echo '<div class="card">';
                 echo '<img src="../assets/image.jpg">';
@@ -98,7 +95,7 @@
                 echo '</div>';
                 echo '</div>';
             }
-            if(!$hasMinistsries){
+            if(!$hasMinistries){
                 echo"<p> No Ministries Fetched to Display</p>";
             }
         }else{

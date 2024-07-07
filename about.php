@@ -127,7 +127,7 @@
                 <li><a class="dropdown-item active" href="index.php" aria-current="page">Home</a></li>
                 <li><a class="dropdown-item" href="about.php">About Us</a></li>
                 <li><a class="dropdown-item" href="#">Services</a></li>
-                <li><a class="dropdown-item" href="#">Ministries</a></li>
+                <li><a class="dropdown-item" href="ministries.php">Ministries</a></li>
                 <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -144,7 +144,7 @@
                         <li class="nav-item"><a href="index.php" class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
                         <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Services</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
+                        <li class="nav-item"><a href="ministries.php" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
                         <li class="nav-item">
                             <a href="#" class="p-2 nav-link icon-link link-body-emphasis" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
@@ -197,7 +197,7 @@
                     <li class="nav-item mb-2"><a href="index.php" class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
                     <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-body-secondary">About</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Services` Activities</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ministries</a></li>
+                    <li class="nav-item mb-2"><a href="ministries.php" class="nav-link p-0 text-body-secondary">Ministries</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Evangelistic Teams</a></li>
                     <li class="nav-item mb-2"><a href="leadership.php" class="nav-link p-0 text-body-secondary">Leadership</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Noticeboard</a></li>

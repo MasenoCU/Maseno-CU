@@ -123,10 +123,10 @@
                   <svg class="bi me-2" width="24" height="24"><use xlink:href="icons.svg#menu" style="fill: currentColor; color:invert;"></use></svg>
               </a>
               <ul class="dropdown-menu text-small shadow" style="">
-                <li><a class="dropdown-item active" href="index.html" aria-current="page">Home</a></li>
+                <li><a class="dropdown-item active" href="index.php" aria-current="page">Home</a></li>
                 <li><a class="dropdown-item" href="about.php">About Us</a></li>
                 <li><a class="dropdown-item" href="#">Services</a></li>
-                <li><a class="dropdown-item" href="#">Ministries</a></li>
+                <li><a class="dropdown-item" href="ministries.php">Ministries</a></li>
                 <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -143,7 +143,7 @@
                         <li class="nav-item"><a href="index.php" class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
                         <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Services</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
+                        <li class="nav-item"><a href="ministries.php" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
                         <li class="nav-item">
                             <a href="#" class="p-2 nav-link icon-link link-body-emphasis" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
@@ -172,8 +172,8 @@
             <!-- cta section -->
             <div class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" class="btn btn-warning ms-2" >Sign-up</button>
+                    <button type="button" class="btn btn-outline-primary mx-2" onclick="window.location.href='registrationpage.php'">Login</button>
+                    <button type="button" class="btn btn-warning ms-2"  onclick="window.location.href='registrationpage.php'">Sign-up</button>
                 </div>
             </div>
         </div>

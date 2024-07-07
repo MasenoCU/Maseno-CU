@@ -10,7 +10,7 @@ $client = null;
 
 try {
     // Connecting to the database
-    $uri = 'mongodb+srv://mucuweb:mucuweb@mucuproject.7vs9zpi.mongodb.net/?retryWrites=true&w=majority&appName=mucuproject';
+    $uri = getenv('MONGODB_URI');
     $client = new Client($uri);
     $database = $client->selectDatabase('MUCUWEB');
 } catch (MongoDBException $e) {

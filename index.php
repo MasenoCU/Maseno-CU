@@ -97,7 +97,7 @@
 
     <!-- main header -->
     <header id="header" class="sticky-top bg-body">
-        <!-- navbar -->        
+        <!-- navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
             <!-- navbar-brand -->                
             <a href="index.php" class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
@@ -127,7 +127,7 @@
                 <li><a class="dropdown-item active" href="index.php" aria-current="page">Home</a></li>
                 <li><a class="dropdown-item" href="about.php">About Us</a></li>
                 <li><a class="dropdown-item" href="#">Services</a></li>
-                <li><a class="dropdown-item" href="#">Ministries</a></li>
+                <li><a class="dropdown-item" href="ministries.php">Ministries</a></li>
                 <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
@@ -144,7 +144,7 @@
                         <li class="nav-item"><a href="index.php" class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
                         <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Services</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
+                        <li class="nav-item"><a href="ministries.php" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
                         <li class="nav-item">
                             <a href="#" class="p-2 nav-link icon-link link-body-emphasis" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
@@ -173,15 +173,15 @@
             <!-- cta section -->
             <div class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" class="btn btn-warning ms-2" >Sign-up</button>
+                    <button type="button" class="btn btn-outline-primary mx-2" onclick="window.location.href='registrationpage.php'">Login</button>
+                    <button type="button" class="btn btn-warning ms-2" onclick="window.location.href='registrationpage.php'" >Sign-up</button>
                 </div>
             </div>
         </div>
     </header>
 
 
-<!-- <?php include("components/header.php"); ?> -->
+<!--   --><?php include("components/header.php"); ?>
 
     <!-- hero area -->
     <section id="hero" style="height: 544px;">
@@ -627,7 +627,7 @@
                   <li class="nav-item mb-2"><a href="index.php" class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
                   <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-body-secondary">About</a></li>
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Services` Activities</a></li>
-                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ministries</a></li>
+                  <li class="nav-item mb-2"><a href="ministries.php" class="nav-link p-0 text-body-secondary">Ministries</a></li>
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Evangelistic Teams</a></li>
                   <li class="nav-item mb-2"><a href="leadership.php" class="nav-link p-0 text-body-secondary">Leadership</a></li>
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Noticeboard</a></li>
