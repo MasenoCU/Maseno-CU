@@ -1,6 +1,3 @@
-<?php
-echo "Hello Heroku!";
-?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 <head>
