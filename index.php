@@ -1,5 +1,5 @@
 <?php
-echo "Hello Heroku";
+echo "Hello Heroku!";
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
