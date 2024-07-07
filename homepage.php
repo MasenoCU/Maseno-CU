@@ -10,7 +10,6 @@ if (!isset($_SESSION['username'])) {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="styles/styles.css">
