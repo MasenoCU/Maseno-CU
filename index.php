@@ -31,13 +31,14 @@
                             <div class="mobile-s d-sm-none display-6 text-muted">Maseno University Christian Union!</div>
                             <div class="content-to-hide-xs mobile-m d-md-none display-5 text-muted">Maseno University Christian Union!</div>
                             <div class="d-none d-md-block display-2 text-muted">Maseno University Christian Union!</div>
-                        </h1>                  
+                        </h1>
                         <p class="lead mt-2 mb-1 text-muted">We are a group of committed young men and women living for God and pursuing a holy life.</p>
                         <p class="lead mt-0 text-muted">Join us in our journey of faith.</p>
                         <p><a class="btn btn-md btn-outline-success border-2" href="about.php" id="learnmore">Learn more</a></p>
                       </div>
                     </div>
                   </div>
+
                   <div class="carousel-item">
                     <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
                     <div class="container">
@@ -62,6 +63,7 @@
             </div>
         </div>
     </section>
+
     <!-- history & growth -->
     <section id="history">
         <div class="container-xl">
@@ -84,56 +86,84 @@
         </div>
     </section>
     <hr class="featurette-divider">
+
+    <!-- vision, mission, goals -->
+    <!-- blogs & testimonies -->
+    <section id="testimonials">
+        <div class="container-xl">
+            <h2>
+                <div class="display-4 text-start">Real Stories From Members</div>
+            </h2>
+            <p class="my-4 lead text-muted text-start">
+                Read the latest blog posts for insights and testimonies.
+            </p>
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <?php
+                foreach ($blogs as $blog) {
+                    ?>
+                    <div class="col">
+                      <div class="card border-0 h-100">
+                        <img src="<?php echo htmlspecialchars($blog['image_url'], ENT_QUOTES, 'UTF-8'); ?>" class="card-img-top" alt="...">
+                        <div class="card-body p-2">
+                          <p class="bg-secondary text-white d-inline"><small><?php echo htmlspecialchars($blog['category'], ENT_QUOTES, 'UTF-8'); ?></small></p>
+                          <h5 class="card-title"><?php echo htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8'); ?></h5>
+                          <p class="card-text text-muted"><?php echo htmlspecialchars($blog['summary'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="<?php echo htmlspecialchars($blog['author_image_url'], ENT_QUOTES, 'UTF-8'); ?>" class="w-25 me-3 rounded float-start" alt="...">
+                            <p><small><?php echo htmlspecialchars($blog['author_name'], ENT_QUOTES, 'UTF-8'); ?></small></p>
+                            <p class="text-muted"><small><?php echo htmlspecialchars($blog['date'], ENT_QUOTES, 'UTF-8'); ?> ~ <?php echo htmlspecialchars($blog['read_time'], ENT_QUOTES, 'UTF-8'); ?> min read</small></p>
+                            <p class="mb-0 d-inline"><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 0, 166, 81;" href="blogs.php#<?php echo htmlspecialchars($blog['_id'], ENT_QUOTES, 'UTF-8'); ?>">
+                              Read more
+                              <svg class="bi" aria-hidden="true"><use xlink:href="assets/icons.svg#arrow-bar-right"></use></svg>
+                            </a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+    <hr class="featurette-divider">
+
     <!-- vision, mission, goals -->
     <section id="goals&objectives">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
                 <h2>
-                    <div class="display-4 text-center">Living for God, Pursuing a Holy Life
-                    </div>
+                    <div class="display-4 text-center">Living for God, Pursuing a Holy Life</div>
                 </h2>
                 <p class="my-4 lead text-muted text-center">
                     At Maseno University Christian Union, our core values revolve around living for God and pursuing a holy life.
                 </p>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center align-items-center">
-                    <div class="col justify-content-center">
-                        <div class="text-center">                            
-                            <svg class="bi text-body-secondary" width="64" height="64"><use xlink:href="assets/icons.svg#eye"></use></svg>
+                    <?php
+                    foreach ($aboutDetails as $about) {
+                        ?>
+                        <div class="col justify-content-center">
+                            <div class="text-center">                            
+                                <svg class="bi text-body-secondary" width="64" height="64"><use xlink:href="<?php echo htmlspecialchars($about['svg'], ENT_QUOTES, 'UTF-8'); ?>"></use></svg>
+                            </div>
+                            <h2>
+                                <div class="display-6 text-center"><?php echo htmlspecialchars($about['category'], ENT_QUOTES, 'UTF-8'); ?></div>
+                            </h2>
+                            <p class="text-muted text-center">
+                                <?php echo htmlspecialchars($about['description'], ENT_QUOTES, 'UTF-8'); ?>
+                            </p>
                         </div>
-                        <h2>
-                            <div class="display-6 text-center">Our Vision</div>
-                        </h2>
-                        <p class="text-muted text-center">
-                            Living as True Disciples of Jesus Christ.
-                        </p>
-                    </div>
-                    <div class="col ">
-                        <div class="text-center">
-                            <svg class="bi text-body-secondary" width="64" height="64"><use xlink:href="assets/icons.svg#rocket"></use></svg>
-                        </div>
-                        <h2>
-                            <div class="display-6 text-center">Our Mission</div>
-                        </h2>
-                        <p class="text-muted text-center">
-                            Nurturing belief in Christ & Developing Christ-like character.
-                        </p>
-                    </div>
-                    <div class="col ">
-                        <div class="text-center">
-                            <svg class="bi text-body-secondary" width="64" height="64"><use xlink:href="assets/icons.svg#bullseye"></use></svg>
-                        </div>
-                        <h2>
-                            <div class="display-6 text-center">Our Goals</div>
-                        </h2>
-                        <p class="text-muted text-center">
-                            Discipleship, Evangelism & Leadership Development.
-                        </p>
-                    </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
     </section>
+
+
     <hr class="featurette-divider">
+
     <!-- benefits -->
     <section id="benefits">
         <div class="container-xl ">
@@ -157,6 +187,7 @@
         </div>
     </section>
     <hr class="featurette-divider">
+
     <!-- blogs & testimonies -->
     <section id="testimonials">
         <div class="container-xl">
@@ -167,70 +198,35 @@
                 Read the latest blog posts for insights and testimonies.
             </p>
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-                <div class="col">
-                  <div class="card border-0 h-100">
-                    <img src="assets/images/Content-Placeholder-blog.webp" class="card-img-top" alt="...">
-                    <div class="card-body p-2">
-                      <p class="bg-secondary text-white d-inline"><small>Testimony</small></p>
-                      <h5 class="card-title">How God Transformed My Life</h5>
-                      <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <?php
+                foreach ($blogs as $blog) {
+                    ?>
+                    <div class="col">
+                      <div class="card border-0 h-100">
+                        <img src="<?php echo htmlspecialchars($blog['image_url'], ENT_QUOTES, 'UTF-8'); ?>" class="card-img-top" alt="...">
+                        <div class="card-body p-2">
+                          <p class="bg-secondary text-white d-inline"><small><?php echo htmlspecialchars($blog['category'], ENT_QUOTES, 'UTF-8'); ?></small></p>
+                          <h5 class="card-title"><?php echo htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8'); ?></h5>
+                          <p class="card-text text-muted"><?php echo htmlspecialchars($blog['summary'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="<?php echo htmlspecialchars($blog['author_image_url'], ENT_QUOTES, 'UTF-8'); ?>" class="w-25 me-3 rounded float-start" alt="...">
+                            <p><small><?php echo htmlspecialchars($blog['author_name'], ENT_QUOTES, 'UTF-8'); ?></small></p>
+                            <p class="text-muted"><small><?php echo htmlspecialchars($blog['date'], ENT_QUOTES, 'UTF-8'); ?> ~ <?php echo htmlspecialchars($blog['read_time'], ENT_QUOTES, 'UTF-8'); ?> min read</small></p>
+                            <p class="mb-0 d-inline"><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 0, 166, 81;" href="blogs.php#<?php echo htmlspecialchars($blog['_id'], ENT_QUOTES, 'UTF-8'); ?>">
+                              Read more
+                              <svg class="bi" aria-hidden="true"><use xlink:href="assets/icons.svg#arrow-bar-right"></use></svg>
+                            </a></p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="card-footer">
-                        <img src="assets/images/student_m.png" class="w-25 me-3 rounded float-start" alt="...">
-                        <p><small>John Doe</small></p>
-                        <p class="text-muted"><small>11 Jan 2024 ~ 5 min read</small></p>
-                        <p class="mb-0 d-inline"><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 0, 166, 81;" href="blogs.phpl#hgtml">
-                          Read more
-                          <svg class="bi" aria-hidden="true"><use xlink:href="assets/icons.svg#arrow-bar-right"></use></svg>
-                        </a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-0 h-100">
-                    <img src="assets/images/Content-Placeholder-blog.webp" class="card-img-top" alt="...">
-                    <div class="card-body p-2">
-                        <p class="bg-secondary text-white d-inline"><small>Inspiration</small></p>
-                        <h5 class="card-title">Overcoming Fear and Doubt</h5>
-                        <p class="card-text text-muted">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                        <img src="assets/images/student_f.png" class="w-25 me-3 rounded float-start" alt="...">
-                        <p><small>Jane Smith</small></p>
-                        <p class="text-muted"><small>24 Feb 2024 ~ 3 min read</small></p>
-                        <p class="mb-0 d-inline"><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 0, 166, 81;" href="blogs.php#ofad">
-                          Read more
-                          <svg class="bi" aria-hidden="true"><use xlink:href="assets/icons.svg#arrow-bar-right"></use></svg>
-                        </a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-0 h-100">
-                    <img src="assets/images/Content-Placeholder-blog.webp" class="card-img-top" alt="...">
-                    <div class="card-body p-2">
-                        <p class="bg-secondary text-white d-inline"><small>Testimony</small></p>
-                        <h5 class="card-title">Finding Purpose in Life</h5>
-                        <p class="card-text text-muted">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                    <div class="card-footer">
-                        <img src="assets/images/student_m.png" class="w-25 me-3 mt-auto rounded float-start" alt="...">
-                        <p><small>John Johnson</small></p>
-                        <p class="text-muted"><small>16 Apr 2024 ~ 5 min read</small></p>
-                        <p class="mb-0 d-inline">
-                            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 0, 166, 81;" href="blogs.php#fpil">
-                            Read more
-                            <svg class="bi" aria-hidden="true"><use xlink:href="assets/icons.svg#arrow-bar-right"></use></svg>
-                            </a>
-                        </p>
-                    </div>
-                  </div>
-                </div>
-                <a href="blogs.phpl" class="btn col-3 col-lg-1 btn-success btn-sm mt-3">View all</a>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </section>
-    <hr class="featurette-divider">
+
     <!-- resources -->
     <section id="E-Library">
         <div class="container-xl">

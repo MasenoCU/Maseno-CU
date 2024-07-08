@@ -61,4 +61,20 @@ if ($database) {
 }
 
 
+$blogs = [];
+if ($database){
+    $collection= $database->selectCollection('Blogs');
+    $blogsCursor = $collection->find();
+    $blogs = iterator_to_array($blogsCursor);
+
+}else{
+    echo "Connection error from the database.";
+}
+
+$aboutDetails=[];
+if($database){
+    $collection =$database->selectCollection('AboutUs');
+    $aboutCursor=$collection->find();
+    $aboutDetails=iterator_to_array($aboutCursor);
+}
 
