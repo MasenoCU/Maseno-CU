@@ -112,7 +112,7 @@
                   More
                 </a>
                 <ul class="dropdown-menu text-small shadow">
-                  <li><a class="dropdown-item" href="leadership.php">Leadership</a></li>
+                  <li><a class="dropdown-item" href="..leadership.php">Leadership</a></li>
                   <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                   <li><a class="dropdown-item" href="#resources">Resources</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -157,7 +157,7 @@
                               More
                             </a>
                             <ul class="dropdown-menu text-small">
-                              <li><a class="dropdown-item" href="leadership.php">Leadership</a></li>
+                              <li><a class="dropdown-item" href="..leadership.php">Leadership</a></li>
                               <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                               <li><a class="dropdown-item" href="#resources">Resources</a></li>
                               <li><hr class="dropdown-divider"></li>

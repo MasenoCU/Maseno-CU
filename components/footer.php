@@ -1,4 +1,5 @@
-    <!-- footer -->
+<body>   
+   <!-- footer -->
     <section id="footer" class="pb-2">
       <div class="rounded container-xl my-footer">
           <footer class="pt-5">
@@ -6,12 +7,12 @@
               <div class="col-6 col-md-2 mb-3 text-center">
                 <h5>Our Pages</h5>
                 <ul class="nav nav-pills nav-fill flex-column">
-                  <li class="nav-item mb-2"><a href="index.php" class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
-                  <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-body-secondary">About</a></li>
+                  <li class="nav-item mb-2"><a href="..components/index.php" class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
+                  <li class="nav-item mb-2"><a href="..components/about.php" class="nav-link p-0 text-body-secondary">About</a></li>
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Services` Activities</a></li>
                   <li class="nav-item mb-2"><a href="ministries.php" class="nav-link p-0 text-body-secondary">Ministries</a></li>
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Evangelistic Teams</a></li>
-                  <li class="nav-item mb-2"><a href="leadership.php" class="nav-link p-0 text-body-secondary">Leadership</a></li>
+                  <li class="nav-item mb-2"><a href="..components/leadership.php" class="nav-link p-0 text-body-secondary">Leadership</a></li>
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Noticeboard</a></li>
                 </ul>
               </div>
@@ -70,3 +71,7 @@
           </footer>
       </div>
   </section>
+  <script src="../scripts/main.js"></script>
+  <!-- bootstrap JS -->
+  <script src="../scripts/bootstrap.bundle.min.js"></script>
+</body>
