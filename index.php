@@ -15,7 +15,7 @@
                     <div class="container">
                       <div class="carousel-caption text-start">
                         <h1>
-                            <div class="display-2">Join Our Community and Grow in Faith</div>
+                            <div class="display-2">Join Our Community and Grow in Faith(This is second; 6:19)</div>
                         </h1>
                         <p class="lead text-muted">Become part of our Christian Union community and experience spiritual growth in a supportive environment.</p>
                         <p><a class="btn btn-md btn-warning" href="#register" id="joinus">Join Us</a></p>
