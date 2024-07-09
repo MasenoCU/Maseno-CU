@@ -42,7 +42,7 @@
     <div class="thank-you-container">
         <h1>Thank You</h1>
         <p class="thank-you-message">Your registration was successful, Your details are with us now, thanks and have a good day</p>
-        <a class="thank-you-link" href="registration_page.php?mode=login">Login here</a>
+        <a class="thank-you-link" href="registrationpage.php?mode=login">Login here</a>
 
     </div>
 </body>

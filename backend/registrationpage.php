@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <h2 class="title">Login</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="username" placeholder="Username" required />
+                        <input type="text" name="Admissionnumber" placeholder="Admission Number" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-1">
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="username" placeholder="firstname secondname" required />
+                            <input type="text" name="fullnames" placeholder="Mwangi Kamau" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
@@ -151,15 +151,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course eg Bsc. Education" required />
+                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.]{1,}" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text" name="admission_number" placeholder="Admission Number" required />
+                            <input type="text" name="admission_number" placeholder="Admission Number" required pattern="\d{1,}" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
-                            <input type="text" name="phone_number" placeholder="Phone Number" required />
+                            <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10,}" title="Please enter a valid phone number" />
                         </div>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
@@ -178,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="button" class="ministry-btn" data-value="Choir">Choir Ministry</button>
                             <button type="button" class="ministry-btn" data-value="High School Ministry">High School Ministry</button>
                         </div>
-                        <input type="hidden" name="ministry" id="ministry" value="" />
+                        <input type="hidden" name="ministry" id="ministry" value="" required />
 
                         <label class="titlelabel">Year of Study:</label>
                         <div class="yos">
@@ -187,9 +187,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="button" class="eve-team-btn" data-value="3">3</button>
                             <button type="button" class="eve-team-btn" data-value="4">4</button>
                         </div>
-                        <input type="hidden" name="year_of_study" id="year_of_study" value="" />
-                        <button type="button" class="btn next-btn">Next</button>
+                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
                         <button type="button" class="btn back-btn">Back</button>
+                        <button type="button" class="btn next-btn">Next</button>
                     </div>
 
                     <!-- Step 3: Eve team -->
@@ -203,29 +203,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="button" class="eve-team-btn" data-value="Noret">Noret</button>
                             <button type="button" class="eve-team-btn" data-value="Soret">Soret</button>
                             <button type="button" class="eve-team-btn" data-value="Emuseta">Emuseta</button>
+                            <button type="button" class="eve-team-btn" data-value="UET">UET</button>
                         </div>
-                        <input type="hidden" name="eve_team" id="eve_team" value="" />
-                        <button type="button" class="btn next-btn">Next</button>
+                        <input type="hidden" name="eve_team" id="eve_team" value="" required />
                         <button type="button" class="btn back-btn">Back</button>
+                        <button type="button" class="btn next-btn">Next</button>
                     </div>
 
                     <!-- Step 4: Passwords and file upload -->
                     <div class="step step-4">
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" name="password" placeholder="Enter a Password" required />
+                            <input type="password" name="password" placeholder="Enter a Password" required minlength="6" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" name="confirm_password" placeholder="Confirm the Password" required />
+                            <input type="password" name="confirm_password" placeholder="Confirm the Password" required minlength="6" />
                         </div>
                         <div class="input-field file-field">
                             <label for="schoolId">Please Upload Your School ID:</label>
-                            <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" />
+                            <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
                         </div>
-                        <input type="submit" class="btn" name="register" value="Register me Now!" />
                         <button type="button" class="btn back-btn">Back</button>
+                        <input type="submit" class="btn" name="register" value="Register me Now!" />
                     </div>
+
                 </form>
             </div>
         </div>
