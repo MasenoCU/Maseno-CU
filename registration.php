@@ -130,7 +130,7 @@
             <input type="tel" id="phoneNumber" placeholder="E.g. 0725221576" name="phoneNumber" required>
 
             <label for="email">Email Address:</label>
-            <input type="email" id="email" placeholder="E.g. jesuschrist@gmail.com" name="email" required>
+            <input type="email" id="email" placeholder="E.g. " name="email" required>
 
             <input type="submit" value="Register">
         </form>
