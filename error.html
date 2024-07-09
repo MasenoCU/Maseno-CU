@@ -1,4 +1,8 @@
 <?php
+// error.php
+
+// Retrieve the message from the query parameter
+$message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 'Some error occurred, please try again after some time';
 
 ?>
 <!DOCTYPE html>
@@ -6,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <title>Error</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -14,7 +18,7 @@
             padding: 50px;
             background-color: #f0f0f0;
         }
-        .thank-you-container {
+        .error-container {
             background-color: #fff;
             border: 1px solid #ccc;
             padding: 20px;
@@ -22,28 +26,27 @@
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .thank-you-message {
+        .error-message {
             font-size: 18px;
-            color: #5cb85c;
+            color: #d9534f;
         }
-        .thank-you-link {
+        .error-link {
             display: block;
             margin-top: 20px;
             font-size: 16px;
             color: #007bff;
             text-decoration: none;
         }
-        .thank-you-link:hover {
+        .error-link:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="thank-you-container">
-        <h1>Thank You</h1>
-        <p class="thank-you-message">Your registration was successful, Your details are with us now, thanks and have a good day</p>
-        <a class="thank-you-link" href="registration_page.php?mode=login">Login here</a>
-
+    <div class="error-container">
+        <h1>Error</h1>
+        <p class="error-message"><?php echo $message; ?></p>
+        <a class="error-link" href="index.php">Go back to the homepage</a>
     </div>
 </body>
 </html>

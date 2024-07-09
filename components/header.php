@@ -1,3 +1,4 @@
+<?php include("db_connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 <head>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../styles/blog.css">
     <!-- page title -->
     <title>Maseno University Christian Union</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <!-- unicons iconscout -->
@@ -96,12 +98,12 @@
 
     <!-- main header -->
     <header id="header" class="sticky-top bg-body">
-        <!-- navbar -->        
+        <!-- navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
-            <!-- navbar-brand -->                
-            <a href="index.php" class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+            <!-- navbar-brand -->
+            <a href="../index.php" class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                 <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="icons.svg#mucu"></use></svg>
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="/assets/icons.svg#mucu"></use></svg>
                 </svg><span class="ms-1 ms-lg-0 ms-xl-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
             <!-- more nav -->
@@ -110,7 +112,7 @@
                   More
                 </a>
                 <ul class="dropdown-menu text-small shadow">
-                  <li><a class="dropdown-item" href="leadership.php">Leadership</a></li>
+                  <li><a class="dropdown-item" href="..leadership.php">Leadership</a></li>
                   <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                   <li><a class="dropdown-item" href="#resources">Resources</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -120,34 +122,34 @@
             <!-- mobile nav -->
             <div class="dropdown d-sm-none ms-5">
               <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <svg class="bi me-2" width="24" height="24"><use xlink:href="icons.svg#menu" style="fill: currentColor; color:invert;"></use></svg>
+                  <svg class="bi me-2" width="24" height="24"><use xlink:href="assets/icons.svg#menu" style="fill: currentColor; color:invert;"></use></svg>
               </a>
               <ul class="dropdown-menu text-small shadow" style="">
-                <li><a class="dropdown-item active" href="index.html" aria-current="page">Home</a></li>
+                <li><a class="dropdown-item active" href="index.php" aria-current="page">Home</a></li>
                 <li><a class="dropdown-item" href="about.php">About Us</a></li>
                 <li><a class="dropdown-item" href="#">Services</a></li>
-                <li><a class="dropdown-item" href="#">Ministries</a></li>
+                <li><a class="dropdown-item" href="ministries.php">Ministries</a></li>
                 <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                       <a class="dropdown-item icon-link disabled" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
-                          <svg class="bi" width="64" height="64"><use xlink:href="icons.svg#give" style="fill: currentColor; color:invert;"></use></svg>
+                          <svg class="bi" width="64" height="64"><use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;"></use></svg>
                       </a>
                   </li>
               </ul>
             </div>
             <!-- navbar links -->
             <nav class="p-0 mb-1 mt-xl-2 mx-xl-auto border rounded navbar-expand-sm bg-primary" data-bs-theme="auto">
-                <div class="collapse navbar-collapse">                        
+                <div class="collapse navbar-collapse">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li class="nav-item"><a href="index.php" class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
                         <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Services</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
+                        <li class="nav-item"><a href="ministries.php" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
                         <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
                         <li class="nav-item">
                             <a href="#" class="p-2 nav-link icon-link link-body-emphasis" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
-                              <svg class="bi" width="64" height="64"><use xlink:href="icons.svg#give" style="fill: currentColor; color:invert;"></use></svg>
+                              <svg class="bi" width="64" height="64"><use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;"></use></svg>
                             </a>
                         </li>
                         <li class="nav-item d-none d-sm-inline dropdown text-end">
@@ -155,7 +157,7 @@
                               More
                             </a>
                             <ul class="dropdown-menu text-small">
-                              <li><a class="dropdown-item" href="leadership.php">Leadership</a></li>
+                              <li><a class="dropdown-item" href="..leadership.php">Leadership</a></li>
                               <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                               <li><a class="dropdown-item" href="#resources">Resources</a></li>
                               <li><hr class="dropdown-divider"></li>
@@ -172,10 +174,9 @@
             <!-- cta section -->
             <div class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" class="btn btn-warning ms-2" >Sign-up</button>
+                    <button type="button" class="btn btn-outline-primary mx-2" onclick="window.location.href='registrationpage.php'">Login</button>
+                    <button type="button" class="btn btn-warning ms-2" onclick="window.location.href='registrationpage.php'" >Sign-up</button>
                 </div>
             </div>
         </div>
     </header>
-

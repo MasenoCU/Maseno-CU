@@ -70,36 +70,36 @@
 
             </div>
         </div>
-
     </nav>
-
     <section class="main-section">
 
         <div class="container">
             <h1 class="heading">MINISTRIES</h1>
             <div class="card-container">
                 <?php
-            #code to fetch the ministries dynamically.
-
       require 'components/db_connection.php';
       try{
-        $ministriesCollection =$database->selectCollection('Ministries');
-        $ministries=$ministriesCollection->find();
+        $error="Cannot connect to the database";
+        if ($database){
+            $collection =$database->selectCollection('Ministries');
+            $ministries=$collection->find();
 
-        $hasMinistries = false;
-        foreach ($ministries as $ministry) {
-            $hasMinistries = true;
-            echo '<div class="card">';
-            echo '<img src="../assets/image.jpg">';
-            echo '<div class="card-content">';
-            echo '<h3>' . $ministry["ministryName"] . '</h3>';
-            echo '<p>' . $ministry["description"] . '</p>';
-            echo '</div>';
-            echo '</div>';
-        }
-    
-        if (!$hasMinistries) {
-            echo "<p>No ministries to display.</p>";
+            $hasMinistries =false;
+            foreach($ministries as $ministry){
+                $hasMinistries =true;
+                echo '<div class="card">';
+                echo '<img src="../assets/image.jpg">';
+                echo '<div class="card-content">';
+                echo '<h3>' . $ministry["ministryName"] . '</h3>';
+                echo '<p>' . $ministry["description"] . '</p>';
+                echo '</div>';
+                echo '</div>';
+            }
+            if(!$hasMinistries){
+                echo"<p> No Ministries Fetched to Display</p>";
+            }
+        }else{
+            echo $error;
         }
       } catch (MongoDB\Exception\Exception $e){
         /** @var \Throwable $e */

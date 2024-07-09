@@ -34,7 +34,7 @@ $pdf->AddPage();
 $bMargin = $pdf->getBreakMargin();
 $auto_page_break = $pdf->getAutoPageBreak();
 $pdf->SetAutoPageBreak(false, 0);
-$img_file = 'path/to/your/canva-template.png'; // Update this path to your template image
+$img_file = 'path/to/your/canva-template.png'; 
 $pdf->Image($img_file, 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
 $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
 $pdf->setPageMark();
@@ -50,7 +50,6 @@ $pdf->Cell(0, 15, $userName, 0, 1, 'C', 0, '', 0, false, 'T', 'M');
 // Set font for the date
 $pdf->SetFont('helvetica', 'B', 20);
 
-// Position the date (adjust the coordinates to fit your template)
 $pdf->SetXY(50, 200); // Adjust these coordinates
 $pdf->Cell(0, 15, 'on ' . $completionDate, 0, 1, 'C', 0, '', 0, false, 'T', 'M');
 
