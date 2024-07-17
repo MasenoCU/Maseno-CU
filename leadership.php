@@ -4,7 +4,7 @@
 <section id="header">
     <div class="container-xl">
         <h2>
-            <div class="display-4 text-center">Leadership With A Purpose</div>
+            <div class="display-4 text-center">Leading With A Purpose</div>
         </h2>
         <p class="lead text-muted text-center">Discover the power of leadership in the Christian Union and make a
             difference</p>
@@ -46,22 +46,22 @@
             </div>
             <!-- vice chairperson -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_m.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/Lenox Mutwiri.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                 <h5 class="fw-bold mt-2">Lenox Mutwiri</h5>
                 <h5 class="mb-3">Vice Chairperson</h5>
                 <p class="mb-2 text-muted">Lenox brings his strong faith and organizational skills to support the growth
                     of our Union.</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -69,21 +69,21 @@
             </div>
             <!-- secretary -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_f.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/Babra Chebet.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                 <h5 class="fw-bold mt-2">Babra Chebet</h5>
                 <h5 class="mb-3">Secretary</h5>
                 <p class="mb-2 text-muted">Babra ensures effective communication and coordination within our Union.</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -98,15 +98,15 @@
                 <p class="mb-2 text-muted">Kevin manages the financial resources of our Union with integrity and
                     transparency.</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -114,22 +114,22 @@
             </div>
             <!-- vice secretary -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_f.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/Eulita Chebet.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                <h5 class="fw-bold mt-2">Jane Smith</h5>
+                <h5 class="fw-bold mt-2">Eulita Chebet</h5>
                 <h5 class="mb-3">Vice Secretary</h5>
                 <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.
                 </p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -137,21 +137,21 @@
             </div>
             <!-- hospitality coordinator -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_m.png" class="rounded-circle" width="100" height="100"
-                    aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
+                <img src="assets/images/Brian Kimondo.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
+                    aria-label="leader-image" focusable="false" alt="">
                 <h5 class="fw-bold mt-2">Brian Kimondo</h5>
                 <h5 class="mb-3">Hospitality Coordinator</h5>
                 <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quae.</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -159,21 +159,21 @@
             </div>
             <!-- discipleship coordinator -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_f.png" class="rounded-circle" width="100" height="100"
-                    aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                <h5 class="fw-bold mt-2">Jane Johnson</h5>
+                <img src="assets/images/Rosemary Wambua.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
+                    aria-label="leader-image" focusable="false" alt="">
+                <h5 class="fw-bold mt-2">Rosemary Wambua</h5>
                 <h5 class="mb-3">Discipleship Coordinator</h5>
                 <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, consectetur.</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -181,22 +181,22 @@
             </div>
             <!-- mission coordinator -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_m.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/Fidel Were.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                 <h5 class="fw-bold mt-2">Fidel Were</h5>
                 <h5 class="mb-3">Mission Coordinator</h5>
                 <p class="mb-2 text-muted">Fidel organizes impactful outreach programs to spread the love of Christ to
                     others.</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -204,22 +204,22 @@
             </div>
             <!-- bible study coordinator -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_f.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/student_f.png" class="rounded-circle" width="100" height="auto"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                <h5 class="fw-bold mt-2">Jane Doe</h5>
+                <h5 class="fw-bold mt-2">Britney Mwenesi</h5>
                 <h5 class="mb-3">Bible Study Coordinator</h5>
                 <p class="mb-2 text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat,
                     reiciendis!</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -227,21 +227,21 @@
             </div>
             <!-- MIT director -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_f.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/Shyreen Mwenda.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                 <h5 class="fw-bold mt-2">Shyreen Mwenda</h5>
                 <h5 class="mb-3">MIT Coordinator</h5>
                 <p class="mb-2 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, at!</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -249,21 +249,21 @@
             </div>
             <!-- prayer coordinator -->
             <div class="col-md-4 col-lg-3">
-                <img src="assets/images/student_m.png" class="rounded-circle" width="100" height="100"
+                <img src="assets/images/Elvis Omondi.jpg" class="object-fit-cover rounded-circle" width="100" height="100"
                     aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                <h5 class="fw-bold mt-2">John Doe</h5>
+                <h5 class="fw-bold mt-2">Elvis Omondi</h5>
                 <h5 class="mb-3">Prayer Coordinator</h5>
                 <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime!</p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -278,15 +278,15 @@
                 <p class="mb-2 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, reprehenderit!
                 </p>
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="#" target="_blank"><svg
+                    <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>
@@ -354,7 +354,7 @@
 <section id="testimonials">
 
 </section>
-<!-- guidlines -->
+<!-- guidelines -->
 <section id="guidelines">
     <div class="container-xl">
         <div class="row mb-4">

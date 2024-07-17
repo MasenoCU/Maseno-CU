@@ -380,7 +380,7 @@
     <!-- i-frame -->
     <iframe src="components/leadership.htm" title="Events"></iframe>
     <div class="row justify-content-center align-items-center">
-        <a href="leadership.html" target="_parent" rel="noreferrer" class="btn col-auto btn-success btn-sm mt-3">Meet
+        <a href="leadership.php" target="_parent" rel="noreferrer" class="btn col-auto btn-success btn-sm mt-3">Meet
             them all</a>
     </div>
 </section>

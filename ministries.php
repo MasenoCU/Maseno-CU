@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUCU WEB</title>
 
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/mediaquaries.css">
-    <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../new/all.min.css">
-    <link rel="stylesheet" href="../new/fontawesome.min.css">
-    <link rel="stylesheet" href="../styles/ministries.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/mediaquaries.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="new/all.min.css">
+    <link rel="stylesheet" href="new/fontawesome.min.css">
+    <link rel="stylesheet" href="styles/ministries.css">
 
 
 </head>

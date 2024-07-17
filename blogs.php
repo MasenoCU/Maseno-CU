@@ -381,8 +381,8 @@
                     <h4 class="fst-italic">Elsewhere</h4>
                     <ol class="list-unstyled">
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">YouTube</a></li>
+                        <li><a href="sermons.php">Sermons and Notes</a></li>
+                        <li><a href="#">E-Library</a></li>
                     </ol>
                 </div>
             </div>

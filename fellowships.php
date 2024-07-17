@@ -13,7 +13,7 @@
 // limitations under the License. -->
 
 <?php include"components/header.php"; ?>
-<!-- header -->
+<!-- hero -->
 <section id="header">
     <div class="container-xl">
         <div class="row">
@@ -47,15 +47,16 @@
                 <p class="text-muted mb-0">Preston Maina</p>
                 <ul class="nav mb-2">
                     <li class="nav-item mx-1"><a class="nav-link p-0"
-                            href="https://linkedin.com/in/paul-mwika-2066b8234" target="_blank"><svg
+                            href="https://www.linkedin.com/in/prestigious-preston" target="_blank"><svg
                                 class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#linkedin"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/paul.mwika.52"
-                            target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
+                    <li class="nav-item mx-1"><a class="nav-link p-0"
+                            href="https://www.facebook.com/prestigious.preston" target="_blank"><svg
+                                class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#facebook"></use>
                             </svg></a></li>
-                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://wa.me/qr/JPJ4MZ3SNEHDD1"
+                    <li class="nav-item mx-1"><a class="nav-link p-0" href="https://wa.me/qr/GDOUTSNGJIYMF1"
                             target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
                                 <use xlink:href="assets/icons.svg#whatsapp"></use>
                             </svg></a></li>

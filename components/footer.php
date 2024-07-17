@@ -6,7 +6,7 @@
                     <div class="col-6 col-md-2 mb-3 text-center">
                         <h5>Our Pages</h5>
                         <ul class="nav nav-pills nav-fill flex-column">
-                            <li class="nav-item mb-2"><a href="home.php" class="active nav-link p-0 text-body-secondary"
+                            <li class="nav-item mb-2"><a href="homepage.php" class="active nav-link p-0 text-body-secondary"
                                     aria-current="page">Home</a></li>
                             <li class="nav-item mb-2"><a href="about.php"
                                     class="nav-link p-0 text-body-secondary">About</a></li>
