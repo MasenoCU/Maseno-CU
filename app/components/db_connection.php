@@ -77,4 +77,3 @@ if($database){
     $aboutCursor=$collection->find();
     $aboutDetails=iterator_to_array($aboutCursor);
 }
-

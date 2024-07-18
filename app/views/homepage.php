@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in, if not redirect to login page
 if (!isset($_SESSION['username'])) {
-    header("Location: /login.php");
+    header("Location: login.php");
     exit;
 }
 ?>
@@ -19,10 +19,10 @@ if (!isset($_SESSION['username'])) {
     <meta name="description" content="">
     <meta name="author" content="Preston Maina">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Dashboard</title>
+    <title>Dashboard Maseno University Christian Union</title>
 
+    <link href="/public/assets/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
     <link href="/public/assets/styles/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -272,8 +272,7 @@ if (!isset($_SESSION['username'])) {
 
         <div class="container-xl text-center">
             <h2 class="display-4">Welcome to the Home Page</h2>
-            <p class="lead">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! This will be your
-                dashboard.</p>
+            <p class="lead">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! This will be your dashboard.</p>
         </div>
 
     </main>

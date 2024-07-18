@@ -24,11 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Sign Up Maseno University Christian Union</title>
+    <link rel="stylesheet" href="/public/assets/scripts/styles/style.css">
+    <link rel="stylesheet" href="/public/assets/scripts/styles/bootstrap.min.css">
 </head>
 
 <body>

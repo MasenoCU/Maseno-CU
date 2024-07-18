@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
-
-<head>
-    <script src="/public/assets/scripts/color-modes.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- custon css -->
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
-    <link rel="stylesheet" href="/public/assets/styles/blog.css">
-    <!-- page title -->
-    <title>Maseno University Christian Union</title>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
-    <!-- unicons iconscout -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-</head>
-
-<body>
     <!-- spinner -->
 
     <!-- SVG icons -->
@@ -197,7 +178,8 @@
                                 class="nav-link px-2 link-body-emphasis">Fellowships</a></li>
                         <li class="nav-item"><a href="ministries.php"
                                 class="nav-link px-2 link-body-emphasis">Ministries</a></li>
-                        <li class="nav-item"><a href="eveteams.php" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a>
+                        <li class="nav-item"><a href="eveteams.php"
+                                class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a>
                         <li class="nav-item"><a href="leadership.php"
                                 class="nav-link px-2 link-body-emphasis">Leadership</a>
                         </li>

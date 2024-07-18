@@ -1,6 +1,6 @@
 <?php
-require 'components/db_connection.php';
-require 'components/authenticate.php';
+require 'app/components/db_connection.php';
+require 'app/components/authenticate.php';
 
 use MongoDB\Exception\Exception as MongoDBException;
 
@@ -98,10 +98,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e36217afb5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/registrationstyles.css">
+    <link rel="stylesheet" href="/public/assets/styles/registrationstyles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <title>Maseno University Christian Union</title>
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <title>Registration Maseno University Christian Union</title>
 </head>
 <body>
     <div class="container">
@@ -247,11 +247,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p class="cuthemeformat">Login to access the <span>Christian Union</span> Modules</p>
                     <button class="btn transparent" id="sign-in-btn">Login</button>
                 </div>
-                <img src="img/register.svg" class="image" alt="" />
+                <img src="/public/assets/images/register.svg" class="image" alt="" />
             </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="/public/assets/scripts/app.js"></script>
 </body>
 </html>

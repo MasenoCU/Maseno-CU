@@ -33,8 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 
 <head>
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Login Maseno University Christian Union</title>
+    <link rel="stylesheet" type="text/css" href="/public/assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/assets/styles/bootstrap.min.css">
 </head>
 
 <body>
