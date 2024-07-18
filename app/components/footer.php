@@ -13,9 +13,9 @@
                             <li class="nav-item mb-2"><a href="fellowships.php"
                                     class="nav-link p-0 text-body-secondary">Fellowships`
                                     Events</a></li>
-                            <li class="nav-item mb-2"><a href="#"
+                            <li class="nav-item mb-2"><a href="ministries.php"
                                     class="nav-link p-0 text-body-secondary">Ministries</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Evangelistic
+                            <li class="nav-item mb-2"><a href="eveteams.php" class="nav-link p-0 text-body-secondary">Evangelistic
                                     Teams</a></li>
                             <li class="nav-item mb-2"><a href="leadership.php"
                                     class="nav-link p-0 text-body-secondary">Leadership</a></li>
@@ -110,9 +110,9 @@
     </section>
 
     <!-- main js -->
-    <script src="../scripts/main.js"></script>
+    <script src="../public/assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <script src="../public/assets/scripts/bootstrap.bundle.min.js"></script>
 
     </body>
 

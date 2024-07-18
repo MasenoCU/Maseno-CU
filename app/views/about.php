@@ -1,4 +1,4 @@
-<?php include"components/header.php"; ?>
+<?php include"app/components/header.php"; ?>
 
 <!-- head -->
 <section id="header">
@@ -142,7 +142,7 @@
             <p class="lead text-muted mb-16">Get to know the dedicated leaders of our Christian Union.</p>
         </div>
         <!-- i-frame -->
-        <iframe src="components/leadership.htm" title="Events"></iframe>
+        <iframe src="/app/components/leadership.htm" title="Events"></iframe>
         <div class="row justify-content-center align-items-center">
             <a href="leadership.php" target="_parent" rel="noreferrer" class="btn col-auto btn-success btn-sm mt-3">Meet
                 them all</a>
@@ -190,4 +190,4 @@
     </div>
 </section>
 
-<?php include"components/footer.php"; ?>
+<?php include"app/components/footer.php"; ?>

@@ -1,6 +1,6 @@
 <?php
-require 'components/db_connection.php';
-require 'components/authenticate.php';
+require 'app/components/db_connection.php';
+require 'app/components/authenticate.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

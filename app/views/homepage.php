@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in, if not redirect to login page
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: /login.php");
     exit;
 }
 ?>
@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/assets/styles/bootstrap.min.css" rel="stylesheet">
 
     <style>
     .bd-placeholder-img {
@@ -270,10 +270,11 @@ if (!isset($_SESSION['username'])) {
         </div>
         </div>
 
-    <div class="container-xl text-center">
-        <h2 class="display-4">Welcome to the Home Page</h2>
-        <p class="lead">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! This will be your dashboard.</p>
-    </div>
+        <div class="container-xl text-center">
+            <h2 class="display-4">Welcome to the Home Page</h2>
+            <p class="lead">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>! This will be your
+                dashboard.</p>
+        </div>
 
     </main>
     <!-- JavaScript -->

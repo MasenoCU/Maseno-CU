@@ -1,4 +1,4 @@
-<?php include"components/header.php"; ?>
+<?php include"app/components/header.php"; ?>
 
 <!-- header -->
 <section id="header">
@@ -389,4 +389,4 @@
         </div>
 </section>
 
-<?php include"components/footer.php"; ?>
+<?php include"app/components/footer.php"; ?>

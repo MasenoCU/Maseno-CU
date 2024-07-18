@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License. -->
 
-<?php include"components/header.php"; ?>
+<?php include"app/components/header.php"; ?>
 
 <!-- hero -->
  <section id="hero">    <!--from CET 'inspiring' or captured layouts or fullscreen image sliders -->
@@ -53,4 +53,4 @@
     <div class="container-xl"></div>
  </section>
 
-<?php include"components/footer.php"; ?>
+<?php include"app/components/footer.php"; ?>

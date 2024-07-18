@@ -1,4 +1,4 @@
-<?php include"components/header.php"; ?>
+<?php include"app/components/header.php"; ?>
 
 <!-- more SVG icons -->
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -391,4 +391,4 @@
 
 </main>
 
-<?php include("components/footer.php"); ?>
+<?php include"app/components/footer.php"; ?>
