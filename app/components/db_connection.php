@@ -20,7 +20,7 @@ try {
     exit;
 }
 
-//Fetching the ledaers data
+//Fetching the leaders data
 $leaders =[];
 if($database){
   $collection=$database->selectCollection('Leadership');

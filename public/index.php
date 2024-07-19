@@ -1,3 +1,22 @@
+<?php
+//starting the session.
+session_start();
+
+// Includes.
+include"../app/components/db_connection.php";
+
+// Fetch data from MongoDB using controllers
+require '../app/controllers/HomeController.php';
+
+use App\Controllers\HomeController;
+
+$homeController = new HomeController($database);
+$blogs = $homeController->getBlogs();
+$aboutDetails = $homeController->getAboutDetails();
+$faqs = $homeController->getFaqs();
+$contacts = $homeController->getContacts();
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
@@ -190,7 +209,8 @@
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li class="nav-item"><a href="../app/views/homepage.php"
                                 class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="../app/views/about.php" class="nav-link px-2 link-body-emphasis">About
+                        <li class="nav-item"><a href="../app/views/about.php"
+                                class="nav-link px-2 link-body-emphasis">About
                                 Us</a>
                         </li>
                         <li class="nav-item"><a href="../app/views/fellowships.php"
@@ -460,81 +480,40 @@
                 Read the latest blog posts for insights and testimonies.
             </p>
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <?php foreach ($blogs as $blog): ?>
                 <div class="col">
                     <div class="card border-0 h-100">
-                        <img src="assets/images/Content-Placeholder-blog.webp" class="card-img-top" alt="...">
+                        <img src="<?php echo htmlspecialchars($blog['image_url'], ENT_QUOTES, 'UTF-8'); ?>"
+                            class="card-img-top" alt="...">
                         <div class="card-body p-2">
-                            <p class="bg-secondary text-white d-inline"><small>Testimony</small></p>
-                            <h5 class="card-title">How God Transformed My Life</h5>
-                            <p class="card-text text-muted">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img src="assets/images/student_m.png" class="w-25 me-3 rounded float-start" alt="...">
-                            <p><small>John Doe</small></p>
-                            <p class="text-muted"><small>11 Jan 2024 ~ 5 min read</small></p>
-                            <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
-                                    style="--bs-link-hover-color-rgb: 0, 166, 81;" href="../app/views/blogs.php#hgtml">
-                                    Read more
-                                    <svg class="bi" aria-hidden="true">
-                                        <use xlink:href="assets/icons.svg#arrow-bar-right"></use>
-                                    </svg>
-                                </a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 h-100">
-                        <img src="assets/images/Content-Placeholder-blog.webp" class="card-img-top" alt="...">
-                        <div class="card-body p-2">
-                            <p class="bg-secondary text-white d-inline"><small>Inspiration</small></p>
-                            <h5 class="card-title">Overcoming Fear and Doubt</h5>
-                            <p class="card-text text-muted">This card has supporting text below as a natural lead-in to
-                                additional content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img src="assets/images/student_f.png" class="w-25 me-3 rounded float-start" alt="...">
-                            <p><small>Jane Smith</small></p>
-                            <p class="text-muted"><small>24 Feb 2024 ~ 3 min read</small></p>
-                            <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
-                                    style="--bs-link-hover-color-rgb: 0, 166, 81;" href="../app/views/blogs.php#ofad">
-                                    Read more
-                                    <svg class="bi" aria-hidden="true">
-                                        <use xlink:href="assets/icons.svg#arrow-bar-right"></use>
-                                    </svg>
-                                </a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0 h-100">
-                        <img src="assets/images/Content-Placeholder-blog.webp" class="card-img-top" alt="...">
-                        <div class="card-body p-2">
-                            <p class="bg-secondary text-white d-inline"><small>Testimony</small></p>
-                            <h5 class="card-title">Finding Purpose in Life</h5>
-                            <p class="card-text text-muted">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This card has even longer content than the first to show
-                                that
-                                equal height action.</p>
-                        </div>
-                        <div class="card-footer">
-                            <img src="assets/images/student_m.png" class="w-25 me-3 mt-auto rounded float-start"
-                                alt="...">
-                            <p><small>John Johnson</small></p>
-                            <p class="text-muted"><small>16 Apr 2024 ~ 5 min read</small></p>
-                            <p class="mb-0 d-inline">
-                                <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 0, 166, 81;"
-                                    href="../app/views/blogs.php#fpil">
-                                    Read more
-                                    <svg class="bi" aria-hidden="true">
-                                        <use xlink:href="assets/icons.svg#arrow-bar-right"></use>
-                                    </svg>
-                                </a>
+                            <p class="bg-secondary text-white d-inline">
+                                <small><?php echo htmlspecialchars($blog['category'], ENT_QUOTES, 'UTF-8'); ?></small>
                             </p>
+                            <h5 class="card-title"><?php echo htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8'); ?>
+                            </h5>
+                            <p class="card-text text-muted">
+                                <?php echo htmlspecialchars($blog['summary'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="<?php echo htmlspecialchars($blog['author_image_url'], ENT_QUOTES, 'UTF-8'); ?>"
+                                class="w-25 me-3 rounded float-start" alt="...">
+                            <p><small><?php echo htmlspecialchars($blog['author_name'], ENT_QUOTES, 'UTF-8'); ?></small>
+                            </p>
+                            <p class="text-muted">
+                                <small><?php echo htmlspecialchars($blog['date'], ENT_QUOTES, 'UTF-8'); ?>
+                                    ~ <?php echo htmlspecialchars($blog['read_time'], ENT_QUOTES, 'UTF-8'); ?> min
+                                    read</small>
+                            </p>
+                            <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
+                                    style="--bs-link-hover-color-rgb: 0, 166, 81;"
+                                    href="blogs.php#<?php echo htmlspecialchars($blog['_id'], ENT_QUOTES, 'UTF-8'); ?>">Read
+                                    more<svg class="bi" aria-hidden="true">
+                                        <use xlink:href="assets/icons.svg#arrow-bar-right"></use>
+                                    </svg></a></p>
                         </div>
                     </div>
                 </div>
-                <a href="blogs.php" class="btn col-3 col-lg-1 btn-success btn-sm mt-3">View all</a>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -627,7 +606,7 @@
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="../app/components/events.htm" title="Events"></iframe>
+        <iframe src="../app/components/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 
@@ -642,7 +621,7 @@
             </div>
         </div>
         <!-- i-frame -->
-        <iframe src="../app/components/leadership.htm" title="Events"></iframe>
+        <iframe src="../app/components/leadership.php" title="Events"></iframe>
         <div class="row justify-content-center align-items-center">
             <a href="../app/views/leadership.php" target="_parent" rel="noreferrer"
                 class="btn col-auto btn-success btn-sm mt-3">Meet
@@ -650,7 +629,7 @@
         </div>
     </section>
     <hr class="featurette-divider">
-    
+
     <!-- FAQs -->
     <section id="FAQs">
         <div class="container-xl">
@@ -669,76 +648,35 @@
                     </svg>
                 </div>
                 <div class="col-lg-8">
-                    <!-- accordion -->
+                    <!-- Accordion -->
                     <div class="accordion" id="questions">
+                        <?php foreach ($faqs as $index => $faq): ?>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading-1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#questionOne" aria-expanded="true" aria-controls="questionOne">
-                                    What is a Christian Union?
+                            <h2 class="accordion-header" id="heading-<?php echo $index; ?>">
+                                <button class="accordion-button <?php echo $index === 0 ? '' : 'collapsed'; ?>"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#question<?php echo $index; ?>"
+                                    aria-expanded="<?php echo $index === 0 ? 'true' : 'false'; ?>"
+                                    aria-controls="question<?php echo $index; ?>">
+                                    <?php echo htmlspecialchars($faq['question'], ENT_QUOTES, 'UTF-8'); ?>
                                 </button>
                             </h2>
-                            <div id="questionOne" class="accordion-collapse collapse show" aria-labelledby="heading-1"
-                                data-bs-parent="#questions">
+                            <div id="question<?php echo $index; ?>"
+                                class="accordion-collapse collapse <?php echo $index === 0 ? 'show' : ''; ?>"
+                                aria-labelledby="heading-<?php echo $index; ?>" data-bs-parent="#questions">
                                 <div class="accordion-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nemo, magnam, quo in
-                                    dolore non officia quisquam placeat facilis nisi sunt qui ea labore fugit.
-                                    Necessitatibus, minima. Voluptate, repellendus laborum.
+                                    <?php echo nl2br(htmlspecialchars($faq['answer'], ENT_QUOTES, 'UTF-8')); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading-2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
-                                    Who can join?
-                                </button>
-                            </h2>
-                            <div id="questionTwo" class="accordion-collapse collapse" aria-labelledby="heading-2"
-                                data-bs-parent="#questions">
-                                <div class="accordion-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo omnis et quia
-                                    molestiae obcaecati voluptatem temporibus culpa impedit fugit in.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading-3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
-                                    What ministries are available?
-                                </button>
-                            </h2>
-                            <div id="questionThree" class="accordion-collapse collapse" aria-labelledby="heading-3"
-                                data-bs-parent="#questions">
-                                <div class="accordion-body">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit eaque asperiores
-                                    reiciendis deleniti laborum sit quae obcaecati facere vitae architecto!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading-4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#questionFour" aria-expanded="false" aria-controls="questionFour">
-                                    How can I get involved?
-                                </button>
-                            </h2>
-                            <div id="questionFour" class="accordion-collapse collapse" aria-labelledby="heading-4"
-                                data-bs-parent="#questions">
-                                <div class="accordion-body">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit eaque asperiores
-                                    reiciendis deleniti laborum sit quae obcaecati facere vitae architecto!
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
             <div class="text-start">
                 <h3>Still have questions?</h3>
                 <p class="text-muted">Contact us for more information or assistance.</p>
-                <a href="#contact " class="btn btn-outline-secondary btn-md ms-2 mb-2 border-2 ">Contact Us</a>
+                <a href="#contact" class="btn btn-outline-secondary btn-md ms-2 mb-2 border-2 ">Contact Us</a>
             </div>
         </div>
     </section>
@@ -748,7 +686,7 @@
     <section id="cta">
         <!-- jumbotron -->
         <div class="container-xl md-4 align-content-center align-items-center">
-            <div class="p-2 text-center bg-body-tertiar rounded-3 home-cta">
+            <div class="p-2 text-center rounded-3 home-cta">
                 <svg class="bi mt-4 mb-3" width="70" height="62">
                     <use xlink:href="assets/icons.svg#mucu" />
                 </svg>
@@ -760,8 +698,9 @@
                     ministries and evangelistic teams to grow in your faith and make a difference in the world.
                 </p>
                 <div class="d-inline-block text-center text-md-start">
-                    <a href="#register" id="joinus" class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Join today</a>
-                    <a href="#login" id="learnmore"
+                    <a href="registrationpage.php" id="joinus"
+                        class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Join today</a>
+                    <a href="#login" id="login.php"
                         class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill">Sign
                         in</a>
                 </div>
@@ -769,7 +708,7 @@
         </div>
     </section>
 
-    <!-- contact -->
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container-xl justify-content-center align-items-center">
             <div class="text-start">
@@ -780,33 +719,34 @@
             </div>
             <div class="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center align-content-center">
                 <div class="col-auto col-lg-4">
+                    <?php foreach ($contacts as $contact) : ?>
+                    <?php if ($contact['contactType'] == 'Email') : ?>
                     <div class="text-start">
                         <h5>Email</h5>
                         <p class="mb-0">Send us an email</p>
-                        <p><small><a href="mailto:contact@yourcu.com"
-                                    class="contact-link">contact@yourcu.com</a></small>
-                        </p>
+                        <p><small><a href="mailto:<?= $contact['contactDetail'] ?>"
+                                    class="contact-link"><?= $contact['contactDetail'] ?></a></small></p>
                     </div>
+                    <?php elseif ($contact['contactType'] == 'PhoneNumber') : ?>
                     <div class="text-start">
                         <h5>Phone</h5>
                         <p class="mb-0">Give us a call</p>
-                        <p><small <a href="tel:+254712345678" class="contact-link">+254712345678</a></small></p>
+                        <p><small><a href="tel:<?= $contact['contactDetail'] ?>"
+                                    class="contact-link"><?= $contact['contactDetail'] ?></a></small></p>
                     </div>
+                    <?php elseif ($contact['contactType'] == 'Address') : ?>
                     <div class="text-start">
                         <h5>Visit Us</h5>
-                        <p class="mb-0">LH15 Siriba Campus, Maseno, Kenya</p>
-                        <p>
-                            <small>
-                                <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;"
-                                    href="https://maps.google.com/maps/dir//lecture+hall+15+XJW3%2B7R3+Maseno/@-0.0043532,34.6045384,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x182aa9fb91ce4dc5:0xc37f7341e6b2549d">
-                                    Get directions
-                                </a>
-                            </small>
-                        </p>
+                        <p class="mb-0"><?= $contact['contactDetail'] ?></p>
+                        <p><small><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                                    href="https://maps.google.com/maps/dir//lecture+hall+15+XJW3%2B7R3+Maseno/@-0.0043532,34.6045384,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x182aa9fb91ce4dc5:0xc37f7341e6b2549d">Get
+                                    directions</a></small></p>
                     </div>
+                    <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
                 <div class="col-auto col-lg-8">
-                    <iframe class="map-iframe"
+                    <iframe title="Pin on LH15" class="map-iframe"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498.7272886660101!2d34.604589600000004!3d-0.0042575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa9fb91ce4dc5%3A0xc37f7341e6b2549d!2slecture%20hall%2015!5e0!3m2!1sen!2ske!4v1717702928110!5m2!1sen!2ske"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -832,7 +772,8 @@
                                     Events</a></li>
                             <li class="nav-item mb-2"><a href="../app/views/ministries.php"
                                     class="nav-link p-0 text-body-secondary">Ministries</a></li>
-                            <li class="nav-item mb-2"><a href="../app/views/eveteams.php" class="nav-link p-0 text-body-secondary">Evangelistic
+                            <li class="nav-item mb-2"><a href="../app/views/eveteams.php"
+                                    class="nav-link p-0 text-body-secondary">Evangelistic
                                     Teams</a></li>
                             <li class="nav-item mb-2"><a href="../app/views/leadership.php"
                                     class="nav-link p-0 text-body-secondary">Leadership</a></li>
