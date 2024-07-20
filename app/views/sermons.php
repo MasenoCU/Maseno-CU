@@ -19,7 +19,7 @@
 <body>
 
     <!-- header -->
-    <?php include"app/components/header.php"; ?>
+    <?php include"../components/header.php"; ?>
 
     <!-- hero -->
     <section id="hero">
@@ -100,7 +100,7 @@
     </section>
 
     <!-- footer -->
-    <?php include"app/components/footer.php"; ?>
+    <?php include"../components/footer.php"; ?>
 
     <!-- main js -->
     <script src="/public/assets/scripts/main.js"></script>

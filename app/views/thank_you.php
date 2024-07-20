@@ -50,7 +50,7 @@
     <div class="thank-you-container">
         <h1>Thank you for registering with us!</h1>
         <p class="thank-you-message">We will verify your details and an email will be sent to you with login instructions.</p>
-        <a class="thank-you-link" href="login.php?mode=login">Login here</a>
+        <a class="thank-you-link" href="registrationpage.php?mode=login">Login here</a>
     </div>
 </body>
 

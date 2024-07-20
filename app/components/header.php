@@ -1,5 +1,7 @@
     <!-- spinner -->
-
+<?php
+include"db_connection.php";
+?>
     <!-- SVG icons -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -111,7 +113,7 @@
         <!-- navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
             <!-- navbar-brand -->
-            <a href="index.php"
+            <a href="../../public/index.php"
                 class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                 <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
                     <rect width="100%" height="100%" fill="white" />
@@ -218,8 +220,8 @@
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" class="btn btn-warning ms-2">Sign-up</button>
+                    <button type="button" href='../views/registrationpage.php' class="btn btn-outline-primary mx-2">Login</button>
+                    <button type="button" href='../views/registrationpage.php' class="btn btn-warning ms-2">Sign-up</button>
                 </div>
             </div>
         </div>

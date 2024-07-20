@@ -19,7 +19,7 @@
 <body>
 
     <!-- header -->
-    <?php include"app/components/header.php"; ?>
+    <?php include"../components/header.php"; ?>
 
     <!-- more SVG icons -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -433,7 +433,7 @@
     </main>
 
     <!-- footer -->
-    <?php include"app/components/footer.php"; ?>
+    <?php include"../components/footer.php"; ?>
 
     <!-- main js -->
     <script src="/public/assets/scripts/main.js"></script>

@@ -15,6 +15,7 @@ $blogs = $homeController->getBlogs();
 $aboutDetails = $homeController->getAboutDetails();
 $faqs = $homeController->getFaqs();
 $contacts = $homeController->getContacts();
+$events = $homeController->getEvents();
 ?>
 
 <!DOCTYPE html>

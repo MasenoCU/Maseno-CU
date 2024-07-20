@@ -129,7 +129,7 @@
 <body>
 
     <!-- header -->
-    <?php include"components/header.php"; ?>
+    <?php include"../components/header.php"; ?>
 
     <!-- hero -->
     <section id="teams" class="py-5">
@@ -600,7 +600,7 @@
     </section>
 
 
-    <?php include"app/components/footer.php"; ?>
+    <?php include"../components/footer.php"; ?>
 
     <!-- main js -->
     <script src="/public/assets/scripts/main.js"></script>

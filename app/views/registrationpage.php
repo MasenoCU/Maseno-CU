@@ -1,6 +1,6 @@
 <?php
-require 'app/components/db_connection.php';
-require 'app/components/authenticate.php';
+require '../components/db_connection.php';
+require '../components/authenticate.php';
 
 use MongoDB\Exception\Exception as MongoDBException;
 
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = htmlspecialchars($_POST['username']);
         $password = $_POST['password'];
 
-        try { 
+        try {
             if ($database) {
                 $collection = $database->selectCollection('Users');
                 $user = $collection->findOne(['username' => $username]);
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-1">
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="fullnames" placeholder="Mwangi Kamau" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
+                            <input type="text" name="fullnames" placeholder="John Doe" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>

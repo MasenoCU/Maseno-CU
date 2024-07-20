@@ -13,25 +13,31 @@ class HomeController
 
     public function getBlogs()
     {
-        $collection = $this->database->selectCollection('blogs');
+        $collection = $this->database->selectCollection('Blogs');
         return $collection->find()->toArray();
     }
 
     public function getAboutDetails()
     {
-        $collection = $this->database->selectCollection('about');
+        $collection = $this->database->selectCollection('AboutUs');
         return $collection->find()->toArray();
     }
 
     public function getFaqs()
     {
-        $collection = $this->database->selectCollection('faqs');
+        $collection = $this->database->selectCollection('FAQs');
         return $collection->find()->toArray();
     }
 
     public function getContacts()
     {
-        $collection = $this->database->selectCollection('contacts');
+        $collection = $this->database->selectCollection('Contacts');
+        return $collection->find()->toArray();
+    }
+
+    public function getEvents()
+    {
+        $collection = $this->database->selectCollection('Events');
         return $collection->find()->toArray();
     }
 }
