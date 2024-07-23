@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="signin-signup">
                 
                 <form action="registrationpage.php" class="sign-in-form" method="post">
-                    <h2 class="title">Login</h2>
+                    <h2 class="title">Welcome Back!</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="Admissionnumber" placeholder="Admission Number" required />
@@ -119,21 +119,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="password" name="password" placeholder="Password" required />
                     </div>
                     <input type="submit" name="login" value="Login" class="btn solid" />
-                    <p class="social-text">Or Sign in with social platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
                 </form>
 
                 <form action="registrationpage.php" class="sign-up-form" method="post" enctype="multipart/form-data">
@@ -151,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.]{1,}" title="Please enter a valid course" />
+                            <input type="text" name="course" placeholder="Course (e.g., BSc. Education)" required pattern="[A-Za-z\s.]{1,}" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
@@ -159,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
-                            <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10,}" title="Please enter a valid phone number" />
+                            <input type="text" name="phone_number" placeholder="Phone Number (e.g. 0712345678" required pattern="\d{10,}" title="Please enter a valid phone number" />
                         </div>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
