@@ -37,21 +37,21 @@ include"db_connection.php";
                         <li class="nav-item mx-1"><a class="nav-link p-0"
                                 href="<?php echo htmlspecialchars($leader['linkedin'], ENT_QUOTES, 'UTF-8'); ?>"
                                 target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="../assets/icons.svg#linkedin"></use>
+                                    <use xlink:href="/public/assets/icons.svg#linkedin"></use>
                                 </svg></a></li>
                         <?php endif; ?>
                         <?php if (!empty($leader['facebook'])): ?>
                         <li class="nav-item mx-1"><a class="nav-link p-0"
                                 href="<?php echo htmlspecialchars($leader['facebook'], ENT_QUOTES, 'UTF-8'); ?>"
                                 target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="../assets/icons.svg#facebook"></use>
+                                    <use xlink:href="/public/assets/icons.svg#facebook"></use>
                                 </svg></a></li>
                         <?php endif; ?>
                         <?php if (!empty($leader['whatsapp'])): ?>
                         <li class="nav-item mx-1"><a class="nav-link p-0"
                                 href="<?php echo htmlspecialchars($leader['whatsapp'], ENT_QUOTES, 'UTF-8'); ?>"
                                 target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="../assets/icons.svg#whatsapp"></use>
+                                    <use xlink:href="/public/assets/icons.svg#whatsapp"></use>
                                 </svg></a></li>
                         <?php endif; ?>
                     </ul>

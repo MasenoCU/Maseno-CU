@@ -63,25 +63,25 @@ include"db_connection.php";
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://www.facebook.com/Masenocu/"
                                     target="_blank"><svg class="bi text-body-primary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#facebook"></use>
+                                        <use xlink:href="/public/assets/icons.svg#facebook"></use>
                                     </svg> Facebook</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://whatsapp.com/channel/0029VaCqwFSIt5ryXrSNeN3w" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#whatsapp"></use>
+                                        <use xlink:href="/public/assets/icons.svg#whatsapp"></use>
                                     </svg> WhatsApp</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="http://www.youtube.com/@maseno_cu"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#youtube"></use>
+                                        <use xlink:href="/public/assets/icons.svg#youtube"></use>
                                     </svg> YouTube</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://www.instagram.com/maseno_cu/" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#instagram"></use>
+                                        <use xlink:href="/public/assets/icons.svg#instagram"></use>
                                     </svg> Instagram</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://twitter.com/Maseno_CU"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#twitter-x"></use>
+                                        <use xlink:href="/public/assets/icons.svg#twitter-x"></use>
                                     </svg> X</a></li>
                         </ul>
                     </div>

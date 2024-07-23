@@ -118,7 +118,7 @@ include"db_connection.php";
                 <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
                     <rect width="100%" height="100%" fill="white" />
                     <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="assets/icons.svg#mucu"></use>
+                        <use xlink:href="/public/assets/icons.svg#mucu"></use>
                     </svg>
                 </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
@@ -144,7 +144,7 @@ include"db_connection.php";
                     class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <svg class="bi me-2" width="24" height="24">
-                        <use xlink:href="assets/icons.svg#menu" style="fill: currentColor; color:invert;"></use>
+                        <use xlink:href="/public/assets/icons.svg#menu" style="fill: currentColor; color:invert;"></use>
                     </svg>
                 </a>
                 <ul class="dropdown-menu text-small shadow">
@@ -152,7 +152,7 @@ include"db_connection.php";
                     <li><a class="dropdown-item" href="about.php">About Us</a></li>
                     <li><a class="dropdown-item" href="fellowships.php">Fellowships</a></li>
                     <li><a class="dropdown-item" href="ministries.php">Ministries</a></li>
-                    <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
+                    <li><a class="dropdown-item" href="evteams.php">Evangelistic Teams</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -160,7 +160,7 @@ include"db_connection.php";
                         <a class="dropdown-item icon-link disabled"
                             style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                             <svg class="bi" width="64" height="64">
-                                <use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;">
+                                <use xlink:href="/public/assets/icons.svg#give" style="fill: currentColor; color:invert;">
                                 </use>
                             </svg>
                         </a>
@@ -195,7 +195,7 @@ include"db_connection.php";
                                     <a class="dropdown-item icon-link disabled"
                                         style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                                         <svg class="bi" width="64" height="64">
-                                            <use xlink:href="assets/icons.svg#give"
+                                            <use xlink:href="/public/assets/icons.svg#give"
                                                 style="fill: currentColor; color:invert;">
                                             </use>
                                         </svg>
@@ -220,8 +220,8 @@ include"db_connection.php";
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                    <button type="button" href='../views/registrationpage.php' class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" href='../views/registrationpage.php' class="btn btn-warning ms-2">Sign-up</button>
+                    <button type="button" href='/app/views/registrationpage.php' class="btn btn-outline-primary mx-2">Login</button>
+                    <button type="button" href='/app/views/registrationpage.php' class="btn btn-warning ms-2">Sign-up</button>
                 </div>
             </div>
         </div>
