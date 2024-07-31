@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NET - Maseno</title>
+
+    <script src="scripts/color-modes.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+        <!-- custon css -->
+        <link rel="stylesheet" href="styles/styles.css">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+    <style>
+    .trapezium-wrapper {
+    width: 100%; /* Width of the trapezium */
+    height: 300px; /* Height of the trapezium */
+    overflow: hidden;
+    display: inline-block;
+}
+
+.trapezium {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+}
+</style>
+      </style>
+</head>
+<body>
+        <!-- spinner -->
+
+    <!-- SVG icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+          <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+          <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </symbol>
+        <symbol id="chevron-left" viewBox="0 0 16 16">
+            <title>chevron-left</title><g fill="#212121"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"></path></g>
+        </symbol>
+        <symbol id="chevron-right" viewBox="0 0 16 16">
+            <title>chevron-right</title><g fill="#212121"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path></g>
+        </symbol>
+        <symbol id="arrow-bar-right" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+        </symbol>
+    </svg>
+
+    <!-- toggle theme -->
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                id="bd-theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                aria-label="Toggle theme (auto)">
+          <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+              <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+              Light
+              <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+              <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+              Dark
+              <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+              <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+              Auto
+              <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </button>
+          </li>
+        </ul>
+    </div>
+
+    <!-- Major ongoing/upcoming events display -->
+    <div class="container-xxl h-100 d-none">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <div class="bg-info h-100 d-flex text-center justify-content-center align-items-center">
+                    <!-- Upcoming/Ongoing Events Countdown -->
+                    <div class="d-flex align-items-center">
+                        <p class="m-2 lead fw-bold">Commission Conference 2024:</p>
+                        <div class="events-cd" data-countdown="2024/12/27"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main header -->
+    <header id="header" class="sticky-top bg-body">
+        <!-- navbar -->        
+        <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
+            <!-- navbar-brand -->                
+            <a href="index.html" class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="assets/icons.svg#mucu"></use></svg>
+                </svg><span class="ms-1 ms-lg-0 ms-xl-1 fw-bold" style="font-size: large;">MUCU</span>
+            </a>
+            <!-- more nav -->
+            <div class="d-sm-none flex-shrink-0 dropdown mx-auto">
+                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                  <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
+                  <li><a class="dropdown-item" href="#">Noticeboard</a></li>
+                  <li><a class="dropdown-item" href="#resources">Resources</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#reachout">Reach out</a></li>
+                </ul>
+            </div>
+            <!-- mobile nav -->
+            <div class="dropdown d-sm-none ms-5">
+              <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg class="bi me-2" width="24" height="24"><use xlink:href="assets/icons.svg#menu" style="fill: currentColor; color:invert;"></use></svg>
+              </a>
+              <ul class="dropdown-menu text-small shadow" style="">
+                <li><a class="dropdown-item active" href="index.html" aria-current="page">Home</a></li>
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Services</a></li>
+                <li><a class="dropdown-item" href="ministries.html">Ministries</a></li>
+                <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                      <a class="dropdown-item icon-link disabled" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
+                          <svg class="bi" width="64" height="64"><use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;"></use></svg>
+                      </a>
+                  </li>
+              </ul>
+            </div>
+            <!-- navbar links -->
+            <nav class="p-0 mb-1 mt-xl-2 mx-xl-auto border rounded navbar-expand-sm bg-primary" data-bs-theme="auto">
+                <div class="collapse navbar-collapse">                        
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link px-2 link-body-emphasis">About Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Services</a></li>
+                        <li class="nav-item"><a href="ministries.html" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="p-2 nav-link icon-link link-body-emphasis" style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
+                              <svg class="bi" width="64" height="64"><use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item d-none d-sm-inline dropdown text-end">
+                            <a href="#" class="nav-link d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              More
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                              <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
+                              <li><a class="dropdown-item" href="#">Noticeboard</a></li>
+                              <li><a class="dropdown-item" href="#resources">Resources</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#reachout">Reach Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- bs search -->
+            <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+            <!-- cta section -->
+            <div class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
+                    <button type="button" class="btn btn-warning ms-2" >Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+     <section class="container mt-5 evteam ">
+        <div class="row py-4">
+            <div class="jumbotron link-body-emphasis animate__animated animate__fadeInUp">
+              <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
+                <img src="assets/images/ev-logo/UET LOGO.png" alt="UET Image" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
+                <h1 class="display-4 text-secondary">About NET</h1>
+                </div>
+                <p class="lead text-primary">Learn more about the Nyanza Evangelistic Team, our mission, and our values.</p>
+                <hr class="my-4 ">
+                <p class="text-primary">NET Ministries is an evangelistic team committed to preaching and teaching the gospel of Jesus Christ in Nyanza and beyond.</p>
+            </div>
+        </div>
+     </section>
+     <hr class="my-4 bg-tertiary ">
+        <section class="about-section py-5 bg-tertiary mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-body-emphasis">
+                        <h2>Our History</h2>
+                        <p>Nyanza Evangelistic Team  Maseno University is a team of born again Christian students who have a calling to reach out to people in Nyanza province with the Gospel of Jesus Christ and who are joined together with the heavenly calling according to the Holy Scriptures. And it declares that it shall be nondenominational, non-political, voluntary and non-biased.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section py-5 link-body-emphasis">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <i class="bi bi-book-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h3 class="text-secondary">Mandate</h3>
+                        <p class="text-primary">UET's mandate is to fulfill the Great Commission of our Lord Jesus Christ as in Matthew 28:19‐20: “Go ye therefore and make disciples of all nations...”</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="bi bi-eye-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h3 class="text-secondary">Vision</h3>
+                        <p class="text-primary">A leading organization in transforming the lives of people in Kenya by the holistic gospel of Christ through the power of the Holy Ghost.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="bi bi-globe2 text-primary mb-3 " style="font-size: 2rem;"></i>
+                        <h3 class="text-secondary " >Mission</h3>
+                        <p class="text-primary" > As a non-denominational ministry, UET is committed to prayerfully proclaiming the gospel of Jesus Christ through preaching, training, mentoring, and community initiatives in Kenya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-4 bg-tertiary ">
+
+        <section class="about-section py-5 bg-tertiary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="text-secondary">Membership</h2>
+                        <p>To become a member of UET Kenya, one has to subscribe annually with Ksh 100. After campus, one still remains a member of UET as an associate and can join branches and fellowships/activities.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <div class="trapezium-wrapper">
+                          <img src="assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="my-4 bg-tertiary ">
+
+        <section class="activities-section py-5 link-body-emphasis">
+            <div class="container text-body-emphasis">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-secondary">Activities</h2>
+                        <ul>
+                            <li>Fellowships every Saturday from 5:30pm-7:00pm</li>
+                            <li>Prayer and fasting every Thursday</li>
+                            <li>A retreat once per semester</li>
+                            <li>At least one prayer week per semester, and another before every mission</li>
+                            <li>Family meetings on Sundays</li>
+                            <li>Door-to-door evangelism within the campus</li>
+                            <li>Annual General Mission and Mini-missions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr class="my-4 bg-tertiary ">
+
+<!-- <?php include("components/footer.php"); ?> -->
+      <!-- footer -->
+      <section id="footer" class="pb-2">
+        <div class="rounded container-xl my-footer">
+            <footer class="pt-5">
+              <div class="row justify-content-center">
+                <div class="col-6 col-md-2 mb-3 text-center">
+                  <h5>Our Pages</h5>
+                  <ul class="nav nav-pills nav-fill flex-column">
+                    <li class="nav-item mb-2"><a href="index.html" class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
+                    <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Services` Activities</a></li>
+                    <li class="nav-item mb-2"><a href="ministries.html" class="nav-link p-0 text-body-secondary">Ministries</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Evangelistic Teams</a></li>
+                    <li class="nav-item mb-2"><a href="leadership.html" class="nav-link p-0 text-body-secondary">Leadership</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Noticeboard</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-2 mb-3 text-center">
+                  <h5 id="resources">Resources</h5>
+                  <ul class="nav flex-column nav-pills nav-fill">
+                    <li class="nav-item mb-2"><a href="blogs.html" class="nav-link p-0 text-body-secondary">Blogs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">E-Library</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gallery</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sermons` Notes</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-2 mb-3 text-center">
+                  <h5 id="reachout">Reach Out</h5>
+                  <ul class="nav flex-column nav-pills nav-fill">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Need Jesus?</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Prayer Request</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Get Support</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Online Giving</a></li>
+                  </ul>
+                </div>
+  
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Follow Us:</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a class="nav-link p-0" href="https://www.facebook.com/Masenocu/" target="_blank"><svg class="bi text-body-primary" width="20" height="20"><use xlink:href="assets/icons.svg#facebook"></use></svg> Facebook</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0" href="https://whatsapp.com/channel/0029VaCqwFSIt5ryXrSNeN3w" target="_blank"><svg class="bi text-body-secondary" width="20" height="20"><use xlink:href="assets/icons.svg#whatsapp"></use></svg> WhatsApp</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0" href="http://www.youtube.com/@maseno_cu" target="_blank"><svg class="bi text-body-secondary" width="20" height="20"><use xlink:href="assets/icons.svg#youtube"></use></svg> YouTube</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0" href="https://www.instagram.com/maseno_cu/" target="_blank"><svg class="bi text-body-secondary" width="20" height="20"><use xlink:href="assets/icons.svg#instagram"></use></svg> Instagram</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0" href="https://twitter.com/Maseno_CU" target="_blank"><svg class="bi text-body-secondary" width="20" height="20"><use xlink:href="assets/icons.svg#twitter-x"></use></svg> X</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-md-4 mb-3">
+                  <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p class="text-body-secondary">Stay up to date with the latest features by joining our newsletter.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                      <label for="newsletter1" class="visually-hidden">Email address</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                      <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          
+              <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 mb-0 border-top">
+                <p>© 2024 MUCU, Inc. We love our members!</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="nav-item"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+                    <li class="nav-item mx-4"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+                </ul>
+              </div>
+            </footer>
+        </div>
+    </section>
+  
+     <!-- main js -->
+     <script src="scripts/main.js"></script>
+     <!-- bootstrap JS -->
+     <script src="scripts/bootstrap.bundle.min.js"></script>
+     
+   </body>
+   </html>

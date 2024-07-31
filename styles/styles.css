@@ -121,11 +121,30 @@ iframe{
 
 /* LIGHT THEME STYLES 
 --------------------------------------------------*/
+:root {
+  --primary:#1f242b; /* Custom secondary color */
+  --secondary:#2d353f; /* Custom primary color */
+  --tertiary:#dfe4b3;
+  --heading-color:#E79B07; /* Custom color for headings */
+  --paragraph-color: #ffffff; /* Custom color for paragraphs */
+}
+
 html:not([data-bs-theme="dark"]) .my-footer {
   background-color: #FBDBAE;
 }
 html:not([data-bs-theme="dark"]) .home-cta {
   background-color: #99DCBA;
+}
+html:not([data-bs-theme="dark"]) .evteam{
+  background-color: #2d353f;
+
+}
+.text-primary {
+  color: var(--paragraph-color) !important;
+}
+
+.text-secondary {
+  color: var(--heading-color) !important;
 }
 
 /* DARK THEME STYLES 
@@ -136,10 +155,13 @@ html[data-bs-theme="dark"] .my-footer {
 html[data-bs-theme="dark"] .home-cta {
   background-color: #007D3D;
 }
+html[data-bs-theme="dark"] .evteam, .values-section {
+  background-color:#353d46;
+}
 html[data-bs-theme="dark"] .map-iframe {
   filter: invert(100%);
 }
-
+text-primary
 
 /* Show content on mobile small devices (ms) only */
 @media (max-width: 0px) {
