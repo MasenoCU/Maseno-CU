@@ -8,7 +8,7 @@
         <?php
     }
     include 'inc/header.php';
-    include 'inc/connection.php';
+	require '../components/db_connection.php';
  ?>
 	<!--dashboard area-->
 	<div class="dashboard-content">

@@ -1,37 +1,38 @@
 <?php 
-     session_start();
-    if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
-    }
-    include 'inc/header.php';
-    include 'inc/connection.php';
+session_start();
+if (!isset($_SESSION["username"])) {
+    ?>
+    <script type="text/javascript">
+        window.location = "login.php";
+    </script>
+    <?php
+    exit();
+}
 
-    // Define the fine rate per day
-    $fineRatePerDay = 5;
+include 'inc/header.php';
+require '../components/db_connection.php'; // Ensure $client is initialized in this file
+if(isset($client)){
+// Define the fine rate per day
+$fineRatePerDay = 5;
 
-    // Function to calculate fine based on days past due
-    // Function to calculate fine based on days past due
-    function calculateFine($dueDate, $returnDate, $fineRatePerDay) {
-        $dueDate = strtotime($dueDate);
-        $returnDateTime = strtotime($returnDate);
+// Function to calculate fine based on days past due
+function calculateFine($dueDate, $returnDate, $fineRatePerDay) {
+    $dueDate = strtotime($dueDate);
+    $returnDateTime = strtotime($returnDate);
 
-        // Calculate the difference in seconds
-        $difference = $returnDateTime - $returnDateTime;
+    // Calculate the difference in seconds
+    $difference = $returnDateTime - $dueDate; // Fixed: difference should be returnDate - dueDate
 
-        // Convert seconds to days
-        $daysPastDue = floor($difference/ (60 * 60 * 24));
+    // Convert seconds to days
+    $daysPastDue = floor($difference / (60 * 60 * 24));
 
-        // Calculate fine
-        $fine = $daysPastDue * $fineRatePerDay;
+    // Calculate fine
+    $fine = $daysPastDue * $fineRatePerDay;
 
-        return $fine;
-    }
+    return $fine;
+}
 
- ?>
+?>
 <div class="dashboard-content">
     <div class="dashboard-header">
         <div class="container">
@@ -53,24 +54,25 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $res= mysqli_query($link, "SELECT * FROM finezone");
-                                        while ($row=mysqli_fetch_array($res)) {
-                                            // Calculate the fine
-                                            $fine = calculateFine($row['due_date'], $row['return_date'], $fineRatePerDay);
-                                            $amount = $fine;
+                                    $mongoClient = $client;
+                                    $collection = $mongoClient->library->finezone;
 
-                                            echo "<tr>";
-                                            echo "<td>"; echo $row["username"]; echo "</td>";
-                                            echo "<td>"; echo $row["utype"]; echo "</td>";
-                                            echo "<td>"; echo $row["email"]; echo "</td>";
-                                            echo "<td>"; echo $row["booksname"]; echo "</td>";
-                                            echo "<td>"; echo $amount; echo "</td>";
-                                            echo "<td>";
-                                            ?><a href="delete-fine.php?id=<?php echo $row["id"]; ?> " style="color: red"><i class="fas fa-trash"></i></a><?php
-                                            echo "</td>";
-                                            echo "</tr>";
-                                        }
-                                     ?>
+                                    $fines = $collection->find();
+                                    foreach ($fines as $row) {
+                                        // Calculate the fine
+                                        $fine = calculateFine($row['due_date'], $row['return_date'], $fineRatePerDay);
+                                        $amount = $fine;
+
+                                        echo "<tr>";
+                                        echo "<td>" . htmlspecialchars($row["username"]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row["utype"]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($row["booksname"]) . "</td>";
+                                        echo "<td>" . htmlspecialchars($amount) . "</td>";
+                                        echo "<td><a href='delete-fine.php?id=" . urlencode($row["id"]) . "' style='color: red'><i class='fas fa-trash'></i></a></td>";
+                                        echo "</tr>";
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -80,9 +82,12 @@
         </div>
     </div>
 </div>
+
 <?php 
-    include 'inc/footer.php';
+include 'inc/footer.php';
+                                }
 ?>
+
 <script>
     $(document).ready(function () {
         $('#dtBasicExample').DataTable();

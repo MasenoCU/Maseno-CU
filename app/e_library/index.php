@@ -1,6 +1,8 @@
 <?php
-    session_start();
-    include 'inc/connection.php';
+session_start();
+require '../components/db_connection.php'; // MongoDB connection file
+
+use MongoDB\Exception\Exception as MongoDBException;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,17 +14,17 @@
     <link rel="stylesheet" href="inc/css/pro1.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
-        .login{
+        .login {
             background-image: url(inc/img/3.jpg);
             margin-bottom: 30px;
             padding: 50px;
             padding-bottom: 130px;
         }
-        .reg-header h2{
+        .reg-header h2 {
             color: #DDDDDD;
             z-index: 999999;
         }
-        .login-body h4{
+        .login-body h4 {
             margin-bottom: 20px;
         }
     </style>
@@ -31,7 +33,7 @@
     <div class="login registration">
         <div class="wrapper">
             <div class="reg-header text-center">
-                <h2>Library Management system</h2>
+                <h2>Library Management System</h2>
                 <div class="gap-30"></div>
                 <div class="gap-30"></div>
             </div>
@@ -48,29 +50,38 @@
                         </div>
                         <div class="mb-20">
                             <input class="btn btn-info submit" type="submit" name="login" value="Login">
-                            
                         </div>
                     </form>
                 </div>
                 <?php
-                if (isset($_POST["login"])) {
-                    $count=0;
-                    $res= mysqli_query($link, "select * from lib_registration where username='$_POST[username]' && password= '$_POST[password]' ");
-                    $count = mysqli_num_rows($res);
-                    if ($count==0) {
-                        ?>
-                        <div class="alert alert-warning">
-                            <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
-                        </div>
-                    <?php
-                    }
-                    else{
-                    $_SESSION["username"] = $_POST["username"];
-                    ?>
-                        <script type="text/javascript">
-                            window.location="dashboard.php";
-                        </script>
-                        <?php
+                if (isset($_POST['login'])) {
+                    $username = htmlspecialchars($_POST['username']);
+                    $password = $_POST['password'];
+                    
+                    try {
+                        if ($database) {
+                            $collection = $database->selectCollection('lib_registration');
+                            $user = $collection->findOne(['username' => $username]);
+
+                            if ($user && $user['password'] === $password) {
+                                $_SESSION['username'] = $username;
+                                header("Location: dashboard.php");
+                                exit;
+                            } else {
+                                echo '<div class="alert alert-warning">
+                                        <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
+                                      </div>';
+                            }
+                        } else {
+                            echo '<div class="alert alert-danger">
+                                    <strong>Error!</strong> Could not connect to the database.
+                                  </div>';
+                        }
+                    } catch (MongoDBException $e) {
+                        /** @var \Throwable $e */
+                        echo '<div class="alert alert-danger">
+                                <strong>Error!</strong> ' . htmlspecialchars($e->getMessage()) . '
+                              </div>';
                     }
                 }
                 ?>

@@ -1,7 +1,7 @@
 <?php 
     session_start();
-    include 'inc/connection.php';
- ?>
+    require '../components/db_connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,19 +56,28 @@
                 </div>
                 
                 <?php 
-                    if (isset($_POST["login"])) {
-                        $count=0;
-                        $res= mysqli_query($link, "select * from std_registration where username='$_POST[username]' && password= '$_POST[password]' ");
-                        $count = mysqli_num_rows($res);
-                        if ($count==0) {
+                    if (isset($_POST["login"]) &&(isset($client))) {
+                        $collection = $client->library->std_registration;
+
+                        $username = $_POST['username'];
+                        $password = $_POST['password'];
+
+                        // Query MongoDB for the user
+                        $user = $collection->findOne([
+                            'username' => $username, 
+                            'password' => $password
+                        ]);
+
+                        if ($user === null) {
+                            // No user found
                             ?>
                             <div class="alert alert-warning">
                                 <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
                             </div>
                             <?php
-                        }
-                        else{
-                            $_SESSION["username"] = $_POST["username"];
+                        } else {
+                            // User found
+                            $_SESSION["username"] = $username;
                             ?>
                             <script type="text/javascript">
                                 window.location="dashboard.php";
@@ -76,7 +85,7 @@
                             <?php  
                         }
                     }
-                 ?>
+                ?>
             </div>
         </div>
     </div>

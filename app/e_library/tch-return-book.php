@@ -1,15 +1,17 @@
 <?php 
-    session_start();
-    if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
-    }
-    include 'inc/header.php';
-    include 'inc/connection.php';
- ?>
+session_start();
+if (!isset($_SESSION["username"])) {
+    ?>
+    <script type="text/javascript">
+        window.location="login.php";
+    </script>
+    <?php
+}
+
+include 'inc/header.php';
+require '../components/db_connection.php'; // Use MongoDB connection here
+if($database){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,9 +41,12 @@
                                 <td>
                                     <select name="enr" class="form-control">
                                         <?php 
-                                            $res = mysqli_query($link, "SELECT idno FROM t_registration");
-                                            while($row = mysqli_fetch_array($res)){
-                                                echo "<option value='".$row['idno']."'>".$row['idno']."</option>";
+                                            // Fetch ID numbers from MongoDB
+                                            $collection = $database->selectCollection('teacher_registration');
+                                            $cursor = $collection->find([], ['projection' => ['idno' => 1]]);
+                                            
+                                            foreach ($cursor as $doc) {
+                                                echo "<option value='".$doc['idno']."'>".$doc['idno']."</option>";
                                             }
                                         ?>
                                     </select>
@@ -71,10 +76,14 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                            if(isset($_POST["submit1"])){
+                                            if (isset($_POST["submit1"])) {
                                                 $idno = $_POST["enr"];
-                                                $res = mysqli_query($link, "SELECT * FROM t_issuebook WHERE idno='$idno'");
-                                                while($row = mysqli_fetch_array($res)){
+                                                
+                                                // Fetch issued book records for the selected ID from MongoDB
+                                                $issueCollection = $database->selectCollection('teacher_issuebook');
+                                                $result = $issueCollection->find(['idno' => $idno]);
+
+                                                foreach ($result as $row) {
                                                     echo "<tr>";
                                                     echo "<td>".$row['idno']."</td>";
                                                     echo "<td>".$row['name']."</td>";
@@ -84,7 +93,7 @@
                                                     echo "<td>".$row['booksissuedate']."</td>";
                                                     echo "<td>".$row['email']."</td>";
                                                     echo "<td>".$row['phone']."</td>";
-                                                    echo "<td><a href='return.php?id=".$row['id']."' class='btn btn-danger'>Return Book</a></td>";
+                                                    echo "<td><a href='return.php?id=".$row['_id']."' class='btn btn-danger'>Return Book</a></td>";
                                                     echo "</tr>";
                                                 }
                                             }
@@ -102,5 +111,6 @@
 </html>
 
 <?php 
-    include 'inc/footer.php';
+include 'inc/footer.php';
+                                        }
 ?>

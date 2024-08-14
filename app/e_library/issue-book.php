@@ -6,9 +6,16 @@ if (!isset($_SESSION["teacher"])) {
     header("Location: login.php");
     exit();
 }
+require '../components/db_connection.php';
+if(isset($client)){
+// Include MongoDB connection
+ // Ensure this file initializes $client
 
-// Include database connection
-include 'inc/connection.php';
+// Access the library database and the books collection
+$mongoClient = $client;
+$db = $mongoClient->library;
+$booksCollection = $db->books;
+$issueCollection = $db->t_issuebook;
 
 // Check if form is submitted
 if (isset($_POST["issue_book"])) {
@@ -19,19 +26,24 @@ if (isset($_POST["issue_book"])) {
         $error = "Please select a book.";
     } else {
         // Check if the selected book is available
-        $check_query = "SELECT * FROM books WHERE title = '$bookname' AND availability = 'available'";
-        $check_result = mysqli_query($link, $check_query);
+        $check_query = ['title' => $bookname, 'availability' => 'available'];
+        $book = $booksCollection->findOne($check_query);
 
-        if (mysqli_num_rows($check_result) > 0) {
-            // Insert record into t_issuebook table
-            $query = "INSERT INTO t_issuebook (username, booksname, booksissuedate, return_status) 
-                      VALUES ('$_SESSION[teacher]', '$bookname', NOW(), 'pending')";
-            $result = mysqli_query($link, $query);
+        if ($book) {
+            // Insert record into t_issuebook collection
+            $issueData = [
+                'username' => $_SESSION['teacher'],
+                'booksname' => $bookname,
+                'booksissuedate' => new MongoDB\BSON\UTCDateTime(),
+                'return_status' => 'pending'
+            ];
+            $result = $issueCollection->insertOne($issueData);
 
-            if ($result) {
+            if ($result->getInsertedCount() > 0) {
                 // Update book availability to 'issued'
-                $update_query = "UPDATE books SET availability = 'issued' WHERE title = '$bookname'";
-                mysqli_query($link, $update_query);
+                $update_query = ['title' => $bookname];
+                $update_data = ['$set' => ['availability' => 'issued']];
+                $booksCollection->updateOne($update_query, $update_data);
 
                 // Book issued successfully
                 $success_msg = "Book issued successfully.";
@@ -46,9 +58,10 @@ if (isset($_POST["issue_book"])) {
     }
 }
 
-// Fetch available books from database
-$books_query = "SELECT * FROM books WHERE availability = 'available'";
-$books_result = mysqli_query($link, $books_query);
+// Fetch available books from the database
+$books_query = ['availability' => 'available'];
+$books_result = $booksCollection->find($books_query);
+}
 
 ?>
 <!DOCTYPE html>
@@ -69,9 +82,9 @@ $books_result = mysqli_query($link, $books_query);
     <form action="issue-book.php" method="post">
         <label for="bookname">Select Book:</label>
         <select name="bookname" id="bookname">
-            <?php while ($row = mysqli_fetch_assoc($books_result)): ?>
-                <option value="<?php echo $row['title']; ?>"><?php echo $row['title']; ?></option>
-            <?php endwhile; ?>
+            <?php foreach ($books_result as $row): ?>
+                <option value="<?php echo htmlspecialchars($row['title']); ?>"><?php echo htmlspecialchars($row['title']); ?></option>
+            <?php endforeach; ?>
         </select>
         <button type="submit" name="issue_book">Issue Book</button>
     </form>

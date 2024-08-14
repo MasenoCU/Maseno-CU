@@ -1,5 +1,63 @@
 <?php 
-    include 'inc/connection.php';
+require '../components/db_connection.php'; // MongoDB connection file
+
+use MongoDB\Exception\Exception as MongoDBException;
+
+if (isset($_POST["submit"])) {
+    // Registration logic
+    $name = $_POST["name"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+
+    // You should add validation and sanitization for user input before using it
+
+    try {
+        if ($database) {
+            $collection = $database->selectCollection('lib_registration');
+            $result = $collection->insertOne([
+                'name' => $name,
+                'username' => $username,
+                'password' => $password, // Note: Storing passwords as plain text is not secure. Consider hashing.
+                'email' => $email,
+                'phone' => $phone,
+                'address' => $address
+            ]);
+
+            if ($result->getInsertedCount() > 0) {
+                // Registration successful, display success message and redirect to login page after 3 seconds
+                ?>
+                <div class="alert alert-success col-lg-6">
+                    Registration successful. Redirecting to login page...
+                </div>
+                <script>
+                    setTimeout(function() {
+                        window.location.href = "login.php";
+                    }, 3000);
+                </script>
+                <?php
+            } else {
+                // Registration failed, display error message
+                ?>
+                <div class="alert alert-danger col-lg-6">
+                    Registration failed. Please try again later.
+                </div>
+                <?php
+            }
+        } else {
+            echo '<div class="alert alert-danger">
+                    <strong>Error!</strong> Could not connect to the database.
+                  </div>';
+        }
+    } catch (MongoDBException $e) {
+        /** @var \Throwable $e */
+        echo '<div class="alert alert-danger">
+                <strong>Error!</strong> ' . htmlspecialchars($e->getMessage()) . '
+              </div>';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,17 +69,17 @@
     <link rel="stylesheet" href="inc/css/pro1.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
-        .registration{
+        .registration {
             background-image: url(inc/img/3.jpg);
             margin-bottom: 30px;
             padding: 50px;
             padding-bottom: 70px;
         }
-        .reg-header h2{
+        .reg-header h2 {
             color: #DDDDDD;
             z-index: 999999;
         }
-        .login-body h4{
+        .login-body h4 {
             margin-bottom: 20px;
         }
     </style>
@@ -58,50 +116,13 @@
                     </div>
                     <div class="form-group">
                          <label for="address">Address <span>*</span></label>
-                        <textarea name="address" id="address"  class="form-control custom" placeholder="Your address"></textarea>
+                        <textarea name="address" id="address" class="form-control custom" placeholder="Your address"></textarea>
                     </div>
                     <div class="submit">
                         <input type="submit" value="Register" class="btn change" name="submit">
                     </div>
                 </form>
             </div>
-            <?php 
-                if (isset($_POST["submit"])) {
-                    // Your registration logic goes here
-                    $name = $_POST["name"];
-                    $username = $_POST["username"];
-                    $password = $_POST["password"];
-                    $email = $_POST["email"];
-                    $phone = $_POST["phone"];
-                    $address = $_POST["address"];
-                    // You should add validation and sanitization for user input before using it in SQL queries
-                    
-                    // Sample query to insert data into database
-                    $query = "INSERT INTO lib_registration (name, username, password, email, phone, address) VALUES ('$name', '$username', '$password', '$email', '$phone', '$address')";
-                    $result = mysqli_query($link, $query);
-                    
-                    if ($result) {
-                        // Registration successful, display success message and redirect to login page after 3 seconds
-                        ?>
-                        <div class="alert alert-success col-lg-6">
-                            Registration successful. Redirecting to login page...
-                        </div>
-                        <script>
-                            setTimeout(function() {
-                                window.location.href = "login.php";
-                            }, 3000);
-                        </script>
-                        <?php
-                    } else {
-                        // Registration failed, display error message
-                        ?>
-                        <div class="alert alert-danger col-lg-6">
-                            Registration failed. Please try again later.
-                        </div>
-                        <?php
-                    }
-                }
-             ?>
         </div>
     </div>
     <!-- Your footer section goes here -->

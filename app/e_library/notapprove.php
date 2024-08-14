@@ -1,24 +1,41 @@
 <?php 
-	include 'inc/connection.php';
-	$id= $_GET["id"];
-	mysqli_query($link, "update std_registration set status='no' where id=$id");
-	mysqli_query($link, "update t_registration set status='no' where id=$id");
- ?>
- <script type="text/javascript">
- 	window.location="status.php";
- </script>
- <?php 
-     $res = mysqli_query($link, "select * from std_registration where id=$id");
-     $res2 = mysqli_query($link, "select * from t_registration where id=$id");
-    while($row = mysqli_fetch_array($res)){
-        $email      = $row['email']; 
-    }
-    while($row2 = mysqli_fetch_array($res2)){
-        $email      = $row2['email'];
-    }
-    $to = "$email";
+require '../components/db_connection.php';
+
+
+
+// MongoDB collections
+if(isset($client)){
+$id = $_GET["id"];
+$stdCollection = $client->library->std_registration; // Replace 'library' with your database name
+$tCollection = $client->library->t_registration;
+
+// Update status in MongoDB
+$stdCollection->updateOne(['_id' => new MongoDB\BSON\ObjectId($id)], ['$set' => ['status' => 'no']]);
+$tCollection->updateOne(['_id' => new MongoDB\BSON\ObjectId($id)], ['$set' => ['status' => 'no']]);
+
+?>
+<script type="text/javascript">
+    window.location = "status.php";
+</script>
+<?php 
+
+// Fetch email from MongoDB
+$stdResult = $stdCollection->findOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+$tResult = $tCollection->findOne(['_id' => new MongoDB\BSON\ObjectId($id)]);
+
+$email = "";
+if ($stdResult) {
+    $email = $stdResult['email'];
+} elseif ($tResult) {
+    $email = $tResult['email'];
+}
+
+// Prepare and send email
+if ($email) {
+    $to = $email;
     $subject = "Account Approve problem";
-    $message = "We can't approve your account. Might be your information is not correct. Please register with real information <br> Thanks";
+    $message = "We can't approve your account. It might be that your information is not correct. Please register with real information.<br>Thanks";
     $headers = "From: parttimemail18@gmail.com";
-    mail($to,$subject,$message,$headers);
+    mail($to, $subject, $message, $headers);
+}}
 ?>

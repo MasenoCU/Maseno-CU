@@ -1,27 +1,28 @@
 <?php
 session_start();
-
+require '../components/db_connection.php';
+if(($database) && (isset($client))){
 // Redirect to login page if user is not logged in
 if (!isset($_SESSION["username"])) {
     header("Location: login.php");
     exit;
 }
 
-include 'inc/connection.php';
-
-// Function to log book issuing transaction
-function logTransaction($link, $username, $bookName)
+function logTransaction($collection, $username, $bookName)
 {
     $logMessage = "User '$username' issued book '$bookName'.";
-    // Log the transaction to database
-    $query = "INSERT INTO transaction_logs (username, book_name) VALUES ('$username', '$bookName')";
-    mysqli_query($link, $query);
+    // Log the transaction to MongoDB
+    $collection->insertOne([
+        'username' => $username,
+        'book_name' => $bookName,
+        'timestamp' => new MongoDB\BSON\UTCDateTime()
+    ]);
 }
 
-// Function to sanitize input data to prevent SQL injection attacks
-function sanitizeInput($link, $data)
+// Function to sanitize input data (not necessary with MongoDB but kept for uniformity)
+function sanitizeInput($data)
 {
-    return mysqli_real_escape_string($link, $data);
+    return htmlspecialchars(strip_tags($data));
 }
 
 // Function to display error message
@@ -37,34 +38,46 @@ $errorMessage = "";
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Sanitize input data
-    $name = sanitizeInput($link, $_POST["name"]);
-    $teaches = sanitizeInput($link, $_POST["teaches"]);
-    $phone = sanitizeInput($link, $_POST["phone"]);
-    $email = sanitizeInput($link, $_POST["email"]);
-    $booksName = sanitizeInput($link, $_POST["booksname"]);
-    $booksIssueDate = sanitizeInput($link, $_POST["booksissuedate"]);
-    $booksReturnDate = sanitizeInput($link, $_POST["booksreturndate"]);
+    $name = sanitizeInput($_POST["name"]);
+    $teaches = sanitizeInput($_POST["teaches"]);
+    $phone = sanitizeInput($_POST["phone"]);
+    $email = sanitizeInput($_POST["email"]);
+    $booksName = sanitizeInput($_POST["booksname"]);
+    $booksIssueDate = sanitizeInput($_POST["booksissuedate"]);
+    $booksReturnDate = sanitizeInput($_POST["booksreturndate"]);
     $username = $_SESSION["username"];
 
     // Check if the book is available
-    $availabilityQuery = "SELECT books_availability FROM add_book WHERE books_name = '$booksName'";
-    $availabilityResult = mysqli_query($link, $availabilityQuery);
-    $row = mysqli_fetch_assoc($availabilityResult);
-    $availability = $row['books_availability'];
+    $bookCollection = $database->selectCollection('add_book');
+    $book = $bookCollection->findOne(['books_name' => $booksName]);
 
-    if ($availability == 0) {
+    if ($book['books_availability'] == 0) {
         $errorMessage = "This book is not available.";
     } else {
         // Issue the book and update availability
-        $issueQuery = "INSERT INTO t_issuebook (utype, idno, name, teaches, phone, email, books_name, books_issuedate, books_returndate, tusername) VALUES ('Teacher', '', '$name', '$teaches', '$phone', '$email', '$booksName', '$booksIssueDate', '$booksReturnDate', '$username')";
-        mysqli_query($link, $issueQuery);
+        $issueCollection = $database->selectCollection('t_issuebook');
+        $issueCollection->insertOne([
+            'utype' => 'Teacher',
+            'idno' => '',
+            'name' => $name,
+            'teaches' => $teaches,
+            'phone' => $phone,
+            'email' => $email,
+            'books_name' => $booksName,
+            'books_issuedate' => $booksIssueDate,
+            'books_returndate' => $booksReturnDate,
+            'tusername' => $username
+        ]);
 
         // Update book availability
-        $updateQuery = "UPDATE add_book SET books_availability = books_availability - 1 WHERE books_name = '$booksName'";
-        mysqli_query($link, $updateQuery);
+        $bookCollection->updateOne(
+            ['books_name' => $booksName],
+            ['$inc' => ['books_availability' => -1]]
+        );
 
         // Log the transaction
-        logTransaction($link, $username, $booksName);
+        $logCollection = $database->selectCollection('transaction_logs');
+        logTransaction($logCollection, $username, $booksName);
 
         // Redirect to the same page to clear POST data
         header("Location: teacher-issue-book.php");
@@ -116,10 +129,10 @@ include 'inc/header.php';
                                             <select name="booksname" class="form-control" required>
                                             <option value="" disabled selected>Select Book</option>
                                             <?php 
-                                                $bookQuery = "SELECT books_name FROM add_book";
-                                                $bookResult = mysqli_query($link, $bookQuery);
-                                                while($row = mysqli_fetch_assoc($bookResult)) {
-                                                    echo "<option>" . $row['books_name'] . "</option>";
+                                                $bookCollection = $database->selectCollection('add_book');
+                                                $books = $bookCollection->find([], ['projection' => ['books_name' => 1]]);
+                                                foreach ($books as $book) {
+                                                    echo "<option>" . $book['books_name'] . "</option>";
                                                 }
                                             ?>
                                             </select>
@@ -150,4 +163,6 @@ include 'inc/header.php';
     </div>
 </div>
 
-<?php include 'inc/footer.php'; ?>
+<?php include 'inc/footer.php'; 
+}
+?>
