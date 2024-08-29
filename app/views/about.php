@@ -51,7 +51,7 @@
                         fosters stability in Christian faith among its members.</p>
                 </div>
                 <div class="col-12">
-                    <img class="img-fluid" src="assets/images/Placeholder Lightbox.png" alt="">
+                    <img class="img-fluid" src="/public/assets/images/Placeholder Lightbox.png" alt="">
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
                     </ul>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/public/assets/images/700x500.png" alt=" ">
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
                     <hr class="featurette-divider">
                 </div>
                 <div class="col-md-6 d-none d-lg-inline">
-                    <img class="img-fluid" src="assets/images/Placeholder Image.png" alt=" ">
+                    <img class="img-fluid" src="/public/assets/images/Placeholder Image.png" alt=" ">
                 </div>
             </div>
         </div>
@@ -206,7 +206,7 @@
                 Capturing moments of impact and community engagement
             </p>
             <div>
-                <img class="img-fluid" src="assets/images/Content.png" alt="">
+                <img class="img-fluid" src="/public/assets/images/Content.png" alt="">
             </div>
         </div>
     </section>

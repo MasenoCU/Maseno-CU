@@ -1,6 +1,3 @@
-<?php
-include"db_connection.php";
-?>
     <!-- footer -->
     <section id="footer" class="pb-2">
         <div class="rounded container-xl my-footer">

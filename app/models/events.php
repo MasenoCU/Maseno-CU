@@ -1,7 +1,14 @@
 <?php
-include"db_connection.php";
-?>
+include "db_connection.php";
 
+// Fetch events from the database
+$events = fetchTableData($connection, 'Events');
+
+// Ensure $events is always an array
+if (!is_array($events)) {
+    $events = []; // Default to an empty array if the query fails
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
@@ -12,7 +19,7 @@ include"db_connection.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- page title -->
     <title>Events</title>
-    <!-- custon css -->
+    <!-- custom css -->
     <link rel="stylesheet" href="/public/assets/styles/style.css">
     <link rel="stylesheet" href="/public/assets/styles/blog.css">
     <!-- bootstrap css -->
@@ -51,8 +58,7 @@ include"db_connection.php";
                         <div class="p-2 text-center">
                             <p class="m-0"><?php echo htmlspecialchars($event['day'], ENT_QUOTES, 'UTF-8'); ?></p>
                             <h3 class="m-0"><?php echo htmlspecialchars($event['date'], ENT_QUOTES, 'UTF-8'); ?></h3>
-                            <p class="m-0"><?php echo htmlspecialchars($event['month_of_year'], ENT_QUOTES, 'UTF-8'); ?>
-                            </p>
+                            <p class="m-0"><?php echo htmlspecialchars($event['month_of_year'], ENT_QUOTES, 'UTF-8'); ?></p>
                         </div>
                     </div>
                     <div class="col-md-auto p-0 d-none d-md-inline">
@@ -64,14 +70,12 @@ include"db_connection.php";
                     <div class="col-auto col-md-6 p-0">
                         <div class="p-2 ms-3">
                             <h5 class="m-0"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h5>
-                            <?php foreach ($event['events'] as $subEvent): ?>
-                            <p class="mb-0"><small><span
-                                        class="fst-italic fw-bold"><?php echo htmlspecialchars($subEvent['type'], ENT_QUOTES, 'UTF-8'); ?>:</span>
-                                    <?php echo htmlspecialchars($subEvent['time'], ENT_QUOTES, 'UTF-8'); ?></small></p>
-                            <?php endforeach; ?>
-                            <p class="m-0"><small
-                                    class="text-body-secondary"><?php echo htmlspecialchars($event['location'], ENT_QUOTES, 'UTF-8'); ?></small>
-                            </p>
+                            <p class="m-0"><small class="text-body-secondary">
+                                <?php echo htmlspecialchars($event['location'], ENT_QUOTES, 'UTF-8'); ?>
+                            </small></p>
+                            <p class="m-0"><small class="text-body-secondary">
+                                <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?>
+                            </small></p>
                         </div>
                     </div>
                     <div class="col-auto col-md-3 ms-auto p-0" style="width: 172px;">
@@ -86,8 +90,7 @@ include"db_connection.php";
             <div class="tab">
                 <?php foreach ($events as $event): ?>
                 <?php if ($event['category'] === 'fellowship'): ?>
-                <div
-                    class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
                     <div class="col col-auto m-0 text-center left-column">
                         <div class="img-card">
                             <img class="img-fluid d-md-block"
@@ -98,8 +101,7 @@ include"db_connection.php";
                         <div class="info">
                             <h4 class="event"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                             <div class="description text-muted">
-                                <p class="m-0">
-                                    <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <p class="m-0"><?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -107,12 +109,11 @@ include"db_connection.php";
                 <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- worship -->
+            <!-- Worship -->
             <div class="tab">
                 <?php foreach ($events as $event): ?>
                 <?php if ($event['category'] === 'worship'): ?>
-                <div
-                    class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
                     <div class="col col-auto m-0 text-center left-column">
                         <div class="img-card">
                             <img class="img-fluid d-md-block"
@@ -123,8 +124,7 @@ include"db_connection.php";
                         <div class="info">
                             <h4 class="event"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                             <div class="description text-muted">
-                                <p class="m-0">
-                                    <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <p class="m-0"><?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -132,12 +132,11 @@ include"db_connection.php";
                 <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- prayer -->
+            <!-- Prayer -->
             <div class="tab">
                 <?php foreach ($events as $event): ?>
                 <?php if ($event['category'] === 'prayer'): ?>
-                <div
-                    class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
                     <div class="col col-auto m-0 text-center left-column">
                         <div class="img-card">
                             <img class="img-fluid d-md-block"
@@ -148,8 +147,7 @@ include"db_connection.php";
                         <div class="info">
                             <h4 class="event"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                             <div class="description text-muted">
-                                <p class="m-0">
-                                    <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <p class="m-0"><?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -157,12 +155,11 @@ include"db_connection.php";
                 <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- bible study -->
+            <!-- Bible Study -->
             <div class="tab">
                 <?php foreach ($events as $event): ?>
                 <?php if ($event['category'] === 'bible_study'): ?>
-                <div
-                    class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
                     <div class="col col-auto m-0 text-center left-column">
                         <div class="img-card">
                             <img class="img-fluid d-md-block"
@@ -173,8 +170,7 @@ include"db_connection.php";
                         <div class="info">
                             <h4 class="event"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                             <div class="description text-muted">
-                                <p class="m-0">
-                                    <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <p class="m-0"><?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -182,12 +178,11 @@ include"db_connection.php";
                 <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- outreach -->
+            <!-- Outreach -->
             <div class="tab">
                 <?php foreach ($events as $event): ?>
                 <?php if ($event['category'] === 'outreach'): ?>
-                <div
-                    class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
                     <div class="col col-auto m-0 text-center left-column">
                         <div class="img-card">
                             <img class="img-fluid d-md-block"
@@ -198,8 +193,7 @@ include"db_connection.php";
                         <div class="info">
                             <h4 class="event"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                             <div class="description text-muted">
-                                <p class="m-0">
-                                    <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <p class="m-0"><?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -207,12 +201,11 @@ include"db_connection.php";
                 <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- training -->
+            <!-- Training -->
             <div class="tab">
                 <?php foreach ($events as $event): ?>
                 <?php if ($event['category'] === 'training'): ?>
-                <div
-                    class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 my-4 justify-content-center align-items-center">
                     <div class="col col-auto m-0 text-center left-column">
                         <div class="img-card">
                             <img class="img-fluid d-md-block"
@@ -223,8 +216,7 @@ include"db_connection.php";
                         <div class="info">
                             <h4 class="event"><?php echo htmlspecialchars($event['title'], ENT_QUOTES, 'UTF-8'); ?></h4>
                             <div class="description text-muted">
-                                <p class="m-0">
-                                    <?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                <p class="m-0"><?php echo htmlspecialchars($event['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </div>
                         </div>
                     </div>
