@@ -18,7 +18,7 @@
 <body>
     
     <!-- header -->
-    <?php include"../components/header.php"; ?>
+    <?php include"../models/header.php"; ?>
 
     <!-- hero -->
     <section id="hero">
@@ -174,7 +174,7 @@
                 <p class="lead text-muted mb-16">Get to know the dedicated leaders of our Christian Union.</p>
             </div>
             <!-- i-frame -->
-            <iframe src="../components/leadership.php" title="Events"></iframe>
+            <iframe src="../models/leadership.php" title="Events"></iframe>
             <div class="row justify-content-center align-items-center">
                 <a href="leadership.php" target="_parent" rel="noreferrer"
                     class="btn col-auto btn-success btn-sm mt-3">Meet
@@ -224,7 +224,7 @@
     </section>
 
     <!-- footer -->
-    <?php include"../components/footer.php"; ?>
+    <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
     <script src="/public/assets/scripts/main.js"></script>

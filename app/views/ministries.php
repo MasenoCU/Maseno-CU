@@ -19,7 +19,7 @@
 
 <body>
 
-    <?php include"../components/header.php"; ?>
+    <?php include"../models/header.php"; ?>
 
     <!-- ministries -->
     <section class="ministries">
@@ -121,7 +121,7 @@
         </div>
     </section>
 
-    <?php include"../components/footer.php"; ?>
+    <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
     <script src="/public/assets/scripts/main.js"></script>

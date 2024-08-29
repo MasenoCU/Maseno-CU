@@ -1,6 +1,6 @@
 <?php
-require '../components/db_connection.php';
-require '../components/authenticate.php';
+require '../models/db_connection.php';
+require '../models/authenticate.php';
 
 use MongoDB\Exception\Exception as MongoDBException;
 

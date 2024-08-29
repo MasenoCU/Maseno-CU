@@ -3,14 +3,14 @@
 session_start();
 
 // Includes.
-include"../app/components/db_connection.php";
+include"../app/models/db_connection.php";
 
 // Fetch data from MongoDB using controllers
 require '../app/controllers/HomeController.php';
 
 use App\Controllers\HomeController;
 
-$homeController = new HomeController($database);
+$homeController = new HomeController($connection);
 $blogs = $homeController->getBlogs();
 $aboutDetails = $homeController->getAboutDetails();
 $faqs = $homeController->getFaqs();
@@ -607,7 +607,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="../app/components/events.php" title="Events"></iframe>
+        <iframe src="../app/models/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 
@@ -622,7 +622,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- i-frame -->
-        <iframe src="../app/components/leadership.php" title="Events"></iframe>
+        <iframe src="../app/models/leadership.php" title="Events"></iframe>
         <div class="row justify-content-center align-items-center">
             <a href="../app/views/leadership.php" target="_parent" rel="noreferrer"
                 class="btn col-auto btn-success btn-sm mt-3">Meet

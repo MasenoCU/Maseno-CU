@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-// Check if the user is logged in, if not redirect to login page
+//This will be used as dashbaord,  for a logged in user.
+
+//Check if the user is logged in, if not redirect to login page
 if (!isset($_SESSION['username'])) {
     header("Location: registrationpage.php");
     exit;

@@ -129,7 +129,7 @@
 <body>
     
     <!-- header -->
-    <?php include"app/components/header.php"; ?>
+    <?php include"app/models/header.php"; ?>
     <section id="teams" class="py-5">
         <div class="container bg-container">
 
@@ -625,7 +625,7 @@
     </section>
 
     <!-- footer -->
-    <?php include"app/components/footer.php"; ?>
+    <?php include"app/models/footer.php"; ?>
 
     <!-- main js -->
     <script src="/public/assets/scripts/main.js"></script>
