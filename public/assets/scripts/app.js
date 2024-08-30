@@ -1,24 +1,57 @@
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
+const admissionNumberInput = document.querySelector('input[name="admission_number"]');
+
+// Listen for changes to the admission number field
+admissionNumberInput.addEventListener('blur', function() {
+    const admissionNumber = admissionNumberInput.value.trim();
+
+    if (admissionNumber) {
+        checkAdmissionNumber(admissionNumber);
+    }
+});
+
+function checkAdmissionNumber(admissionNumber) {
+    $.ajax({
+        url: '/../../../backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
+        type: 'POST',
+        data: { admission_number: admissionNumber },
+        dataType: 'json',
+        success: function(response) {
+            console.log("AJAX Success:", response)
+            if (response.exists) {
+                alert('The admission number already exists. Please use a different one.');
+                admissionNumberInput.value = '';
+                $('.step-1 .next-btn').prop('disabled', true);
+            }else{
+                $('.step-1 .next-btn').prop('disabled', false);
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("AJAX Error:", status, error);
+            alert('An error occurred while checking the admission number.');
+        }
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const mode = urlParams.get('mode');
     const schoolIdInput = document.getElementById('schoolId');
 
-    schoolIdInput.addEventListener('change', function(event){
-        const file =event.target.files[0];
+    schoolIdInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
         const maxSize = 2 * 1024 * 1024;
-        const allowedTypes = ['image/jpeg ', 'image/png'];
+        const allowedTypes = ['image/jpeg', 'image/png'];
 
-        if (file){
-            if(file.size > maxSize){
+        if (file) {
+            if (file.size > maxSize) {
                 alert("Error: The file size exceeds the allowed limit of 2MB.");
                 schoolIdInput.value = '';
                 return;
             }
-        
+
             if (!allowedTypes.includes(file.type)) {
                 alert("Error: Only JPEG and PNG files are allowed.");
                 schoolIdInput.value = '';
@@ -26,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
-
 
     if (mode === 'login') {
         container.classList.remove("sign-up-mode");
@@ -36,11 +68,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
+    container.classList.add("sign-up-mode");
 });
 
 sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
+    container.classList.remove("sign-up-mode");
 });
 
 // to reveal steps

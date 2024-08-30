@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <h2 class="title">Login</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="Admissionnumber" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" required />
+                        <input type="text" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <i class="fas fa-phone"></i>
                             <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10,}" title="Please enter a valid phone number" />
                         </div>
-                        <button type="button" class="btn next-btn">Next</button>
+                        <button type="button" class="btn next-btn" disabled>Next</button>
                     </div>
 
                     <!-- Step 2: Ministry involvement and year of study -->
