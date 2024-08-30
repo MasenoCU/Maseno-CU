@@ -1,96 +1,26 @@
 <?php
-require '../models/db_connection.php';
-require '../models/authenticate.php';
+require_once '../models/authenticate.php';
+require_once '../models/db_connection.php';
+require_once '../models/login.php';
+require_once '../models/register.php';
 
-use MongoDB\Exception\Exception as MongoDBException;
 
-$signup_message = '';
 $login_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['register'])) {
-        // Registration logic
-        $username = htmlspecialchars($_POST['username']);
-        $password = password_hash($_POST['password'], PASSWORD_BCRYPT); // Hash the password
-        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        $course = htmlspecialchars($_POST['course']);
-        $admission_number = htmlspecialchars($_POST['admission_number']);
-        $phone_number = htmlspecialchars($_POST['phone_number']);
-        $ministry = htmlspecialchars($_POST['ministry']);
-        $year_of_study = htmlspecialchars($_POST['year_of_study']);
-        $eve_team = htmlspecialchars($_POST['eve_team']);
-
-        if ($database) {
-            $collection = $database->selectCollection('Users');
-
-            try {
-                // Insert the new user into the `Users` collection
-                $result = $collection->insertOne([
-                    'username' => $username,
-                    'password' => $password,
-                    'email' => $email,
-                    'course' => $course,
-                    'admission_number' => $admission_number,
-                    'phone_number' => $phone_number,
-                    'ministry' => $ministry,
-                    'year_of_study' => $year_of_study,
-                    'eve_team' => $eve_team,
-                ]);
-
-                if ($result->getInsertedCount() == 1) {
-                    $signup_message = "<p>Sign up successful! <a href='#'>Login here</a></p>";
-                    // Redirect to thank you page
-                    header("Location: thank_you.php");
-                    exit;
-                } else {
-                    $signup_message = "<p>Error: Failed to insert user. <a href='#'>Try again</a></p>";
-                    // Redirect to error page
-                    header("Location: error.php?message=Failed to insert user");
-                    exit;
-                }
-            } catch (MongoDBException $e) {
-                /** @var \Throwable $e */
-                $signup_message = "<p>Error: " . $e->getMessage() . "</p>";
-                // Redirect to error page with exception message
-                header("Location: error.php?message=" . urlencode($e->getMessage()));
-                exit;
-            }
-        } else {
-            $signup_message = "<p>Error: Could not connect to the database.</p>";
-            // Redirect to error page with database connection error
-            header("Location: error.php?message=Could not connect to the database");
+    if (isset($_POST['login'])) {
+        $login_message = loginlogic($connection);
+        if (!$login_message) {
+            header("Location: homepage.php");
             exit;
         }
     }
-
-    if (isset($_POST['login'])) {
-        // Login logic
-        $username = htmlspecialchars($_POST['username']);
-        $password = $_POST['password'];
-
-        try {
-            if ($database) {
-                $collection = $database->selectCollection('Users');
-                $user = $collection->findOne(['username' => $username]);
-
-                if ($user && password_verify($password, $user['password'])) {
-                    // Set session variables
-                    $_SESSION['username'] = $username;
-                    // Redirect to home page
-                    header("Location: homepage.php");
-                    exit;
-                } else {
-                    $login_message = "<p>Invalid username or password. <a href='#'>Try again</a></p>";
-                }
-            } else {
-                $login_message = "<p>Error: Could not connect to the database.</p>";
-            }
-        } catch (MongoDBException $e) {
-            /** @var \Throwable $e */
-            $login_message = "<p>Error: " . $e->getMessage() . "</p>";
-        }
+    if (isset($_POST['register'])) {
+        $register_message = registerlogic($connection);
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e36217afb5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/assets/styles/registrationstyles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
     <title>Registration Maseno University Christian Union</title>
 </head>
@@ -108,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="forms-container">
             <div class="signin-signup">
                 
-                <form action="registrationpage.php" class="sign-in-form" method="post">
+                <form action="" class="sign-in-form" method="post">
                     <h2 class="title">Login</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="Admissionnumber" placeholder="Admission Number" required />
+                        <input type="text" name="Admissionnumber" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
@@ -136,14 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </form>
 
-                <form action="registrationpage.php" class="sign-up-form" method="post" enctype="multipart/form-data">
+                <form action="" class="sign-up-form" method="post" enctype="multipart/form-data">
                     <h2 class="title">Register with Us Today!</h2>
 
                     <!-- Step 1: Name -->
                     <div class="step step-1">
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="fullnames" placeholder="John Doe" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
+                            <input type="text" name="username" placeholder="John Doe" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
@@ -155,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text" name="admission_number" placeholder="Admission Number" required pattern="\d{1,}" title="Please enter a valid admission number" required />
+                            <input type="text" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>

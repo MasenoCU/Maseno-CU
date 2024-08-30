@@ -3,9 +3,30 @@ const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Check URL parameters to set the initial state
     const urlParams = new URLSearchParams(window.location.search);
     const mode = urlParams.get('mode');
+    const schoolIdInput = document.getElementById('schoolId');
+
+    schoolIdInput.addEventListener('change', function(event){
+        const file =event.target.files[0];
+        const maxSize = 2 * 1024 * 1024;
+        const allowedTypes = ['image/jpeg ', 'image/png'];
+
+        if (file){
+            if(file.size > maxSize){
+                alert("Error: The file size exceeds the allowed limit of 2MB.");
+                schoolIdInput.value = '';
+                return;
+            }
+        
+            if (!allowedTypes.includes(file.type)) {
+                alert("Error: Only JPEG and PNG files are allowed.");
+                schoolIdInput.value = '';
+                return;
+            }
+        }
+    });
+
 
     if (mode === 'login') {
         container.classList.remove("sign-up-mode");
@@ -103,9 +124,9 @@ function validateStep(step) {
 
     inputs.each(function() {
         if (!this.checkValidity()) {
-            alert(`One or more of the inputs is incorrect, please fill in valid details`);
+            alert(`The input "${this.name}" is incorrect or missing, please fill in valid details.`);
             isValid = false;
-            return false; // Break the loop
+            return false;
         }
     });
 
