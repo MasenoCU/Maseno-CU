@@ -216,7 +216,7 @@
         <div class="row py-4">
             <div class="jumbotron link-body-emphasis animate__animated animate__fadeInUp">
               <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                <img src="D:\My_Projects\Maseno-CU\public\assets\images\UET LOGO.png" alt="UET Image" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
+                <img src="D:\My_Projects\Maseno-CU\public\assets\images\ev-logo\UET LOGO.png" alt="UET Image" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                 <h1 class="display-4 text-secondary">About CET</h1>
                 </div>
                 <p class="lead text-primary">Learn more about the Central Evangelistic Team (CET), our mission, and our values.</p>
@@ -280,7 +280,7 @@
                     </div>
                     <div class="col-md-6 text-center">
                       <div class="trapezium-wrapper position-relative">
-                        <img src="assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
+                        <img src="D:\My_Projects\Maseno-CU\public\assets\images\teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
                         <div class="text-overlay fw-bold">
                           <em> “Preaching the Word” </em>
                         </div>
