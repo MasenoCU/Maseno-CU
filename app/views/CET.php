@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About CET - Maseno</title>
 
-    <script src="D:\My_Projects\Maseno-CU\public\assets\scripts\color-modes.js"></script>
+    <script src="/public/assets/scripts/color-modes.js"></script>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="D:\My_Projects\Maseno-CU\public\assets\styles\bootstrap.min.css">
+    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
         <!-- custon css -->
-        <link rel="stylesheet" href="D:\My_Projects\Maseno-CU\public\assets\styles\style.css">
+        <link rel="stylesheet" href="/public/assets/styles/style.css">
         
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 
@@ -216,7 +216,7 @@
         <div class="row py-4">
             <div class="jumbotron link-body-emphasis animate__animated animate__fadeInUp">
               <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                <img src="D:\My_Projects\Maseno-CU\public\assets\images\ev-logo\UET LOGO.png" alt="UET Image" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
+                <img src="/public/assets/images/ev-logo/UET LOGO.png" alt="UET Image" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                 <h1 class="display-4 text-secondary">About CET</h1>
                 </div>
                 <p class="lead text-primary">Learn more about the Central Evangelistic Team (CET), our mission, and our values.</p>
@@ -280,7 +280,7 @@
                     </div>
                     <div class="col-md-6 text-center">
                       <div class="trapezium-wrapper position-relative">
-                        <img src="D:\My_Projects\Maseno-CU\public\assets\images\teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
+                        <img src="/public/assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
                         <div class="text-overlay fw-bold">
                           <em> “Preaching the Word” </em>
                         </div>
@@ -390,9 +390,9 @@
     </section>
   
      <!-- main js -->
-     <script src="D:\My_Projects\Maseno-CU\public\assets\scripts\main.js"></script>
+     <script src="/public/assets/scripts/main.js"></script>
      <!-- bootstrap JS -->
-     <script src="D:\My_Projects\Maseno-CU\public\assets\scripts\bootstrap.bundle.min.js"></script>
+     <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
      
    </body>
    </html>
