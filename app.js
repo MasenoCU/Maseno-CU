@@ -22,26 +22,26 @@ sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
 
-
-
 // to reveal steps
 $(document).ready(function() {
     $('.next-btn').on('click', function() {
         var currentStep = $(this).closest('.step');
         var nextStep = currentStep.next('.step');
 
-        // Sliding out current step to the left
-        currentStep.addClass('slide-out-left');
-        setTimeout(function() {
-            currentStep.hide().removeClass('slide-out-left');
-        }, 500); 
+        if (validateStep(currentStep)) {
+            // Sliding out current step to the left
+            currentStep.addClass('slide-out-left');
+            setTimeout(function() {
+                currentStep.hide().removeClass('slide-out-left');
+            }, 500); 
 
-        // Sliding in next step from the right
-        nextStep.show();
-        nextStep.addClass('slide-in-right');
-        setTimeout(function() {
-            nextStep.removeClass('slide-in-right');
-        }, 500); 
+            // Sliding in next step from the right
+            nextStep.show();
+            nextStep.addClass('slide-in-right');
+            setTimeout(function() {
+                nextStep.removeClass('slide-in-right');
+            }, 500); 
+        }
     });
 
     $('.back-btn').on('click', function() {
@@ -63,12 +63,11 @@ $(document).ready(function() {
     });
 
     $('.ministry-btn').on('click', function() {
-        // Removes 'active' class from all ministry buttons and add to the clicked button
-        $('.ministry-btn').removeClass('active');
-        $(this).addClass('active');
+        // Toggle 'active' class on clicked button
+        $(this).toggleClass('active');
 
-        // Set the hidden input field for ministry
-        $('#ministry').val($(this).data('value'));
+        // Update the hidden input field for ministry
+        updateMinistryField();
     });
 
     $('.eve-team-btn').on('click', function() {
@@ -88,4 +87,36 @@ $(document).ready(function() {
         // Set the hidden input field for year of study
         $('#year_of_study').val($(this).data('value'));
     });
+
+    function updateMinistryField() {
+        const selectedMinistries = $('.ministry-btn.active').map(function() {
+            return $(this).data('value');
+        }).get().join(', ');
+
+        $('#ministry').val(selectedMinistries);
+    }
 });
+
+function validateStep(step) {
+    let isValid = true;
+    const inputs = $(step).find('input[required]');
+
+    inputs.each(function() {
+        if (!this.checkValidity()) {
+            alert(`One or more of the inputs is incorrect, please fill in valid details`);
+            isValid = false;
+            return false; // Break the loop
+        }
+    });
+
+    if (isValid && $(step).hasClass('step-4')) {
+        const password = $('input[name="password"]').val();
+        const confirmPassword = $('input[name="confirm_password"]').val();
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            isValid = false;
+        }
+    }
+
+    return isValid;
+}

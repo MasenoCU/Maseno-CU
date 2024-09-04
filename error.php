@@ -2,7 +2,7 @@
 // error.php
 
 // Retrieve the message from the query parameter
-$message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 'Some error occurred, please try again after some time';
+$message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 'Some error occurred, please try again after some minutes';
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ $message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 'Some 
     <div class="error-container">
         <h1>Error</h1>
         <p class="error-message"><?php echo $message; ?></p>
-        <a class="error-link" href="index.php">Go back to the homepage</a>
+        <a class="error-link" href="homepage.php">Go back to the homepage</a>
     </div>
 </body>
 </html>

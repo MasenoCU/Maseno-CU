@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in, if not redirect to first page registartion page
 if (!isset($_SESSION['username'])) {
-    header("Location: registarationpage.php");
+    header("Location: registrationpage.php");
     exit;
 }
 ?>

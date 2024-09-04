@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z/\s.]{1,}" title="Please enter a valid admission number" required />
+                            <input type="text" name="admission_number" placeholder="Admission Number" required pattern="\d{1,}" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>

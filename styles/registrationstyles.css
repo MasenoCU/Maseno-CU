@@ -64,8 +64,8 @@ form.sign-in-form {
   font-size: 2.2rem;
   color: #444;
   margin-bottom: 10px;
-  border-bottom: 2px solid #f5a133; 
-  display: inline-block; 
+  border-bottom: 2px solid #f5a133;
+  display: inline-block;
   padding-bottom: 5px;
 }
 
@@ -86,7 +86,7 @@ form.sign-in-form {
   text-align: center;
   line-height: 55px;
   color: #acacac;
-  transition: 0.s;
+  transition: 0.5s;
   font-size: 1.1rem;
 }
 
@@ -145,7 +145,7 @@ form.sign-in-form {
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -153,6 +153,7 @@ form.sign-in-form {
 .btn:hover {
   background-color: #f5a133;
 }
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -233,8 +234,6 @@ form.sign-in-form {
 .right-panel .content {
   transform: translateX(800px);
 }
-
-/* ANIMATION */
 
 .container.sign-up-mode:before {
   transform: translate(100%, -50%);
@@ -360,8 +359,7 @@ form.sign-in-form {
     transform: translateY(-300px);
   }
 
-  .container.sign-up-mode .right-panel .image,
-  .container.sign-up-mode .right-panel .content {
+  .container.sign-up-mode .right-panel .right-panel .content {
     transform: translateY(0px);
   }
 
@@ -400,132 +398,143 @@ form.sign-in-form {
     bottom: 28%;
     left: 50%;
   }
+
+  .title {
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+    border-bottom: none;
+  }
+  .title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f5a133;
+    margin-top: 5px;
+  }
 }
 
-.cuthemeformat span{
-    border-bottom: 2px solid #f5a133; 
-    padding-bottom: 2px; 
-
+.cuthemeformat span {
+  border-bottom: 2px solid #f5a133;
+  padding-bottom: 2px;
 }
 
 .step {
-    display: none;
-    position: relative;
-  }
-  .step-1 {
-    display: block; 
-  }
+  display: none;
+  position: relative;
+  margin-top: 20px;
+}
+.step-1 {
+  display: block;
+}
 
-  .ministry-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    border: 1px solid #007bff; 
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 20px; 
-  }
-  
-  .ministry-btn.active {
-    background-color: #f5a133; 
-    color: #fff; 
-  }
+.ministry-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
 
-  .eve-team-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    border: 1px solid #007bff; 
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 20px; 
-  }
-  
-  .eve-team-btn.active {
-    background-color: #f5a133; 
-    color: #fff;
-  }
-  
-  .input-field.file-field {
-    margin-bottom: 20px; 
-    display: block; 
-  }
-  
-  .input-field.file-field label {
-    display: block; 
-    margin-bottom: 5px; 
-  }
-  
-  .input-field.file-field input[type="file"] {
-    display: block; 
-    padding: 8px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-  }
-  
-  .input-field.file-field input[type="file"]:hover {
-    border-color: #999; 
-  }
-  
+.ministry-btn.active {
+  background-color: #f5a133;
+  color: #fff;
+}
 
-/* Transition classes for step animations */
+.eve-team-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.eve-team-btn.active {
+  background-color: #f5a133;
+  color: #fff;
+}
+
+.input-field.file-field {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.input-field.file-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field.file-field input[type="file"] {
+  display: block;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-field.file-field input[type="file"]:hover {
+  border-color: #999;
+}
 
 .slide-in-right {
-    animation: slide-in-right 0.5s forwards;
+  animation: slide-in-right 0.5s forwards;
 }
 
 .slide-in-left {
-    animation: slide-in-left 0.5s forwards;
+  animation: slide-in-left 0.5s forwards;
 }
 
 .slide-out-right {
-    animation: slide-out-right 0.5s forwards;
+  animation: slide-out-right 0.5s forwards;
 }
 
 .slide-out-left {
-    animation: slide-out-left 0.5s forwards;
+  animation: slide-out-left 0.5s forwards;
 }
 
 @keyframes slide-in-right {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide-in-left {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide-out-right {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 @keyframes slide-out-left {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
