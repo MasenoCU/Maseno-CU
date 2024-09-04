@@ -37,3 +37,20 @@ $events = fetchTableData($connection, 'Events');
 $blogs = fetchTableData($connection, 'Blogs');
 $aboutDetails = fetchTableData($connection, 'AboutUs');
 
+//reuseable function to fetch eveteam details.
+if (!function_exists('fetchEveTeamData')){
+    function fetchEveTeamData($connection, $team_name){
+        $sql = "SELECT history, mandate, vision, mission, membership, motto, motto_verse, activities, team_logo FROM eveteam WHERE team_name = ?";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("s", $team_name);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();
+        } else {
+            return null;
+        }
+    }
+}
+

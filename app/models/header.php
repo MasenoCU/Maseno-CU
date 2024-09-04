@@ -1,6 +1,6 @@
     <!-- spinner -->
 <?php
-include"db_connection.php";
+require_once "db_connection.php";
 ?>
     <!-- SVG icons -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">

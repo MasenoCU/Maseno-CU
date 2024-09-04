@@ -2,21 +2,20 @@
 // Include the database connection
 require_once "../models/db_connection.php";
 
-//calling the function to fetch eveteam data
-$team_name = "CET";
-$team =fetchEveTeamData($connection, $team_name);
+// Fetch team data for UET
+$team_name = "UET";
+$team = fetchEveTeamData($connection, $team_name);
 
-if(!$team){
-  echo "No content for CET";
+if (!$team) {
+    echo "No content for UET.";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About CET - Maseno</title>
+    <title>About UET - Maseno</title>
 
     <script src="/public/assets/scripts/color-modes.js"></script>
     <!-- Bootstrap CSS -->
@@ -33,7 +32,7 @@ if(!$team){
     <style>
     .trapezium-wrapper {
         width: 100%; 
-        height: 300px;
+        height: 300px; 
         overflow: hidden;
         display: inline-block;
     }
@@ -65,16 +64,16 @@ if(!$team){
 
     <main>
         <!-- Hero Section -->
-        <section class="container mt-5 evteam ">
+        <section class="container mt-5 evteam">
             <div class="row py-4">
                 <div class="jumbotron link-body-emphasis animate__animated animate__fadeInUp">
                     <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                        <img src="/public/assets/images/ev-logo/<?php echo $team['team_logo']; ?>" alt="CET Logo" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
-                        <h1 class="display-4 text-secondary">About CET</h1>
+                        <img src="/public/assets/images/ev-logo/<?php echo $team['team_logo']; ?>" alt="UET Image" class="rounded-circle mb-3 mb-md-0" width="50" height="50">
+                        <h1 class="display-4 text-secondary">About UET</h1>
                     </div>
                     <p class="lead text-primary"><?php echo $team['history']; ?></p>
                     <hr class="my-4">
-                    <p class="text-primary">CET is a non-denominational fellowship of Christian students at the Maseno University.</p>
+                    <p class="text-primary">UET is a non-denominational ministry committed to prayerfully proclaiming the gospel of Jesus Christ through preaching, training, mentoring, and community initiatives in Kenya.</p>
                 </div>
             </div>
         </section>
@@ -88,13 +87,9 @@ if(!$team){
                         <h2>Our History</h2>
                         <p><?php echo $team['history']; ?></p>
                     </div>
-                    <div class="col-md-6 text-center">
-                        <img src="/public/assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
-                    </div>
                 </div>
             </div>
         </section>
-        <hr class="my-4 bg-tertiary">
 
         <!-- Values Section -->
         <section class="values-section py-5 link-body-emphasis">
@@ -118,6 +113,7 @@ if(!$team){
                 </div>
             </div>
         </section>
+
         <hr class="my-4 bg-tertiary">
 
         <!-- Membership Section -->
@@ -132,7 +128,9 @@ if(!$team){
                       <div class="trapezium-wrapper position-relative">
                         <img src="/public/assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
                         <div class="text-overlay fw-bold">
-                          <em><?php echo $team['motto']; ?></em>
+                          "<?php echo $team['motto']; ?>"
+                          <br>
+                          <?php echo $team['motto_verse']; ?>
                         </div>
                       </div>
                     </div>
