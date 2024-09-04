@@ -481,7 +481,10 @@ form.sign-in-form {
   display: none;
   position: relative;
   margin-top: 20px;
+<<<<<<< HEAD
   margin-bottom: 20px;
+=======
+>>>>>>> 0bf8a1342a5a0e3e6fbb5a62255df1cd726820ea
 }
 .step-1 {
   display: block;
