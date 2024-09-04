@@ -112,11 +112,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <h2 class="title">Login</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="Admissionnumber" placeholder="Admission Number" required />
+                        <input type="text" name="Admissionnumber" placeholder="Email Address" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="password" placeholder="Password" required />
+                        <input type="password" name="password" placeholder="Your Password" required />
                     </div>
                     <input type="submit" name="login" value="Login" class="btn solid" />
                     <p class="social-text">Or Sign in with social platforms</p>
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.]{1,}" title="Please enter a valid course" />
+                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.,]{1,}" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
 
-                    <!-- Step 2: Ministry involvement and year of study -->
+                    <!-- Step 2: Ministry involvement  -->
                     <div class="step step-2">
                         <label class="titlelabel">Ministry you are currently involved in:</label>
                         <div class="ministries">
@@ -180,16 +180,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <input type="hidden" name="ministry" id="ministry" value="" required />
 
-                        <label class="titlelabel">Year of Study:</label>
-                        <div class="yos">
-                            <button type="button" class="eve-team-btn" data-value="1">1</button>
-                            <button type="button" class="eve-team-btn" data-value="2">2</button>
-                            <button type="button" class="eve-team-btn" data-value="3">3</button>
-                            <button type="button" class="eve-team-btn" data-value="4">4</button>
-                        </div>
-                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
+
                         <button type="button" class="btn back-btn">Back</button>
                         <button type="button" class="btn next-btn">Next</button>
+                        <br>
+                        <br>
                     </div>
 
                     <!-- Step 3: Eve team -->
@@ -206,6 +201,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="button" class="eve-team-btn" data-value="UET">UET</button>
                         </div>
                         <input type="hidden" name="eve_team" id="eve_team" value="" required />
+
+                        <label class="titlelabel">Year of Study:</label>
+                        <div class="yos">
+                            <button type="button" class="eve-team-btn" data-value="1">1</button>
+                            <button type="button" class="eve-team-btn" data-value="2">2</button>
+                            <button type="button" class="eve-team-btn" data-value="3">3</button>
+                            <button type="button" class="eve-team-btn" data-value="4">4</button>
+                        </div>
+                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
+
                         <button type="button" class="btn back-btn">Back</button>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
@@ -220,12 +225,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <i class="fas fa-lock"></i>
                             <input type="password" name="confirm_password" placeholder="Confirm the Password" required minlength="6" />
                         </div>
-                        <div class="input-field file-field">
+                        <!-- <div class="input-field file-field">
                             <label for="schoolId">Please Upload Your School ID:</label>
                             <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
-                        </div>
+                        </div> -->
                         <button type="button" class="btn back-btn">Back</button>
-                        <input type="submit" class="btn" name="register" value="Register me Now!" />
+                        <input type="submit" class="btn" name="register" value="Register Me" />
                     </div>
 
                 </form>

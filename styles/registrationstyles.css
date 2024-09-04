@@ -372,6 +372,35 @@ form.sign-in-form {
     top: 5%;
     transform: translate(-50%, 0);
   }
+
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px; /* Adds a small space between the input and the error message */
+    display: inline-block; /* Ensures it stays on one line */
+    vertical-align: middle; /* Aligns the error message with the input field */
+}
+
+  .input-error {
+      border-color: red;
+      outline: none;
+  }
+
+  /* Highlight the border of the input field in red */
+.input-error {
+  border-color: red;
+}
+
+/* Optionally, change the text color to red */
+.input-error::placeholder {
+  color: red; /* Change placeholder text color */
+}
+
+.input-error {
+  color: red; /* Change input text color */
+}
+
+
 }
 
 @media (max-width: 570px) {
@@ -412,6 +441,35 @@ form.sign-in-form {
     background: #f5a133;
     margin-top: 5px;
   }
+
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px; /* Adds a small space between the input and the error message */
+    display: inline-block; /* Ensures it stays on one line */
+    vertical-align: middle; /* Aligns the error message with the input field */
+}
+
+  .input-error {
+      border-color: red;
+      outline: none;
+  }
+
+  /* Highlight the border of the input field in red */
+  .input-error {
+    border-color: red;
+  }
+
+  /* Optionally, change the text color to red */
+  .input-error::placeholder {
+    color: red; /* Change placeholder text color */
+  }
+
+  .input-error {
+    color: red; /* Change input text color */
+  }
+
+
 }
 
 .cuthemeformat span {
@@ -423,6 +481,7 @@ form.sign-in-form {
   display: none;
   position: relative;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .step-1 {
   display: block;
@@ -494,6 +553,34 @@ form.sign-in-form {
 .slide-out-left {
   animation: slide-out-left 0.5s forwards;
 }
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-left: 10px; /* Adds a small space between the input and the error message */
+  display: inline-block; /* Ensures it stays on one line */
+  vertical-align: middle; /* Aligns the error message with the input field */
+}
+
+.input-error {
+  border-color: red;
+  outline: none;
+}
+
+/* Highlight the border of the input field in red */
+.input-error {
+  border-color: red;
+}
+
+/* Optionally, change the text color to red */
+.input-error::placeholder {
+  color: red; /* Change placeholder text color */
+}
+
+.input-error {
+  color: red; /* Change input text color */
+}
+
 
 @keyframes slide-in-right {
   from {

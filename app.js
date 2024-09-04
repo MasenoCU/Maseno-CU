@@ -101,9 +101,24 @@ function validateStep(step) {
     let isValid = true;
     const inputs = $(step).find('input[required]');
 
+    // Clear previous error messages and highlighting
+    $(step).find('.error-message').remove();
+    inputs.removeClass('input-error');
+    inputs.css('border-color', ''); // Reset border color
+    inputs.css('color', ''); // Reset text color
+
     inputs.each(function() {
         if (!this.checkValidity()) {
-            alert(`One or more of the inputs is incorrect, please fill in valid details`);
+            // Highlight the input with an error
+            $(this).addClass('input-error');
+            // Highlight the input with an error by changing the border color and text color
+            $(this).css('border-color', 'red');
+            $(this).css('color', 'red');
+
+            // Show a small error message
+            const errorMessage = "Invalid input here.";
+            $(this).after(`<span class="error-message" style="color: red; font-size: 0.9em;">${errorMessage}</span>`);
+
             isValid = false;
             return false; // Break the loop
         }
@@ -113,7 +128,10 @@ function validateStep(step) {
         const password = $('input[name="password"]').val();
         const confirmPassword = $('input[name="confirm_password"]').val();
         if (password !== confirmPassword) {
-            alert("Passwords do not match!");
+            
+            passwordInput.addClass('input-error');
+            passwordInput.after('<span class="error-message" style="color: red; font-size: 0.9em;">Passwords do not match!</span>');
+            
             isValid = false;
         }
     }
