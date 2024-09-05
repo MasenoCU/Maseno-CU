@@ -12,7 +12,6 @@ use App\Controllers\HomeController;
 
 $homeController = new HomeController($connection);
 $blogs = $homeController->getBlogs();
-$aboutDetails = $homeController->getAboutDetails();
 $faqs = $homeController->getFaqs();
 $contacts = $homeController->getContacts();
 $events = $homeController->getEvents();
@@ -507,10 +506,10 @@ $events = $homeController->getEvents();
                             </p>
                             <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
                                     style="--bs-link-hover-color-rgb: 0, 166, 81;"
-                                    href="blogs.php#<?php echo htmlspecialchars($blog['_id'], ENT_QUOTES, 'UTF-8'); ?>">Read
-                                    more<svg class="bi" aria-hidden="true">
+                                    href="/app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
                                         <use xlink:href="assets/icons.svg#arrow-bar-right"></use>
-                                    </svg></a></p>
+                                    </svg></a>
+                            </p>
                         </div>
                     </div>
                 </div>

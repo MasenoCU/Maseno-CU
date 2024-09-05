@@ -272,6 +272,25 @@ form.sign-in-form {
   pointer-events: all;
 }
 
+.alert{
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #FFa133; /* Background color for the alert */
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.alert.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
 @media (max-width: 870px) {
   .container {
     min-height: 800px;

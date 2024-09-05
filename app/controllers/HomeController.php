@@ -16,10 +16,6 @@ class HomeController
         return $this->fetchData('Blogs');
     }
 
-    public function getAboutDetails()
-    {
-        return $this->fetchData('AboutUs');
-    }
 
     public function getFaqs()
     {

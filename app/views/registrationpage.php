@@ -40,6 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
                 <form action="" class="sign-in-form" method="post">
                     <h2 class="title">Login</h2>
+
+                    <?php if (!empty($login_message)): ?>
+                        <div class="alert alert-danger" role="alert" id="loginError">
+                            <?php echo $login_message; ?>
+                        </div>
+                    <?php endif; ?>
+
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" required />
@@ -85,13 +92,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" title="Please enter a valid admission number" required />
+                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
                             <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10,}" title="Please enter a valid phone number" />
                         </div>
-                        <button type="button" class="btn next-btn" disabled>Next</button>
+                        <button type="button" class="btn next-btn" disabled >Next</button>
                     </div>
 
                     <!-- Step 2: Ministry involvement and year of study -->

@@ -35,7 +35,6 @@ $faqs = fetchTableData($connection, 'FAQs');
 $contacts = fetchTableData($connection, 'Contacts');
 $events = fetchTableData($connection, 'Events');
 $blogs = fetchTableData($connection, 'Blogs');
-$aboutDetails = fetchTableData($connection, 'AboutUs');
 $ministries = fetchTableData($connection, 'ministries');
 
 //reuseable function to fetch eveteam details.

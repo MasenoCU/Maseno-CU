@@ -1,7 +1,9 @@
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
-const admissionNumberInput = document.querySelector('input[name="admission_number"]');
+const admissionNumberInput = document.querySelector('#step1-admission-number');
+const loginError = document.getElementById('loginError');
+
 
 // Listen for changes to the admission number field
 admissionNumberInput.addEventListener('blur', function() {
@@ -14,7 +16,7 @@ admissionNumberInput.addEventListener('blur', function() {
 
 function checkAdmissionNumber(admissionNumber) {
     $.ajax({
-        url: '/../../../backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
+        url: '../../../backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
         type: 'POST',
         data: { admission_number: admissionNumber },
         dataType: 'json',
@@ -172,4 +174,13 @@ function validateStep(step) {
     }
 
     return isValid;
+}
+
+if (loginError){
+    setTimeout(function() {
+        loginError.classList.add('fade-out');
+        setTimeout(function(){
+            loginError.style.display = 'none';
+        }, 1000);
+    }, 3000);
 }

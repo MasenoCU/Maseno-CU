@@ -1,5 +1,5 @@
 <?php
-require_once '/../../app/models/db_connection.php';
+require_once '../../app/models/db_connection.php';
 
 if (isset($_POST['admission_number'])) {
     $admission_number = htmlspecialchars($_POST['admission_number']);
