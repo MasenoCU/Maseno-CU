@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.certificate {
+    width: 800px;
+    height: 600px;
+    padding: 50px;
+    border: 10px solid #ddd;
+    background: white;
+    text-align: center;
+}
+
+.certificate-header {
+    margin-bottom: 20px;
+}
+
+.certificate-header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.certificate-body {
+    margin-bottom: 30px;
+}
+
+.certificate-body p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.certificate-body h2 {
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.certificate-body h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.certificate-footer {
+    margin-top: 40px;
+}
+
+.certificate-footer p {
+    font-size: 18px;
+}

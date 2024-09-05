@@ -1,0 +1,93 @@
+.slide-container {
+    margin: 0 20px;
+  }
+
+.card {
+  border-radius: 8px;
+  width: 312px;
+}
+
+.card .ministry-photo {
+    height: 200px;
+}
+
+.card .ministry-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.card .ministry-details {
+    display: flex;
+    align-items: center;
+    columns: 12px;
+    padding: 2px;
+}
+
+.card .ministry-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.swiper-navButton {
+    color: black;
+    height: 32px;
+    width: 32px;
+    background: white;
+    border-radius: 50%;
+}
+
+.swiper-navButton::before,
+.swiper-navButton::after {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-navButton {
+      display: none;
+    }
+}
+
+/* ==================EVE TEAMS STYLES====================== */
+section .eveteam .evteam-logo{
+    padding: 3px;
+}
+
+section .eveteam .evteam-logo img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 3px solid #eb3136;
+    z-index: 100;
+}
+
+
+.eveteam::before{
+    content: "";
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    background: #2f317f;
+    border-radius: 8px 8px 0 0;
+}
+
+.eveteam .eveteam-content{
+    position: relative;
+    z-index: 100;
+}
+
+.eveteam .media-icons{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eveteam .media-icons a{
+    color: white;
+    transition: all 0.3s ease;
+}
