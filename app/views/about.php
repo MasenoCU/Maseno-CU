@@ -32,6 +32,7 @@
             </p>
         </div>
     </section>
+
     <!-- History -->
     <section id="OurStory">
         <div class="container-xl">
@@ -56,6 +57,7 @@
             </div>
         </div>
     </section>
+
     <!-- Goals -->
     <section id="goals">
         <div class="container-xl">
@@ -82,6 +84,7 @@
             </div>
         </div>
     </section>
+
     <!-- Doctrinal Basis -->
     <section id="doctrine">
         <div class="container-xl">
@@ -117,6 +120,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Membership -->
     <section id="membership">
         <div class="container-xl">
