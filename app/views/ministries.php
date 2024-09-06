@@ -13,7 +13,7 @@
     <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/assets/styles/ccomingsoon.css"> <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/public/assets/styles/comingsoon.css"> <!-- Core Stylesheet -->
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>

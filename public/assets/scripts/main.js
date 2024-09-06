@@ -13,6 +13,27 @@
 // limitations under the License.
 
 
+// Check if the URL contains the logout query parameter
+
+const urlParams = new URLSearchParams(window.location.search);
+const logoutSuccess = urlParams.get('logout');
+
+if (logoutSuccess === 'success') {
+    // Display the notification
+    const notification = document.getElementById('logoutNotification');
+    notification.style.display = 'block';
+
+    // Automatically hide the notification after 3 seconds
+    setTimeout(() => {
+        notification.style.display = 'none';
+
+        // Remove the 'logout' query parameter from the URL without reloading the page
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
+    }, 2000);
+}
+
+
 //========== Javascript for header Scrollspy==========//
 
 // get the header
@@ -130,3 +151,16 @@ tabBtns.forEach((tabBtn, i) => {
         tab_Nav(i);
     });
 });
+
+// logout functionality
+
+// if (logoutSuccess === 'success') {
+//     // Display the notification
+//     const notification = document.getElementById('logoutNotification');
+//     notification.style.display = 'block';
+
+//     // Automatically hide the notification after 3 seconds
+//     setTimeout(() => {
+//         notification.style.display = 'none';
+//     }, 3000);
+// }

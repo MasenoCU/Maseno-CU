@@ -1,5 +1,4 @@
 <?php
-//starting the session.
 session_start();
 
 // Includes.
@@ -257,12 +256,16 @@ $events = $homeController->getEvents();
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" class="btn btn-warning ms-2">Sign-up</button>
+                <a href="../app/views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2">Login</a>
+                <a href="../app/views/registrationpage.php?mode=signup" class="btn btn-warning ms-2">Sign-up</a>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Logout Notification -->
+    <div id="logoutNotification" class="logout-notification">
+        You have successfully logged out.
+    </div>
 
     <!-- hero -->
     <section id="hero" style="height: 544px;">

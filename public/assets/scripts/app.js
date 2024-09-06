@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (mode === 'login') {
         container.classList.remove("sign-up-mode");
-    } else {
+    } else if (mode === 'signup') {
         container.classList.add("sign-up-mode");
     }
 });

@@ -189,6 +189,22 @@ html[data-bs-theme="dark"] .map-iframe {
   margin: 0px;
 }
 
+.logout-notification {
+  display:  none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F5A133;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
