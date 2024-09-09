@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/public/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/public/css/about.css">
     <!-- Font Awesome -->
-    <!-- <script src="https://kit.fontawesome.com/ae877f7da9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/ae877f7da9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -326,9 +326,9 @@
                 <h2 class="display-5">An Overview of Our Ministries</h2>
                 <p class="lead"></p>
             </div>
-            <div class="swiper">
-                <div class="slide-container d-flex justify-content-center align-items-center mb-5">
-                    <div class="card-wrapper swiper-wrapper">
+            <div class="swiper swiper1">
+                <div class="slide-container slider1 d-flex justify-content-center align-items-center mb-5">
+                    <div class="swiper-wrapper cards">
                         <!-- Ministry Card -->
                         <div class="card swiper-slide bg-body-secondary">
                             <div class="ministry-photo">
@@ -491,50 +491,57 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next swiper-navButton"></div>
-                <div class="swiper-button-prev swiper-navButton"></div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next swiper-navButton slider1-next"></div>
+                <div class="swiper-button-prev swiper-navButton slider1-prev"></div>
+                <div class="swiper-pagination slider1-pagination"></div>
             </div>
         </div>
     </section>
 
     <!-- EVE Teams -->
     <section id="eve teams">
-        <div class="container-xl d-flex align-items-center justify-content-center">
-            <div class="swiper">    
-                <div class="swiper-wrapper content">
-                    <div class="swiper-slide eveteam bg-secondary position-relative border rounded-3">
-                        <div class="eveteam-content d-flex flex-column align-items-center p-4">
-                            <div class="evteam-logo">
-                                <img class=""
-                                    src="/public/assets/images/CET Logo.jpg" alt="evteam-logo">
-                            </div>
-                            <div class="media-icons">
-                                <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
-                                        target="_blank"><svg class="bi" width="20" height="20">
-                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                        </svg></a>
-                                <a class="p-1"
-                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
-                                            class="bi" width="20" height="20">
-                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                        </svg></a>
-                                <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
-                            </div>
-                            <div class="name-description d-flex flex-column align-items-center">
-                                <h4>Central Evangelistic Team</h4>
-                                <h4>(C.E.T)</h4>
-                                <p class="text-muted">Preaching the word.</p>
-                            </div>
-                            <div class="d-inline-block text-center text-md-start">
-                                <a href="" target="" id="youtube"
-                                class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Learn More</a>
-                                <a href="https://www.facebook.com/Masenocu/" target="_blank" id="facebook"
-                                class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill d-none">Follow</a>
+        <div class="container-lg d-flex align-items-center justify-content-center">
+            <div class="swiper swiper2"> 
+                <div class="slide-container slider2 d-flex justify-content-center align-items-center mb-5">
+                    <div class="swiper-wrapper slides">
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/CET Logo.jpg" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                            target="_blank"><svg class="bi" width="20" height="20">
+                                                <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                            </svg></a>
+                                    <a class="p-1"
+                                            href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                                class="bi" width="20" height="20">
+                                                <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                            </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center">
+                                    <h4>Central Evangelistic Team</h4>
+                                    <h4>(C.E.T Family)</h4>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="youtube"
+                                    class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Learn More</a>
+                                    <a href="https://www.facebook.com/Masenocu/" target="_blank" id="facebook"
+                                    class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill d-none">Follow</a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
+                <div class="swiper-button-next slider2-next"></div>
+                <div class="swiper-button-prev slider2-prev"></div>
+                <div class="swiper-pagination slider2-pagination"></div>
             </div>
         </div>
     </section>
