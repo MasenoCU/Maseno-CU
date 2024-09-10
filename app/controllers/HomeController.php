@@ -13,23 +13,23 @@ class HomeController
 
     public function getBlogs()
     {
-        return $this->fetchData('Blogs');
+        return $this->fetchData('blogs');
     }
 
 
     public function getFaqs()
     {
-        return $this->fetchData('FAQs');
+        return $this->fetchData('faqs');
     }
 
     public function getContacts()
     {
-        return $this->fetchData('Contacts');
+        return $this->fetchData('contacts');
     }
 
     public function getEvents()
     {
-        return $this->fetchData('Events');
+        return $this->fetchData('events');
     }
 
     private function fetchData($tableName)

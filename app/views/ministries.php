@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
@@ -58,10 +62,9 @@
     <?php require_once "../models/footer.php"; ?>
     <?php require_once "../models/coming-soon-modal.php";?>
 
-    <!-- main js -->
+    <script src="/public/assets/scripts/jquery.min.js"></script>  <!-- Ensure jQuery is included if using jQuery in your JS -->
+    <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS for dropdowns -->
     <script src="/public/assets/scripts/main.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

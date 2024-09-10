@@ -30,11 +30,11 @@ function fetchTableData($connection, $tableName) {
     return $data;
 }
 
-$leaders = fetchTableData($connection, 'Leadership');
-$faqs = fetchTableData($connection, 'FAQs');
-$contacts = fetchTableData($connection, 'Contacts');
-$events = fetchTableData($connection, 'Events');
-$blogs = fetchTableData($connection, 'Blogs');
+$leaders = fetchTableData($connection, 'leadership');
+$faqs = fetchTableData($connection, 'faqs');
+$contacts = fetchTableData($connection, 'contacts');
+$events = fetchTableData($connection, 'events');
+$blogs = fetchTableData($connection, 'blogs');
 $ministries = fetchTableData($connection, 'ministries');
 
 //reuseable function to fetch eveteam details.

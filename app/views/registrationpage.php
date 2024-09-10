@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../models/authenticate.php';
 require_once '../models/db_connection.php';
 require_once '../models/login.php';

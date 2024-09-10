@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Include the database connection
 require_once "../models/db_connection.php";
 

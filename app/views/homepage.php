@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
     <meta name="description" content="">
     <meta name="author" content="Preston Maina">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Dashboard - Maseno University Christian Union</title>
+    <title>Home</title>
 
     <link href="/public/assets/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -521,10 +521,11 @@ require_once '../models/header.php';
 
 <?php 
 require_once '../models/footer.php';
-//require_once "../models/coming-soon-modal.php";
+require_once "../models/coming-soon-modal.php";
 ?>   
-    <?php ?>
-    <!-- JavaScript -->
+    <!-- main js -->
+    <script src="/public/assets/scripts/main.js"></script>
+    <!-- bootstrap JS -->
     <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
 </body>
 

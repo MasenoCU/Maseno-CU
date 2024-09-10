@@ -30,7 +30,7 @@ require_once "db_connection.php";
                 <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
                     <rect width="100%" height="100%" fill="white" />
                     <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="assets/icons.svg#mucu"></use>
+                        <use xlink:href="/public/assets/icons.svg#mucu"></use>
                     </svg>
                 </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
@@ -50,6 +50,8 @@ require_once "db_connection.php";
                             <a href="#" class="nav-link d-block link-body-emphasis text-decoration-none dropdown-toggle"
                                 data-bs-toggle="dropdown" aria-expanded="false">More</a>
                             <ul class="dropdown-menu text-small">
+                                <li><a class="dropdown-item icon-link" href="../views/dashboard.php" >My Dashboard</a></li>
+                                <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item icon-link disabled">Online Giving</a></li>
                                 <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                                 <li><a class="dropdown-item" href="#resources">Resources</a></li>
@@ -81,3 +83,7 @@ require_once "db_connection.php";
             </div>
         </div>
     </header>
+<script src="/public/assets/scripts/jquery.min.js"></script>
+<script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
+<script src="/public/assets/scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

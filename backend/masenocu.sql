@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2024 at 03:26 PM
+-- Generation Time: Sep 07, 2024 at 12:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,24 +24,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aboutus`
+-- Table structure for table `about`
 --
 
-CREATE TABLE `aboutus` (
+CREATE TABLE `about` (
   `id` int(11) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `svg` varchar(255) DEFAULT NULL,
-  `description` text DEFAULT NULL
+  `section_name` varchar(255) NOT NULL,
+  `heading` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `order_number` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `aboutus`
+-- Dumping data for table `about`
 --
 
-INSERT INTO `aboutus` (`id`, `category`, `svg`, `description`) VALUES
-(1, 'Our Vision', 'assets/icons.svg#eye', 'Living as True Disciples of Jesus Christ.'),
-(2, 'Our Mission', 'assets/icons.svg#rocket', 'Nurturing belief in Christ & Developing Christ-like character.'),
-(3, 'Our Goals', 'assets/icons.svg#bullseye', 'Discipleship, Evangelism & Leadership Development.');
+INSERT INTO `about` (`id`, `section_name`, `heading`, `content`, `image`, `order_number`) VALUES
+(1, 'hero', 'Discover Our Story', 'Welcome to Maseno University Christian Union. Learn about our history, vision, and values.', NULL, 1),
+(2, 'OurStory', 'A Journey of Faith: The History and Growth of Maseno University Christian Union', 'Maseno University Christian Union, established in 1978 as an affiliate of Moi University, has experienced remarkable growth over the years. From its humble beginnings, the Union has grown in population, with a large number of converts joining every year.', 'Placeholder Lightbox.png', 2),
+(3, 'goals', 'Committed to Discipleship, Evangelism, and Fostering a Strong Christian Community', 'At Maseno University Christian Union, we are dedicated to nurturing disciples, spreading the Gospel, and building a vibrant Christian community.', '700x500.png', 3),
+(4, 'doctrine', 'Our Core Beliefs and Doctrinal Stances', 'At Maseno University Christian Union, we are guided by a set of core beliefs and doctrinal stances that define who we are and how we live our lives.', 'Placeholder Image.png', 4),
+(5, 'membership', 'How to Become a Member and Responsibilities', 'At Maseno University Christian Union, we offer different membership options to cater to the diverse needs of our community.', NULL, 5);
 
 -- --------------------------------------------------------
 
@@ -157,6 +161,40 @@ INSERT INTO `events` (`id`, `category`, `day`, `date`, `month_of_year`, `title`,
 (9, 'bible_study', 'Thursday', 19, 'Sep 2024', 'BEST-P', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
 (10, 'outreach', 'Saturday', 21, 'Sep 2024', 'Nakuru Mission', 'Various Locations', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
 (11, 'training', 'Saturday', 21, 'Sep 2024', 'Ministry Practices', 'Various Halls', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eveteam`
+--
+
+CREATE TABLE `eveteam` (
+  `id` int(11) NOT NULL,
+  `team_name` varchar(100) NOT NULL,
+  `history` text NOT NULL,
+  `mandate` text NOT NULL,
+  `vision` text NOT NULL,
+  `mission` text NOT NULL,
+  `membership` text NOT NULL,
+  `motto` varchar(255) NOT NULL,
+  `activities` text NOT NULL,
+  `team_logo` varchar(255) NOT NULL,
+  `motto_verse` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `eveteam`
+--
+
+INSERT INTO `eveteam` (`id`, `team_name`, `history`, `mandate`, `vision`, `mission`, `membership`, `motto`, `activities`, `team_logo`, `motto_verse`) VALUES
+(1, 'CET', 'CENTRAL EVANGELISTIC TEAM (MASENO UNIVERSITY) is a body of evangelizing Christians open to all bonafide registered members of the Maseno University Christian Union who come from the following regions in Kenya: Laikipia, Nairobi, Naivasha, Nyandarua, and any other born-again member from the region not mentioned above but has a burden to reach out to people in Central Kenya and is willing to abide by the governing constitution of CET.', 'To evangelize within the University, its environs, central parts of Kenya, and other regions as agreed upon. To strengthen the spiritual life of members through discipleship, prayers, and fellowship.', 'To have mankind reconciled with God through gospel evangelism.', 'To make disciples, instill and nurture Christ-like character through the teaching of the Word of God and evangelism.', 'For a M.U.C.U member defined in article 2.1.1 shall be a C.E.T full member upon signing the declaration form containing the following declaration: “In joining C.E.T, I declare my faith in Jesus Christ as my Saviour, Lord, and God. It is my desire by the grace of God to live a life consistent with the scriptures. I am determined to give active support to C.E.T as it seeks to fulfill its aims and objectives. I also agree to uphold the doctrinal basis as outlined in article 1.2.5 of the C.E.T constitution.”', 'Preaching the Word', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions', 'cet-logo.png', NULL),
+(2, 'EMUSETA', 'Emulatable students evangelistic Team and Associates (EMUSETA) is a body of Christians bound together by a common faith in the only God and joined together with the heavenly calling of Christ according to the Holy Scriptures...', 'To witness Jesus Christ as Lord and savior and to seek to lead others to personal faith and commitment to Him through evangelistic missions, conventions, mentorship, conferences, crusades, seminars, and discipleship.', 'Making disciples of Jesus Christ throughout the world.', 'Spreading the gospel of Jesus Christ to the whole world through missions, conventions, conference, mentorship programs, seminars, weekend challenges, charity works, and day-to-day personal evangelism.', 'To be a member, one must be a born-again Christian and ascribe to the doctrinal basis/beliefs stated in EMUSETA Constitution. One must also be ready to work together towards achievement of the group\'s objectives by showing commitment in EMUSETA activities and giving financial, physical, and spiritual support.', 'Making disciples of Jesus Christ throughout the world', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions', 'emuseta-logo.png', NULL),
+(3, 'MUBET', 'UET has been in existence since 1983 and has continued to grow from strength to strength in spreading the Gospel of Jesus Christ and mentoring young Christians in the University Branches. Over time, the Team has undergone numerous changes to remain relevant in a fast-changing world.', 'UET\'s mandate is to fulfill the Great Commission of our Lord Jesus Christ as in Matthew 28:19‐20: “Go ye therefore and make disciples of all nations...”', 'A leading organization in transforming the lives of people in Kenya by the holistic gospel of Christ through the power of the Holy Ghost.', 'As a non-denominational ministry, UET is committed to prayerfully proclaiming the gospel of Jesus Christ through preaching, training, mentoring, and community initiatives in Kenya.', 'To become a member of UET Kenya, one has to subscribe annually with Ksh 100. After campus, one still remains a member of UET as an associate and can join branches and fellowships/activities.', 'Committed to prayerfully proclaiming the gospel of Jesus Christ.', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions', 'mubet-logo.png', NULL),
+(4, 'NET', 'Nyanza Evangelistic Team Maseno University is a team of born again Christian students who are COMMITTED to responding to God’s call; RECOGNISING the need to evangelize, prepare, and equip believers to live the word of the truth, effectively declare the scriptures and be committed to a lifestyle that enriches the church and the communities.', 'Honouring the call to have transformed communities and impacting the world through the Gospel of Jesus Christ.', 'To live as true disciples of Jesus Christ.', 'To nurture belief in Christ and develop Christ-like character among students and communities.', 'Full membership of NET shall be open to all bona-fide registered undergraduate students of Maseno University. Associates membership shall be open to graduates and postgraduate students of Maseno University who profess the Christian faith and whose names shall be entered into the associate members register. There shall be no membership fee.', 'Responding to God’s Call.', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions.', 'net-logo.png', NULL),
+(5, 'NORET', 'North Rift Evangelistic Team was constituted to dispense the gospel in the northern part of Rift Valley under the name NORET Maseno, for the worship of God and the spread of the gospel of Jesus Christ.', 'To evangelize in the Northern part of Rift Valley and disciple sons into maturity; growing in the knowledge of Christ.', 'One Church; United in Faith and Mission Witnessing to Jesus Christ and Transforming Lives.', 'To transform lives through ecumenism, capacity building, advocacy and service delivery.', 'Full membership of NORET Maseno shall be open to all bona-fide registered members of Maseno University and registered member of the Christian union and who has signed the declaration form.', 'Go into the world and preach the good news to all creation..', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions.', 'noret-logo.png', 'Mark 16:15'),
+(6, 'SORET', 'SORET is a body of evangelizing Christians bound together by a common faith in God and obedience to the great commission of our savior, Jesus Christ. The team seeks to make Christ known to all students in the University and the South Rift and beyond.', 'To obey and fulfill the great commission of Jesus Christ to \"Go and make disciples of all nations\" (Matt.28:19-20), focusing on Maseno University, other institutions, and South Rift.', 'To pursue holiness and reach the unreached with the gospel.', 'To nurture and equip missioners for the great commission of evangelism.', 'Membership is open to all registered, born-again undergraduates of Maseno University Christian Union from Nakuru, Kericho, Kajiado, Bomet, and Narok. It is also open to any other born-again members who sign the declaration form.', 'Go ye unto the whole world...', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions.', 'soret-logo.png', 'Matt. 28:19'),
+(7, 'UET', 'UET has been in existence since 1983 and has continued to grow from strength to strength in spreading the Gospel of Jesus Christ and mentoring young Christians in the University Branches. Over time, the Team has undergone numerous changes to remain relevant in a fast-changing world.', 'UET\'s mandate is to fulfill the Great Commission of our Lord Jesus Christ as in Matthew 28:19‐20: “Go ye therefore and make disciples of all nations...”', 'A leading organization in transforming the lives of people in Kenya by the holistic gospel of Christ through the power of the Holy Ghost.', 'As a non-denominational ministry, UET is committed to prayerfully proclaiming the gospel of Jesus Christ through preaching, training, mentoring, and community initiatives in Kenya.', 'To become a member of UET Kenya, one has to subscribe annually with Ksh 100. After campus, one still remains a member of UET as an associate and can join branches and fellowships/activities.', 'Whom shall I send? ... Here am I. Send me.', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions.', 'uet-logo.png', 'Isaiah 6:8'),
+(8, 'WESO', 'Western Outreach (WESO) is an Evangelistic Team comprised of students mainly from western Kenya. It is responsible for organizing missions, in-reach on campus, high school empowerment, and discipleship.', 'To prepare and equip Christian students to take out the good news of salvation to the whole world and be effective people in society. To develop and strengthen the spiritual life of members by prayers, brethren fellowships, and Bible study.', 'Every convert a disciple, every disciple a soul winner, and every pastor church leader equipped for service in the church of the Lord Jesus Christ.', 'To grow up mature disciples, ready to preach the gospel of salvation to the lost and to train pastors and church leaders for effective ministry.', 'Full membership shall be open to undergraduate student, member of the MUCU from the following regions; Bungoma, Busia, Kakamega, Vihiga, Trans-Nzoia. Any other interested member from other regions is welcome to join.', 'See, hear, and proclaim.', 'Fellowships every Saturday from 5:30pm-7:00pm, Prayer and fasting every Thursday, A retreat once per semester, At least one prayer week per semester, Family meetings on Sundays, Door-to-door evangelism within the campus, Annual General Mission and Mini-missions.', 'weso-logo.png', NULL);
 
 -- --------------------------------------------------------
 
@@ -341,17 +379,26 @@ INSERT INTO `message` (`id`, `susername`, `rusername`, `title`, `msg`, `read1`, 
 
 CREATE TABLE `ministries` (
   `id` int(11) NOT NULL,
-  `ministryName` varchar(255) DEFAULT NULL,
-  `description` text DEFAULT NULL
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `schedule` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ministries`
 --
 
-INSERT INTO `ministries` (`id`, `ministryName`, `description`) VALUES
-(1, 'MEDIA AND IT', 'This is the Media and IT ministry that covers the publicity of the church services.'),
-(2, 'Praise and Worship', 'This ministry is responsible for leading the congregation in worship through music.');
+INSERT INTO `ministries` (`id`, `name`, `description`, `schedule`, `image`) VALUES
+(1, 'Discipleship Ministry', 'Our discipleship ministry nurtures believers to grow in their walk with Christ.', 'Tuesday - 6:00pm to 8:00pm', 'discipleship.jpeg'),
+(2, 'Choir Ministry', 'The choir ministry leads the congregation in worship through songs and hymns.', 'Tuesday - 6:00pm to 8:00pm', 'choir.jpeg'),
+(3, 'Praise and Worship Ministry', 'The Praise and Worship ministry creates an atmosphere of worship in every service.', 'Tuesday - 6:00pm to 8:00pm', 'praise_worship.jpeg'),
+(4, 'Instrumentalists Ministry', 'Our instrumentalists add depth to worship with musical instruments.', 'Tuesday - 6:00pm to 8:00pm', 'instrumentalists.jpeg'),
+(5, 'Media and IT Ministry', 'Supporting the church through audio, video, and technology services.', 'Tuesday - 6:00pm to 8:00pm', 'media_it.jpeg'),
+(6, 'Creative Ministry', 'Harnessing creativity to glorify God through arts and design.', 'Tuesday - 6:00pm to 8:00pm', 'creative.jpeg'),
+(7, 'Intercessory Ministry', 'Dedicated to prayer and intercession for the church and community.', 'Tuesday - 6:00pm to 8:00pm', 'intercessory.jpeg'),
+(8, 'Hospitality Ministry', 'Making church attendees feel welcome and at home.', 'Tuesday - 6:00pm to 8:00pm', 'hospitality.jpeg'),
+(9, 'High School Ministry', 'This ministry focuses on high school outreach and discipleship for young students to help them grow in faith.', 'Tuesday - 6:00pm to 8:00pm', 'high_school.jpeg');
 
 -- --------------------------------------------------------
 
@@ -508,16 +555,18 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `course`, `admission_number`, `phone_number`, `ministry`, `year_of_study`, `eve_team`, `school_id_path`) VALUES
 (2, 'Victor Arnold', '$2y$10$JwGG3W/aRyb9PKKN.fy0wed1K/aLZQG6Vnu2YMG5hFEJEb4DDEgWS', 'arnod@gmail.com', 'B.Sc Computer Science', 'CCS\\00046/022', '0743720033', 'Praise and Worship', 3, 'Weso', ''),
-(4, 'Preston Maina', '$2y$10$0dMj28AEWr8QqshfnKzLfuXJM9OU/4C9E6f47zcZqt2Ca9XVakpse', 'prestonmaina75@gmail.com', 'BSc Computer Science', 'CCS/00007/021', '0791666055', 'Media and IT', 3, 'Central Evangelistic Team', '');
+(4, 'Preston Maina', '$2y$10$0dMj28AEWr8QqshfnKzLfuXJM9OU/4C9E6f47zcZqt2Ca9XVakpse', 'prestonmaina75@gmail.com', 'BSc Computer Science', 'CCS/00007/021', '0791666055', 'Media and IT', 3, 'Central Evangelistic Team', ''),
+(11, 'Amakalu Vitalis', '$2y$10$t5b4z0kdkDzZSjufoDJjWuh1MLwE8GxwY0IkwOvZfUNgUghez/xN2', 'amakalu254@gmail.com', 'Computer Science', 'CCS/00046/022', '0743720033', 'Media and IT', 3, 'Weso', 'backend/uploads/school_Ids/66da00a3767d8-choir.jpeg'),
+(12, 'Paul Mwika', '$2y$10$WtZUYguQoFyXesGF6yZctulpqLRHMBb9urJGAgFBj1iFcZx1M4eba', 'mwikapaul61@gmail.com', 'Economics and Statistics', 'BES/00010/021', '0745614323', 'Media and IT', 4, 'Central Evangelistic Team', 'backend/uploads/school_Ids/66db38d42408a-creative.jpeg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `aboutus`
+-- Indexes for table `about`
 --
-ALTER TABLE `aboutus`
+ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -542,6 +591,12 @@ ALTER TABLE `contacts`
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `eveteam`
+--
+ALTER TABLE `eveteam`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -621,10 +676,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `aboutus`
+-- AUTO_INCREMENT for table `about`
 --
-ALTER TABLE `aboutus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `add_book`
@@ -649,6 +704,12 @@ ALTER TABLE `contacts`
 --
 ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `eveteam`
+--
+ALTER TABLE `eveteam`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `faqs`
@@ -690,7 +751,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `ministries`
 --
 ALTER TABLE `ministries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `request_books`
@@ -720,7 +781,7 @@ ALTER TABLE `t_registration`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

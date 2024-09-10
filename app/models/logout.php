@@ -3,6 +3,6 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header("Location: /../public/index.php?logout=success");
+header("Location: /../index.php?logout=success");
 
 ?>..

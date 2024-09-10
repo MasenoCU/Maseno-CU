@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
@@ -16,7 +19,6 @@
 </head>
 
 <body>
-
     <!-- header -->
     <?php include"../models/header.php"; ?>
 
