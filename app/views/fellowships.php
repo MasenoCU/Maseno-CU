@@ -1,20 +1,21 @@
 <?php
 session_start();
+require_once "../../config.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="/public/assets/scripts/color-modes.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>Fellowships Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -50,12 +51,12 @@ session_start();
             </div>
             <div class="row justify-content-lg-center align-items-lg-center">
                 <div class="col-auto col-md-6">
-                    <img src="/public/assets/images/Video Placeholder.png" alt="" class="img-fluid">
+                    <img src="<?php echo BASE_URL; ?>assets/images/Video Placeholder.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-auto col-md-6">
                     <h4 class="mb-2">Christianity and Technology</h4>
                     <h5>Featured Speaker</h5>
-                    <img src="/public/assets/images/Preston.jpeg" alt="speaker-profile" width="64" height="64"
+                    <img src="<?php echo BASE_URL; ?>assets/images/Preston.jpeg" alt="speaker-profile" width="64" height="64"
                         class="rounded-circle">
                     <p class="text-muted mb-0">Preston Maina</p>
                     <ul class="nav mb-2">
@@ -95,7 +96,7 @@ session_start();
                 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center">
                     <div class="col justify-content-center">
                         <div class="text-center">
-                            <img src="/public/assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Friday Fellowship</h4>
                         <p class="text-muted text-center">
@@ -105,7 +106,7 @@ session_start();
                     </div>
                     <div class="col ">
                         <div class="text-center">
-                            <img src="/public/assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Sunday Service</h4>
                         <p class="text-muted text-center">
@@ -115,7 +116,7 @@ session_start();
                     </div>
                     <div class="col ">
                         <div class="text-center">
-                            <img src="/public/assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Saturday Fellowship</h4>
                         <p class="text-muted text-center">
@@ -140,7 +141,7 @@ session_start();
                 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                     <div class="col">
                         <div>
-                            <img src="/public/assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Ministry Fellowship</h4>
                         <p class="text-muted text-start">
@@ -150,7 +151,7 @@ session_start();
                     </div>
                     <div class="col">
                         <div>
-                            <img src="/public/assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Wednesday Prayers & BS</h4>
                         <p class="text-muted text-start">
@@ -160,7 +161,7 @@ session_start();
                     </div>
                     <div class="col">
                         <div>
-                            <img src="/public/assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Thursday BEST-P Session</h4>
                         <p class="text-muted text-start">
@@ -187,9 +188,9 @@ session_start();
     <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
-    <script src="/public/assets/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

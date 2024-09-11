@@ -1,19 +1,20 @@
 <?php
 session_start();
+require_once "../../config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="/public/assets/scripts/color-modes.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>Gallery Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -31,7 +32,7 @@ session_start();
                 <p class="lead text-center">Browse through our gallery to relive the memorable events and activities of
                     the Christian Union</p>
             </div>
-            <div class="row"><img src="/public/assets/images/Slider Image.png" alt="" class="img-fluid"></div>
+            <div class="row"><img src="<?php echo BASE_URL; ?>assets/images/Slider Image.png" alt="" class="img-fluid"></div>
         </div>
     </section>
     
@@ -74,9 +75,9 @@ session_start();
     <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
-    <script src="/public/assets/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

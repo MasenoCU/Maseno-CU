@@ -1,23 +1,24 @@
 <?php
 session_start();
+require_once "../../config.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="/public/assets/scripts/color-modes.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
-    <link rel="stylesheet" href="/public/assets/styles/ministries.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/ministries.css">
     <!-- page title -->
     <title>Ministries Maseno University Christian Union</title>
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>favicon.ico">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/assets/styles/comingsoon.css"> <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/comingsoon.css"> <!-- Core Stylesheet -->
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -40,7 +41,7 @@ session_start();
                     <div class="card h-100 shadow-sm">
                         <div class="img-container">
                             <!-- Dynamically build the image path -->
-                            <img src="/public/assets/images/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
+                            <img src="<?php echo BASE_URL; ?>assets/images/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
                             <div class="overlay">
                                 <p class="description"><?php echo $ministry['description']; ?></p>
                                 <!-- Hardcode the page URL for each ministry -->
@@ -62,9 +63,9 @@ session_start();
     <?php require_once "../models/footer.php"; ?>
     <?php require_once "../models/coming-soon-modal.php";?>
 
-    <script src="/public/assets/scripts/jquery.min.js"></script>  <!-- Ensure jQuery is included if using jQuery in your JS -->
-    <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS for dropdowns -->
-    <script src="/public/assets/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>  <!-- Ensure jQuery is included if using jQuery in your JS -->
+    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS for dropdowns -->
+    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
 
 </body>
 

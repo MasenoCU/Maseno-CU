@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "../../config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +8,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <title>Thank You! Maseno University Christian Union</title>
     <style>
     body {

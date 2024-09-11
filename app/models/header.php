@@ -1,5 +1,6 @@
 <?php
 require_once "db_connection.php";
+require_once "../../config.php";
 ?>
     <!-- SVG icons -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -25,12 +26,12 @@ require_once "db_connection.php";
         <!-- Navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
             <!-- Navbar brand -->
-            <a href="../../public/index.php"
+            <a href="../..<?php echo BASE_URL; ?>index.php"
                 class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                 <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
                     <rect width="100%" height="100%" fill="white" />
                     <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="/public/assets/icons.svg#mucu"></use>
+                        <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#mucu"></use>
                     </svg>
                 </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
@@ -83,7 +84,7 @@ require_once "db_connection.php";
             </div>
         </div>
     </header>
-<script src="/public/assets/scripts/jquery.min.js"></script>
-<script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
-<script src="/public/assets/scripts/main.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

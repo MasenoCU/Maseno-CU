@@ -1,5 +1,6 @@
 <?php
-include "db_connection.php";
+require_once "db_connection.php";
+require_once "../../config.php";
 
 // Fetch events from the database
 $events = fetchTableData($connection, 'Events');
@@ -14,16 +15,16 @@ if (!is_array($events)) {
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="/public/assets/scripts/color-modes.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- page title -->
     <title>Events</title>
     <!-- custom css -->
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
-    <link rel="stylesheet" href="/public/assets/styles/blog.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/blog.css">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -229,9 +230,9 @@ if (!is_array($events)) {
     </section>
 
     <!-- main js -->
-    <script src="/public/assets/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="/public/assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

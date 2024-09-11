@@ -1,3 +1,6 @@
+<?php
+require_once "../../config.php";
+?>
 <div class="dashboard-container container-xxl">
     <div class="row">
         <!-- Sidebar or navigation area for quick links -->
@@ -92,4 +95,4 @@
 </div>
 <!-- Include Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="/public/assets/js/user_dashboard.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/user_dashboard.js"></script>
