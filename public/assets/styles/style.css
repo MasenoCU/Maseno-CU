@@ -205,6 +205,11 @@ html[data-bs-theme="dark"] .map-iframe {
 
 }
 
+.sidebar{
+  background-color: #ffffff;
+  color: #000000;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
