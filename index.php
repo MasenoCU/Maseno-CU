@@ -21,16 +21,16 @@ $events = $homeController->getEvents();
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/blog.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/blog.css">
     <!-- page title -->
     <title>Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>

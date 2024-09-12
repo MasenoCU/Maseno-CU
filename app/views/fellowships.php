@@ -7,15 +7,15 @@ require_once "../../config.php";
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>Fellowships Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -96,7 +96,7 @@ require_once "../../config.php";
                 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center">
                     <div class="col justify-content-center">
                         <div class="text-center">
-                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Friday Fellowship</h4>
                         <p class="text-muted text-center">
@@ -106,7 +106,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col ">
                         <div class="text-center">
-                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Sunday Service</h4>
                         <p class="text-muted text-center">
@@ -116,7 +116,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col ">
                         <div class="text-center">
-                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Saturday Fellowship</h4>
                         <p class="text-muted text-center">
@@ -141,7 +141,7 @@ require_once "../../config.php";
                 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                     <div class="col">
                         <div>
-                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Ministry Fellowship</h4>
                         <p class="text-muted text-start">
@@ -151,7 +151,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col">
                         <div>
-                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Wednesday Prayers & BS</h4>
                         <p class="text-muted text-start">
@@ -161,7 +161,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col">
                         <div>
-                            <img src="<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Thursday BEST-P Session</h4>
                         <p class="text-muted text-start">
@@ -188,9 +188,9 @@ require_once "../../config.php";
     <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

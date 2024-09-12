@@ -9,15 +9,15 @@ require_once "../../config.php";
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>Leadership Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -50,7 +50,7 @@ require_once "../../config.php";
             <div class="row text-center">
                 <!-- chairperson -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Paul Mwika.jpg" class="rounded-circle" width="100" height="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Paul Mwika.jpg" class="rounded-circle" width="100" height="100"
                         aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                     <h5 class="fw-bold mt-2">Paul Mwika</h5>
                     <h5 class="mb-3">Chairperson</h5>
@@ -75,7 +75,7 @@ require_once "../../config.php";
                 </div>
                 <!-- vice chairperson -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Lenox Mutwiri.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Lenox Mutwiri.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
                         alt="">
                     <h5 class="fw-bold mt-2">Lenox Mutwiri</h5>
@@ -100,7 +100,7 @@ require_once "../../config.php";
                 </div>
                 <!-- secretary -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Babra Chebet.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Babra Chebet.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
                         alt="">
                     <h5 class="fw-bold mt-2">Babra Chebet</h5>
@@ -124,7 +124,7 @@ require_once "../../config.php";
                 </div>
                 <!-- treasurer -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/student_m.png" class="rounded-circle" width="100" height="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/student_m.png" class="rounded-circle" width="100" height="100"
                         aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                     <h5 class="fw-bold mt-2">Kevin Soita</h5>
                     <h5 class="mb-3">Treasurer</h5>
@@ -147,7 +147,7 @@ require_once "../../config.php";
                 </div>
                 <!-- vice secretary -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Eulita Chebet.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Eulita Chebet.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
                         alt="">
                     <h5 class="fw-bold mt-2">Eulita Chebet</h5>
@@ -172,7 +172,7 @@ require_once "../../config.php";
                 </div>
                 <!-- hospitality coordinator -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Brian Kimondo.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Brian Kimondo.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" focusable="false" alt="">
                     <h5 class="fw-bold mt-2">Brian Kimondo</h5>
                     <h5 class="mb-3">Hospitality Coordinator</h5>
@@ -195,7 +195,7 @@ require_once "../../config.php";
                 </div>
                 <!-- discipleship coordinator -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Rosemary Wambua.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Rosemary Wambua.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" focusable="false" alt="">
                     <h5 class="fw-bold mt-2">Rosemary Wambua</h5>
                     <h5 class="mb-3">Discipleship Coordinator</h5>
@@ -218,7 +218,7 @@ require_once "../../config.php";
                 </div>
                 <!-- mission coordinator -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Fidel Were.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Fidel Were.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
                         alt="">
                     <h5 class="fw-bold mt-2">Fidel Were</h5>
@@ -243,7 +243,7 @@ require_once "../../config.php";
                 </div>
                 <!-- bible study coordinator -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/student_f.png" class="rounded-circle" width="100" height="auto"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/student_f.png" class="rounded-circle" width="100" height="auto"
                         aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                     <h5 class="fw-bold mt-2">Britney Mwenesi</h5>
                     <h5 class="mb-3">Bible Study Coordinator</h5>
@@ -266,7 +266,7 @@ require_once "../../config.php";
                 </div>
                 <!-- MIT director -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Shyreen Mwenda.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Shyreen Mwenda.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
                         alt="">
                     <h5 class="fw-bold mt-2">Shyreen Mwenda</h5>
@@ -289,7 +289,7 @@ require_once "../../config.php";
                 </div>
                 <!-- prayer coordinator -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Elvis Omondi.jpg" class="object-fit-cover rounded-circle" width="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Elvis Omondi.jpg" class="object-fit-cover rounded-circle" width="100"
                         height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
                         alt="">
                     <h5 class="fw-bold mt-2">Elvis Omondi</h5>
@@ -313,7 +313,7 @@ require_once "../../config.php";
                 </div>
                 <!-- board director -->
                 <div class="col-md-4 col-lg-3">
-                    <img src="<?php echo BASE_URL; ?>assets/images/student_m.png" class="rounded-circle" width="100" height="100"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/student_m.png" class="rounded-circle" width="100" height="100"
                         aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
                     <h5 class="fw-bold mt-2">Nixon Kiptoo</h5>
                     <h5 class="mb-3">Board Director</h5>
@@ -358,7 +358,7 @@ require_once "../../config.php";
                         and recommendations to help the Christian Union thrive and fulfill its purpose.</p>
                 </div>
                 <div class="col-12">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Wide Placeholder Image.png" alt="" class="img-fluid">
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Wide Placeholder Image.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -393,7 +393,7 @@ require_once "../../config.php";
                         individuals who will lead and serve the community with integrity and passion.</p>
                 </div>
                 <div class="col col-auto col-md-6">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/700x500.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>assets/images/700x500.png" alt="">
                 </div>
             </div>
         </div>
@@ -445,9 +445,9 @@ require_once "../../config.php";
     <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

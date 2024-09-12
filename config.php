@@ -4,5 +4,5 @@ if ($_SERVER['HTTP_HOST'] === 'localhost' || strpos($_SERVER['REQUEST_URI'], '/d
     define('BASE_URL', '/developer/public/');
 } else {
     // BASE_URL for the production environment and Localhost
-    define('BASE_URL', '/public/');
+    define('BASE_URL', 'public/');
 }

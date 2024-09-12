@@ -13,7 +13,7 @@ if (!isset($_SESSION['username'])) {
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,10 +22,10 @@ if (!isset($_SESSION['username'])) {
     <meta name="generator" content="Hugo 0.122.0">
     <title>Home</title>
 
-    <link href="<?php echo BASE_URL; ?>assets/styles/style.css" rel="stylesheet">
+    <link href="/<?php echo BASE_URL; ?>assets/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>assets/styles/home.css" rel="stylesheet">
+    <link href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="/<?php echo BASE_URL; ?>assets/styles/home.css" rel="stylesheet">
 </head>
 
 <body>
@@ -145,7 +145,7 @@ require_once '../models/header.php';
                         More</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/700x500.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>assets/images/700x500.png" alt="">
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@ require_once '../models/header.php';
                     <div class="col justify-content-center">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#eye"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#eye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -182,7 +182,7 @@ require_once '../models/header.php';
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#rocket"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#rocket"></use>
                             </svg>
                         </div>
                         <h2>
@@ -195,7 +195,7 @@ require_once '../models/header.php';
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#bullseye"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#bullseye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -236,7 +236,7 @@ require_once '../models/header.php';
                     <a href="#contact " class="btn btn-outline-secondary btn-sm ms-2 mb-2 border-2 ">Get in touch</a>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>assets/images/700x500.png" alt=" ">
                 </div>
             </div>
         </div>
@@ -280,7 +280,7 @@ require_once '../models/header.php';
                             <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
                                     style="--bs-link-hover-color-rgb: 0, 166, 81;"
                                     href="/app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
-                                        <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#arrow-bar-right"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#arrow-bar-right"></use>
                                     </svg></a>
                             </p>
                         </div>
@@ -308,7 +308,7 @@ require_once '../models/header.php';
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary">Faith</h6>
                             </div>
-                            <img src="<?php echo BASE_URL; ?>assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Growing in Faith</h5>
@@ -327,7 +327,7 @@ require_once '../models/header.php';
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Inspiration</h6>
                             </div>
-                            <img src="<?php echo BASE_URL; ?>assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title ">Finding Inner Peace</h5>
@@ -346,7 +346,7 @@ require_once '../models/header.php';
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Testimonials</h6>
                             </div>
-                            <img src="<?php echo BASE_URL; ?>assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Life Changing Stories</h5>
@@ -417,7 +417,7 @@ require_once '../models/header.php';
             <div class="row my-4 justify-content-around align-items-center">
                 <div class="text-center col-6 col-lg-4 mb-2">
                     <svg class="bi text-body-secondary" width="64" height="64">
-                        <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#person?"></use>
+                        <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#person?"></use>
                     </svg>
                 </div>
                 <div class="col-lg-8">
@@ -461,7 +461,7 @@ require_once '../models/header.php';
         <div class="container-xl md-4 align-content-center align-items-center">
             <div class="p-2 text-center rounded-3 home-cta">
                 <svg class="bi mt-4 mb-3" width="70" height="62">
-                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#mucu" />
+                    <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#mucu" />
                 </svg>
                 <h1 class="text-body-emphasis">
                     <div class="display-4">Feel at the feet of Jesus</div>
@@ -526,9 +526,9 @@ require_once '../models/footer.php';
 require_once "../models/coming-soon-modal.php";
 ?>   
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

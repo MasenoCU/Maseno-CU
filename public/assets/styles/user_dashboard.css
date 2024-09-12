@@ -71,7 +71,7 @@ p {
 }
 
 [data-bs-theme="dark"] .sidebar .nav-link:hover, [data-bs-theme="dark"] .sidebar .nav-link.active {
-    background-color: #00cec9;
+    background-color: #25aae1;
     color: #ffffff;
 }
 
