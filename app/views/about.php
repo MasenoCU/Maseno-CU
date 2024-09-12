@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="/public/css/about.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ae877f7da9.js" crossorigin="anonymous"></script>
+    <!-- *******  Owl Carousel Link  ******* -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 </head>
 
 <body>
@@ -129,7 +132,7 @@
         </div>
     </div>
 
-    <?php include"../components/header.php"; ?> 
+    <?php include "../components/header.php"; ?>
 
     <!-- header -->
     <section id="header">
@@ -316,7 +319,6 @@
                     them all</a>
             </div>
         </div>
-
     </section>
 
     <!-- Ministries -->
@@ -499,13 +501,13 @@
     </section>
 
     <!-- EVE Teams -->
-    <section id="eve teams">
+    <section id="eve-teams">
         <div class="container-lg d-flex align-items-center justify-content-center">
-            <div class="swiper swiper2"> 
+            <div class="swiper swiper2">
                 <div class="slide-container slider2 d-flex justify-content-center align-items-center mb-5">
-                    <div class="swiper-wrapper slides">
+                    <div class="swiper-wrapper slides align-items-center">
                         <!-- EveTeam -->
-                        <div class="swiper-slide eveteam bg-secondary position-relative border rounded-3">
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
                             <div class="eveteam-content d-flex flex-column align-items-center p-2">
                                 <div class="evteam-logo">
                                     <img class=""
@@ -513,34 +515,247 @@
                                 </div>
                                 <div class="media-icons">
                                     <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
-                                            target="_blank"><svg class="bi" width="20" height="20">
-                                                <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                            </svg></a>
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
                                     <a class="p-1"
-                                            href="https://chat.whatsapp.com/channel/" target="_blank"><svg
-                                                class="bi" width="20" height="20">
-                                                <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                            </svg></a>
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
                                     <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
                                 </div>
                                 <div class="name-description d-flex flex-column align-items-center">
-                                    <h4>Central Evangelistic Team</h4>
-                                    <h4>(C.E.T Family)</h4>
+                                    <h5>Central Evangelistic Team</h5>
+                                    <h6>(CET Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="info"
+                                        class="btn btn-primary btn-md my-1 rounded-pill">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/UET LOGO.png" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center">
+                                    <h5>Uttermost Evangelistic Team</h5>
+                                    <h6>(UET Family)</h6>
                                     <p class="text-muted">Preaching the word.</p>
                                 </div>
                                 <div class="d-inline-block text-center text-md-start">
                                     <a href="" target="" id="youtube"
-                                    class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Learn More</a>
-                                    <a href="https://www.facebook.com/Masenocu/" target="_blank" id="facebook"
-                                    class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill d-none">Follow</a>
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
+
                                 </div>
                             </div>
                         </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/mubet.png" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center text-center">
+                                    <h5>Middle Eastern Brethren Evangelistic Team</h5>
+                                    <h6>(MUBET Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="youtube"
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/noret.jpg" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center">
+                                    <h5>North Rift Evangelistic Team</h5>
+                                    <h6>(NORET Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="info"
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/soret.jpg" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center">
+                                    <h5>South Rift Evangelistic Team</h5>
+                                    <h6>(SORET Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="youtube"
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/CET Logo.jpg" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center">
+                                    <h5>Nyanza Evangelistic Team</h5>
+                                    <h6>(NET Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="youtube"
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/emuseta.jpg" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center text-center">
+                                    <h5>Emulatable Students and Associates Evangelistic Team</h5>
+                                    <h6>(EMUSETA Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="youtube"
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EveTeam -->
+                        <div class="swiper-slide eveteam bg-body-secondary position-relative border rounded-3">
+                            <div class="eveteam-content d-flex flex-column align-items-center p-2">
+                                <div class="evteam-logo">
+                                    <img class=""
+                                        src="/public/assets/images/CET Logo.jpg" alt="evteam-logo">
+                                </div>
+                                <div class="media-icons">
+                                    <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
+                                        target="_blank"><svg class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                        </svg></a>
+                                    <a class="p-1"
+                                        href="https://chat.whatsapp.com/channel/" target="_blank"><svg
+                                            class="bi" width="20" height="20">
+                                            <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                        </svg></a>
+                                    <!-- <i class="bi bi-facebook text-primary fs-4"></i> -->
+                                </div>
+                                <div class="name-description d-flex flex-column align-items-center">
+                                    <h5>Western Evangelistic Team</h5>
+                                    <h6>(WESO Family)</h6>
+                                    <p class="text-muted">Preaching the word.</p>
+                                </div>
+                                <div class="d-inline-block text-center text-md-start">
+                                    <a href="" target="" id="youtube"
+                                        class="btn btn-primary btn-md my-1 ms-1 rounded-pill">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next slider2-next"></div>
-                <div class="swiper-button-prev slider2-prev"></div>
+                <div class="swiper-button-next swiper2-navButton slider2-next"></div>
+                <div class="swiper-button-prev swiper2-navButton slider2-prev"></div>
                 <div class="swiper-pagination slider2-pagination"></div>
             </div>
         </div>
@@ -556,8 +771,75 @@
             <p class="lead text-muted text-center">
                 Capturing moments of impact and community engagement
             </p>
-            <div>
-                <img class="img-fluid" src="/public/assets/images/Content.png" alt="">
+            <div style="--swiper-navigation-color: #f89119; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper3-navButton"></div>
+                <div class="swiper-button-prev swiper3-navButton"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper3">
+                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -565,7 +847,181 @@
     <!-- Testimonials -->
     <section id="testimonials">
         <div class="container-xl">
+            <div class="testimonials-section">
+                <!-- Owl Carousel Slider Starts -->
+                <div class="owl-carousel owl-theme testimonials-container">
+                    <!-- Item1 Starts -->
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Life-changing</h2>
+                            </div>
+                            <p>Being part of Maseno University Christian Union has been a life-changing experience. It has helped me grow in my faith and develop a deeper relationship with God.</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="/public/assets/images/User.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Person Name</span>
+                                <span>Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item1 Ends -->
 
+                    <!-- Item2 Starts -->
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Supportive Community</h2>
+                            </div>
+                            <p>The Christian Union has provided me with a supportive community where I can worship, learn, and serve alongside fellow believers. It has truly transformed my college experience.</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="/public/assets/images/User.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Person Name</span>
+                                <span>Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item2 Ends -->
+
+                    <!-- Item3 Starts -->
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Spiritual Growth</h2>
+                            </div>
+                            <p>Being part of the Maseno University Christian Union has been an incredible journey of spiritual growth and transformation. The community of believers has provided a supportive environment where I have been able to deepen my relationship with God and discover my purpose in Him.</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="/public/assets/images/User.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Person Name</span>
+                                <span>Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item3 Ends -->
+
+                    <!-- Item4 Starts -->
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Awesome Coding</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="/public/assets/images/User.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Person Name</span>
+                                <span>Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item4 Ends -->
+
+                    <!-- Item5 Starts -->
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Awesome Coding</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="/public/assets/images/User.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Person Name</span>
+                                <span>Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item5 Ends -->
+
+                    <!-- Item6 Starts -->
+                    <div class="item testimonial-card">
+                        <main class="test-card-body">
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                                <h2>Awesome Coding</h2>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </main>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="/public/assets/images/User.jpg">
+                            </div>
+                            <div class="profile-desc">
+                                <span>Person Name</span>
+                                <span>Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item6 Ends -->
+
+                </div>
+                <!-- Owl Carousel Slider Ends -->
+
+            </div>
         </div>
     </section>
 
@@ -574,9 +1030,13 @@
         <div class="container-xl"></div>
     </section>
 
-    <?php include"../components/footer.php"; ?>
+    <?php include "../components/footer.php"; ?>
 
 
+    <!--   *****   JQuery Link   *****   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--   *****   Owl Carousel js Link  *****  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Swiper JS -->
     <script src="/public/js/swiper-bundle.min.js"></script>
     <script src="/public/js/about.js"></script>
