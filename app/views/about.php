@@ -19,8 +19,8 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ae877f7da9.js" crossorigin="anonymous"></script>
     <!-- *******  Owl Carousel Link  ******* -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 </head>
 
 <body>
@@ -664,7 +664,7 @@
                             <div class="eveteam-content d-flex flex-column align-items-center p-2">
                                 <div class="evteam-logo">
                                     <img class=""
-                                        src="/public/assets/images/CET Logo.jpg" alt="evteam-logo">
+                                        src="/public/assets/images/NET-LOGO.jpg" alt="evteam-logo">
                                 </div>
                                 <div class="media-icons">
                                     <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
@@ -726,7 +726,7 @@
                             <div class="eveteam-content d-flex flex-column align-items-center p-2">
                                 <div class="evteam-logo">
                                     <img class=""
-                                        src="/public/assets/images/CET Logo.jpg" alt="evteam-logo">
+                                        src="/public/assets/images/weso-logo.png" alt="evteam-logo">
                                 </div>
                                 <div class="media-icons">
                                     <a class="p-1" href="https://www.facebook.com/MasenoCuCet/"
@@ -847,6 +847,7 @@
     <!-- Testimonials -->
     <section id="testimonials">
         <div class="container-xl">
+
             <div class="testimonials-section">
                 <!-- Owl Carousel Slider Starts -->
                 <div class="owl-carousel owl-theme testimonials-container">
@@ -1027,7 +1028,16 @@
 
     <!-- CTA -->
     <section id="cta">
-        <div class="container-xl"></div>
+        <div class="container-xxl">
+            <!-- <img src="..." class="img-fluid" alt="..."> -->
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Join Our Christian Union Community</h1>
+                    <p class="col-md-8 fs-4">Discover the joy of living for God and pursuing a holy life.</p>
+                    <button class="btn btn-warning btn-md" type="button">Join</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <?php include "../components/footer.php"; ?>
