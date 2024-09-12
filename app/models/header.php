@@ -117,7 +117,7 @@ require_once "../../config.php";
             <nav class="p-0 mb-1 mt-xl-2 mx-xl-auto border rounded navbar-expand-sm bg-primary" data-bs-theme="auto">
                 <div class="collapse navbar-collapse">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li class="nav-item"><a href="homepage.php" class="nav-link px-2 link-body-emphasis active"
+                        <li class="nav-item"><a href="/docs/index.php" class="nav-link px-2 link-body-emphasis active"
                                 aria-current="page">Home</a></li>
                         <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                         <li class="nav-item"><a href="fellowships.php" class="nav-link px-2 link-body-emphasis">Fellowships</a></li>

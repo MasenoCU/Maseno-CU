@@ -1,13 +1,13 @@
-<?php
+<!-- <?php
 session_start();
 
 require_once "../../config.php";
 
 if (!isset($_SESSION['username'])) {
-    header("Location: registrationpage.php");
+    header("Location: login.php");
     exit;
 }
-?>
+?> -->
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">

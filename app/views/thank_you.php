@@ -4,7 +4,6 @@ require_once "../../config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,13 +45,10 @@ require_once "../../config.php";
     }
     </style>
 </head>
-
 <body>
-    <div class="thank-you-container">
-        <h1>Thank you for registering with us!</h1>
-        <p class="thank-you-message">We will verify your details and an email will be sent to you with login instructions.</p>
-        <a class="thank-you-link" href="registrationpage.php?mode=login">Login here</a>
-    </div>
+    <h1>Thanks for your submission</h1>
+    <br>
+    <br>
+    <h3>Your details are with us now, thanks for being a member </h3>
 </body>
-
 </html>
