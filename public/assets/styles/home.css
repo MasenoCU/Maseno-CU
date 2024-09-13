@@ -1,0 +1,53 @@
+
+/* Navbar fixes */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar .nav-link {
+    padding: 0 15px;
+    color: #000;
+}
+
+.navbar .nav-link:hover {
+    color: #00a651; /* Branding green hover */
+}
+
+/* Main welcome text */
+.display-4 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+/* Fix for the profile image */
+.profile-image {
+    width: 40px;
+    height: 40px;
+}
+
+/* Center content in the main section */
+.main-content {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Online giving button styling */
+.btn-giving {
+    background-color: #00a651;
+    border-color: #00a651;
+    color: #fff;
+}
+
+.btn-giving:hover {
+    background-color: #007f3a;
+    border-color: #007f3a;
+}
+
+.dropdown-menu a {
+    font-size: 14px;
+}
