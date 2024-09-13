@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const defaultContent = document.getElementById('default-content');  // The default content
     const breadcrumb = document.querySelector('.breadcrumb');  // Breadcrumb selector
 
+    // Function to close all open submenus
+    function closeAllSubmenus() {
+        const openSubmenus = document.querySelectorAll('.submenu.show');
+        openSubmenus.forEach(submenu => {
+            submenu.classList.remove('show');
+        });
+    }
+
     // Function to dynamically update the breadcrumb
     function updateBreadcrumb(sectionTitle) {
         breadcrumb.innerHTML = '';  // Clear the existing breadcrumb
@@ -21,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
             contentSections.forEach(section => section.classList.add('d-none'));
             defaultContent.classList.remove('d-none');
             localStorage.removeItem('activeSection');
+
+            // Close any open submenus
+            closeAllSubmenus();
+
             updateBreadcrumb('Overview');
         });
         dashboardLink.appendChild(dashboardAnchor);
@@ -107,9 +119,11 @@ document.addEventListener('DOMContentLoaded', function () {
             updateBreadcrumb(activeLink.textContent);
         }
     } else {
+        // Initialize breadcrumb for the default Overview
         updateBreadcrumb('Overview');
     }
 
+    // Add event listener to the "Overview" link to reset to the default content
     const overviewLink = document.querySelector('.nav-link.active');
     if (overviewLink) {
         overviewLink.addEventListener('click', function () {
@@ -122,14 +136,16 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             defaultContent.classList.remove('d-none');
 
+            // Close all open submenus when returning to the overview
+            closeAllSubmenus();
+
             // Update breadcrumb back to 'Overview'
             updateBreadcrumb('Overview');
         });
     }
 
-    // Ministry Participation Chart
+    // Ministry Participation Chart (optional, uncomment when necessary)
     const ctxMinistry = document.getElementById('ministryChart')?.getContext('2d');
-    // Uncomment this if you want to re-enable the Ministry chart logic
     // const ministryChart = new Chart(ctxMinistry, {
     //     type: 'bar',
     //     data: {
@@ -153,9 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
     //     }
     // });
 
-    // Fellowship Attendance Chart
+    // Fellowship Attendance Chart (optional, uncomment when necessary)
     const ctxFellowship = document.getElementById('fellowshipChart')?.getContext('2d');
-    // Uncomment this if you want to re-enable the Fellowship chart logic
     // const fellowshipChart = new Chart(ctxFellowship, {
     //     type: 'line',
     //     data: {

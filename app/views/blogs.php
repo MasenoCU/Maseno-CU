@@ -14,12 +14,12 @@ require_once "../../config.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/blog.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/blog.css">
     <!-- page title -->
     <title>Blogs & Articles Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -134,7 +134,7 @@ require_once "../../config.php";
     </div>
 
     <!-- main header -->
-    <?php include"../components/header.php"; ?>
+    <?php include"../models/header.php"; ?>
 
     <!-- more SVG icons -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -547,12 +547,12 @@ require_once "../../config.php";
 
     </main>
 
-    <?php include("../components/footer.php"); ?>
+    <?php include("../models/footer.php"); ?>
 
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

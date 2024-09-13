@@ -145,6 +145,7 @@ require_once "../../config.php";
                 difference</p>
         </div>
     </section>
+
     <!-- exec -->
     <section id="exec">
         <div class="container-xl">
@@ -155,296 +156,45 @@ require_once "../../config.php";
                 <p class="lead text-muted mb-16">Get to know the dedicated leaders of our Christian Union.</p>
             </div>
             <div class="row text-center">
-                <!-- chairperson -->
+
+
+            <?php foreach ($leaders as $leader): ?>
                 <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Paul Mwika.jpg" class="rounded-circle" width="100" height="100"
-                        aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                    <h5 class="fw-bold mt-2">Paul Mwika</h5>
-                    <h5 class="mb-3">Chairperson</h5>
-                    <p class="mb-2 text-muted">Paul is a passionate leader who is commited to serving God and guiding
-                        our
-                        Union.</p>
+                    <img src="<?php echo htmlspecialchars($leader['image'], ENT_QUOTES, 'UTF-8'); ?>" alt=""
+                        class="rounded-circle" width="100" height="100" aria-label="leader-image"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <h5 class="fw-bold mt-2"><?php echo htmlspecialchars($leader['name'], ENT_QUOTES, 'UTF-8'); ?></h5>
+                    <h5 class="mb-3"><?php echo htmlspecialchars($leader['position'], ENT_QUOTES, 'UTF-8'); ?></h5>
+                    <p class="mb-2 text-muted">
+                        <?php echo htmlspecialchars($leader['description'], ENT_QUOTES, 'UTF-8'); ?></p>
                     <ul class="nav justify-content-center mb-4">
+                        <?php if (!empty($leader['linkedin'])): ?>
                         <li class="nav-item mx-1"><a class="nav-link p-0"
-                                href="https://linkedin.com/in/paul-mwika-2066b8234" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link p-0" href="https://facebook.com/paul.mwika.52"
+                                href="<?php echo htmlspecialchars($leader['linkedin'], ENT_QUOTES, 'UTF-8'); ?>"
                                 target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
+                                    <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#linkedin"></use>
                                 </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link p-0" href="https://wa.me/qr/JPJ4MZ3SNEHDD1"
+                        <?php endif; ?>
+                        <?php if (!empty($leader['facebook'])): ?>
+                        <li class="nav-item mx-1"><a class="nav-link p-0"
+                                href="<?php echo htmlspecialchars($leader['facebook'], ENT_QUOTES, 'UTF-8'); ?>"
                                 target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
+                                    <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#facebook"></use>
                                 </svg></a></li>
+                        <?php endif; ?>
+                        <?php if (!empty($leader['whatsapp'])): ?>
+                        <li class="nav-item mx-1"><a class="nav-link p-0"
+                                href="<?php echo htmlspecialchars($leader['whatsapp'], ENT_QUOTES, 'UTF-8'); ?>"
+                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
+                                    <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#whatsapp"></use>
+                                </svg></a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
-                <!-- vice chairperson -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Lenox Mutwiri.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
-                        alt="">
-                    <h5 class="fw-bold mt-2">Lenox Mutwiri</h5>
-                    <h5 class="mb-3">Vice Chairperson</h5>
-                    <p class="mb-2 text-muted">Lenox brings his strong faith and organizational skills to support the
-                        growth
-                        of our Union.</p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- secretary -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Babra Chebet.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
-                        alt="">
-                    <h5 class="fw-bold mt-2">Babra Chebet</h5>
-                    <h5 class="mb-3">Secretary</h5>
-                    <p class="mb-2 text-muted">Babra ensures effective communication and coordination within our Union.
-                    </p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- treasurer -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/student_m.png" class="rounded-circle" width="100" height="100"
-                        aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                    <h5 class="fw-bold mt-2">Kevin Soita</h5>
-                    <h5 class="mb-3">Treasurer</h5>
-                    <p class="mb-2 text-muted">Kevin manages the financial resources of our Union with integrity and
-                        transparency.</p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- vice secretary -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Eulita Chebet.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
-                        alt="">
-                    <h5 class="fw-bold mt-2">Eulita Chebet</h5>
-                    <h5 class="mb-3">Vice Secretary</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                        voluptatum.
-                    </p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- hospitality coordinator -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Brian Kimondo.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" focusable="false" alt="">
-                    <h5 class="fw-bold mt-2">Brian Kimondo</h5>
-                    <h5 class="mb-3">Hospitality Coordinator</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quae.
-                    </p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- discipleship coordinator -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Rosemary Wambua.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" focusable="false" alt="">
-                    <h5 class="fw-bold mt-2">Rosemary Wambua</h5>
-                    <h5 class="mb-3">Discipleship Coordinator</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, consectetur.
-                    </p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- mission coordinator -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Fidel Were.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
-                        alt="">
-                    <h5 class="fw-bold mt-2">Fidel Were</h5>
-                    <h5 class="mb-3">Mission Coordinator</h5>
-                    <p class="mb-2 text-muted">Fidel organizes impactful outreach programs to spread the love of Christ
-                        to
-                        others.</p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- bible study coordinator -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/student_f.png" class="rounded-circle" width="100" height="auto"
-                        aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                    <h5 class="fw-bold mt-2">Britney Mwenesi</h5>
-                    <h5 class="mb-3">Bible Study Coordinator</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat,
-                        reiciendis!</p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- MIT director -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Shyreen Mwenda.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
-                        alt="">
-                    <h5 class="fw-bold mt-2">Shyreen Mwenda</h5>
-                    <h5 class="mb-3">MIT Coordinator</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, at!</p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- prayer coordinator -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Elvis Omondi.jpg" class="object-fit-cover rounded-circle" width="100"
-                        height="100" aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false"
-                        alt="">
-                    <h5 class="fw-bold mt-2">Elvis Omondi</h5>
-                    <h5 class="mb-3">Prayer Coordinator</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, maxime!
-                    </p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-                <!-- board director -->
-                <div class="col-md-4 col-lg-3">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/student_m.png" class="rounded-circle" width="100" height="100"
-                        aria-label="leader-image" preserveAspectRatio="xMidYMid slice" focusable="false" alt="">
-                    <h5 class="fw-bold mt-2">Nixon Kiptoo</h5>
-                    <h5 class="mb-3">Board Director</h5>
-                    <p class="mb-2 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea,
-                        reprehenderit!
-                    </p>
-                    <ul class="nav justify-content-center mb-4">
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#linkedin"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="https://facebook.com/"
-                                target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#facebook"></use>
-                                </svg></a></li>
-                        <li class="nav-item mx-1"><a class="nav-link disabled p-0" href="#" target="_blank"><svg
-                                    class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="/public/assets/icons/icons.svg#whatsapp"></use>
-                                </svg></a></li>
-                    </ul>
-                </div>
-            </div>
+                <?php endforeach; ?>
         </div>
     </section>
+
     <!-- advisory -->
     <section id="advisory">
         <div class="container-xl justify-content-center">
