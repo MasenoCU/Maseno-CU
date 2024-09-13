@@ -1062,11 +1062,7 @@ require_once "../../config.php";
     <script src="<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
     <!-- bootstrap JS -->
-<<<<<<< HEAD
     <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
-=======
-    <script src="<?php echo BASE_URL; ?>public/assets/scripts/bootstrap.bundle.min.js"></script>
->>>>>>> df2bd9333ec971bffdf6524abc87ab976cb5fe9c
 
 </body>
 
