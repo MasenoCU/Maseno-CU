@@ -1036,7 +1036,7 @@ require_once "../../config.php";
 
     <!-- CTA -->
     <section id="cta">
-        <div class="container-xxl">
+        <div class="container-xl">
             <div class="p-5 mb-4 bg-body-tertiary rounded-3">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Join Our Christian Union Community</h1>
@@ -1058,10 +1058,15 @@ require_once "../../config.php";
     <!-- Swiper JS -->
     <script src="<?php echo BASE_URL; ?>assets/scripts/swiper-bundle.min.js"></script>
     <!-- main js -->
+    <script src="<?php echo BASE_URL; ?>public/assets/scripts/main.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
     <!-- bootstrap JS -->
+<<<<<<< HEAD
     <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+=======
+    <script src="<?php echo BASE_URL; ?>public/assets/scripts/bootstrap.bundle.min.js"></script>
+>>>>>>> df2bd9333ec971bffdf6524abc87ab976cb5fe9c
 
 </body>
 
