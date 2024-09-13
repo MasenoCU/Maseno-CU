@@ -92,11 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.]{1,}" title="Please enter a valid course" />
+                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.,]{1,}" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" title="Please enter a valid admission number" required />
+                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9\/]+" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
@@ -121,14 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <input type="hidden" name="ministry" id="ministry" value="" required />
 
-                        <label class="titlelabel">Year of Study:</label>
-                        <div class="yos">
-                            <button type="button" class="eve-team-btn" data-value="1">1</button>
-                            <button type="button" class="eve-team-btn" data-value="2">2</button>
-                            <button type="button" class="eve-team-btn" data-value="3">3</button>
-                            <button type="button" class="eve-team-btn" data-value="4">4</button>
-                        </div>
-                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
                         <button type="button" class="btn back-btn">Back</button>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
@@ -147,6 +139,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="button" class="eve-team-btn" data-value="UET">UET</button>
                         </div>
                         <input type="hidden" name="eve_team" id="eve_team" value="" required />
+
+                        <label class="titlelabel">Year of Study:</label>
+                        <div class="yos">
+                            <button type="button" class="ministry-btn" data-value="1">1</button>
+                            <button type="button" class="ministry-btn" data-value="2">2</button>
+                            <button type="button" class="ministry-btn" data-value="3">3</button>
+                            <button type="button" class="ministry-btn" data-value="4">4</button>
+                        </div>
+                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
+
                         <button type="button" class="btn back-btn">Back</button>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
