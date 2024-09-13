@@ -98,21 +98,6 @@ require_once "../../config.php";
     <!-- Events content -->
 </div>
 
-<<<<<<< HEAD
-    <!-- Main header -->
-    <header id="header" class="sticky-top bg-body">
-        <!-- Navbar -->
-        <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
-            <!-- Navbar brand -->
-            <a href="../../<?php echo BASE_URL; ?>index.php"
-                class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="white" />
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="/<?php echo BASE_URL; ?>assets/icons.svg#mucu"></use>
-                    </svg>
-                </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
-=======
 <!-- Main header -->
 <header id="header" class="sticky-top bg-body">
     <!-- Navbar -->
@@ -133,7 +118,6 @@ require_once "../../config.php";
             <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 More
->>>>>>> df2bd9333ec971bffdf6524abc87ab976cb5fe9c
             </a>
             <ul class="dropdown-menu text-small shadow">
                 <li><a class="dropdown-item" href="leadership.php">Leadership</a></li>
@@ -235,13 +219,8 @@ require_once "../../config.php";
                 <?php endif; ?>
             </div>
         </div>
-<<<<<<< HEAD
     </header>
 <script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
 <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-=======
-    </div>
-</header>
->>>>>>> df2bd9333ec971bffdf6524abc87ab976cb5fe9c
