@@ -1,7 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Sidebar Submenu Toggle Logic
     const navItems = document.querySelectorAll('.nav-item > a');
+    const submenuLinks = document.querySelectorAll('.submenu .nav-link');  // Select submenu links
+    const contentSections = document.querySelectorAll('.content-section');  // All content sections
+    const defaultContent = document.getElementById('default-content');  // The default content
+    const breadcrumb = document.querySelector('.breadcrumb');  // Breadcrumb selector
 
+    // Function to dynamically update the breadcrumb
+    function updateBreadcrumb(sectionTitle) {
+        breadcrumb.innerHTML = '';  // Clear the existing breadcrumb
+
+        // Add 'Dashboard' link to breadcrumb
+        const dashboardLink = document.createElement('li');
+        dashboardLink.classList.add('breadcrumb-item');
+        const dashboardAnchor = document.createElement('a');
+        dashboardAnchor.href = '#';
+        dashboardAnchor.textContent = 'Dashboard';
+        dashboardAnchor.addEventListener('click', function () {
+            // Reset to the default dashboard view
+            contentSections.forEach(section => section.classList.add('d-none'));
+            defaultContent.classList.remove('d-none');
+            localStorage.removeItem('activeSection');
+            updateBreadcrumb('Overview');
+        });
+        dashboardLink.appendChild(dashboardAnchor);
+        breadcrumb.appendChild(dashboardLink);
+
+        // Add the current section as active
+        const currentSection = document.createElement('li');
+        currentSection.classList.add('breadcrumb-item', 'active');
+        currentSection.setAttribute('aria-current', 'page');
+        currentSection.textContent = sectionTitle;
+        breadcrumb.appendChild(currentSection);
+    }
+
+    // Handle the sidebar submenu toggle
     navItems.forEach(item => {
         item.addEventListener('click', function (event) {
             const submenu = this.nextElementSibling;
@@ -22,8 +55,81 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Handle submenu link clicks and content toggling
+    submenuLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();  // Prevent default link behavior
+            const contentId = this.getAttribute('data-content');  // Get the data-content attribute
+
+            // Store the current section in localStorage to maintain it after reload
+            localStorage.setItem('activeSection', contentId);
+
+            // Hide all content sections
+            contentSections.forEach(section => {
+                section.classList.add('d-none');
+            });
+
+            // Show the selected content section
+            const targetSection = document.getElementById(contentId);
+            if (targetSection) {
+                targetSection.classList.remove('d-none');
+            }
+
+            // Hide the default content
+            defaultContent.classList.add('d-none');
+
+            // Update the breadcrumb with the current section
+            const sectionTitle = this.textContent;
+            updateBreadcrumb(sectionTitle);
+        });
+    });
+
+    // Check localStorage for the last active section (preserve on refresh)
+    const activeSection = localStorage.getItem('activeSection');
+    if (activeSection) {
+        // Hide all content sections
+        contentSections.forEach(section => {
+            section.classList.add('d-none');
+        });
+
+        // Show the last active section
+        const targetSection = document.getElementById(activeSection);
+        if (targetSection) {
+            targetSection.classList.remove('d-none');
+        }
+
+        // Hide the default content
+        defaultContent.classList.add('d-none');
+
+        // Update the breadcrumb to reflect the current section
+        const activeLink = document.querySelector(`.submenu .nav-link[data-content="${activeSection}"]`);
+        if (activeLink) {
+            updateBreadcrumb(activeLink.textContent);
+        }
+    } else {
+        updateBreadcrumb('Overview');
+    }
+
+    const overviewLink = document.querySelector('.nav-link.active');
+    if (overviewLink) {
+        overviewLink.addEventListener('click', function () {
+            // Clear localStorage to reset the view to the dashboard main content
+            localStorage.removeItem('activeSection');
+
+            // Show the default content and hide other sections
+            contentSections.forEach(section => {
+                section.classList.add('d-none');
+            });
+            defaultContent.classList.remove('d-none');
+
+            // Update breadcrumb back to 'Overview'
+            updateBreadcrumb('Overview');
+        });
+    }
+
     // Ministry Participation Chart
-    const ctxMinistry = document.getElementById('ministryChart').getContext('2d');
+    const ctxMinistry = document.getElementById('ministryChart')?.getContext('2d');
+    // Uncomment this if you want to re-enable the Ministry chart logic
     // const ministryChart = new Chart(ctxMinistry, {
     //     type: 'bar',
     //     data: {
@@ -48,7 +154,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // });
 
     // Fellowship Attendance Chart
-    const ctxFellowship = document.getElementById('fellowshipChart').getContext('2d');
+    const ctxFellowship = document.getElementById('fellowshipChart')?.getContext('2d');
+    // Uncomment this if you want to re-enable the Fellowship chart logic
     // const fellowshipChart = new Chart(ctxFellowship, {
     //     type: 'line',
     //     data: {

@@ -7,18 +7,18 @@ require_once "../../config.php";
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/ministries.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/ministries.css">
     <!-- page title -->
     <title>Ministries Maseno University Christian Union</title>
-    <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/<?php echo BASE_URL; ?>favicon.ico">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/comingsoon.css"> <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/comingsoon.css"> <!-- Core Stylesheet -->
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
@@ -41,7 +41,7 @@ require_once "../../config.php";
                     <div class="card h-100 shadow-sm">
                         <div class="img-container">
                             <!-- Dynamically build the image path -->
-                            <img src="<?php echo BASE_URL; ?>assets/images/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
                             <div class="overlay">
                                 <p class="description"><?php echo $ministry['description']; ?></p>
                                 <!-- Hardcode the page URL for each ministry -->
@@ -63,9 +63,9 @@ require_once "../../config.php";
     <?php require_once "../models/footer.php"; ?>
     <?php require_once "../models/coming-soon-modal.php";?>
 
-    <script src="<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>  <!-- Ensure jQuery is included if using jQuery in your JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS for dropdowns -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
 
 </body>
 

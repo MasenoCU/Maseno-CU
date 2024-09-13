@@ -7,7 +7,7 @@ require_once "../../config.php";
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
@@ -177,7 +177,7 @@ require_once "../../config.php";
                         fosters stability in Christian faith among its members.</p>
                 </div>
                 <div class="col-12">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/Placeholder Lightbox.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>assets/images/Placeholder Lightbox.png" alt="">
                 </div>
             </div>
         </div>
@@ -205,7 +205,7 @@ require_once "../../config.php";
                     </ul>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>assets/images/700x500.png" alt=" ">
                 </div>
             </div>
         </div>
@@ -248,7 +248,7 @@ require_once "../../config.php";
                     <hr class="featurette-divider">
                 </div>
                 <div class="col-md-6 d-none d-lg-inline">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/Placeholder Image.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>assets/images/Placeholder Image.png" alt=" ">
                 </div>
             </div>
         </div>
@@ -1047,7 +1047,8 @@ require_once "../../config.php";
         </div>
     </section>
 
-    <?php include "../models/footer.php"; ?>
+    <!-- footer -->
+    <?php require_once "../models/footer.php"; ?>
 
 
     <!--   *****   JQuery Link   *****   -->
@@ -1060,7 +1061,7 @@ require_once "../../config.php";
     <script src="<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

@@ -10,12 +10,12 @@ require_once "../../config.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/style/styles.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/style/styles.css">
     <!-- page title -->
     <title>Evangelistic Teams Maseno University Christian Union</title>
-    <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/<?php echo BASE_URL; ?>assets/images/favicon.ico">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
@@ -607,9 +607,9 @@ require_once "../../config.php";
     <?php include"../models/footer.php"; ?>
 
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 
