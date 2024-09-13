@@ -10,17 +10,17 @@ require_once "../../config.php";
     <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- custon css -->
+    <!-- custom css -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>About Maseno University Christian Union</title>
-<!-- bootstrap css -->
-<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="/public/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/public/css/about.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/about.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ae877f7da9.js" crossorigin="anonymous"></script>
     <!-- *******  Owl Carousel Link  ******* -->
@@ -139,7 +139,7 @@ require_once "../../config.php";
         </div>
     </div>
 
-    <?php include "../components/header.php"; ?>
+    <?php include "../models/header.php"; ?>
 
     <!-- header -->
     <section id="header">
@@ -319,7 +319,7 @@ require_once "../../config.php";
                 <p class="lead text-muted mb-16">Get to know the dedicated leaders of our Christian Union.</p>
             </div>
             <!-- i-frame -->
-            <iframe src="/app/components/leadership.htm" title="Events"></iframe>
+            <iframe src="/app/models/leadership.htm" title="Events"></iframe>
             <div class="row justify-content-center align-items-center">
                 <a href="leadership.php" target="_parent" rel="noreferrer"
                     class="btn col-auto btn-success btn-sm mt-3">Meet
@@ -780,76 +780,76 @@ require_once "../../config.php";
             </p>
             <div>
                 <div style="--swiper-navigation-color: #f89119; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
                     </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    <div class="swiper-button-next swiper3-navButton"></div>
+                    <div class="swiper-button-prev swiper3-navButton"></div>
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </div>
+                        <div class="swiper-slide swiper3">
+                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next swiper3-navButton"></div>
-                <div class="swiper-button-prev swiper3-navButton"></div>
             </div>
-            <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                    </div>
-                    <div class="swiper-slide swiper3">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Testimonials -->
@@ -1037,7 +1037,6 @@ require_once "../../config.php";
     <!-- CTA -->
     <section id="cta">
         <div class="container-xxl">
-            <!-- <img src="..." class="img-fluid" alt="..."> -->
             <div class="p-5 mb-4 bg-body-tertiary rounded-3">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Join Our Christian Union Community</h1>
@@ -1048,7 +1047,7 @@ require_once "../../config.php";
         </div>
     </section>
 
-    <?php include "../components/footer.php"; ?>
+    <?php include "../models/footer.php"; ?>
 
 
     <!--   *****   JQuery Link   *****   -->
@@ -1056,8 +1055,9 @@ require_once "../../config.php";
     <!--   *****   Owl Carousel js Link  *****  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Swiper JS -->
-    <script src="/public/js/swiper-bundle.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/swiper-bundle.min.js"></script>
     <!-- main js -->
+    <script src="<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
     <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>

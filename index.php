@@ -24,11 +24,10 @@ $events = $homeController->getEvents();
     <script src="<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- custon css -->
+    <!-- custom css -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/blog.css">
     <!-- page title -->
-    <title>Maseno University Christian Union</title>
+    <title>Home Maseno University Christian Union</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
@@ -153,7 +152,7 @@ $events = $homeController->getEvents();
                 <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
                     <rect width="100%" height="100%" fill="white" />
                     <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="assets/icons.svg#mucu"></use>
+                        <use xlink:href="/public/assets/icons/icons.svg#mucu"></use>
                     </svg>
                 </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
@@ -179,7 +178,7 @@ $events = $homeController->getEvents();
                     class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <svg class="bi me-2" width="24" height="24">
-                        <use xlink:href="assets/icons.svg#menu" style="fill: currentColor; color:invert;"></use>
+                        <use xlink:href="/public/assets/icons/icons.svg#menu" style="fill: currentColor; color:invert;"></use>
                     </svg>
                 </a>
                 <ul class="dropdown-menu text-small shadow">
@@ -195,7 +194,7 @@ $events = $homeController->getEvents();
                         <a class="dropdown-item icon-link disabled"
                             style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                             <svg class="bi" width="64" height="64">
-                                <use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;">
+                                <use xlink:href="/public/assets/icons/icons.svg#give" style="fill: currentColor; color:invert;">
                                 </use>
                             </svg>
                         </a>
@@ -232,7 +231,7 @@ $events = $homeController->getEvents();
                                     <a class="dropdown-item icon-link disabled"
                                         style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                                         <svg class="bi" width="64" height="64">
-                                            <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#give"
+                                            <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#give"
                                                 style="fill: currentColor; color:invert;">
                                             </use>
                                         </svg>
@@ -400,7 +399,7 @@ $events = $homeController->getEvents();
                     <div class="col justify-content-center">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#eye"></use>
+                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#eye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -413,7 +412,7 @@ $events = $homeController->getEvents();
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#rocket"></use>
+                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#rocket"></use>
                             </svg>
                         </div>
                         <h2>
@@ -426,7 +425,7 @@ $events = $homeController->getEvents();
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#bullseye"></use>
+                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#bullseye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -511,7 +510,7 @@ $events = $homeController->getEvents();
                             <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
                                     style="--bs-link-hover-color-rgb: 0, 166, 81;"
                                     href="app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#arrow-bar-right"></use>
+                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#arrow-bar-right"></use>
                                     </svg></a>
                             </p>
                         </div>
@@ -648,7 +647,7 @@ $events = $homeController->getEvents();
             <div class="row my-4 justify-content-around align-items-center">
                 <div class="text-center col-6 col-lg-4 mb-2">
                     <svg class="bi text-body-secondary" width="64" height="64">
-                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#person?"></use>
+                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#person?"></use>
                     </svg>
                 </div>
                 <div class="col-lg-8">
@@ -692,7 +691,7 @@ $events = $homeController->getEvents();
         <div class="container-xl md-4 align-content-center align-items-center">
             <div class="p-2 text-center rounded-3 home-cta">
                 <svg class="bi mt-4 mb-3" width="70" height="62">
-                    <use xlink:href="assets/icons.svg#mucu" />
+                    <use xlink:href="/public/assets/icons/icons.svg#mucu" />
                 </svg>
                 <h1 class="text-body-emphasis">
                     <div class="display-4">Feel at the feet of Jesus</div>
@@ -767,8 +766,9 @@ $events = $homeController->getEvents();
                     <div class="col-6 col-md-2 mb-3 text-center">
                         <h5>Our Pages</h5>
                         <ul class="nav nav-pills nav-fill flex-column">
-                            <li class="nav-item mb-2"><a href="app/views/homepage.php"
-                                    class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
+                            <!-- no need to have the home link if member is not logged in -->
+                            <!-- <li class="nav-item mb-2"><a href="app/views/homepage.php"
+                                    class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li> -->
                             <li class="nav-item mb-2"><a href="app/views/about.php"
                                     class="nav-link p-0 text-body-secondary">About</a></li>
                             <li class="nav-item mb-2"><a href="app/views/fellowships.php"
@@ -821,25 +821,25 @@ $events = $homeController->getEvents();
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://www.facebook.com/Masenocu/"
                                     target="_blank"><svg class="bi text-body-primary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#facebook"></use>
+                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#facebook"></use>
                                     </svg> Facebook</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://whatsapp.com/channel/0029VaCqwFSIt5ryXrSNeN3w" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#whatsapp"></use>
+                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#whatsapp"></use>
                                     </svg> WhatsApp</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="http://www.youtube.com/@maseno_cu"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#youtube"></use>
+                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#youtube"></use>
                                     </svg> YouTube</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://www.instagram.com/maseno_cu/" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#instagram"></use>
+                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#instagram"></use>
                                     </svg> Instagram</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://twitter.com/Maseno_CU"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons.svg#twitter-x"></use>
+                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#twitter-x"></use>
                                     </svg> X</a></li>
                         </ul>
                     </div>
@@ -872,9 +872,9 @@ $events = $homeController->getEvents();
     </section>
 
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>public/assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>public/assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 
