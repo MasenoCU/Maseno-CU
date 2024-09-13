@@ -103,12 +103,12 @@ require_once "../../config.php";
     <!-- Navbar -->
     <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
         <!-- Navbar brand -->
-        <a href="<?php echo BASE_URL; ?>index.php"
+        <a href="/<?php echo BASE_URL; ?>../../index.php"
             class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
             <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
                 <rect width="100%" height="100%" fill="white" />
                 <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons/icons.svg#mucu"></use>
+                    <use xlink:href="/<?php echo BASE_URL; ?>assets/icons/icons.svg#mucu"></use>
                 </svg>
             </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
         </a>
@@ -164,7 +164,7 @@ require_once "../../config.php";
         <nav class="p-0 mb-1 mt-xl-2 mx-xl-auto border rounded navbar-expand-sm bg-primary" data-bs-theme="auto">
             <div class="collapse navbar-collapse">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li class="nav-item"><a href="/docs/index.php" class="nav-link px-2 link-body-emphasis active"
+                    <li class="nav-item"><a href="../../index.php" class="nav-link px-2 link-body-emphasis active"
                             aria-current="page">Home</a></li>
                     <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                     <li class="nav-item"><a href="fellowships.php" class="nav-link px-2 link-body-emphasis">Fellowships</a></li>

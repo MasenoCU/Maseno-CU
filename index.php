@@ -232,7 +232,7 @@ $events = $homeController->getEvents();
                                     <a class="dropdown-item icon-link disabled"
                                         style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                                         <svg class="bi" width="64" height="64">
-                                            <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#give"
+                                            <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#give"
                                                 style="fill: currentColor; color:invert;">
                                             </use>
                                         </svg>
@@ -376,7 +376,7 @@ $events = $homeController->getEvents();
                         More</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>/assets/images/700x500.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/700x500.png" alt="">
                 </div>
             </div>
         </div>
@@ -400,7 +400,7 @@ $events = $homeController->getEvents();
                     <div class="col justify-content-center">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#eye"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#eye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -413,7 +413,7 @@ $events = $homeController->getEvents();
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#rocket"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#rocket"></use>
                             </svg>
                         </div>
                         <h2>
@@ -426,7 +426,7 @@ $events = $homeController->getEvents();
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#bullseye"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#bullseye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -467,7 +467,7 @@ $events = $homeController->getEvents();
                     <a href="#contact " class="btn btn-outline-secondary btn-sm ms-2 mb-2 border-2 ">Get in touch</a>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>/assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/700x500.png" alt=" ">
                 </div>
             </div>
         </div>
@@ -511,7 +511,7 @@ $events = $homeController->getEvents();
                             <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
                                     style="--bs-link-hover-color-rgb: 0, 166, 81;"
                                     href="app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#arrow-bar-right"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#arrow-bar-right"></use>
                                     </svg></a>
                             </p>
                         </div>
@@ -539,7 +539,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary">Faith</h6>
                             </div>
-                            <img src="<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Growing in Faith</h5>
@@ -558,7 +558,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Inspiration</h6>
                             </div>
-                            <img src="<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title ">Finding Inner Peace</h5>
@@ -577,7 +577,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Testimonials</h6>
                             </div>
-                            <img src="<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Life Changing Stories</h5>
@@ -648,7 +648,7 @@ $events = $homeController->getEvents();
             <div class="row my-4 justify-content-around align-items-center">
                 <div class="text-center col-6 col-lg-4 mb-2">
                     <svg class="bi text-body-secondary" width="64" height="64">
-                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#person?"></use>
+                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#person?"></use>
                     </svg>
                 </div>
                 <div class="col-lg-8">
@@ -822,25 +822,25 @@ $events = $homeController->getEvents();
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://www.facebook.com/Masenocu/"
                                     target="_blank"><svg class="bi text-body-primary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#facebook"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#facebook"></use>
                                     </svg> Facebook</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://whatsapp.com/channel/0029VaCqwFSIt5ryXrSNeN3w" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#whatsapp"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#whatsapp"></use>
                                     </svg> WhatsApp</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="http://www.youtube.com/@maseno_cu"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#youtube"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#youtube"></use>
                                     </svg> YouTube</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://www.instagram.com/maseno_cu/" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#instagram"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#instagram"></use>
                                     </svg> Instagram</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://twitter.com/Maseno_CU"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="<?php echo BASE_URL; ?>/assets/icons/icons.svg#twitter-x"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#twitter-x"></use>
                                     </svg> X</a></li>
                         </ul>
                     </div>
@@ -873,9 +873,9 @@ $events = $homeController->getEvents();
     </section>
 
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>public/assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>public/assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="<?php echo BASE_URL; ?>public/assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>public/assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

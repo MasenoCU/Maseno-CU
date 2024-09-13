@@ -128,7 +128,7 @@ if (!$team) {
                     </div>
                     <div class="col-md-6 text-center">
                       <div class="trapezium-wrapper position-relative">
-                        <img src="<?php echo BASE_URL; ?>assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
+                        <img src="/<?php echo BASE_URL; ?>assets/images/teamsbg.jpg" alt="Membership Image" class="img-fluid trapezium">
                         <div class="text-overlay">
                           <em>
                             "<?php echo $team['motto']; ?>"

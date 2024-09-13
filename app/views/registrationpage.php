@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e36217afb5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/registrationstyles.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/registrationstyles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" type="image/x-icon" href="/<?php echo BASE_URL; ?>favicon.ico">
     <title>Registration Maseno University Christian Union</title>

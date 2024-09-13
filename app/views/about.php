@@ -11,16 +11,16 @@ require_once "../../config.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>About Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/about.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/about.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ae877f7da9.js" crossorigin="anonymous"></script>
     <!-- *******  Owl Carousel Link  ******* -->
@@ -1056,11 +1056,11 @@ require_once "../../config.php";
     <!--   *****   Owl Carousel js Link  *****  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Swiper JS -->
-    <script src="<?php echo BASE_URL; ?>assets/scripts/swiper-bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/swiper-bundle.min.js"></script>
     <!-- main js -->
-    <script src="<?php echo BASE_URL; ?>public/assets/scripts/main.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
     <!-- bootstrap JS -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 

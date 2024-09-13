@@ -141,7 +141,7 @@ require_once "../../config.php";
             <div class="container-xl md-4 align-content-center align-items-center">
 
                 <div class="p-2 text-center bg-body-tertiary rounded-3 blur-bg">
-                    <img src="<?php echo BASE_URL; ?>assets/images/teams.jpg" alt="hero bg" class="img-fluid"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/teams.jpg" alt="hero bg" class="img-fluid"
                         style="max-width: 100px; height: auto; border-radius: 50%;">
 
                     <h1 class="text-body-emphasis">
@@ -180,7 +180,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -229,7 +229,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -278,7 +278,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -331,7 +331,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -380,7 +380,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -429,7 +429,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -478,7 +478,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -527,7 +527,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>
@@ -576,7 +576,7 @@ require_once "../../config.php";
                     <div class="impact-section">
                         <div class="row justify-content-center">
                             <div class="d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                                <img src="<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
+                                <img src="/<?php echo BASE_URL; ?>assets/images/UET LOGO.png" alt="UET logo"
                                     class="rounded-circle mb-3 mb-md-0" width="50" height="50">
                                 <div class="col-md-8" style="padding-left: 30px;">
                                     <h1>Uttermost Evangelistic Team (UET)</h1>

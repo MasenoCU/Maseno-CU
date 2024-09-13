@@ -11,10 +11,10 @@ require_once "../../config.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/fellowship.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/fellowship.css">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css" />
     <!-- page title -->
     <title>Fellowships Maseno University Christian Union</title>
     <!-- bootstrap css -->
@@ -164,12 +164,12 @@ require_once "../../config.php";
             </div>
             <div class="row justify-content-lg-center align-items-lg-center">
                 <div class="col-auto col-md-6">
-                    <img src="<?php echo BASE_URL; ?>assets/images/Video Placeholder.png" alt="" class="img-fluid">
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Video Placeholder.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-auto col-md-6">
                     <h4 class="mb-2">Christianity and Technology</h4>
                     <h5>Featured Speaker</h5>
-                    <img src="<?php echo BASE_URL; ?>assets/images/Preston.jpeg" alt="speaker-profile" width="64" height="64"
+                    <img src="/<?php echo BASE_URL; ?>assets/images/Preston.jpeg" alt="speaker-profile" width="64" height="64"
                         class="rounded-circle">
                     <p class="text-muted mb-0">Preston Maina</p>
                     <ul class="nav mb-2">
@@ -552,7 +552,7 @@ require_once "../../config.php";
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
     <!-- main js -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->

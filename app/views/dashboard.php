@@ -12,7 +12,7 @@ require_once "../../config.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/ministries.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/ministries.css">
     <!-- page title -->
     <title>Ministries Maseno University Christian Union</title>
     <link rel="icon" type="image/x-icon" href="/<?php echo BASE_URL; ?>favicon.ico">
