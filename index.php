@@ -24,14 +24,9 @@ $events = $homeController->getEvents();
     <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <!-- custom css -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
-=======
     <!-- custon css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/blog.css">
->>>>>>> 969848155f399135f667568e77001bb62c8ff732
     <!-- page title -->
     <title>Home Maseno University Christian Union</title>
     <!-- bootstrap css -->

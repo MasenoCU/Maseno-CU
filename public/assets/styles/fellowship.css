@@ -24,6 +24,7 @@ html {
   }
 }
 
+/* Responsive */
 @media (min-width: 2560px) {
   html {
     zoom: 1.7;
