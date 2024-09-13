@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <base href="https://masenocu.org/developer/">
+    <!-- <base href="https://masenocu.org/developer/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e36217afb5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">

@@ -16,7 +16,7 @@ admissionNumberInput.addEventListener('blur', function() {
 
 function checkAdmissionNumber(admissionNumber) {
     $.ajax({
-        url: '../../../backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
+        url: '../../../mucuwebsitegithub/backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
         type: 'POST',
         data: { admission_number: admissionNumber },
         dataType: 'json',
