@@ -133,7 +133,7 @@ require_once "../../config.php";
 
     
 
-    <?php include"../components/header.php"; ?> 
+    <?php include"../models/header.php"; ?> 
 
     <!-- hero -->
     <section id="hero">
@@ -543,7 +543,7 @@ require_once "../../config.php";
             </div>
     </section>
 
-    <?php include"../components/footer.php"; ?>
+    <?php include"../models/footer.php"; ?>
 
     
 

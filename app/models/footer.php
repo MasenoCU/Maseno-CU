@@ -61,13 +61,13 @@ require_once "../../config.php";
                 </div>
 
                 <!-- Follow Us Section -->
-                <div class="col-6 col-md-2 mb-3">
+                <div class="col-6 col-md-2 mb-3 text-start">
                     <h5>Follow Us</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2">
                             <a class="nav-link p-0" href="https://www.facebook.com/Masenocu/" target="_blank">
                                 <svg class="bi text-body-primary" width="20" height="20">
-                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#facebook"></use>
+                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons/icons.svg#facebook"></use>
                                 </svg> Facebook
                             </a>
                         </li>
@@ -75,28 +75,28 @@ require_once "../../config.php";
                             <a class="nav-link p-0" href="https://whatsapp.com/channel/0029VaCqwFSIt5ryXrSNeN3w"
                                 target="_blank">
                                 <svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#whatsapp"></use>
+                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons/icons.svg#whatsapp"></use>
                                 </svg> WhatsApp
                             </a>
                         </li>
                         <li class="nav-item mb-2">
                             <a class="nav-link p-0" href="http://www.youtube.com/@maseno_cu" target="_blank">
                                 <svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#youtube"></use>
+                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons/icons.svg#youtube"></use>
                                 </svg> YouTube
                             </a>
                         </li>
                         <li class="nav-item mb-2">
                             <a class="nav-link p-0" href="https://www.instagram.com/maseno_cu/" target="_blank">
                                 <svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#instagram"></use>
+                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons/icons.svg#instagram"></use>
                                 </svg> Instagram
                             </a>
                         </li>
                         <li class="nav-item mb-2">
                             <a class="nav-link p-0" href="https://twitter.com/Maseno_CU" target="_blank">
                                 <svg class="bi text-body-secondary" width="20" height="20">
-                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons.svg#twitter-x"></use>
+                                    <use xlink:href="<?php echo BASE_URL; ?>assets/icons/icons.svg#twitter-x"></use>
                                 </svg> X
                             </a>
                         </li>
@@ -146,3 +146,9 @@ require_once "../../config.php";
         </div>
     </div>
 </div>
+
+<!-- Crucial JavaScript -->
+<script src="<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>

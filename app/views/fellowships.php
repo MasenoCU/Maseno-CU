@@ -12,6 +12,9 @@ require_once "../../config.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/fellowship.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css" />
     <!-- page title -->
     <title>Fellowships Maseno University Christian Union</title>
     <!-- bootstrap css -->
@@ -133,7 +136,7 @@ require_once "../../config.php";
 
     
 
-    <?php include"../components/header.php"; ?> 
+    <?php include"../models/header.php"; ?> 
 
     <!-- hero -->
     <section id="header">
@@ -543,13 +546,13 @@ require_once "../../config.php";
         </div>
     </section>
 
-    <?php include"../components/footer.php"; ?>
+    <?php include"../models/footer.php"; ?>
 
     <!-- custom js -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/public/js/fellowship.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
     <!-- main js -->
     <script src="<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->

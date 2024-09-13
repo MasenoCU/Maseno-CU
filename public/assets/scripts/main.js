@@ -57,7 +57,7 @@ window.addEventListener("scroll", function(){
 
 
 //========== Javascript for active nav-link==========//
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
 
 navLinks.forEach(link => {
   if (link.href === window.location.href) {
