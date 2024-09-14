@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $username = 'root';
-$password = '';
+$password = '1234';
 $database_name = 'masenocu';
 
 $connection = new mysqli($host, $username, $password, $database_name);

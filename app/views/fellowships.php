@@ -13,6 +13,7 @@ require_once "../../config.php";
     <!-- custon css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/fellowship.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/calendar.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css" />
     <!-- page title -->
@@ -20,7 +21,15 @@ require_once "../../config.php";
     <!-- bootstrap css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> -->
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Page Title -->
     <title>Fellowships Maseno University Christian Union</title>
 </head>
@@ -152,6 +161,78 @@ require_once "../../config.php";
                         in Christ.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="calendar">
+        <div class="container-xl">
+            <div class="container">
+                <div class="left">
+                    <div class="calendar bg-body">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">September 2024</div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days"></div>
+                        <div class="goto-today">
+                            <div class="goto">
+                                <input type="text" placeholder="mm/yyyy" class="date-input" />
+                                <button class="goto-btn">Go</button>
+                            </div>
+                            <button class="today-btn">Today</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="today-date">
+                        <div class="event-day">Sun</div>
+                        <div class="event-date">15th September 2024</div>
+                    </div>
+                    <div class="events"></div>
+                    <!-- Add Events -->
+                    <!-- <div class="add-event-wrapper">
+                        <div class="add-event-header">
+                            <div class="title">Add Event</div>
+                            <i class="fas fa-times close"></i>
+                        </div>
+                        <div class="add-event-body">
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Name" class="event-name" />
+                            </div>
+                            <div class="add-event-input">
+                                <input
+                                    type="text"
+                                    placeholder="Event Time From"
+                                    class="event-time-from" />
+                            </div>
+                            <div class="add-event-input">
+                                <input
+                                    type="text"
+                                    placeholder="Event Time To"
+                                    class="event-time-to" />
+                            </div>
+                        </div>
+                        <div class="add-event-footer">
+                            <button class="add-event-btn">Add Event</button>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- add event button -->
+                <!-- <button class="add-event">
+                    <i class="fas fa-plus"></i>
+                </button> -->
+            </div>
+
         </div>
     </section>
 
@@ -627,12 +708,13 @@ require_once "../../config.php";
     <?php include "../models/footer.php"; ?>
 
     <!-- Iconions -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
     <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
     <!-- Custom JS -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/calendar.js"></script>
 
 </body>
 
