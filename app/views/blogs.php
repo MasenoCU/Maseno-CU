@@ -10,7 +10,7 @@ require_once "../../config.php";
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
@@ -548,11 +548,6 @@ require_once "../../config.php";
     </main>
 
     <?php include("../models/footer.php"); ?>
-
-    <!-- main js -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

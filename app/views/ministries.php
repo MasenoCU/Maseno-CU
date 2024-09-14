@@ -64,8 +64,6 @@ require_once "../../config.php";
     <?php require_once "../models/coming-soon-modal.php";?>
 
     <!-- <script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script> -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
 
 </body>
 

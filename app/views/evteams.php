@@ -2,15 +2,15 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="/public/js/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>Evangelistic Teams Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
@@ -234,10 +234,10 @@
         </div>
     </div>
 
-    
-
-
-    <?php include("../components/header.php"); ?>
+    <?php 
+    require_once "../models/header.php";
+    require_once "../models/db_connection.php";
+    ?>
 
     <!-- hero -->
     <section id="teams" class="py-5">
@@ -727,14 +727,8 @@
     </section>
 
 
-    <?php include("../components/footer.php"); ?> 
-
-    
-
-    <!-- main js -->
-    <script src="/public/js/main.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/public/js/bootstrap.bundle.min.js"></script>
+    <?php require_once "../models/footer.php"; ?>
+    <?php require_once "../models/coming-soon-modal.php"; ?>
 
 </body>
 
