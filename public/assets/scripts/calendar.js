@@ -172,7 +172,7 @@ function addListner() {
         }, 100);
       } else if (e.target.classList.contains("next-date")) {
         nextMonth();
-        //add active to clicked day afte month is changed
+        //add active to clicked day after month is changed
         setTimeout(() => {
           const days = document.querySelectorAll(".day");
           days.forEach((day) => {
@@ -285,7 +285,7 @@ document.addEventListener("click", (e) => {
 
 //allow 50 chars in eventtitle
 addEventTitle.addEventListener("input", (e) => {
-  addEventTitle.value = addEventTitle.value.slice(0, 60);
+  addEventTitle.value = addEventTitle.value.slice(0, 80);
 });
 
 // function defineProperty() {
