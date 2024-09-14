@@ -134,9 +134,9 @@ require_once "../../config.php";
         </div>
     </div>
 
-    
 
-    <?php include"../models/header.php"; ?> 
+
+    <?php include "../models/header.php"; ?>
 
     <!-- hero -->
     <section id="header">
@@ -291,7 +291,85 @@ require_once "../../config.php";
 
     <!-- frequent events -->
     <section id="frequent events">
-        <div class="container-xl"></div>
+        <div class="container-xl">
+            <div class="row">
+                <h2 class="display-5 text-center section-heading">Frequent Events</h2>
+                <p class="lead text-center section-subheading">More often than not</p>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Prayer Kesha</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Worship Experience</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Prayer Retreats</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Hikes</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Prayer Week</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Mini Missions</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
     </section>
 
     <!-- occasional events -->
@@ -546,12 +624,14 @@ require_once "../../config.php";
         </div>
     </section>
 
-    <?php include"../models/footer.php"; ?>
+    <?php include "../models/footer.php"; ?>
 
-    <!-- custom js -->
+    <!-- Iconions -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
 
 </body>
