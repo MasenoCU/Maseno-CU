@@ -26,7 +26,6 @@ $events = $homeController->getEvents();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/blog.css">
     <!-- page title -->
     <title>Home Maseno University Christian Union</title>
     <!-- bootstrap css -->
@@ -79,7 +78,7 @@ $events = $homeController->getEvents();
         </symbol>
     </svg>
 
-    <!-- toggle theme -->
+    <!-- THEME TOGGLE -->
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
             aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
@@ -143,7 +142,7 @@ $events = $homeController->getEvents();
         </div>
     </div>
 
-    <!-- main header -->
+    <!-- MAIN HEADER -->
     <header id="header" class="sticky-top bg-body">
         <!-- navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
@@ -268,7 +267,7 @@ $events = $homeController->getEvents();
         You have successfully logged out.
     </div>
 
-    <!-- hero -->
+    <!-- HERO -->
     <section id="hero" style="height: 544px;">
         <div class="container-xl">
             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -354,7 +353,7 @@ $events = $homeController->getEvents();
         </div>
     </section>
 
-    <!-- history & growth -->
+    <!-- HISTORY & GROWTH -->
     <section id="history">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
@@ -383,7 +382,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- vision, mission, goals -->
+    <!-- VISION, MISSION, GOALS -->
     <section id="goals&objectives">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
@@ -442,7 +441,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- benefits -->
+    <!-- BENEFITS -->
     <section id="benefits">
         <div class="container-xl ">
             <div class="row justify-content-center align-items-center">
@@ -474,7 +473,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- blogs & testimonies -->
+    <!-- BLOGS -->
     <section id="testimonials">
         <div class="container-xl">
             <h2>
@@ -523,7 +522,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- resources -->
+    <!-- E-LIBRARY -->
     <section id="E-Library">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
@@ -597,7 +596,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- events -->
+    <!-- EVENTS -->
     <section id="events">
         <!-- tab navigation -->
         <div class="container-xl justify-content-center align-items-center">
@@ -614,7 +613,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- leadership -->
+    <!-- LEADERSHIP -->
     <section>
         <div class="container-xl">
             <div class="text-center">
@@ -873,9 +872,9 @@ $events = $homeController->getEvents();
     </section>
 
     <!-- main js -->
-    <script src="/<?php echo BASE_URL; ?>public/assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="/<?php echo BASE_URL; ?>public/assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

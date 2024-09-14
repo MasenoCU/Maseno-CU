@@ -10,12 +10,8 @@ require_once "../../config.php";
     <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- custom css -->
-    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
     <title>About Maseno University Christian Union</title>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Link Swiper's CSS -->
@@ -28,6 +24,10 @@ require_once "../../config.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
 </head>
 
 <body>
@@ -1036,12 +1036,24 @@ require_once "../../config.php";
 
     <!-- CTA -->
     <section id="cta">
-        <div class="container-xl">
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-                <div class="container-fluid py-5">
-                    <h1 class="display-5 fw-bold">Join Our Christian Union Community</h1>
-                    <p class="col-md-8 fs-4">Discover the joy of living for God and pursuing a holy life.</p>
-                    <button class="btn btn-warning btn-md" type="button">Join</button>
+        <!-- jumbotron -->
+        <div class="container-xl md-4 align-content-center align-items-center">
+            <div class="p-2 text-center rounded-3 home-cta">
+                <svg class="bi mt-4 mb-3" width="70" height="62">
+                    <use xlink:href="/public/assets/icons/icons.svg#mucu" />
+                </svg>
+                <h1 class="text-body-emphasis">
+                    <div class="display-4">Join Our Christian Union Community</div>
+                </h1>
+                <p class="col-lg-8 mx-auto fs-5 text-muted">
+                    Discover the joy of living for God and pursuing a holy life.
+                </p>
+                <div class="d-inline-block text-center text-md-start">
+                    <a href="registrationpage.php" id="joinus"
+                        class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Join today</a>
+                    <a href="#login" id="login.php"
+                        class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill">Sign
+                        in</a>
                 </div>
             </div>
         </div>
@@ -1057,12 +1069,8 @@ require_once "../../config.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Swiper JS -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/swiper-bundle.min.js"></script>
-    <!-- main js -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <!-- About JS -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/about.js"></script>
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 
