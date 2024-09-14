@@ -333,7 +333,7 @@ $events = $homeController->getEvents();
                         More</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/700x500.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/image1.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -424,7 +424,7 @@ $events = $homeController->getEvents();
                     <a href="#contact " class="btn btn-outline-secondary btn-sm ms-2 mb-2 border-2 ">Get in touch</a>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/growth_image1.jpg" alt=" ">
                 </div>
             </div>
         </div>
