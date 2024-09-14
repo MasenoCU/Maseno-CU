@@ -15,6 +15,7 @@ $blogs = $homeController->getBlogs();
 $faqs = $homeController->getFaqs();
 $contacts = $homeController->getContacts();
 $events = $homeController->getEvents();
+// var_dump($carousels)
 ?>
 
 <!DOCTYPE html>
@@ -271,81 +272,36 @@ $events = $homeController->getEvents();
     <section id="hero" style="height: 544px;">
         <div class="container-xl">
             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Carousel Indicators -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
-                        aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
-                        class="active" aria-current="true"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
-                        class=""></button>
+                    <?php foreach ($carousels as $index => $carousel): ?>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $index; ?>" class="<?php echo $index === 0 ? 'active' : ''; ?>" aria-label="Slide <?php echo $index + 1; ?>"></button>
+                    <?php endforeach; ?>
                 </div>
-                <div class="carousel-inner ">
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                        </svg>
-                        <div class="container">
-                            <div class="carousel-caption text-start">
-                                <h1>
-                                    <div class="display-2">Join Our Community and Grow in Faith</div>
-                                </h1>
-                                <p class="lead text-muted">Become part of our Christian Union community and experience
-                                    spiritual growth in a supportive environment.</p>
-                                <p><a class="btn btn-md btn-warning" href="#register" id="joinus">Join Us</a></p>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <?php foreach ($carousels as $index => $carousel): ?>
+                        <div id="carousel-slide-<?php echo $index; ?>" class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>" style="background-image: url('public/assets/images/<?php echo $carousel['image']; ?>'); background-size: cover; background-position: center;">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1><div class="display-2"><?php echo $carousel['message']; ?></div></h1>
+                                    <p><?php echo $carousel['description']; ?></p>
+                                    <p><a class="btn btn-md btn-warning" href="<?php echo $carousel['button_link']; ?>" id="exploreMinistries"><?php echo $carousel['button_text']; ?></a></p>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item active">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                        </svg>
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <h1>
-                                    <div class="display-2">Welcome to</div>
-                                    <div class="mobile-s d-sm-none display-6 text-muted">Maseno University Christian
-                                        Union!
-                                    </div>
-                                    <div class="content-to-hide-xs mobile-m d-md-none display-5 text-muted">Maseno
-                                        University Christian Union!</div>
-                                    <div class="d-none d-md-block display-2 text-muted">Maseno University Christian
-                                        Union!
-                                    </div>
-                                </h1>
-                                <p class="lead mt-2 mb-1 text-muted">We are a group of committed young men and women
-                                    living
-                                    for God and pursuing a holy life.</p>
-                                <p class="lead mt-0 text-muted">Join us in our journey of faith.</p>
-                                <p><a class="btn btn-md btn-outline-success border-2" href="../app/views/about.php"
-                                        id="learnmore">Learn
-                                        more</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                        </svg>
-                        <div class="container">
-                            <div class="carousel-caption text-end">
-                                <h1>
-                                    <div class="display-2">Get Involved and Make a Difference</div>
-                                </h1>
-                                <p class="lead text-muted">Engage in our ministries and evangelistic teams to make a
-                                    positive impact for Christ.</p>
-                                <p><a class="btn btn-md btn-primary" href="#contact" id="contactus">Contact Us</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" id="prevSlide">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" id="nextSlide">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -375,7 +331,7 @@ $events = $homeController->getEvents();
                         More</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/700x500.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/image1.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -466,7 +422,7 @@ $events = $homeController->getEvents();
                     <a href="#contact " class="btn btn-outline-secondary btn-sm ms-2 mb-2 border-2 ">Get in touch</a>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/growth_image1.jpg" alt=" ">
                 </div>
             </div>
         </div>
@@ -609,7 +565,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="app/models/events.htm" title="Events"></iframe>
+        <iframe src="app/models/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 
@@ -871,6 +827,78 @@ $events = $homeController->getEvents();
         </div>
     </section>
 
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const slides = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    // Manually control the next and previous buttons
+    const prevButton = document.getElementById('prevSlide');
+    const nextButton = document.getElementById('nextSlide');
+
+    // Show the first slide initially
+    showSlide(currentIndex);
+
+    // Handle 'Next' button click
+    nextButton.addEventListener('click', function () {
+        clearInterval(autoSlideInterval); // Stop the auto-slide
+        currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide
+        showSlide(currentIndex);
+        autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+    });
+
+    // Handle 'Previous' button click
+    prevButton.addEventListener('click', function () {
+        clearInterval(autoSlideInterval); // Stop the auto-slide
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Go to previous slide
+        showSlide(currentIndex);
+        autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+    });
+
+    // Auto-slide every 5 seconds
+    let autoSlideInterval = setInterval(autoSlideFunction, 8000);
+
+    function autoSlideFunction() {
+        currentIndex = (currentIndex + 1) % totalSlides; // Move to the next slide
+        showSlide(currentIndex);
+    }
+
+    // Show the slide based on the current index
+    function showSlide(index) {
+        slides.forEach((slide, idx) => {
+            if (idx === index) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+    }
+});
+
+// Reset auto-slide when the user manually clicks next or prev
+nextButton.addEventListener('click', function () {
+    clearInterval(autoSlideInterval); // Stop the auto-slide
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+    autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+});
+
+prevButton.addEventListener('click', function () {
+    clearInterval(autoSlideInterval); // Stop the auto-slide
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+    autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+});
+
+// Auto-slide function
+function autoSlideFunction() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+}
+
+    </script>
     <!-- main js -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
