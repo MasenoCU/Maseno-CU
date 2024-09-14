@@ -553,10 +553,6 @@ require_once "../../config.php";
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="/<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
-    <!-- main js -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

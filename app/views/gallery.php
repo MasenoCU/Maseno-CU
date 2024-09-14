@@ -172,12 +172,7 @@ require_once "../../config.php";
         <div class="container-xl"></div>
     </section>
 
-    <?php include"../components/footer.php"; ?>    
-
-    <!-- main js -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
+    <?php include"../models/footer.php"; ?>
 
 </body>
 

@@ -220,7 +220,3 @@ require_once "../../config.php";
             </div>
         </div>
     </header>
-<script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
-<script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
-<script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
