@@ -15,6 +15,19 @@
 
 // Check if the URL contains the logout query parameter
 
+var myCarousel = document.querySelector('#myCarousel');
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 5000,  // Change slide every 5 seconds
+  ride: 'carousel' // Start the carousel automatically
+});
+
+// Listen for slide events
+myCarousel.addEventListener('slide.bs.carousel', function (event) {
+  console.log('Slide from: ', event.from);
+  console.log('Slide to: ', event.to);
+});
+
+
 const urlParams = new URLSearchParams(window.location.search);
 const logoutSuccess = urlParams.get('logout');
 
@@ -152,15 +165,3 @@ tabBtns.forEach((tabBtn, i) => {
     });
 });
 
-// logout functionality
-
-// if (logoutSuccess === 'success') {
-//     // Display the notification
-//     const notification = document.getElementById('logoutNotification');
-//     notification.style.display = 'block';
-
-//     // Automatically hide the notification after 3 seconds
-//     setTimeout(() => {
-//         notification.style.display = 'none';
-//     }, 3000);
-// }

@@ -2,7 +2,7 @@
 
 $host = 'localhost';
 $username = 'root';
-$password = '1234';
+$password = '';
 $database_name = 'masenocu';
 
 $connection = new mysqli($host, $username, $password, $database_name);
@@ -36,6 +36,7 @@ $contacts = fetchTableData($connection, 'contacts');
 $events = fetchTableData($connection, 'events');
 $blogs = fetchTableData($connection, 'blogs');
 $ministries = fetchTableData($connection, 'ministries');
+$carousels = fetchTableData($connection, 'carousels');
 
 //reuseable function to fetch eveteam details.
 if (!function_exists('fetchEveTeamData')){

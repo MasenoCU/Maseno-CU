@@ -4,7 +4,7 @@ session_start();
 require_once "../../config.php";
 
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: registrationpage.php");
     exit;
 }
 ?> -->
@@ -54,7 +54,7 @@ require_once '../models/header.php';
                 </div>
 
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+        <div class="carousel-inner">
         <!-- Welcome Back Slide -->
         <div class="carousel-item active">
             <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
