@@ -49,7 +49,7 @@ require_once "../../config.php";
                             </div>
                         </div>
                         <div class="card-body text-center">
-                            <h3 class="card-title"><?php echo $ministry['name']; ?></h3>
+                            <h3 class="card-title text-primary"><?php echo $ministry['name']; ?></h3>
                             <p class="card-text fw-light"><?php echo $ministry['schedule']; ?></p>
                         </div>
                     </div>

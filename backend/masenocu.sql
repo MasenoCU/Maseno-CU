@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2024 at 04:53 AM
+-- Generation Time: Sep 15, 2024 at 07:40 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -176,15 +176,15 @@ CREATE TABLE `events` (
 INSERT INTO `events` (`id`, `category`, `day`, `date`, `month_of_year`, `title`, `location`, `description`, `image`) VALUES
 (1, 'prayers_bible_study', 'Wednesday', 18, 'Sep 2024', 'Wednesday Prayers & Bible Study', 'Lecture Hall 15', '', ''),
 (2, 'bible_study', 'Thursday', 19, 'Sep 2024', 'BEST-P', 'Lecture Hall 15', '', ''),
-(3, 'fellowship', 'Friday', 20, 'Sep 2024', 'Friday Fellowship', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(4, 'fellowship', 'Sunday', 22, 'Sep 2024', 'Sunday Service', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(5, 'worship', 'Sunday', 22, 'Sep 2024', 'Worship Experience', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(6, 'prayer', 'Wednesday', 18, 'Sep 2024', 'Wednesday Prayers', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(7, 'prayer', 'Friday', 20, 'Sep 2024', 'Prayer Kesha', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(8, 'bible_study', 'Wednesday', 18, 'Sep 2024', 'Bible Study', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(9, 'bible_study', 'Thursday', 19, 'Sep 2024', 'BEST-P', 'Lecture Hall 15', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(10, 'outreach', 'Saturday', 21, 'Sep 2024', 'Nakuru Mission', 'Various Locations', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
-(11, 'training', 'Saturday', 21, 'Sep 2024', 'Ministry Practices', 'Various Halls', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos praesent...', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png');
+(3, 'fellowship', 'Friday', 20, 'Sep 2024', 'Friday Fellowship', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(4, 'fellowship', 'Sunday', 22, 'Sep 2024', 'Sunday Service', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(5, 'worship', 'Sunday', 22, 'Sep 2024', 'Worship Experience', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(6, 'prayer', 'Wednesday', 18, 'Sep 2024', 'Wednesday Prayers', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(7, 'prayer', 'Friday', 20, 'Sep 2024', 'Prayer Kesha', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(8, 'bible_study', 'Wednesday', 18, 'Sep 2024', 'Bible Study', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(9, 'bible_study', 'Thursday', 19, 'Sep 2024', 'BEST-P', 'Lecture Hall 15', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(10, 'outreach', 'Saturday', 21, 'Sep 2024', 'Nakuru Mission', 'Various Locations', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png'),
+(11, 'training', 'Saturday', 21, 'Sep 2024', 'Ministry Practices', 'Various Halls', '', '/public/assets/images/Illustration-CTA-Man-in-Boat-Facing-Right.png');
 
 -- --------------------------------------------------------
 
@@ -239,8 +239,8 @@ CREATE TABLE `faqs` (
 INSERT INTO `faqs` (`id`, `question`, `answer`) VALUES
 (1, 'What is a Christian Union?', 'Christian Union (CU) is an organization, typically found in schools, colleges, and universities, that serves as a community for Christian students. Its primary purpose is to foster spiritual growth, provide a space for worship and Bible study, and promote Christian values within the academic environment. '),
 (2, 'Who can join?', 'Anyone with an interest in Christianity, whether a believer or someone exploring the faith, is typically welcome to join or participate in Christian Union activities. While the primary focus is on Christian students, CUs are often open and inclusive, encouraging participation from all who are curious about Christianity or seeking a faith-based community.'),
-(3, 'What ministries are available?', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit eaque a...'),
-(4, 'How can I get involved?', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit eaque a...');
+(3, 'What ministries are available?', 'MUCU offers a variety of ministries where members  can actively serve, grow spiritually, and contribute to the Christian Community.\r\nSome of the ministries available are ; Praise and Worship, Discipleship, Choir Ministry, Instrumentalists, Media and IT Ministry, Creative Ministry, Intercessory Ministry, Hospitality Ministry and High School Ministry.'),
+(4, 'How can I get involved?', 'One can get involved in the community, in many ways such as joining an evangelistic team, joining ministries. Take an initiative and kick start your journey. Welcome to MUCU Community.');
 
 -- --------------------------------------------------------
 
@@ -414,15 +414,15 @@ CREATE TABLE `ministries` (
 --
 
 INSERT INTO `ministries` (`id`, `name`, `description`, `schedule`, `image`) VALUES
-(1, 'Discipleship Ministry', 'Our discipleship ministry nurtures believers to grow in their walk with Christ.', 'Tuesday - 6:00pm to 8:00pm', 'discipleship.jpeg'),
-(2, 'Choir Ministry', 'The choir ministry leads the congregation in worship through songs and hymns.', 'Tuesday - 6:00pm to 8:00pm', 'choir.jpeg'),
-(3, 'Praise and Worship Ministry', 'The Praise and Worship ministry creates an atmosphere of worship in every service.', 'Tuesday - 6:00pm to 8:00pm', 'praise_worship.jpeg'),
-(4, 'Instrumentalists Ministry', 'Our instrumentalists add depth to worship with musical instruments.', 'Tuesday - 6:00pm to 8:00pm', 'instrumentalists.jpeg'),
-(5, 'Media and IT Ministry', 'Supporting the church through audio, video, and technology services.', 'Tuesday - 6:00pm to 8:00pm', 'media_it.jpeg'),
-(6, 'Creative Ministry', 'Harnessing creativity to glorify God through arts and design.', 'Tuesday - 6:00pm to 8:00pm', 'creative.jpeg'),
-(7, 'Intercessory Ministry', 'Dedicated to prayer and intercession for the church and community.', 'Tuesday - 6:00pm to 8:00pm', 'intercessory.jpeg'),
-(8, 'Hospitality Ministry', 'Making church attendees feel welcome and at home.', 'Tuesday - 6:00pm to 8:00pm', 'hospitality.jpeg'),
-(9, 'High School Ministry', 'This ministry focuses on high school outreach and discipleship for young students to help them grow in faith.', 'Tuesday - 6:00pm to 8:00pm', 'high_school.jpeg');
+(1, 'Discipleship Ministry', 'Our discipleship ministry nurtures believers to grow in their walk with Christ.', 'Tuesday - 6:00pm to 8:00pm', 'discipleship.jpg'),
+(2, 'Choir Ministry', 'The choir ministry leads the congregation in worship through songs and hymns.', 'Tuesday - 6:00pm to 8:00pm', 'choir.jpg'),
+(3, 'Praise and Worship Ministry', 'The Praise and Worship ministry creates an atmosphere of worship in every service.', 'Tuesday - 6:00pm to 8:00pm', 'praise_worship.jpg'),
+(4, 'Instrumentalists Ministry', 'Our instrumentalists add depth to worship with musical instruments.', 'Tuesday - 6:00pm to 8:00pm', 'instrumentalists.jpg'),
+(5, 'Media and IT Ministry', 'Supporting the church through audio, video, and technology services.', 'Tuesday - 6:00pm to 8:00pm', 'media_it.jpg'),
+(6, 'Creative Ministry', 'Harnessing creativity to glorify God through arts and design.', 'Tuesday - 6:00pm to 8:00pm', 'creative.jpg'),
+(7, 'Intercessory Ministry', 'Dedicated to prayer and intercession for the church and community.', 'Tuesday - 6:00pm to 8:00pm', 'intercessory.jpg'),
+(8, 'Hospitality Ministry', 'Making church attendees feel welcome and at home.', 'Tuesday - 6:00pm to 8:00pm', 'hospitality.jpg'),
+(9, 'High School Ministry', 'This ministry focuses on high school outreach and discipleship for young students to help them grow in faith.', 'Tuesday - 6:00pm to 8:00pm', 'high_school.jpg');
 
 -- --------------------------------------------------------
 

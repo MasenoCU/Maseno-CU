@@ -19,7 +19,7 @@ $events = $homeController->getEvents();
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
@@ -34,7 +34,7 @@ $events = $homeController->getEvents();
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
-<body>
+<body class="">
     <!-- spinner -->
 
     <!-- SVG icons -->
@@ -148,14 +148,15 @@ $events = $homeController->getEvents();
         <!-- navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
             <!-- navbar-brand -->
-            <a href="index.php"
-                class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
+        <a href="index.php"
+            class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                <svg class="logo" width="40" height="32" xmlns="http://www.w3.org/2000/svg" style="border-radius: 5px; border: 1px solid #25aae1;">
                     <rect width="100%" height="100%" fill="white" />
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="/public/assets/icons/icons.svg#mucu"></use>
+                    <svg class="bi me-2 logo" width="40" height="32">
+                        <use xlink:href="/public/assets/icons/icons.svg#mucu" class="logo"></use>
                     </svg>
-                </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
+                </svg>
+                <span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
             <!-- more nav -->
             <div class="d-sm-none flex-shrink-0 dropdown mx-auto">
@@ -183,11 +184,11 @@ $events = $homeController->getEvents();
                     </svg>
                 </a>
                 <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item active" href="homepage.php" aria-current="page">Home</a></li>
+                    <li><a class="dropdown-item active" href="#" aria-current="page">Home</a></li>
                     <li><a class="dropdown-item" href="app/views/about.php">About Us</a></li>
                     <li><a class="dropdown-item" href="app/views/fellowships.php">Fellowships</a></li>
                     <li><a class="dropdown-item" href="app/views/ministries.php">Ministries</a></li>
-                    <li><a class="dropdown-item" href="app/views/eveteams.php">Evangelistic Teams</a></li>
+                    <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -565,7 +566,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="app/models/events.php" title="Events"></iframe>
+        <iframe src="/app/models/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 

@@ -28,6 +28,7 @@ require_once "../../config.php";
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    
 </head>
 
 <body>

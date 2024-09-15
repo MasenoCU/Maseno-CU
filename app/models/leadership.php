@@ -18,9 +18,29 @@ require_once "../../config.php";
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <style>
+    html, body {
+    height: 100%;
+    overflow: hidden;
+    }
+
+    .container-xl {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    }
+
+    /* Hide scrollbar in Webkit-based browsers (Chrome, Safari, etc.) */
+    .container-xl::-webkit-scrollbar {
+    display: none;
+    }
+
+    </style>
 </head>
 
-<body>
+<body class="container-xl">
     <section id="leadership">
         <div class="container-xl">
             <div class="row text-center">

@@ -105,12 +105,13 @@ require_once "../../config.php";
         <!-- Navbar brand -->
         <a href="/<?php echo BASE_URL; ?>../../index.php"
             class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-            <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" fill="white" />
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="/<?php echo BASE_URL; ?>assets/icons/icons.svg#mucu"></use>
+            <svg class="logo" width="40" height="32" xmlns="http://www.w3.org/2000/svg" style="border-radius: 5px; border: 1px solid #25aae1;">
+                    <rect width="100%" height="100%" fill="white" />
+                    <svg class="bi me-2 logo" width="40" height="32">
+                        <use xlink:href="/public/assets/icons/icons.svg#mucu" class="logo"></use>
+                    </svg>
                 </svg>
-            </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
+            <span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
         </a>
 
         <!-- more nav -->
@@ -140,7 +141,7 @@ require_once "../../config.php";
                 </svg>
             </a>
             <ul class="dropdown-menu text-small shadow">
-                <li><a class="dropdown-item active" href="/docs/index.php" aria-current="page">Home</a></li>
+                <li><a class="dropdown-item active" href="../../index.php" aria-current="page">Home</a></li>
                 <li><a class="dropdown-item" href="about.php">About Us</a></li>
                 <li><a class="dropdown-item" href="fellowships.php">Fellowships</a></li>
                 <li><a class="dropdown-item" href="ministries.php">Ministries</a></li>
@@ -169,7 +170,7 @@ require_once "../../config.php";
                     <li class="nav-item"><a href="about.php" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                     <li class="nav-item"><a href="fellowships.php" class="nav-link px-2 link-body-emphasis">Fellowships</a></li>
                     <li class="nav-item"><a href="ministries.php" class="nav-link px-2 link-body-emphasis">Ministries</a></li>
-                    <li class="nav-item"><a href="eveteams.php" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a></li>
                     <li class="nav-item"><a href="leadership.php" class="nav-link px-2 link-body-emphasis">Leadership</a></li>
                     <li class="nav-item d-none d-sm-inline dropdown text-end">
                         <a href="#" class="nav-link d-block link-body-emphasis text-decoration-none dropdown-toggle"
@@ -214,8 +215,8 @@ require_once "../../config.php";
                     <a href="../models/logout.php" class="btn btn-outline-primary mx-2">Sign Out</a>
                 <?php else: ?>
                     <!-- Show Login and Sign-up buttons if not logged in -->
-                    <a href="../views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2">Login</a>
-                    <a href="../views/registrationpage.php?mode=signup" class="btn btn-warning ms-2">Sign-up</a>
+                    <a href="#" class="btn btn-outline-primary mx-2">Login</a>
+                    <a href="#" class="btn btn-warning ms-2">Sign-up</a>
                 <?php endif; ?>
             </div>
         </div>

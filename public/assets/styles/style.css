@@ -32,6 +32,8 @@ p {
   color: #25aae1;
 }
 
+
+
 .btn-primary{
   background-color: #25aae1;
   border-color: #25aae1;
@@ -212,10 +214,10 @@ html[data-bs-theme="dark"] .map-iframe {
 
 /* Style the carousel caption with a transparent background */
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with 50% transparency */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
   padding: 20px;
   border-radius: 10px; /* Rounded corners */
-  color: white; /* Ensure text is white for contrast */
+  color: white !important;  /* Ensure text is white for contrast */
 }
 
 /* Optional: Adjust the font styles inside the caption */
