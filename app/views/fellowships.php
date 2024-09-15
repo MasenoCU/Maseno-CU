@@ -20,16 +20,15 @@ require_once "../../config.php";
     <title>Fellowships Maseno University Christian Union</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
-    <!-- unicons iconscout -->
-    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> -->
+    <!-- Bootsrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- font awesome -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
     <!-- Page Title -->
     <title>Fellowships Maseno University Christian Union</title>
 </head>
@@ -143,12 +142,10 @@ require_once "../../config.php";
         </div>
     </div>
 
-
-
     <?php include "../models/header.php"; ?>
 
     <!-- hero -->
-    <section id="header">
+    <!-- <section id="header">
         <div class="container-xl">
             <div class="row">
                 <div class="col-auto col-md-6">
@@ -162,10 +159,19 @@ require_once "../../config.php";
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <!-- Calendar Program -->
     <section id="calendar">
         <div class="container-xl">
+            <h2>
+                <div class="display-4 text-center">Schedule
+                </div>
+            </h2>
+            <p class="lead text-muted text-center">
+                Check out our calendar for upcoming events and plan to attend the next fellowship.
+            </p>
+            <!-- callender -->
             <div class="container">
                 <div class="left">
                     <div class="calendar bg-body">
@@ -233,6 +239,30 @@ require_once "../../config.php";
                 </button> -->
             </div>
 
+        </div>
+    </section>
+
+    <section id="pfogram">
+        <div class="container-xl">
+            <h4 class="text-center">Sem 1 Program - Fellowships, Events and Activities (2024/2025)</h4>
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-auto col-md-8">
+                    <!-- image view -->
+                    <img class="d-md-none" src="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.png" alt="Semester Program" style="max-width:100%; height:auto;">
+                    <!-- pdf view -->
+                    <iframe class="d-none d-md-block" src="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.pdf" width="100%" height="600px">
+                        This browser does not support PDFs. Please download the PDF to view it:
+                        <a href="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.pdf">Download PDF</a>.
+                    </iframe>
+                </div>
+                <div class="col-auto col-md-4 text-center">
+                    <p>Download the Semester's Program:</p>
+                    <a class="text-decoration-none" href="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.pdf" download="MUCU-Semester-Program.pdf">Download PDF <i class="bi bi-file-earmark-arrow-down"></i></a>
+                    <br>
+                    <a class="text-decoration-none" href="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.png" download="MUCU-Semester-Program.jpg">Download Image <i class="bi bi-file-image"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -708,10 +738,10 @@ require_once "../../config.php";
     <?php include "../models/footer.php"; ?>
 
     <!-- Iconions -->
-    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
     <!-- Swiper JS -->
-    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="/<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
     <script src="/<?php echo BASE_URL; ?>assets/scripts/calendar.js"></script>

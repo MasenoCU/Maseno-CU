@@ -484,7 +484,7 @@
     top: calc(100% + 12px);
   }
   .events {
-    padding-bottom: 340px;
+    padding-bottom: 10px;
   }
   .add-event-wrapper {
     bottom: 100px;
