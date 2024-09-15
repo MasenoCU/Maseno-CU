@@ -494,7 +494,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary">Faith</h6>
                             </div>
-                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebooks/book_holder1.jpeg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Growing in Faith</h5>
@@ -513,7 +513,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Inspiration</h6>
                             </div>
-                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebooks/book_holder2.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title ">Finding Inner Peace</h5>
@@ -532,7 +532,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Testimonials</h6>
                             </div>
-                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebooks/book_holder3.jpeg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Life Changing Stories</h5>
