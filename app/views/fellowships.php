@@ -242,7 +242,7 @@ require_once "../../config.php";
         </div>
     </section>
 
-    <section id="pfogram">
+    <section id="program">
         <div class="container-xl">
             <h4 class="text-center">Sem 1 Program - Fellowships, Events and Activities (2024/2025)</h4>
             <div class="row justify-content-center align-items-center">
@@ -367,7 +367,7 @@ require_once "../../config.php";
                 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                     <div class="col">
                         <div>
-                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/ministries/praise-worship.jpeg" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Ministry Fellowship</h4>
                         <p class="text-muted text-start">
@@ -377,7 +377,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col">
                         <div>
-                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/events/bible-study.jpeg" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Wednesday Prayers & BS</h4>
                         <p class="text-muted text-start">
@@ -387,7 +387,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col">
                         <div>
-                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/events/best-p.jpeg" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-start">Thursday BEST-P Session</h4>
                         <p class="text-muted text-start">
@@ -413,11 +413,11 @@ require_once "../../config.php";
                     <!-- Event -->
                     <div class="swiper-slide">
                         <div class="event-img">
-                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/events/prayer-kesha.jpeg" alt="event">
                         </div>
                         <div class="event-content">
                             <div class="text-dark mt-5">
-                                <h4 class="eventname">Prayer Kesha</h4>
+                                <h4 class="eventname">/h4>
                             </div>
                         </div>
                     </div>
@@ -496,45 +496,39 @@ require_once "../../config.php";
                     <!-- event 1-->
                     <div class="swiper-slide slide">
                         <div class="slide-img">
-                            <img src="/public/assets/images/Placeholder Image.png" alt="event">
+                            <img src="/public/assets/images/events/charity.jpeg" alt="event">
                         </div>
                         <div class="slide-content">
                             <h1 class="text-end me-5 text-secondary">1</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Charity Event</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
                     <!-- event 2-->
                     <div class="swiper-slide slide">
                         <div class="slide-img">
-                            <img src="/public/assets/images/Placeholder Image.png" alt="event">
+                            <img src="/public/assets/images/events/ezra-conference.jpeg" alt="event">
                         </div>
                         <div class="slide-content">
                             <h1 class="text-end me-5 text-secondary">2</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Ezra Conference</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
                     <!-- event 3-->
                     <div class="swiper-slide slide">
                         <div class="slide-img">
-                            <img src="/public/assets/images/Placeholder Image.png" alt="event">
+                            <img src="/public/assets/images/events/commision.jpeg" alt="event">
                         </div>
                         <div class="slide-content">
                             <h1 class="text-end me-5 text-secondary">3</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Commission Conference</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -547,9 +541,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">4</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Discipleship Weekend</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -562,24 +554,20 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">5</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Fun Day</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
                     <!-- event 6-->
                     <div class="swiper-slide slide">
                         <div class="slide-img">
-                            <img src="/public/assets/images/Placeholder Image.png" alt="event">
+                            <img src="/public/assets/images/events/prayer-fest.jpeg" alt="event">
                         </div>
                         <div class="slide-content">
                             <h1 class="text-end me-5 text-secondary">6</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Prayer Festival</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -592,9 +580,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">7</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">AGM</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -607,9 +593,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">8</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Inreach Week</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -622,9 +606,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">9</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Meaga Mission</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -637,9 +619,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">10</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Orientation Week</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -652,9 +632,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">11</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Chastity Week</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -667,9 +645,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">12</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Associates Weekend</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -682,9 +658,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">13</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Elders Weekend</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -697,9 +671,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">14</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">2nd Years Weekend</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
@@ -712,9 +684,7 @@ require_once "../../config.php";
                             <h1 class="text-end me-5 text-secondary">15</h1>
                             <div class="slide-content-bottom text-dark">
                                 <h2 class="event-name">Mini Elders Weekend</h2>
-                                <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Rem,
-                                    accusantium?</p>
+                                <p class="event-description"></p>
                             </div>
                         </div>
                     </div>
