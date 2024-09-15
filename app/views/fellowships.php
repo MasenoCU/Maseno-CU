@@ -321,7 +321,7 @@ require_once "../../config.php";
                 <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                     <div class="col justify-content-center">
                         <div class="text-center">
-                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/events/friday.jpg" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Friday Fellowship</h4>
                         <p class="text-muted text-center">
@@ -331,7 +331,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col ">
                         <div class="text-center">
-                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/events/sunday.jpg" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Sunday Service</h4>
                         <p class="text-muted text-center">
@@ -341,7 +341,7 @@ require_once "../../config.php";
                     </div>
                     <div class="col ">
                         <div class="text-center">
-                            <img src="/<?php echo BASE_URL; ?>assets/images/Medium Placeholder Image.png" alt="" class="img-fluid">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/events/image.jpg" alt="" class="img-fluid">
                         </div>
                         <h4 class="text-center">Saturday Fellowship</h4>
                         <p class="text-muted text-center">

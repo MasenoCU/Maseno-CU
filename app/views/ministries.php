@@ -41,7 +41,7 @@ require_once "../../config.php";
                     <div class="card h-100 shadow-sm">
                         <div class="img-container">
                             <!-- Dynamically build the image path -->
-                            <img src="/<?php echo BASE_URL; ?>assets/images/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/ministries/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
                             <div class="overlay">
                                 <p class="description"><?php echo $ministry['description']; ?></p>
                                 <!-- Hardcode the page URL for each ministry -->

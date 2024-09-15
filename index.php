@@ -256,10 +256,10 @@ $events = $homeController->getEvents();
             <!-- cta section -->
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
-                <div class="text-end">
-                <a href="app/views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2">Login</a>
-                <a href="app/views/registrationpage.php?mode=signup" class="btn btn-warning ms-2">Sign-up</a>
-                </div>
+            <div class="text-end"> 
+                <a href="#" class="btn btn-outline-primary mx-2 btn-readmore" >Login</a>
+                <a href="#" class="btn btn-warning ms-2 btn-readmore">Sign-up</a>
+            </div>
             </div>
         </div>
     </header>
@@ -659,7 +659,7 @@ $events = $homeController->getEvents();
                 <div class="d-inline-block text-center text-md-start">
                     <a href="registrationpage.php" id="joinus"
                         class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Join today</a>
-                    <a href="#login" id="login.php"
+                    <a href="#login" id="#"
                         class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill">Sign
                         in</a>
                 </div>
@@ -826,77 +826,99 @@ $events = $homeController->getEvents();
             </footer>
         </div>
     </section>
+    <div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center" style="border: none; border-radius: 15px; overflow: hidden;">
+      <div class="modal-body" style="background-color: #25aae1; color: white; padding: 40px;">
+        <h2>Coming Soon!</h2>
+        <p class="lead">This feature is under development and will be available soon. Stay tuned!</p>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// document.querySelectorAll('.btn-readmore').forEach(button => {
+//     button.addEventListener('click', function(event) {
+//         event.preventDefault();
+//         var myModal = new bootstrap.Modal(document.getElementById('comingSoonModal'));
+//         myModal.show();
+//     });
+// });
+</script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const carouselInner = document.querySelector('.carousel-inner');
-    const slides = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-    const totalSlides = slides.length;
+// document.addEventListener('DOMContentLoaded', function () {
+//     const carouselInner = document.querySelector('.carousel-inner');
+//     const slides = document.querySelectorAll('.carousel-item');
+//     let currentIndex = 0;
+//     const totalSlides = slides.length;
 
-    // Manually control the next and previous buttons
-    const prevButton = document.getElementById('prevSlide');
-    const nextButton = document.getElementById('nextSlide');
+//     // Manually control the next and previous buttons
+//     const prevButton = document.getElementById('prevSlide');
+//     const nextButton = document.getElementById('nextSlide');
 
-    // Show the first slide initially
-    showSlide(currentIndex);
+//     // Show the first slide initially
+//     showSlide(currentIndex);
 
-    // Handle 'Next' button click
-    nextButton.addEventListener('click', function () {
-        clearInterval(autoSlideInterval); // Stop the auto-slide
-        currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide
-        showSlide(currentIndex);
-        autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
-    });
+//     // Handle 'Next' button click
+//     nextButton.addEventListener('click', function () {
+//         clearInterval(autoSlideInterval); // Stop the auto-slide
+//         currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide
+//         showSlide(currentIndex);
+//         autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+//     });
 
-    // Handle 'Previous' button click
-    prevButton.addEventListener('click', function () {
-        clearInterval(autoSlideInterval); // Stop the auto-slide
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Go to previous slide
-        showSlide(currentIndex);
-        autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
-    });
+//     // Handle 'Previous' button click
+//     prevButton.addEventListener('click', function () {
+//         clearInterval(autoSlideInterval); // Stop the auto-slide
+//         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Go to previous slide
+//         showSlide(currentIndex);
+//         autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+//     });
 
-    // Auto-slide every 5 seconds
-    let autoSlideInterval = setInterval(autoSlideFunction, 8000);
+//     // Auto-slide every 5 seconds
+//     let autoSlideInterval = setInterval(autoSlideFunction, 8000);
 
-    function autoSlideFunction() {
-        currentIndex = (currentIndex + 1) % totalSlides; // Move to the next slide
-        showSlide(currentIndex);
-    }
+//     function autoSlideFunction() {
+//         currentIndex = (currentIndex + 1) % totalSlides; // Move to the next slide
+//         showSlide(currentIndex);
+//     }
 
-    // Show the slide based on the current index
-    function showSlide(index) {
-        slides.forEach((slide, idx) => {
-            if (idx === index) {
-                slide.classList.add('active');
-            } else {
-                slide.classList.remove('active');
-            }
-        });
-    }
-});
+//     // Show the slide based on the current index
+//     function showSlide(index) {
+//         slides.forEach((slide, idx) => {
+//             if (idx === index) {
+//                 slide.classList.add('active');
+//             } else {
+//                 slide.classList.remove('active');
+//             }
+//         });
+//     }
+// });
 
-// Reset auto-slide when the user manually clicks next or prev
-nextButton.addEventListener('click', function () {
-    clearInterval(autoSlideInterval); // Stop the auto-slide
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-    autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
-});
+// // Reset auto-slide when the user manually clicks next or prev
+// nextButton.addEventListener('click', function () {
+//     clearInterval(autoSlideInterval); // Stop the auto-slide
+//     currentIndex = (currentIndex + 1) % totalSlides;
+//     showSlide(currentIndex);
+//     autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+// });
 
-prevButton.addEventListener('click', function () {
-    clearInterval(autoSlideInterval); // Stop the auto-slide
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-    autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
-});
+// prevButton.addEventListener('click', function () {
+//     clearInterval(autoSlideInterval); // Stop the auto-slide
+//     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+//     showSlide(currentIndex);
+//     autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+// });
 
-// Auto-slide function
-function autoSlideFunction() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-}
+// // Auto-slide function
+// function autoSlideFunction() {
+//     currentIndex = (currentIndex + 1) % totalSlides;
+//     showSlide(currentIndex);
+// }
 
     </script>
     <!-- main js -->
