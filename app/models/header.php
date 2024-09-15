@@ -202,9 +202,9 @@ require_once "../../config.php";
         </nav>
 
         <!-- Search form -->
-        <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
+        <!-- <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
+        </form> -->
 
         <!-- CTA Section -->
         <div class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">

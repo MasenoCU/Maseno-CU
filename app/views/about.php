@@ -141,8 +141,8 @@ require_once "../../config.php";
 
     <?php include "../models/header.php"; ?>
 
-    <!-- header -->
-    <section id="header">
+    <!-- hero -->
+    <section id="hero">
         <div class="container-xl">
             <h2>
                 <div class="display-4 text-center">Discover Our Story
@@ -319,7 +319,7 @@ require_once "../../config.php";
                 <p class="lead text-muted mb-16">Get to know the dedicated leaders of our Christian Union.</p>
             </div>
             <!-- i-frame -->
-            <iframe src="/app/models/leadership.htm" title="Events"></iframe>
+            <iframe src="/app/models/leadership.php" title="Events"></iframe>
             <div class="row justify-content-center align-items-center">
                 <a href="leadership.php" target="_parent" rel="noreferrer"
                     class="btn col-auto btn-success btn-sm mt-3">Meet
