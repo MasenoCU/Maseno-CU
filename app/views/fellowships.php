@@ -13,12 +13,22 @@ require_once "../../config.php";
     <!-- custon css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/fellowship.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/calendar.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/swiper-bundle.min.css" />
     <!-- page title -->
     <title>Fellowships Maseno University Christian Union</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <!-- Bootsrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- font awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <!-- Page Title -->
@@ -134,12 +144,12 @@ require_once "../../config.php";
         </div>
     </div>
 
-    
 
-    <?php include"../models/header.php"; ?> 
+
+    <?php include "../models/header.php"; ?>
 
     <!-- hero -->
-    <section id="header">
+    <!-- <section id="header">
         <div class="container-xl">
             <div class="row">
                 <div class="col-auto col-md-6">
@@ -150,6 +160,111 @@ require_once "../../config.php";
                         University Christian Union. Engage with like-minded individuals, grow in faith, and achieve
                         maturity
                         in Christ.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Calendar Program -->
+    <section id="calendar">
+        <div class="container-xl">
+            <h2>
+                <div class="display-4 text-center">Schedule
+                </div>
+            </h2>
+            <p class="lead text-muted text-center">
+                Check out our calendar for upcoming events and plan to attend the next fellowship.
+            </p>
+            <!-- callender -->
+            <div class="container">
+                <div class="left">
+                    <div class="calendar bg-body">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">September 2024</div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days"></div>
+                        <div class="goto-today">
+                            <div class="goto">
+                                <input type="text" placeholder="mm/yyyy" class="date-input" />
+                                <button class="goto-btn">Go</button>
+                            </div>
+                            <button class="today-btn">Today</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="today-date">
+                        <div class="event-day">Sun</div>
+                        <div class="event-date">15th September 2024</div>
+                    </div>
+                    <div class="events"></div>
+                    <!-- Add Events -->
+                    <!-- <div class="add-event-wrapper">
+                        <div class="add-event-header">
+                            <div class="title">Add Event</div>
+                            <i class="fas fa-times close"></i>
+                        </div>
+                        <div class="add-event-body">
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Name" class="event-name" />
+                            </div>
+                            <div class="add-event-input">
+                                <input
+                                    type="text"
+                                    placeholder="Event Time From"
+                                    class="event-time-from" />
+                            </div>
+                            <div class="add-event-input">
+                                <input
+                                    type="text"
+                                    placeholder="Event Time To"
+                                    class="event-time-to" />
+                            </div>
+                        </div>
+                        <div class="add-event-footer">
+                            <button class="add-event-btn">Add Event</button>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- add event button -->
+                <!-- <button class="add-event">
+                    <i class="fas fa-plus"></i>
+                </button> -->
+            </div>
+
+        </div>
+    </section>
+    <!-- program -->
+    <section id="program">
+        <div class="container-xl">
+            <h4 class="text-center">Sem 1 Program - Fellowships, Events and Activities (2024/2025)</h4>
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-auto col-md-8">
+                    <!-- image view -->
+                    <img class="d-md-none" src="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.png" alt="Semester Program" style="max-width:100%; height:auto;">
+                    <!-- pdf view -->
+                    <iframe class="d-none d-md-block" src="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.pdf" width="100%" height="600px">
+                        This browser does not support PDFs. Please download the PDF to view it:
+                        <a href="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.pdf">Download PDF</a>.
+                    </iframe>
+                </div>
+                <div class="col-auto col-md-4 text-center">
+                    <p>Download the Semester's Program:</p>
+                    <a class="text-decoration-none" href="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.pdf" download="MUCU-Semester-Program.pdf">Download PDF <i class="bi bi-file-earmark-arrow-down"></i></a>
+                    <br>
+                    <a class="text-decoration-none" href="/app/views/uploads/sem-program/MUCU-24_25-SEM1-PROGRAM.png" download="MUCU-Semester-Program.jpg">Download Image <i class="bi bi-file-image"></i></a>
                 </div>
             </div>
         </div>
@@ -164,7 +279,21 @@ require_once "../../config.php";
             </div>
             <div class="row justify-content-lg-center align-items-lg-center">
                 <div class="col-auto col-md-6">
-                    <img src="/<?php echo BASE_URL; ?>assets/images/Video Placeholder.png" alt="" class="img-fluid">
+                    <!-- <img src="/<?php echo BASE_URL; ?>assets/images/Video Placeholder.png" alt="" class="img-fluid"> -->
+                    <!-- Load Facebook SDK for JavaScript -->
+                    <div id="fb-root"></div>
+                    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+                    <!-- Your embedded video player code -->
+                    <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="500" data-show-text="false">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/">
+                                <a href="https://www.facebook.com/facebook/videos/10153231379946729/">How to Share With Just Friends</a>
+                                <p>How to share with just friends.</p>
+                                Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+                            </blockquote>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-auto col-md-6">
                     <h4 class="mb-2">Christianity and Technology</h4>
@@ -291,7 +420,85 @@ require_once "../../config.php";
 
     <!-- frequent events -->
     <section id="frequent events">
-        <div class="container-xl"></div>
+        <div class="container-xl">
+            <div class="row">
+                <h2 class="display-5 text-center section-heading">Frequent Events</h2>
+                <p class="lead text-center section-subheading">More often than not</p>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Prayer Kesha</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Worship Experience</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Prayer Retreats</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Hikes</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Prayer Week</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event -->
+                    <div class="swiper-slide">
+                        <div class="event-img">
+                            <img class="img-fluid object-fit-cover" src="/public/assets/images/Placeholder Image.png" alt="event">
+                        </div>
+                        <div class="event-content">
+                            <div class="text-dark mt-5">
+                                <h4 class="eventname">Mini Missions</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
     </section>
 
     <!-- occasional events -->
@@ -546,13 +753,14 @@ require_once "../../config.php";
         </div>
     </section>
 
-    <?php include"../models/footer.php"; ?>
+    <?php include "../models/footer.php"; ?>
 
     <!-- custom js -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="/<?php echo BASE_URL; ?>assets/scripts/fellowship.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/calendar.js"></script>
 
 </body>
 

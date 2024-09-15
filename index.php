@@ -30,9 +30,12 @@ $events = $homeController->getEvents();
     <title>Home Maseno University Christian Union</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
+
 <body>
     <!-- spinner -->
 
@@ -190,7 +193,7 @@ $events = $homeController->getEvents();
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="dropdown-item icon-link disabled"
                             style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                             <svg class="bi" width="64" height="64">
@@ -198,7 +201,7 @@ $events = $homeController->getEvents();
                                 </use>
                             </svg>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- navbar links -->
@@ -227,7 +230,7 @@ $events = $homeController->getEvents();
                                 More
                             </a>
                             <ul class="dropdown-menu text-small">
-                                <li>
+                                <!-- <li>
                                     <a class="dropdown-item icon-link disabled"
                                         style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                                         <svg class="bi" width="64" height="64">
@@ -236,7 +239,7 @@ $events = $homeController->getEvents();
                                             </use>
                                         </svg>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                                 <li><a class="dropdown-item" href="#resources">Resources</a></li>
                                 <li>
@@ -249,15 +252,25 @@ $events = $homeController->getEvents();
                 </div>
             </nav>
             <!-- bs search -->
-            <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
+            <!-- <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
                 <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
+            </form> -->
+            <button type="button"
+                class="btn disabled btn-sm btn-success rounded-pill col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3">
+                <a class="icon-link link-body-emphasis text-decoration-none d-block">Online Giving
+                    <svg class="bi" width="64" height="64">
+                        <use xlink:href="/public/assets/icons/icons.svg#give"
+                            style="fill: currentColor; color:invert;">
+                        </use>
+                    </svg>
+                </a>
+            </button>
             <!-- cta section -->
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
                 <div class="text-end">
-                <a href="app/views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2">Login</a>
-                <a href="app/views/registrationpage.php?mode=signup" class="btn btn-warning ms-2">Sign-up</a>
+                    <a href="app/views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2">Login</a>
+                    <a href="app/views/registrationpage.php?mode=signup" class="btn btn-warning ms-2">Sign-up</a>
                 </div>
             </div>
         </div>
@@ -484,38 +497,38 @@ $events = $homeController->getEvents();
             </p>
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                 <?php foreach ($blogs as $blog): ?>
-                <div class="col">
-                    <div class="card border-0 h-100">
-                        <img src="<?php echo htmlspecialchars($blog['image_url'], ENT_QUOTES, 'UTF-8'); ?>"
-                            class="card-img-top" alt="...">
-                        <div class="card-body p-2">
-                            <p class="bg-secondary text-white d-inline">
-                                <small><?php echo htmlspecialchars($blog['category'], ENT_QUOTES, 'UTF-8'); ?></small>
-                            </p>
-                            <h5 class="card-title"><?php echo htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8'); ?>
-                            </h5>
-                            <p class="card-text text-muted">
-                                <?php echo htmlspecialchars($blog['summary'], ENT_QUOTES, 'UTF-8'); ?></p>
-                        </div>
-                        <div class="card-footer">
-                            <img src="<?php echo htmlspecialchars($blog['author_image_url'], ENT_QUOTES, 'UTF-8'); ?>"
-                                class="w-25 me-3 rounded float-start" alt="...">
-                            <p><small><?php echo htmlspecialchars($blog['author_name'], ENT_QUOTES, 'UTF-8'); ?></small>
-                            </p>
-                            <p class="text-muted">
-                                <small><?php echo htmlspecialchars($blog['date'], ENT_QUOTES, 'UTF-8'); ?>
-                                    ~ <?php echo htmlspecialchars($blog['read_time'], ENT_QUOTES, 'UTF-8'); ?> min
-                                    read</small>
-                            </p>
-                            <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
-                                    style="--bs-link-hover-color-rgb: 0, 166, 81;"
-                                    href="app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
-                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#arrow-bar-right"></use>
-                                    </svg></a>
-                            </p>
+                    <div class="col">
+                        <div class="card border-0 h-100">
+                            <img src="<?php echo htmlspecialchars($blog['image_url'], ENT_QUOTES, 'UTF-8'); ?>"
+                                class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <p class="bg-secondary text-white d-inline">
+                                    <small><?php echo htmlspecialchars($blog['category'], ENT_QUOTES, 'UTF-8'); ?></small>
+                                </p>
+                                <h5 class="card-title"><?php echo htmlspecialchars($blog['title'], ENT_QUOTES, 'UTF-8'); ?>
+                                </h5>
+                                <p class="card-text text-muted">
+                                    <?php echo htmlspecialchars($blog['summary'], ENT_QUOTES, 'UTF-8'); ?></p>
+                            </div>
+                            <div class="card-footer">
+                                <img src="<?php echo htmlspecialchars($blog['author_image_url'], ENT_QUOTES, 'UTF-8'); ?>"
+                                    class="w-25 me-3 rounded float-start" alt="...">
+                                <p><small><?php echo htmlspecialchars($blog['author_name'], ENT_QUOTES, 'UTF-8'); ?></small>
+                                </p>
+                                <p class="text-muted">
+                                    <small><?php echo htmlspecialchars($blog['date'], ENT_QUOTES, 'UTF-8'); ?>
+                                        ~ <?php echo htmlspecialchars($blog['read_time'], ENT_QUOTES, 'UTF-8'); ?> min
+                                        read</small>
+                                </p>
+                                <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
+                                        style="--bs-link-hover-color-rgb: 0, 166, 81;"
+                                        href="app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
+                                            <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#arrow-bar-right"></use>
+                                        </svg></a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -624,7 +637,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- i-frame -->
-        <iframe src="app/models/leadership.php" title="Events"></iframe>
+        <iframe src="app/models/leadership.htm" title="Events"></iframe>
         <div class="row justify-content-center align-items-center">
             <a href="app/views/leadership.php" target="_parent" rel="noreferrer"
                 class="btn col-auto btn-success btn-sm mt-3">Meet
@@ -654,24 +667,24 @@ $events = $homeController->getEvents();
                     <!-- Accordion -->
                     <div class="accordion" id="questions">
                         <?php foreach ($faqs as $index => $faq): ?>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading-<?php echo $index; ?>">
-                                <button class="accordion-button <?php echo $index === 0 ? '' : 'collapsed'; ?>"
-                                    type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#question<?php echo $index; ?>"
-                                    aria-expanded="<?php echo $index === 0 ? 'true' : 'false'; ?>"
-                                    aria-controls="question<?php echo $index; ?>">
-                                    <?php echo htmlspecialchars($faq['question'], ENT_QUOTES, 'UTF-8'); ?>
-                                </button>
-                            </h2>
-                            <div id="question<?php echo $index; ?>"
-                                class="accordion-collapse collapse <?php echo $index === 0 ? 'show' : ''; ?>"
-                                aria-labelledby="heading-<?php echo $index; ?>" data-bs-parent="#questions">
-                                <div class="accordion-body">
-                                    <?php echo nl2br(htmlspecialchars($faq['answer'], ENT_QUOTES, 'UTF-8')); ?>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-<?php echo $index; ?>">
+                                    <button class="accordion-button <?php echo $index === 0 ? '' : 'collapsed'; ?>"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#question<?php echo $index; ?>"
+                                        aria-expanded="<?php echo $index === 0 ? 'true' : 'false'; ?>"
+                                        aria-controls="question<?php echo $index; ?>">
+                                        <?php echo htmlspecialchars($faq['question'], ENT_QUOTES, 'UTF-8'); ?>
+                                    </button>
+                                </h2>
+                                <div id="question<?php echo $index; ?>"
+                                    class="accordion-collapse collapse <?php echo $index === 0 ? 'show' : ''; ?>"
+                                    aria-labelledby="heading-<?php echo $index; ?>" data-bs-parent="#questions">
+                                    <div class="accordion-body">
+                                        <?php echo nl2br(htmlspecialchars($faq['answer'], ENT_QUOTES, 'UTF-8')); ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -723,29 +736,29 @@ $events = $homeController->getEvents();
             <div class="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center align-content-center">
                 <div class="col-auto col-lg-4">
                     <?php foreach ($contacts as $contact) : ?>
-                    <?php if ($contact['contactType'] == 'Email') : ?>
-                    <div class="text-start">
-                        <h5>Email</h5>
-                        <p class="mb-0">Send us an email</p>
-                        <p><small><a href="mailto:<?= $contact['contactDetail'] ?>"
-                                    class="contact-link"><?= $contact['contactDetail'] ?></a></small></p>
-                    </div>
-                    <?php elseif ($contact['contactType'] == 'PhoneNumber') : ?>
-                    <div class="text-start">
-                        <h5>Phone</h5>
-                        <p class="mb-0">Give us a call</p>
-                        <p><small><a href="tel:<?= $contact['contactDetail'] ?>"
-                                    class="contact-link"><?= $contact['contactDetail'] ?></a></small></p>
-                    </div>
-                    <?php elseif ($contact['contactType'] == 'Address') : ?>
-                    <div class="text-start">
-                        <h5>Visit Us</h5>
-                        <p class="mb-0"><?= $contact['contactDetail'] ?></p>
-                        <p><small><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;"
-                                    href="https://maps.google.com/maps/dir//lecture+hall+15+XJW3%2B7R3+Maseno/@-0.0043532,34.6045384,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x182aa9fb91ce4dc5:0xc37f7341e6b2549d">Get
-                                    directions</a></small></p>
-                    </div>
-                    <?php endif; ?>
+                        <?php if ($contact['contactType'] == 'Email') : ?>
+                            <div class="text-start">
+                                <h5>Email</h5>
+                                <p class="mb-0">Send us an email</p>
+                                <p><small><a href="mailto:<?= $contact['contactDetail'] ?>"
+                                            class="contact-link"><?= $contact['contactDetail'] ?></a></small></p>
+                            </div>
+                        <?php elseif ($contact['contactType'] == 'PhoneNumber') : ?>
+                            <div class="text-start">
+                                <h5>Phone</h5>
+                                <p class="mb-0">Give us a call</p>
+                                <p><small><a href="tel:<?= $contact['contactDetail'] ?>"
+                                            class="contact-link"><?= $contact['contactDetail'] ?></a></small></p>
+                            </div>
+                        <?php elseif ($contact['contactType'] == 'Address') : ?>
+                            <div class="text-start">
+                                <h5>Visit Us</h5>
+                                <p class="mb-0"><?= $contact['contactDetail'] ?></p>
+                                <p><small><a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                                            href="https://maps.google.com/maps/dir//lecture+hall+15+XJW3%2B7R3+Maseno/@-0.0043532,34.6045384,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x182aa9fb91ce4dc5:0xc37f7341e6b2549d">Get
+                                            directions</a></small></p>
+                            </div>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
                 <div class="col-auto col-lg-8">

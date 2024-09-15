@@ -148,7 +148,7 @@ require_once "../../config.php";
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li>
+                <!-- <li>
                     <a class="dropdown-item icon-link disabled"
                         style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                         <svg class="bi" width="64" height="64">
@@ -156,7 +156,7 @@ require_once "../../config.php";
                             </use>
                         </svg>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
 
@@ -175,11 +175,11 @@ require_once "../../config.php";
                         <a href="#" class="nav-link d-block link-body-emphasis text-decoration-none dropdown-toggle"
                             data-bs-toggle="dropdown" aria-expanded="false">More</a>
                         <ul class="dropdown-menu text-small">
-                            <li><a class="dropdown-item icon-link" href="../views/dashboard.php">My Dashboard</a></li>
+                            <!-- <li><a class="dropdown-item icon-link" href="../views/dashboard.php">My Dashboard</a></li>
                             <li>
-                                <hr class="dropdown-divider">
+                                <hr class="dropdown-divider"> -->
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="dropdown-item icon-link disabled"
                                     style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                                     <svg class="bi" width="64" height="64">
@@ -188,7 +188,7 @@ require_once "../../config.php";
                                         </use>
                                     </svg>
                                 </a>
-                            </li>
+                            </li> -->
                             <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                             <li><a class="dropdown-item" href="#resources">Resources</a></li>
                             <li>
@@ -202,9 +202,20 @@ require_once "../../config.php";
         </nav>
 
         <!-- Search form -->
-        <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
+        <!-- <form class="col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3" role="search">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
+        </form> -->
+        <!-- online giving -->
+        <button type="button"
+            class="btn disabled btn-sm btn-success rounded-pill col-10 col-lg-auto mx-lg-4 mx-xl-auto mb-lg-0 me-lg-3">
+            <a class="icon-link link-body-emphasis text-decoration-none d-block">Online Giving
+                <svg class="bi" width="64" height="64">
+                    <use xlink:href="/public/assets/icons/icons.svg#give"
+                        style="fill: currentColor; color:invert;">
+                    </use>
+                </svg>
+            </a>
+        </button>
 
         <!-- CTA Section -->
         <div class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
@@ -219,4 +230,4 @@ require_once "../../config.php";
                 <?php endif; ?>
             </div>
         </div>
-    </header>
+</header>
