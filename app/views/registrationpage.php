@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input type="password" name="confirm_password" placeholder="Confirm the Password" required minlength="6" />
                         </div>
                         <div class="input-field file-field">
-                            <label for="schoolId">Please Upload Your School ID:</label>
+                            <label for="schoolId">Please Upload Your School ID (Front Side):</label>
                             <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
                         </div>
                         <button type="button" class="btn back-btn">Back</button>
