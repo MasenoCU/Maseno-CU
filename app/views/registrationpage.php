@@ -31,10 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- <base href="https://masenocu.org/developer/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e36217afb5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
-    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/registrationstyles.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/registrationstyles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/<?php echo BASE_URL; ?>favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>favicon.ico">
     <title>Registration Maseno University Christian Union</title>
 </head>
 <body>
@@ -190,11 +190,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p class="cuthemeformat">Login to access the <span>Christian Union</span> Modules</p>
                     <button class="btn transparent" id="sign-in-btn">Login</button>
                 </div>
-                <img src="/<?php echo BASE_URL; ?>assets/images/register.svg" class="image" alt="" />
+                <img src="<?php echo BASE_URL; ?>assets/images/register.svg" class="image" alt="" />
             </div>
         </div>
     </div>
 
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/app.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/scripts/app.js"></script>
 </body>
 </html>

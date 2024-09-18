@@ -295,13 +295,6 @@ require_once "../../config.php";
 
     <?php include"../models/footer.php"; ?>
 
-    
-
-    <!-- main js -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
-    <!-- bootstrap JS -->
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

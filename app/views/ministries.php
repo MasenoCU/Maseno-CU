@@ -41,7 +41,7 @@ require_once "../../config.php";
                     <div class="card h-100 shadow-sm">
                         <div class="img-container">
                             <!-- Dynamically build the image path -->
-                            <img src="/<?php echo BASE_URL; ?>assets/images/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
+                            <img src="/<?php echo BASE_URL; ?>assets/images/ministries/<?php echo $ministry['image']; ?>" class="card-img-top" alt="<?php echo $ministry['name']; ?>">
                             <div class="overlay">
                                 <p class="description"><?php echo $ministry['description']; ?></p>
                                 <!-- Hardcode the page URL for each ministry -->
@@ -49,7 +49,7 @@ require_once "../../config.php";
                             </div>
                         </div>
                         <div class="card-body text-center">
-                            <h3 class="card-title"><?php echo $ministry['name']; ?></h3>
+                            <h3 class="card-title text-primary"><?php echo $ministry['name']; ?></h3>
                             <p class="card-text fw-light"><?php echo $ministry['schedule']; ?></p>
                         </div>
                     </div>
@@ -63,9 +63,7 @@ require_once "../../config.php";
     <?php require_once "../models/footer.php"; ?>
     <?php require_once "../models/coming-soon-modal.php";?>
 
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
+    <!-- <script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script> -->
 
 </body>
 

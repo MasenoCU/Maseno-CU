@@ -148,7 +148,5 @@ require_once "../../config.php";
 </div>
 
 <!-- Crucial JavaScript -->
-<script src="/<?php echo BASE_URL; ?>assets/scripts/jquery.min.js"></script>
 <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
-<script src="/<?php echo BASE_URL; ?>assets/scripts/script.js"></script>
 <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
