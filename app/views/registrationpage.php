@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" title="Please enter a valid course" />
+                            <input type="text" name="course" placeholder="Course ( Bsc. Computer Science)" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
@@ -168,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
                         </div>
                         <button type="button" class="btn back-btn">Back</button>
-                        <input type="submit" class="btn" name="register" value="Register me Now!" />
+                        <input type="submit" class="btn final-btn" name="register" value="Register me Now!" />
                     </div>
 
                 </form>

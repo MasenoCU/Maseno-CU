@@ -158,6 +158,22 @@ $(document).ready(function() {
     }
 });
 
+$(document).ready(function() {
+    $('.final-btn').on('click', function(e) {
+        e.preventDefault(); // Prevent the form from submitting automatically
+
+        if (validateStep('.step')) {
+            // If validation passes, submit the form
+            alert("Registration successful, please login"); 
+            $(this).closest('form').submit();
+        } else {
+            // Validation failed, do not submit the form
+            alert("Please retry because something went wrong"); 
+        }
+    });
+});
+
+
 function validateStep(step) {
     let isValid = true;
 
@@ -242,6 +258,6 @@ if (loginError){
         loginError.classList.add('fade-out');
         setTimeout(function(){
             loginError.style.display = 'none';
-        }, 1000);
-    }, 3000);
+        }, 3000);
+    }, 6000);
 }
