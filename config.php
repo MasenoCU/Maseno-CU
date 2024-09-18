@@ -8,7 +8,7 @@ if (strpos($_SERVER['REQUEST_URI'], '/developer') !== false) {
     // define('BASE_URL', 'public/');
 } else {
     // BASE_URL for the production environment
-    define('BASE_URL', 'mucuwebsitegithub/public/');
-    define('BASE_URL', 'public/');
+    // define('BASE_URL', 'mucuwebsitegithub/public/');
+    define('BASE_URL', '/public/');
 }
 ?>

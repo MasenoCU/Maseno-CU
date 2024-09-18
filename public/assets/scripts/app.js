@@ -79,7 +79,10 @@ sign_in_btn.addEventListener("click", () => {
 
 // to reveal steps
 $(document).ready(function() {
-    $('.next-btn').on('click', function() {
+    $('.next-btn').on('click', function(e) {
+
+        e.preventDefault(); 
+
         var currentStep = $(this).closest('.step');
         var nextStep = currentStep.next('.step');
 
@@ -172,6 +175,9 @@ function validateStep(step) {
     let admissionNumber = $('#step1-admission-number').val();
     console.log("Admission Number: " + admissionNumber);
     const phoneNumber = $('input[name="phone_number"]').val();
+    const password = $('input[name="fpassword"]').val();
+    const confirmPassword = $('input[name="confirm_password"]').val();
+
 
 
     // Print them out in the console
@@ -180,6 +186,8 @@ function validateStep(step) {
     console.log("Course: " + course);
     console.log("Admission Number: " + admissionNumber);
     console.log("Phone Number: " + phoneNumber);
+    console.log("password: " + password);
+    console.log("confirmPassword: " + confirmPassword);
 
     // Validation for Name
     if (!namePattern.test(username)) {
@@ -216,6 +224,14 @@ function validateStep(step) {
         isValid = false;
         return isValid;
     }
+
+    // Ensure the passwords match before proceeding
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        isValid = false;
+        return isValid;
+    }
+
 
     return isValid;
 }

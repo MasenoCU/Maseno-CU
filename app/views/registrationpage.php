@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="button" class="eve-team-btn" data-value="Soret">South Rift Evangelistic Team (SORET)</button>
                             <button type="button" class="eve-team-btn" data-value="Noret">North Rift Evangelistic Team (NORET)</button>
                             <button type="button" class="eve-team-btn" data-value="Emuseta">Emulatable Students and Associates Evangelistic Team (EMUSETA)</button>
-                            <button type="button" class="eve-team-btn" data-value="Net">Nyanza Evangelistic Team (NET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Net">Nyanza Evangelistic Team Ministries Trust(NET Ministries Trust)</button>
                         </div>
                         <input type="hidden" name="eve_team" id="eve_team" value="" required />
 
@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-4">
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" name="password" placeholder="Enter a Password" required minlength="6" />
+                            <input type="password" name="fpassword" placeholder="Enter a Password" required minlength="6" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
