@@ -164,13 +164,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <i class="fas fa-lock"></i>
                             <input type="password" name="confirm_password" placeholder="Confirm the Password" required minlength="6" />
                         </div>
-                        <div class="input-field file-field">
+                        <div id="schoolIddivcalss" class="input-field file-field">
                             <label for="schoolId">Please Upload Your School ID (Front Side):</label>
                             <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
                         </div>
+                        <!-- A canvas to draw the uploaded image -->
+                        <canvas id="imageCanvas" style="display:none;"></canvas>
+
                         <button type="button" class="btn back-btn">Back</button>
                         <input type="submit" class="btn final-btn" name="register" value="Register me Now!" />
                     </div>
+
+                    <canvas id="referenceImageCanvasId" style="display:none;"></canvas>
+
 
                 </form>
             </div>

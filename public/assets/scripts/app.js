@@ -164,6 +164,16 @@ function onOpenCvReady() {
     };
 }
 
+const referenceImg = new Image();
+referenceImg.src = '../images/schoolrefid.jpg'; // Your reference image URL
+referenceImg.onload = function() {
+    const canvas = document.getElementById('referenceImageCanvasId');
+    const ctx = canvas.getContext('2d');
+    canvas.width = referenceImg.width;
+    canvas.height = referenceImg.height;
+    ctx.drawImage(referenceImg, 0, 0); // Draw the reference image on the canvas
+};
+
 
 $(document).ready(function() {
     $('.final-btn').on('click', function(e) {
@@ -171,21 +181,49 @@ $(document).ready(function() {
 
         if (validateStep('.step')) {
             // If password validation passes, proceed to check the ID
+
+            // Ensure OpenCV.js is loaded and ready
+            onOpenCvReady();
+
             let fileInput = document.getElementById('schoolId'); 
             let file = fileInput.files[0];
             if (file) {
                 let reader = new FileReader();
                 reader.onload = function(event) {
                     let dataUrl = event.target.result;
-                    checkIDCard(dataUrl, function(isValidId) {
-                        if (isValidId) {
-                            alert("Registration successful, please login");
-                            $(e.target).closest('form').submit();
-                        } else {
-                            alert("Your ID could not be automatically verified. It has been submitted for manual review by Admin.");
-                            $(e.target).closest('form').submit();  // Form submits for manual review
-                        }
-                    });
+                    console.log('dataUrl ' + dataUrl)
+
+                    // Create a new Image object
+                    let img = new Image();
+                    img.src = dataUrl;
+
+                    img.onload = function() {
+                        let canvas = document.getElementById('imageCanvas');
+                        let ctx = canvas.getContext('2d');
+
+                        // Set canvas dimensions to the image's dimensions
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+
+                        // Draw the image onto the canvas
+                        ctx.drawImage(img, 0, 0);
+
+                        // Read the image from the canvas using OpenCV
+                        cv.imreadAsync('imageCanvas', function(src) {
+
+                            // Now check the ID using the OpenCV `checkIDCard` function
+                            checkIDCard(src, function(isValidId) {
+                                if (isValidId) {
+                                    alert("Registration successful, please login");
+                                    $(e.target).closest('form').submit();
+                                } else {
+                                    alert("Your ID could not be automatically verified. It has been submitted for manual review by Admin.");
+                                    $(e.target).closest('form').submit();  // Form submits for manual review
+                                }
+                            });
+
+                        });
+                    };
                 };
                 reader.readAsDataURL(file);
             } else {
@@ -198,10 +236,9 @@ $(document).ready(function() {
     });
 });
 
-function checkIDCard(dataUrl, callback) {
+function checkIDCard(src, callback) {
     // Assuming reference image is already loaded and available as `refImage`
     cv.imreadAsync('referenceImageCanvasId', function(refImage) {
-        let src = cv.imread(dataUrl);
         let orb = new cv.ORB();
         let keypoints1 = new cv.KeyPointVector();
         let descriptors1 = new cv.Mat();
@@ -231,6 +268,7 @@ function checkIDCard(dataUrl, callback) {
         matches.delete(); matcher.delete();
     });
 }
+
 
 
 
