@@ -158,20 +158,80 @@ $(document).ready(function() {
     }
 });
 
+function onOpenCvReady() {
+    cv['onRuntimeInitialized'] = () => {
+        console.log('OpenCV ready');
+    };
+}
+
+
 $(document).ready(function() {
     $('.final-btn').on('click', function(e) {
         e.preventDefault(); // Prevent the form from submitting automatically
 
         if (validateStep('.step')) {
-            // If validation passes, submit the form
-            alert("Registration successful, please login"); 
-            $(this).closest('form').submit();
+            // If password validation passes, proceed to check the ID
+            let fileInput = document.getElementById('schoolId'); 
+            let file = fileInput.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function(event) {
+                    let dataUrl = event.target.result;
+                    checkIDCard(dataUrl, function(isValidId) {
+                        if (isValidId) {
+                            alert("Registration successful, please login");
+                            $(e.target).closest('form').submit();
+                        } else {
+                            alert("Your ID could not be automatically verified. It has been submitted for manual review by Admin.");
+                            $(e.target).closest('form').submit();  // Form submits for manual review
+                        }
+                    });
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("Please upload an ID card image.");
+            }
         } else {
             // Validation failed, do not submit the form
-            alert("Please retry because something went wrong"); 
+            alert("Please retry because something went wrong");
         }
     });
 });
+
+function checkIDCard(dataUrl, callback) {
+    // Assuming reference image is already loaded and available as `refImage`
+    cv.imreadAsync('referenceImageCanvasId', function(refImage) {
+        let src = cv.imread(dataUrl);
+        let orb = new cv.ORB();
+        let keypoints1 = new cv.KeyPointVector();
+        let descriptors1 = new cv.Mat();
+        let keypoints2 = new cv.KeyPointVector();
+        let descriptors2 = new cv.Mat();
+
+        // Detect keypoints and compute descriptors.
+        orb.detectAndCompute(src, new cv.Mat(), keypoints1, descriptors1);
+        orb.detectAndCompute(refImage, new cv.Mat(), keypoints2, descriptors2);
+
+        // Match descriptors.
+        let matches = new cv.DMatchVectorVector();
+        let matcher = new cv.BFMatcher(cv.NORM_HAMMING, true);
+        matcher.match(descriptors1, descriptors2, matches);
+
+        // Simple heuristic to check matches
+        if (matches.size() > 50) { // Example threshold
+            callback(true);
+        } else {
+            callback(false);
+        }
+
+        // Clean up
+        src.delete(); refImage.delete(); orb.delete();
+        keypoints1.delete(); descriptors1.delete();
+        keypoints2.delete(); descriptors2.delete();
+        matches.delete(); matcher.delete();
+    });
+}
+
 
 
 function validateStep(step) {

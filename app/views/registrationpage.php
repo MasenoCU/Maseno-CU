@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/registrationstyles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>favicon.ico">
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();"></script>
     <title>Registration Maseno University Christian Union</title>
 </head>
 <body>
