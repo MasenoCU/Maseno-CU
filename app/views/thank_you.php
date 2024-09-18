@@ -50,5 +50,7 @@ require_once "../../config.php";
     <br>
     <br>
     <h3>Your details are with us now, thanks for being a member </h3>
+    <br>
+    <h4 href="">Back to Home</h4>
 </body>
 </html>

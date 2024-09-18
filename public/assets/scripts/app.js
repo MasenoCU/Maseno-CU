@@ -5,37 +5,37 @@ const admissionNumberInput = document.querySelector('#step1-admission-number');
 const loginError = document.getElementById('loginError');
 
 
-// Listen for changes to the admission number field
-admissionNumberInput.addEventListener('blur', function() {
-    const admissionNumber = admissionNumberInput.value.trim();
+// // Listen for changes to the admission number field
+// admissionNumberInput.addEventListener('blur', function() {
+//     const admissionNumber = admissionNumberInput.value.trim();
 
-    if (admissionNumber) {
-        checkAdmissionNumber(admissionNumber);
-    }
-});
+//     if (admissionNumber) {
+//         checkAdmissionNumber(admissionNumber);
+//     }
+// });
 
-function checkAdmissionNumber(admissionNumber) {
-    $.ajax({
-        url: '../../../mucuwebsitegithub/backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
-        type: 'POST',
-        data: { admission_number: admissionNumber },
-        dataType: 'json',
-        success: function(response) {
-            console.log("AJAX Success:", response)
-            if (response.exists) {
-                alert('The admission number already exists. Please use a different one.');
-                admissionNumberInput.value = '';
-                $('.step-1 .next-btn').prop('disabled', true);
-            }else{
-                $('.step-1 .next-btn').prop('disabled', false);
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error("AJAX Error:", status, error);
-            alert('An error occurred while checking the admission number.');
-        }
-    });
-}
+// function checkAdmissionNumber(admissionNumber) {
+//     $.ajax({
+//         url: '../../../mucuwebsitegithub/backend/endpoints/check_admission_number.php',  // Adjust this path based on your file structure
+//         type: 'POST',
+//         data: { admission_number: admissionNumber },
+//         dataType: 'json',
+//         success: function(response) {
+//             console.log("AJAX Success:", response)
+//             if (response.exists) {
+//                 alert('The admission number already exists. Please use a different one.');
+//                 admissionNumberInput.value = '';
+//                 $('.step-1 .next-btn').prop('disabled', true);
+//             }else{
+//                 $('.step-1 .next-btn').prop('disabled', false);
+//             }
+//         },
+//         error: function(xhr, status, error) {
+//             console.error("AJAX Error:", status, error);
+//             alert('An error occurred while checking the admission number.');
+//         }
+//     });
+// }
 
 document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (file) {
             if (file.size > maxSize) {
-                alert("Error: The file size exceeds the allowed limit of 2MB.");
+                alert("The file size exceeds the allowed limit of 2MB.");
                 schoolIdInput.value = '';
                 return;
             }
@@ -82,6 +82,9 @@ $(document).ready(function() {
     $('.next-btn').on('click', function() {
         var currentStep = $(this).closest('.step');
         var nextStep = currentStep.next('.step');
+
+        let admissionNumber = $('#step1-admission-number').val();
+        console.log("Admission Number before submission: " + admissionNumber);
 
         if (validateStep(currentStep)) {
             // Sliding out current step to the left
@@ -154,27 +157,69 @@ $(document).ready(function() {
 
 function validateStep(step) {
     let isValid = true;
-    const inputs = $(step).find('input[required]');
 
-    inputs.each(function() {
-        if (!this.checkValidity()) {
-            alert(`The input "${this.name}" is incorrect or missing, please fill in valid details.`);
-            isValid = false;
-            return false;
-        }
-    });
+    // Patterns for validation
+    const namePattern = /^[A-Za-z]+(?:\s[A-Za-z]+){1,}$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const coursePattern = /^[A-Za-z\s.,]+$/;
+    const admissionNumberPattern = /^[A-Za-z0-9]+\/[A-Za-z0-9]+\/[A-Za-z0-9]+$/;
+    const phonePattern = /^\d{10}$/;
 
-    if (isValid && $(step).hasClass('step-4')) {
-        const password = $('input[name="password"]').val();
-        const confirmPassword = $('input[name="confirm_password"]').val();
-        if (password !== confirmPassword) {
-            alert("Passwords do not match!");
-            isValid = false;
-        }
+    // Get the input values
+    const username = $('input[name="username"]').val();
+    const email = $('input[name="email"]').val();
+    const course = $('input[name="course"]').val();
+    let admissionNumber = $('#step1-admission-number').val();
+    console.log("Admission Number: " + admissionNumber);
+    const phoneNumber = $('input[name="phone_number"]').val();
+
+
+    // Print them out in the console
+    console.log("Username: " + username);
+    console.log("Email: " + email);
+    console.log("Course: " + course);
+    console.log("Admission Number: " + admissionNumber);
+    console.log("Phone Number: " + phoneNumber);
+
+    // Validation for Name
+    if (!namePattern.test(username)) {
+        alert('Please enter your valid full names (letters and spaces only).');
+        isValid = false;
+        return isValid;
+    }
+
+    // Validation for Email
+    if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        isValid = false;
+        return isValid;
+    }
+
+    // Validation for Course
+    if (!coursePattern.test(course)) {
+        alert('Please enter a valid course (letters, spaces, commas, and periods only).');
+        isValid = false;
+        return isValid;
+    }
+
+    // Validation for Admission Number
+    if (!admissionNumberPattern.test(admissionNumber)) {
+        console.log(admissionNumber)
+        alert('Please enter a valid admission number (letters, numbers, and slashes only).');
+        isValid = false;
+        return isValid;
+    }
+
+    // Validation for Phone Number
+    if (!phonePattern.test(phoneNumber)) {
+        alert('Please enter a valid phone number (10 digits only).');
+        isValid = false;
+        return isValid;
     }
 
     return isValid;
 }
+
 
 if (loginError){
     setTimeout(function() {

@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-1">
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="username" placeholder="John Doe" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
+                            <input type="text" name="username" placeholder="John Doe" required title="Please enter a valid name" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
@@ -92,17 +92,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.,]{1,}" title="Please enter a valid course" />
+                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9\/]+" title="Please enter a valid admission number" required />
+                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
-                            <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10,}" title="Please enter a valid phone number" />
+                            <input type="text" name="phone_number" placeholder="Phone Number" required title="Please enter a valid phone number" />
                         </div>
-                        <button type="button" class="btn next-btn" disabled >Next</button>
+                        <button type="button" class="btn next-btn" >Next</button>
                     </div>
 
                     <!-- Step 2: Ministry involvement and year of study -->
@@ -129,14 +129,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-3">
                         <label class="titlelabel">Your Eve Team:</label>
                         <div class="eave-teams">
-                            <button type="button" class="eve-team-btn" data-value="Central Evangelistic Team">Central Evangelistic Team</button>
-                            <button type="button" class="eve-team-btn" data-value="Mubet">Mubet</button>
-                            <button type="button" class="eve-team-btn" data-value="Weso">Weso</button>
-                            <button type="button" class="eve-team-btn" data-value="Uet">Uet</button>
-                            <button type="button" class="eve-team-btn" data-value="Noret">Noret</button>
-                            <button type="button" class="eve-team-btn" data-value="Soret">Soret</button>
-                            <button type="button" class="eve-team-btn" data-value="Emuseta">Emuseta</button>
-                            <button type="button" class="eve-team-btn" data-value="UET">UET</button>
+                            <button type="button" class="eve-team-btn" data-value="Central Evangelistic Team">Central Evangelistic Team (CET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Mubet">Middle Eastern Brethren Evangelistic Team (MUBET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Weso">Western Evangelistic Team (WESO)</button>
+                            <button type="button" class="eve-team-btn" data-value="Uet">Uttermost Evangelistic Team (UET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Soret">South Rift Evangelistic Team (SORET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Noret">North Rift Evangelistic Team (NORET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Emuseta">Emulatable Students and Associates Evangelistic Team (EMUSETA)</button>
+                            <button type="button" class="eve-team-btn" data-value="Net">Nyanza Evangelistic Team (NET)</button>
                         </div>
                         <input type="hidden" name="eve_team" id="eve_team" value="" required />
 
