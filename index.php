@@ -258,8 +258,8 @@ $events = $homeController->getEvents();
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
             <div class="text-end"> 
-                <a href="#" class="btn btn-outline-primary mx-2 btn-readmore" >Login</a>
-                <a href="#" class="btn btn-warning ms-2 btn-readmore">Sign-up</a>
+                <a href="#" class="btn btn-outline-primary mx-2 btn-readmore d-none" >Login</a>
+                <a href="#" class="btn btn-warning ms-2 btn-readmore d-none">Sign-up</a>
             </div>
             </div>
         </div>
@@ -566,7 +566,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="/app/models/events.php" title="Events"></iframe>
+        <iframe class="d-none" src="/app/models/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 

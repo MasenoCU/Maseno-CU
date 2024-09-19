@@ -29,8 +29,7 @@ if (!is_array($events)) {
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <style>
     html, body {
-    height: 100%;
-    overflow: hidden; /* Disable the scrollbar on the body */
+    height: 100%;/* Disable the scrollbar on the body */
     }
 
     .container-xl {
