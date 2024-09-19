@@ -1,9 +1,0 @@
-# Redirect all requests to index.php
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
-
-# Deny access to app and vendor directories
-RewriteRule ^app/ - [F,L]
-RewriteRule ^vendor/ - [F,L]

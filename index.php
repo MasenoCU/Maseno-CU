@@ -1,42 +1,40 @@
 <?php
-//starting the session.
 session_start();
 
-// Includes.
-include"../app/components/db_connection.php";
+
+require_once "app/models/db_connection.php";
+require_once "config.php";
 
 // Fetch data from MongoDB using controllers
-require '../app/controllers/HomeController.php';
+require 'app/controllers/HomeController.php';
 
 use App\Controllers\HomeController;
 
-$homeController = new HomeController($database);
+$homeController = new HomeController($connection);
 $blogs = $homeController->getBlogs();
-$aboutDetails = $homeController->getAboutDetails();
 $faqs = $homeController->getFaqs();
 $contacts = $homeController->getContacts();
 $events = $homeController->getEvents();
+// var_dump($carousels)
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="light">
 
 <head>
-    <script src="assets/scripts/color-modes.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/color-modes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custon css -->
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/blog.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
     <!-- page title -->
-    <title>Maseno University Christian Union</title>
+    <title>Home Maseno University Christian Union</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <!-- unicons iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
-
-<body>
+<body class="">
     <!-- spinner -->
 
     <!-- SVG icons -->
@@ -81,7 +79,7 @@ $events = $homeController->getEvents();
         </symbol>
     </svg>
 
-    <!-- toggle theme -->
+    <!-- THEME TOGGLE -->
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
             aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
@@ -145,19 +143,20 @@ $events = $homeController->getEvents();
         </div>
     </div>
 
-    <!-- main header -->
+    <!-- MAIN HEADER -->
     <header id="header" class="sticky-top bg-body">
         <!-- navbar -->
         <div class="container-xxl d-flex flex-wrap align-items-center justify-content-around justify-content-sm-center">
             <!-- navbar-brand -->
-            <a href="index.php"
-                class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                <svg width="40" height="32" xlmns="http://www.w3.org/2000/svg">
+        <a href="index.php"
+            class="nav col-lg-1 col-xl-auto navbar-brand d-flex flex-auto justify-content-center align-items-center mx-xl-auto mt-2 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                <svg class="logo" width="40" height="32" xmlns="http://www.w3.org/2000/svg" style="border-radius: 5px; border: 1px solid #25aae1;">
                     <rect width="100%" height="100%" fill="white" />
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="assets/icons.svg#mucu"></use>
+                    <svg class="bi me-2 logo" width="40" height="32">
+                        <use xlink:href="/public/assets/icons/icons.svg#mucu" class="logo"></use>
                     </svg>
-                </svg><span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
+                </svg>
+                <span class="ms-1 ms-lg-0 ms-xl-1 me-1 fw-bold" style="font-size: large;">MUCU</span>
             </a>
             <!-- more nav -->
             <div class="d-sm-none flex-shrink-0 dropdown mx-auto">
@@ -166,7 +165,7 @@ $events = $homeController->getEvents();
                     More
                 </a>
                 <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="../app/views/leadership.php">Leadership</a></li>
+                    <li><a class="dropdown-item" href="app/views/leadership.php">Leadership</a></li>
                     <li><a class="dropdown-item" href="#">Noticeboard</a></li>
                     <li><a class="dropdown-item" href="#resources">Resources</a></li>
                     <li>
@@ -181,15 +180,15 @@ $events = $homeController->getEvents();
                     class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <svg class="bi me-2" width="24" height="24">
-                        <use xlink:href="assets/icons.svg#menu" style="fill: currentColor; color:invert;"></use>
+                        <use xlink:href="/public/assets/icons/icons.svg#menu" style="fill: currentColor; color:invert;"></use>
                     </svg>
                 </a>
                 <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item active" href="homepage.php" aria-current="page">Home</a></li>
-                    <li><a class="dropdown-item" href="../app/views/about.php">About Us</a></li>
-                    <li><a class="dropdown-item" href="../app/views/fellowships.php">Fellowships</a></li>
-                    <li><a class="dropdown-item" href="../app/views/ministries.php">Ministries</a></li>
-                    <li><a class="dropdown-item" href="../app/views/eveteams.php">Evangelistic Teams</a></li>
+                    <li><a class="dropdown-item active" href="#" aria-current="page">Home</a></li>
+                    <li><a class="dropdown-item" href="app/views/about.php">About Us</a></li>
+                    <li><a class="dropdown-item" href="app/views/fellowships.php">Fellowships</a></li>
+                    <li><a class="dropdown-item" href="app/views/ministries.php">Ministries</a></li>
+                    <li><a class="dropdown-item" href="#">Evangelistic Teams</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -197,7 +196,7 @@ $events = $homeController->getEvents();
                         <a class="dropdown-item icon-link disabled"
                             style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                             <svg class="bi" width="64" height="64">
-                                <use xlink:href="assets/icons.svg#give" style="fill: currentColor; color:invert;">
+                                <use xlink:href="/public/assets/icons/icons.svg#give" style="fill: currentColor; color:invert;">
                                 </use>
                             </svg>
                         </a>
@@ -208,19 +207,20 @@ $events = $homeController->getEvents();
             <nav class="p-0 mb-1 mt-xl-2 mx-xl-auto border rounded navbar-expand-sm bg-primary" data-bs-theme="auto">
                 <div class="collapse navbar-collapse">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li class="nav-item"><a href="/app/views/homepage.php"
-                                class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li>
+                        <!-- I dont think there is need to have home button in the index.php yet the user is not logged in -->
+                        <!-- <li class="nav-item"><a href="#"
+                                class="nav-link px-2 link-body-emphasis active" aria-current="page">Home</a></li> -->
                         <li class="nav-item"><a href="/app/views/about.php"
                                 class="nav-link px-2 link-body-emphasis">About
                                 Us</a>
                         </li>
-                        <li class="nav-item"><a href="/app/views/fellowships.php"
+                        <li class="nav-item"><a href="app/views/fellowships.php"
                                 class="nav-link px-2 link-body-emphasis">Fellowships</a></li>
-                        <li class="nav-item"><a href="/app/views/ministries.php"
+                        <li class="nav-item"><a href="app/views/ministries.php"
                                 class="nav-link px-2 link-body-emphasis">Ministries</a></li>
-                        <li class="nav-item"><a href="/app/views/ministries.php"
+                        <li class="nav-item"><a href="app/views/ministries.php"
                                 class="nav-link px-2 link-body-emphasis">Evangelistic Teams</a>
-                        <li class="nav-item"><a href="/app/views/leadership.php"
+                        <li class="nav-item"><a href="app/views/leadership.php"
                                 class="nav-link px-2 link-body-emphasis">Leadership</a>
                         </li>
                         <li class="nav-item d-none d-sm-inline dropdown text-end">
@@ -233,7 +233,7 @@ $events = $homeController->getEvents();
                                     <a class="dropdown-item icon-link disabled"
                                         style="--bs-link-hover-color-rgb: 25, 135, 84;">Online Giving
                                         <svg class="bi" width="64" height="64">
-                                            <use xlink:href="assets/icons.svg#give"
+                                            <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#give"
                                                 style="fill: currentColor; color:invert;">
                                             </use>
                                         </svg>
@@ -257,93 +257,52 @@ $events = $homeController->getEvents();
             <!-- cta section -->
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
-                <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary mx-2">Login</button>
-                    <button type="button" class="btn btn-warning ms-2">Sign-up</button>
-                </div>
+            <div class="text-end"> 
+                <a href="app/views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2 btn-readmore" >Login</a>
+                <a href="app/views/registrationpage.php?mode=signup" class="btn btn-warning ms-2 btn-readmore">Sign-up</a>
+            </div>
             </div>
         </div>
     </header>
+    <!-- Logout Notification -->
+    <div id="logoutNotification" class="logout-notification">
+        You have successfully logged out.
+    </div>
 
-    <!-- hero -->
+    <!-- HERO -->
     <section id="hero" style="height: 544px;">
         <div class="container-xl">
             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Carousel Indicators -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
-                        aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
-                        class="active" aria-current="true"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
-                        class=""></button>
+                    <?php foreach ($carousels as $index => $carousel): ?>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $index; ?>" class="<?php echo $index === 0 ? 'active' : ''; ?>" aria-label="Slide <?php echo $index + 1; ?>"></button>
+                    <?php endforeach; ?>
                 </div>
-                <div class="carousel-inner ">
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                        </svg>
-                        <div class="container">
-                            <div class="carousel-caption text-start">
-                                <h1>
-                                    <div class="display-2">Join Our Community and Grow in Faith</div>
-                                </h1>
-                                <p class="lead text-muted">Become part of our Christian Union community and experience
-                                    spiritual growth in a supportive environment.</p>
-                                <p><a class="btn btn-md btn-warning" href="#register" id="joinus">Join Us</a></p>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <?php foreach ($carousels as $index => $carousel): ?>
+                        <div id="carousel-slide-<?php echo $index; ?>" class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>" style="background-image: url('public/assets/images/<?php echo $carousel['image']; ?>'); background-size: cover; background-position: center;">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1><div class="display-2"><?php echo $carousel['message']; ?></div></h1>
+                                    <p><?php echo $carousel['description']; ?></p>
+                                    <p><a class="btn btn-md btn-warning" href="<?php echo $carousel['button_link']; ?>" id="exploreMinistries"><?php echo $carousel['button_text']; ?></a></p>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item active">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                        </svg>
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <h1>
-                                    <div class="display-2">Welcome to</div>
-                                    <div class="mobile-s d-sm-none display-6 text-muted">Maseno University Christian
-                                        Union!
-                                    </div>
-                                    <div class="content-to-hide-xs mobile-m d-md-none display-5 text-muted">Maseno
-                                        University Christian Union!</div>
-                                    <div class="d-none d-md-block display-2 text-muted">Maseno University Christian
-                                        Union!
-                                    </div>
-                                </h1>
-                                <p class="lead mt-2 mb-1 text-muted">We are a group of committed young men and women
-                                    living
-                                    for God and pursuing a holy life.</p>
-                                <p class="lead mt-0 text-muted">Join us in our journey of faith.</p>
-                                <p><a class="btn btn-md btn-outline-success border-2" href="../app/views/about.php"
-                                        id="learnmore">Learn
-                                        more</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                        </svg>
-                        <div class="container">
-                            <div class="carousel-caption text-end">
-                                <h1>
-                                    <div class="display-2">Get Involved and Make a Difference</div>
-                                </h1>
-                                <p class="lead text-muted">Engage in our ministries and evangelistic teams to make a
-                                    positive impact for Christ.</p>
-                                <p><a class="btn btn-md btn-primary" href="#contact" id="contactus">Contact Us</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" id="prevSlide">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" id="nextSlide">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -351,7 +310,7 @@ $events = $homeController->getEvents();
         </div>
     </section>
 
-    <!-- history & growth -->
+    <!-- HISTORY & GROWTH -->
     <section id="history">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
@@ -369,18 +328,18 @@ $events = $homeController->getEvents();
                         foundation in discipleship, the Christian Union continues to impact lives and maintain stability
                         in
                         Christian faith.</p>
-                    <a href="../app/views/about.php" class="btn btn-outline-success btn-md ms-auto mb-2 border-2">Learn
+                    <a href="app/views/about.php" class="btn btn-outline-success btn-md ms-auto mb-2 border-2">Learn
                         More</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid" src="assets/images/700x500.png" alt="">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/image1.jpg" alt="">
                 </div>
             </div>
         </div>
     </section>
     <hr class="featurette-divider">
 
-    <!-- vision, mission, goals -->
+    <!-- VISION, MISSION, GOALS -->
     <section id="goals&objectives">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
@@ -397,7 +356,7 @@ $events = $homeController->getEvents();
                     <div class="col justify-content-center">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="assets/icons.svg#eye"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#eye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -410,7 +369,7 @@ $events = $homeController->getEvents();
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="assets/icons.svg#rocket"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#rocket"></use>
                             </svg>
                         </div>
                         <h2>
@@ -423,7 +382,7 @@ $events = $homeController->getEvents();
                     <div class="col ">
                         <div class="text-center">
                             <svg class="bi text-body-secondary" width="64" height="64">
-                                <use xlink:href="assets/icons.svg#bullseye"></use>
+                                <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#bullseye"></use>
                             </svg>
                         </div>
                         <h2>
@@ -439,7 +398,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- benefits -->
+    <!-- BENEFITS -->
     <section id="benefits">
         <div class="container-xl ">
             <div class="row justify-content-center align-items-center">
@@ -464,14 +423,14 @@ $events = $homeController->getEvents();
                     <a href="#contact " class="btn btn-outline-secondary btn-sm ms-2 mb-2 border-2 ">Get in touch</a>
                 </div>
                 <div class="col-md-5 text-center order-md-1">
-                    <img class="img-fluid" src="assets/images/700x500.png" alt=" ">
+                    <img class="img-fluid" src="/<?php echo BASE_URL; ?>/assets/images/growth_image1.jpg" alt=" ">
                 </div>
             </div>
         </div>
     </section>
     <hr class="featurette-divider">
 
-    <!-- blogs & testimonies -->
+    <!-- BLOGS -->
     <section id="testimonials">
         <div class="container-xl">
             <h2>
@@ -507,10 +466,10 @@ $events = $homeController->getEvents();
                             </p>
                             <p class="mb-0 d-inline"><a class="icon-link icon-link-hover"
                                     style="--bs-link-hover-color-rgb: 0, 166, 81;"
-                                    href="blogs.php#<?php echo htmlspecialchars($blog['_id'], ENT_QUOTES, 'UTF-8'); ?>">Read
-                                    more<svg class="bi" aria-hidden="true">
-                                        <use xlink:href="assets/icons.svg#arrow-bar-right"></use>
-                                    </svg></a></p>
+                                    href="app/views/blogs.php#">Read more<svg class="bi" aria-hidden="true">
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#arrow-bar-right"></use>
+                                    </svg></a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -520,7 +479,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- resources -->
+    <!-- E-LIBRARY -->
     <section id="E-Library">
         <div class="container-xl">
             <div class="row justify-content-center align-items-center">
@@ -536,7 +495,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary">Faith</h6>
                             </div>
-                            <img src="assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebooks/book_holder1.jpeg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Growing in Faith</h5>
@@ -555,7 +514,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Inspiration</h6>
                             </div>
-                            <img src="assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebooks/book_holder2.jpg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title ">Finding Inner Peace</h5>
@@ -574,7 +533,7 @@ $events = $homeController->getEvents();
                             <div class="card-header border-success">
                                 <h6 class="card-subtitle text-body-secondary ">Testimonials</h6>
                             </div>
-                            <img src="assets/images/ebook_placeholder.jpg" class="card-img-top img-fluid"
+                            <img src="/<?php echo BASE_URL; ?>/assets/images/ebooks/book_holder3.jpeg" class="card-img-top img-fluid"
                                 style="height: auto;" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Life Changing Stories</h5>
@@ -594,7 +553,7 @@ $events = $homeController->getEvents();
     </section>
     <hr class="featurette-divider">
 
-    <!-- events -->
+    <!-- EVENTS -->
     <section id="events">
         <!-- tab navigation -->
         <div class="container-xl justify-content-center align-items-center">
@@ -607,11 +566,11 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="../app/components/events.php" title="Events"></iframe>
+        <iframe class="d-none" src="/app/models/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 
-    <!-- leadership -->
+    <!-- LEADERSHIP -->
     <section>
         <div class="container-xl">
             <div class="text-center">
@@ -622,9 +581,9 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- i-frame -->
-        <iframe src="../app/components/leadership.php" title="Events"></iframe>
+        <iframe src="app/models/leadership.php" title="Events"></iframe>
         <div class="row justify-content-center align-items-center">
-            <a href="../app/views/leadership.php" target="_parent" rel="noreferrer"
+            <a href="app/views/leadership.php" target="_parent" rel="noreferrer"
                 class="btn col-auto btn-success btn-sm mt-3">Meet
                 them all</a>
         </div>
@@ -645,7 +604,7 @@ $events = $homeController->getEvents();
             <div class="row my-4 justify-content-around align-items-center">
                 <div class="text-center col-6 col-lg-4 mb-2">
                     <svg class="bi text-body-secondary" width="64" height="64">
-                        <use xlink:href="assets/icons.svg#person?"></use>
+                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#person?"></use>
                     </svg>
                 </div>
                 <div class="col-lg-8">
@@ -689,7 +648,7 @@ $events = $homeController->getEvents();
         <div class="container-xl md-4 align-content-center align-items-center">
             <div class="p-2 text-center rounded-3 home-cta">
                 <svg class="bi mt-4 mb-3" width="70" height="62">
-                    <use xlink:href="assets/icons.svg#mucu" />
+                    <use xlink:href="/public/assets/icons/icons.svg#mucu" />
                 </svg>
                 <h1 class="text-body-emphasis">
                     <div class="display-4">Feel at the feet of Jesus</div>
@@ -701,7 +660,7 @@ $events = $homeController->getEvents();
                 <div class="d-inline-block text-center text-md-start">
                     <a href="registrationpage.php" id="joinus"
                         class="btn btn-warning btn-md my-2 ms-1 rounded-pill">Join today</a>
-                    <a href="#login" id="login.php"
+                    <a href="#login" id="#"
                         class="btn btn-outline-primary btn-md ms-1 border-1 rounded-pill">Sign
                         in</a>
                 </div>
@@ -764,19 +723,20 @@ $events = $homeController->getEvents();
                     <div class="col-6 col-md-2 mb-3 text-center">
                         <h5>Our Pages</h5>
                         <ul class="nav nav-pills nav-fill flex-column">
-                            <li class="nav-item mb-2"><a href="../app/views/homepage.php"
-                                    class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li>
-                            <li class="nav-item mb-2"><a href="../app/views/about.php"
+                            <!-- no need to have the home link if member is not logged in -->
+                            <!-- <li class="nav-item mb-2"><a href="app/views/homepage.php"
+                                    class="active nav-link p-0 text-body-secondary" aria-current="page">Home</a></li> -->
+                            <li class="nav-item mb-2"><a href="app/views/about.php"
                                     class="nav-link p-0 text-body-secondary">About</a></li>
-                            <li class="nav-item mb-2"><a href="../app/views/fellowships.php"
+                            <li class="nav-item mb-2"><a href="app/views/fellowships.php"
                                     class="nav-link p-0 text-body-secondary">Fellowships`
                                     Events</a></li>
-                            <li class="nav-item mb-2"><a href="../app/views/ministries.php"
+                            <li class="nav-item mb-2"><a href="app/views/ministries.php"
                                     class="nav-link p-0 text-body-secondary">Ministries</a></li>
-                            <li class="nav-item mb-2"><a href="../app/views/eveteams.php"
+                            <li class="nav-item mb-2"><a href="app/views/eveteams.php"
                                     class="nav-link p-0 text-body-secondary">Evangelistic
                                     Teams</a></li>
-                            <li class="nav-item mb-2"><a href="../app/views/leadership.php"
+                            <li class="nav-item mb-2"><a href="app/views/leadership.php"
                                     class="nav-link p-0 text-body-secondary">Leadership</a></li>
                             <li class="nav-item mb-2"><a href="#"
                                     class="nav-link p-0 text-body-secondary">Noticeboard</a></li>
@@ -786,14 +746,14 @@ $events = $homeController->getEvents();
                     <div class="col-6 col-md-2 mb-3 text-center">
                         <h5 id="resources">Resources</h5>
                         <ul class="nav flex-column nav-pills nav-fill">
-                            <li class="nav-item mb-2"><a href="../app/views/blogs.php"
+                            <li class="nav-item mb-2"><a href="app/views/blogs.php"
                                     class="nav-link p-0 text-body-secondary">Blogs</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">E-Library</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="../app/views/gallery.php"
+                            <li class="nav-item mb-2"><a href="app/views/gallery.php"
                                     class="nav-link p-0 text-body-secondary">Gallery</a>
                             </li>
-                            <li class="nav-item mb-2"><a href="../app/views/sermons.php"
+                            <li class="nav-item mb-2"><a href="app/views/sermons.php"
                                     class="nav-link p-0 text-body-secondary">Sermons`
                                     Notes</a></li>
                         </ul>
@@ -818,25 +778,25 @@ $events = $homeController->getEvents();
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://www.facebook.com/Masenocu/"
                                     target="_blank"><svg class="bi text-body-primary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#facebook"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#facebook"></use>
                                     </svg> Facebook</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://whatsapp.com/channel/0029VaCqwFSIt5ryXrSNeN3w" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#whatsapp"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#whatsapp"></use>
                                     </svg> WhatsApp</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="http://www.youtube.com/@maseno_cu"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#youtube"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#youtube"></use>
                                     </svg> YouTube</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0"
                                     href="https://www.instagram.com/maseno_cu/" target="_blank"><svg
                                         class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#instagram"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#instagram"></use>
                                     </svg> Instagram</a></li>
                             <li class="nav-item mb-2"><a class="nav-link p-0" href="https://twitter.com/Maseno_CU"
                                     target="_blank"><svg class="bi text-body-secondary" width="20" height="20">
-                                        <use xlink:href="assets/icons.svg#twitter-x"></use>
+                                        <use xlink:href="/<?php echo BASE_URL; ?>/assets/icons/icons.svg#twitter-x"></use>
                                     </svg> X</a></li>
                         </ul>
                     </div>
@@ -867,11 +827,105 @@ $events = $homeController->getEvents();
             </footer>
         </div>
     </section>
+    <div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center" style="border: none; border-radius: 15px; overflow: hidden;">
+      <div class="modal-body" style="background-color: #25aae1; color: white; padding: 40px;">
+        <h2>Coming Soon!</h2>
+        <p class="lead">This feature is under development and will be available soon. Stay tuned!</p>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+<script>
+// document.querySelectorAll('.btn-readmore').forEach(button => {
+//     button.addEventListener('click', function(event) {
+//         event.preventDefault();
+//         var myModal = new bootstrap.Modal(document.getElementById('comingSoonModal'));
+//         myModal.show();
+//     });
+// });
+</script>
+
+    <script>
+// document.addEventListener('DOMContentLoaded', function () {
+//     const carouselInner = document.querySelector('.carousel-inner');
+//     const slides = document.querySelectorAll('.carousel-item');
+//     let currentIndex = 0;
+//     const totalSlides = slides.length;
+
+//     // Manually control the next and previous buttons
+//     const prevButton = document.getElementById('prevSlide');
+//     const nextButton = document.getElementById('nextSlide');
+
+//     // Show the first slide initially
+//     showSlide(currentIndex);
+
+//     // Handle 'Next' button click
+//     nextButton.addEventListener('click', function () {
+//         clearInterval(autoSlideInterval); // Stop the auto-slide
+//         currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide
+//         showSlide(currentIndex);
+//         autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+//     });
+
+//     // Handle 'Previous' button click
+//     prevButton.addEventListener('click', function () {
+//         clearInterval(autoSlideInterval); // Stop the auto-slide
+//         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Go to previous slide
+//         showSlide(currentIndex);
+//         autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+//     });
+
+//     // Auto-slide every 5 seconds
+//     let autoSlideInterval = setInterval(autoSlideFunction, 8000);
+
+//     function autoSlideFunction() {
+//         currentIndex = (currentIndex + 1) % totalSlides; // Move to the next slide
+//         showSlide(currentIndex);
+//     }
+
+//     // Show the slide based on the current index
+//     function showSlide(index) {
+//         slides.forEach((slide, idx) => {
+//             if (idx === index) {
+//                 slide.classList.add('active');
+//             } else {
+//                 slide.classList.remove('active');
+//             }
+//         });
+//     }
+// });
+
+// // Reset auto-slide when the user manually clicks next or prev
+// nextButton.addEventListener('click', function () {
+//     clearInterval(autoSlideInterval); // Stop the auto-slide
+//     currentIndex = (currentIndex + 1) % totalSlides;
+//     showSlide(currentIndex);
+//     autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+// });
+
+// prevButton.addEventListener('click', function () {
+//     clearInterval(autoSlideInterval); // Stop the auto-slide
+//     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+//     showSlide(currentIndex);
+//     autoSlideInterval = setInterval(autoSlideFunction, 8000); // Restart auto-slide
+// });
+
+// // Auto-slide function
+// function autoSlideFunction() {
+//     currentIndex = (currentIndex + 1) % totalSlides;
+//     showSlide(currentIndex);
+// }
+
+    </script>
     <!-- main js -->
-    <script src="assets/scripts/main.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/main.js"></script>
     <!-- bootstrap JS -->
-    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/<?php echo BASE_URL; ?>assets/scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 

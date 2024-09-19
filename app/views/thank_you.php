@@ -1,14 +1,14 @@
 <?php
-
+session_start();
+require_once "../../config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/assets/styles/style.css">
-    <link rel="stylesheet" href="/public/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/style.css">
+    <link rel="stylesheet" href="/<?php echo BASE_URL; ?>assets/styles/bootstrap.min.css">
     <title>Thank You! Maseno University Christian Union</title>
     <style>
     body {
@@ -45,13 +45,12 @@
     }
     </style>
 </head>
-
 <body>
-    <div class="thank-you-container">
-        <h1>Thank you for registering with us!</h1>
-        <p class="thank-you-message">We will verify your details and an email will be sent to you with login instructions.</p>
-        <a class="thank-you-link" href="registrationpage.php?mode=login">Login here</a>
-    </div>
+    <h1>Thanks for your submission</h1>
+    <br>
+    <br>
+    <h3>Your details are with us now, thanks for being a member </h3>
+    <br>
+    <a href="/<?php echo BASE_URL; ?>../index.php"> Back to Home</a>
 </body>
-
 </html>

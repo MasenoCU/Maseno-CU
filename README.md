@@ -1,18 +1,22 @@
-MUCU_website
+# Architecture used.
+* We using the Model-View-Controller architecture.
+# Things to note.
+* All eveteams logo should be stored in the ev-logo directory of the  images directory locted in the assets.
+the 
 
-# MUCU-Website
+# The Project Directories.
+* They are three; 
+    - app
+    - backend
+    - public
+* The index.php is at the root of the project - Where the project is launched from
 
-This website is meant to place the Maseno University Christian Union in the social space.
-
-**The Contributors**
-
-Our Mision
-
-Our Vision
-
-Credits
+# Image formats.
+- Images used in building the front_end, such as logos are used in the jpg format.
 
 
-## Attribution
+##### Update the README.md file as development process goes on.
 
-This project includes code inspired by the [Sliding Sign-In &amp; Sign-Up Form](https://github.com/sefyudem/Sliding-Sign-In-Sign-Up-Form) tutorial by Sefyudem.
+
+
+

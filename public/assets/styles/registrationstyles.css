@@ -272,6 +272,25 @@ form.sign-in-form {
   pointer-events: all;
 }
 
+.alert{
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #FFa133; /* Background color for the alert */
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.alert.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
@@ -444,7 +463,7 @@ form.sign-in-form {
 }
 
 .eve-team-btn {
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
   margin: 5px;
   border: 1px solid #007bff;
@@ -456,6 +475,14 @@ form.sign-in-form {
 .eve-team-btn.active {
   background-color: #f5a133;
   color: #fff;
+}
+
+.eave-teams {
+  max-height: 200px; 
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px; 
 }
 
 .input-field.file-field {

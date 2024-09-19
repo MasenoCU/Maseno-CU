@@ -1,0 +1,24 @@
+/* Coming Soon Modal Styles */
+#comingSoonModal .modal-body {
+    background-color: #25aae1; /* Blue Background */
+    color: white;
+    text-align: center;
+    padding: 40px; /* Increase padding for better spacing */
+}
+
+#comingSoonModal .modal-body h2,
+#comingSoonModal .modal-body p {
+    color: white;
+}
+
+#comingSoonModal .btn-warning {
+    background-color: #ffa133; /* Use Yellow from Branding */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#comingSoonModal .btn-warning:hover {
+    background-color: #ffa133;
+}

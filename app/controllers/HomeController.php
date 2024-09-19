@@ -4,40 +4,60 @@ namespace App\Controllers;
 
 class HomeController
 {
-    private $database;
+    private $connection;
 
-    public function __construct($database)
+    public function __construct($connection)
     {
-        $this->database = $database;
+        $this->connection = $connection;
     }
 
     public function getBlogs()
     {
-        $collection = $this->database->selectCollection('Blogs');
-        return $collection->find()->toArray();
+        return $this->fetchData('blogs');
     }
 
-    public function getAboutDetails()
-    {
-        $collection = $this->database->selectCollection('AboutUs');
-        return $collection->find()->toArray();
-    }
 
     public function getFaqs()
     {
-        $collection = $this->database->selectCollection('FAQs');
-        return $collection->find()->toArray();
+        return $this->fetchData('faqs');
     }
 
     public function getContacts()
     {
-        $collection = $this->database->selectCollection('Contacts');
-        return $collection->find()->toArray();
+        return $this->fetchData('contacts');
     }
 
     public function getEvents()
     {
-        $collection = $this->database->selectCollection('Events');
-        return $collection->find()->toArray();
+        return $this->fetchData('events');
+    }
+    
+    public function getCarousels()
+    {
+        $query = "SELECT image, message, description, button_text, button_link FROM carousels";
+        $data = [];
+    
+        if ($result = $this->connection->query($query)) {
+            $data = $result->fetch_all(MYSQLI_ASSOC);
+        } else {
+            error_log("Error fetching carousel data: " . $this->connection->error);
+        }
+    
+        return $data;
+    }
+    
+
+    private function fetchData($tableName)
+    {
+        $data = [];
+        $query = "SELECT * FROM $tableName";
+
+        if ($result = $this->connection->query($query)) {
+            $data = $result->fetch_all(MYSQLI_ASSOC);
+        } else {
+            error_log("Error fetching data from $tableName: " . $this->connection->error);
+        }
+
+        return $data;
     }
 }

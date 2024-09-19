@@ -32,6 +32,8 @@ p {
   color: #25aae1;
 }
 
+
+
 .btn-primary{
   background-color: #25aae1;
   border-color: #25aae1;
@@ -188,6 +190,51 @@ html[data-bs-theme="dark"] .map-iframe {
   height: 32rem;
   margin: 0px;
 }
+
+.logout-notification {
+  display:  none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F5A133;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+
+}
+
+.sidebar{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Style the carousel caption with a transparent background */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  color: white !important;  /* Ensure text is white for contrast */
+}
+
+/* Optional: Adjust the font styles inside the caption */
+.carousel-caption h1 {
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem; /* Adjust font size for the description */
+  margin-top: 10px;
+}
+
+.carousel-caption a.btn {
+  margin-top: 20px;
+}
+
 
 
 /* RESPONSIVE CSS
