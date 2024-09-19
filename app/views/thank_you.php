@@ -50,5 +50,7 @@ require_once "../../config.php";
     <br>
     <br>
     <h3>Your details are with us now, thanks for being a member </h3>
+    <br>
+    <a href="/<?php echo BASE_URL; ?>../index.php"> Back to Home</a>
 </body>
 </html>

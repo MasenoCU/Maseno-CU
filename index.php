@@ -258,8 +258,13 @@ $events = $homeController->getEvents();
             <div
                 class="col-xl-auto mx-lg-4 mx-xl-auto d-flex flex-wrap align-items-center justify-content-center justify-content-lg-center my-2">
             <div class="text-end"> 
+<<<<<<< HEAD
                 <a href="#" class="btn btn-outline-primary mx-2 btn-readmore d-none" >Login</a>
                 <a href="#" class="btn btn-warning ms-2 btn-readmore d-none">Sign-up</a>
+=======
+                <a href="app/views/registrationpage.php?mode=login" class="btn btn-outline-primary mx-2 btn-readmore" >Login</a>
+                <a href="app/views/registrationpage.php?mode=signup" class="btn btn-warning ms-2 btn-readmore">Sign-up</a>
+>>>>>>> 92e36f7454bb1a2e8545bec64b3ff12342e1b17c
             </div>
             </div>
         </div>

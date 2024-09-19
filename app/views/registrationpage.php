@@ -28,13 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <base href="https://masenocu.org/developer/">
+    <!-- <base href="https://masenocu.org/developer/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e36217afb5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/style.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/styles/registrationstyles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>favicon.ico">
+    <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();"></script>
     <title>Registration Maseno University Christian Union</title>
 </head>
 <body>
@@ -84,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-1">
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="username" placeholder="John Doe" required pattern="[A-Za-z\s]{1,}" title="Please enter a valid name" />
+                            <input type="text" name="username" placeholder="John Doe" required title="Please enter a valid name" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
@@ -92,17 +93,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="input-field">
                             <i class="fas fa-graduation-cap"></i>
-                            <input type="text" name="course" placeholder="Course (e.g., Bsc. Education)" required pattern="[A-Za-z\s.]{1,}" title="Please enter a valid course" />
+                            <input type="text" name="course" placeholder="Course ( Bsc. Computer Science)" title="Please enter a valid course" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-id-badge"></i>
-                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" required pattern="[A-Za-z0-9/]+" title="Please enter a valid admission number" required />
+                            <input type="text"  id="step1-admission-number" name="admission_number" placeholder="Admission Number" title="Please enter a valid admission number" required />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
-                            <input type="text" name="phone_number" placeholder="Phone Number" required pattern="\d{10,}" title="Please enter a valid phone number" />
+                            <input type="text" name="phone_number" placeholder="Phone Number" required title="Please enter a valid phone number" />
                         </div>
-                        <button type="button" class="btn next-btn" disabled >Next</button>
+                        <button type="button" class="btn next-btn" >Next</button>
                     </div>
 
                     <!-- Step 2: Ministry involvement and year of study -->
@@ -121,14 +122,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <input type="hidden" name="ministry" id="ministry" value="" required />
 
-                        <label class="titlelabel">Year of Study:</label>
-                        <div class="yos">
-                            <button type="button" class="eve-team-btn" data-value="1">1</button>
-                            <button type="button" class="eve-team-btn" data-value="2">2</button>
-                            <button type="button" class="eve-team-btn" data-value="3">3</button>
-                            <button type="button" class="eve-team-btn" data-value="4">4</button>
-                        </div>
-                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
                         <button type="button" class="btn back-btn">Back</button>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
@@ -137,16 +130,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-3">
                         <label class="titlelabel">Your Eve Team:</label>
                         <div class="eave-teams">
-                            <button type="button" class="eve-team-btn" data-value="Central Evangelistic Team">Central Evangelistic Team</button>
-                            <button type="button" class="eve-team-btn" data-value="Mubet">Mubet</button>
-                            <button type="button" class="eve-team-btn" data-value="Weso">Weso</button>
-                            <button type="button" class="eve-team-btn" data-value="Uet">Uet</button>
-                            <button type="button" class="eve-team-btn" data-value="Noret">Noret</button>
-                            <button type="button" class="eve-team-btn" data-value="Soret">Soret</button>
-                            <button type="button" class="eve-team-btn" data-value="Emuseta">Emuseta</button>
-                            <button type="button" class="eve-team-btn" data-value="UET">UET</button>
+                            <button type="button" class="eve-team-btn" data-value="Central Evangelistic Team">Central Evangelistic Team (CET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Mubet">Middle Eastern Brethren Evangelistic Team (MUBET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Weso">Western Evangelistic Team (WESO)</button>
+                            <button type="button" class="eve-team-btn" data-value="Uet">Uttermost Evangelistic Team (UET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Soret">South Rift Evangelistic Team (SORET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Noret">North Rift Evangelistic Team (NORET)</button>
+                            <button type="button" class="eve-team-btn" data-value="Emuseta">Emulatable Students and Associates Evangelistic Team (EMUSETA)</button>
+                            <button type="button" class="eve-team-btn" data-value="Net">Nyanza Evangelistic Team Ministries Trust(NET Ministries Trust)</button>
                         </div>
                         <input type="hidden" name="eve_team" id="eve_team" value="" required />
+
+                        <label class="titlelabel">Year of Study:</label>
+                        <div class="yos">
+                            <button type="button" class="ministry-btn" data-value="1">1</button>
+                            <button type="button" class="ministry-btn" data-value="2">2</button>
+                            <button type="button" class="ministry-btn" data-value="3">3</button>
+                            <button type="button" class="ministry-btn" data-value="4">4</button>
+                        </div>
+                        <input type="hidden" name="year_of_study" id="year_of_study" value="" required />
+
                         <button type="button" class="btn back-btn">Back</button>
                         <button type="button" class="btn next-btn">Next</button>
                     </div>
@@ -155,18 +158,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="step step-4">
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" name="password" placeholder="Enter a Password" required minlength="6" />
+                            <input type="password" name="fpassword" placeholder="Enter a Password" required minlength="6" />
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
                             <input type="password" name="confirm_password" placeholder="Confirm the Password" required minlength="6" />
                         </div>
                         <div class="input-field file-field">
-                            <label for="schoolId">Please Upload Your School ID:</label>
+                            <label for="schoolId">Please Upload Your School ID (Front Side):</label>
                             <input type="file" id="schoolId" name="schoolId" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
                         </div>
                         <button type="button" class="btn back-btn">Back</button>
-                        <input type="submit" class="btn" name="register" value="Register me Now!" />
+                        <input type="submit" class="btn final-btn" name="register" value="Register me Now!" />
                     </div>
 
                 </form>
