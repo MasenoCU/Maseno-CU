@@ -566,7 +566,7 @@ $events = $homeController->getEvents();
             </div>
         </div>
         <!-- I-frame for events -->
-        <iframe src="/app/models/events.php" title="Events"></iframe>
+        <iframe class="d-none" src="/app/models/events.php" title="Events"></iframe>
     </section>
     <hr class="featurette-divider">
 
