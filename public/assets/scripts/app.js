@@ -164,16 +164,7 @@ function onOpenCvReady() {
     };
 }
 
-const referenceImg = new Image();
-referenceImg.src = '../images/schoolrefid.jpg'; // Your reference image URL
-referenceImg.onload = function() {
-    const canvas = document.getElementById('referenceImageCanvasId');
-    const ctx = canvas.getContext('2d');
-    canvas.width = referenceImg.width;
-    canvas.height = referenceImg.height;
-    ctx.drawImage(referenceImg, 0, 0); // Draw the reference image on the canvas
-};
-
+// D:\xamp\htdocs\MUCUWEBSITEGITHUB\public\assets\images\schoolidref.jpg
 
 $(document).ready(function() {
     $('.final-btn').on('click', function(e) {
@@ -185,13 +176,13 @@ $(document).ready(function() {
             // Ensure OpenCV.js is loaded and ready
             onOpenCvReady();
 
-            let fileInput = document.getElementById('schoolId'); 
+            let fileInput = document.getElementById('schoolId');
             let file = fileInput.files[0];
             if (file) {
                 let reader = new FileReader();
                 reader.onload = function(event) {
                     let dataUrl = event.target.result;
-                    console.log('dataUrl ' + dataUrl)
+                    console.log('dataUrl ' + dataUrl);
 
                     // Create a new Image object
                     let img = new Image();
@@ -204,25 +195,50 @@ $(document).ready(function() {
                         // Set canvas dimensions to the image's dimensions
                         canvas.width = img.width;
                         canvas.height = img.height;
+                        console.log('Canvas drawn and dimensions set');
 
                         // Draw the image onto the canvas
                         ctx.drawImage(img, 0, 0);
 
-                        // Read the image from the canvas using OpenCV
-                        cv.imreadAsync('imageCanvas', function(src) {
+                        // Load the reference image from the <img> tag
+                        let referenceImg = document.getElementById('referenceImage');
+                        console.log('Found Reference Id')
+                        let refCanvas = document.createElement('canvas');
+                        let refCtx = refCanvas.getContext('2d');
+                        refCanvas.width = referenceImg.width;
+                        refCanvas.height = referenceImg.height;
+                        refCtx.drawImage(referenceImg, 0, 0);
 
-                            // Now check the ID using the OpenCV `checkIDCard` function
-                            checkIDCard(src, function(isValidId) {
-                                if (isValidId) {
-                                    alert("Registration successful, please login");
-                                    $(e.target).closest('form').submit();
-                                } else {
-                                    alert("Your ID could not be automatically verified. It has been submitted for manual review by Admin.");
-                                    $(e.target).closest('form').submit();  // Form submits for manual review
+                        // Now read both images using OpenCV
+                        let uploadedImage = cv.imread('imageCanvas');
+                        let referenceImage = cv.imread(refCanvas);
+                        console.log('Read the image from the img element, now going to checkId function');
+
+                        // Check the ID using OpenCV
+                        checkIDCard(uploadedImage, referenceImage, function(isValidId) {
+                            if (isValidId) {
+                                alert("Your registration was successful, and your ID automatically verified, now login");
+                                // Submit the form via AJAX to avoid page reload
+                            $.ajax({
+                                type: 'POST',
+                                url: $(e.target).closest('form').attr('action'),  // Get the form action URL
+                                data: $(e.target).closest('form').serialize(),    // Serialize the form data
+                                success: function(response) {
+                                    // After successful form submission, switch to login mode
+                                    container.classList.remove("sign-up-mode");
+                                },
+                                error: function(error) {
+                                    console.log("Error during form submission: ", error);
+                                    alert("There was an error submitting your registration.");
                                 }
                             });
-
+                            } else {
+                                alert("Your ID could not be automatically verified, but has been submitted for manual review by Admin. Your registration was still successful");
+                                $(e.target).closest('form').submit();  // Form submits for manual review
+                                container.classList.remove("sign-up-mode");
+                            }
                         });
+
                     };
                 };
                 reader.readAsDataURL(file);
@@ -236,39 +252,38 @@ $(document).ready(function() {
     });
 });
 
-function checkIDCard(src, callback) {
-    // Assuming reference image is already loaded and available as `refImage`
-    cv.imreadAsync('referenceImageCanvasId', function(refImage) {
-        let orb = new cv.ORB();
-        let keypoints1 = new cv.KeyPointVector();
-        let descriptors1 = new cv.Mat();
-        let keypoints2 = new cv.KeyPointVector();
-        let descriptors2 = new cv.Mat();
 
-        // Detect keypoints and compute descriptors.
-        orb.detectAndCompute(src, new cv.Mat(), keypoints1, descriptors1);
-        orb.detectAndCompute(refImage, new cv.Mat(), keypoints2, descriptors2);
+function checkIDCard(src, refImage, callback) {
+    let orb = new cv.ORB();
+    let keypoints1 = new cv.KeyPointVector();
+    let descriptors1 = new cv.Mat();
+    let keypoints2 = new cv.KeyPointVector();
+    let descriptors2 = new cv.Mat();
+    console.log('Descriptors and keypoints defined');
 
-        // Match descriptors.
-        let matches = new cv.DMatchVectorVector();
-        let matcher = new cv.BFMatcher(cv.NORM_HAMMING, true);
-        matcher.match(descriptors1, descriptors2, matches);
+    // Detect keypoints and compute descriptors for both images
+    orb.detectAndCompute(src, new cv.Mat(), keypoints1, descriptors1);
+    orb.detectAndCompute(refImage, new cv.Mat(), keypoints2, descriptors2);
 
-        // Simple heuristic to check matches
-        if (matches.size() > 50) { // Example threshold
-            callback(true);
-        } else {
-            callback(false);
-        }
+    // Match descriptors
+    let matches = new cv.DMatchVector();
+    let matcher = new cv.BFMatcher(cv.NORM_HAMMING, true);
+    matcher.match(descriptors1, descriptors2, matches);
+    console.log('Match descriptors initialized');
 
-        // Clean up
-        src.delete(); refImage.delete(); orb.delete();
-        keypoints1.delete(); descriptors1.delete();
-        keypoints2.delete(); descriptors2.delete();
-        matches.delete(); matcher.delete();
-    });
+    // Simple heuristic to check matches
+    if (matches.size() > 50) { // Example threshold
+        callback(true);
+    } else {
+        callback(false);
+    }
+
+    // Clean up
+    src.delete(); refImage.delete(); orb.delete();
+    keypoints1.delete(); descriptors1.delete();
+    keypoints2.delete(); descriptors2.delete();
+    matches.delete(); matcher.delete();
 }
-
 
 
 
