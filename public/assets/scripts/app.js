@@ -287,7 +287,7 @@ function checkIDCard(src, refImage, callback) {
 
 
 
-function validateStep(step) {
+async function validateStep(step) {
     let isValid = true;
 
     // Patterns for validation
@@ -347,6 +347,13 @@ function validateStep(step) {
         return isValid;
     }
 
+    // **AJAX call to check if admission number exists**
+    const admissionExists = await checkAdmissionNumber(admissionNumber);
+    if (admissionExists) {
+        alert('This admission number already exists. Please use a different one.');
+        return false;
+    }
+
     // Validation for Phone Number
     if (!phonePattern.test(phoneNumber)) {
         alert('Please enter a valid phone number (10 digits only).');
@@ -363,6 +370,31 @@ function validateStep(step) {
 
 
     return isValid;
+}
+
+// Function to check if the admission number exists using AJAX
+function checkAdmissionNumber(admissionNumber) {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: '../../../MUCUWEBSITEGITHUB/backend/endpoints/check_admission_number.php',  // Adjust this path if needed
+            // D:\xamp\htdocs\MUCUWEBSITEGITHUB\backend\endpoints\check_admission_number.php
+            type: 'POST',
+            data: { admission_number: admissionNumber },
+            dataType: 'json',
+            success: function(response) {
+                if (response.exists) {
+                    resolve(true);  // Admission number exists
+                } else {
+                    resolve(false);  // Admission number does not exist
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX Error:", status, error);
+                alert('An error occurred while checking the admission number.');
+                resolve(false);  // Consider it valid to allow form submission, but you can change this logic.
+            }
+        });
+    });
 }
 
 
